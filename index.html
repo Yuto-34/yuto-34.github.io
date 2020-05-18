@@ -13,39 +13,15 @@
 
 		gtag('config', 'UA-162881724-2');
 	</script>
-	<!-- jQueryの指定 -->
-	<script src="jquery-3.2.1.min.js"></script>
-
-	<!-- 共通部分の読み込み -->
-	<!-- <script type="text/javascript">
-		$(function () {
-			// header.htmlをid属性「header」という名前で読み込むように指定する
-			$("#header").load("header.html");
-		});
-	</script> -->
-	 <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-	 <!-- ＃リンクのスムーズスクロール -->
-	 <script>
-		$(function(){
-		  // #で始まるリンクをクリックしたら実行されます
-		  $('a[href^="#"]').click(function() {
-			 // スクロールの速度
-			 var speed = 400; // ミリ秒で記述
-			 var href= $(this).attr("href");
-			 var target = $(href == "#" || href == "" ? 'html' : href);
-			 var position = target.offset().top;
-			 $('body,html').animate({scrollTop:position}, speed, 'swing');
-			 return false;
-		  });
-		});
-	 </script>
+	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta name="viewport" content="width=device-width" />
+	
 	<script　src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
-	<script type="text/javascript"
-		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({
 			TeX: { equationNumbers: { autoNumber: "AMS" }},

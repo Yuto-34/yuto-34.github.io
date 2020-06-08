@@ -57,118 +57,400 @@
 		<div id="main">
 			<div class="content">
 
-				<h2>html</h2>
-
+				<h2>xmp03a.c</h2>
 				<figure>
 					<code contenteditable="true">
-<pre class="prettyprint linenums lang-html" contenteditable="true">
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+<pre class="prettyprint linenums lang-c++" contenteditable="true">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;unistd.h>
+#include &lt;math.h>
 
-&lt;head&gt;
-	&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
-	&lt;script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"&gt;&lt;/script&gt;
-	&lt;script&gt;
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-162881724-2');
-	&lt;/script&gt;
+int verbose = 0;
 
-	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
-	&lt;meta http-equiv="Content-Style-Type" content="text/css" /&gt;
-	&lt;meta http-equiv="Content-Script-Type" content="text/javascript" /&gt;
-	&lt;meta name="viewport" content="width=device-width" /&gt;
-	&lt;script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&amp;lang=tex&amp;lang=ruby&amp;lang=c"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt;
-	&lt;script type="text/x-mathjax-config"&gt;
-		MathJax.Hub.Config({
-			TeX: { equationNumbers: { autoNumber: "AMS" }},
-			tex2jax: {
-				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-				processEscapes: true
-			},
-			"HTML-CSS": { matchFontHeight: false },
-			displayAlign: "left",
-			displayIndent: "2em"
-		});
-	&lt;/script&gt;
-	&lt;!-- ###################################################
-	ここからはページ毎に変更する
-	################################################### --&gt;
-	&lt;script type="text/javascript" src="./JS/index.js"&gt;&lt;/script&gt;
-	&lt;link rel="stylesheet" type="text/css" href="./import.css" /&gt;
-	&lt;meta name="keywords" content="ページのキーワード1,2,3" /&gt;
-	&lt;meta name="description" content="YutoのHP" /&gt;
-	&lt;title&gt;Yuto's Page&lt;/title&gt;
-&lt;/head&gt;
-</pre>
-</code>
-				</figure>
-
-
-				<figure>
-					<code contenteditable="true">
-<pre class="prettyprint linenums lang-html" contenteditable="true">
-&lt;body&gt;
-	&lt;div class="header"&gt;
-		&lt;div id="left"&gt; header_img &lt;/div&gt;
-		&lt;div id="right"&gt; header_logo &lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div style="width: 100%; background-color: ghostwhite; text-align: center;"&gt;
-		&lt;input type="text" id="i0"&gt;
-		&lt;button id="b0" onclick="show()"&gt;
-			Push Me
-		&lt;/button&gt;
-		&lt;br&gt;
-		(1回しか結果が出ないよ)
-	&lt;/div&gt;
-	&lt;br&gt;
-	&lt;div style="width: 100%; background-color: gainsboro; text-align: center;"&gt;
-		&lt;input type="text" id="i2"&gt;
-		&lt;input type="text" id="i3"&gt;
-		&lt;input type="text" id="i4"&gt;
-		&lt;button id="b1" onclick="larger()"&gt;
-			export larger on third box
-		&lt;/button&gt;
-	&lt;/div&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
-</pre>
-</code>
-				</figure>
-
-
-				<h2>javascript</h2>
-				<figure>
-					<code contenteditable="true">
-<pre class="prettyprint linenums lang-js " contenteditable="true">
-var msgs = ["Very Lucky", "Lucky", "Usual", "Unlucky"];
-var count = 0;
-function show() {
-	if (count >= 1) {
-		return(null);
-	}
-	var i0 = document.getElementById("i0");
-	var num = Math.floor(Math.random() * msgs.length);
-	i0.value = msgs[num];
-	count = count + 1;
+double func(double x)
+{
+	return sin(x) - 0.2;
 }
 
-var left = parseFloat(document.getElementById("i2").value);
-var right = parseFloat(document.getElementById("i3").value);
-var result = document.getElementById("i4").value;
-function larger() {
-	if (left >= right) {
-		result.value = left;
+void iterate(double a, double b, int n)
+{
+	double ya, yb, c, yc;
+	c = ( a + b ) / 2.0;
+	ya = func(a);
+	yb = func(b);
+	yc = func(c);
+	if ( n++ > 100 )
+	{
+		printf("Too Many Recursions\n");
+		return;
 	}
-	result.value = right;
+	if (verbose)
+	{
+		printf("%03d> %18.14lf %18.14lf %18.14lf  %10.1le %10.1le\n",
+			   n, a, c, b, fabs((a - b) / c), yc);
+	}
+	if (yc == 0)
+	{
+		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
+	}
+	else if (fabs(a - b) < fabs(c) * 1e-12)
+	{
+		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
+	}
+	else if ((a == c) || (c == b))
+	{
+		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
+	}
+	else if (ya * yc < 0)
+	{
+		iterate(a, c, n);
+	}
+	else
+	{
+		iterate(c, b, n);
+	}
+}
+
+int main(int argc, char **argv)
+{
+	double a, b, ya, yb;
+	double xfrom, xto;
+	int xsteps, xidx;
+	char ch;
+
+	while ((ch = getopt(argc, argv, "v")) != -1)
+	{
+		if (ch == 'v')
+		{
+			verbose = 1;
+		}
+	}
+
+	printf("x: from to steps> ");
+	scanf("%lf %lf %d", &xfrom, &xto, &xsteps);
+
+	a = xfrom;
+	if ((ya = func(a)) == 0)
+	{
+		printf("Ans(%03d): %20.14lf %16.6le\n", 0, a, ya);
+	}
+
+	for (xidx = 1; xidx <= xsteps; xidx++)
+	{
+		b = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
+		yb = func(b);
+		if (yb == 0)
+		{
+			printf("Ans(%03d): %20.14lf %16.6le\n", 0, b, yb);
+		}
+		else if (ya * yb < 0)
+		{
+			iterate(a, b, 0);
+		}
+		a = b;
+		ya = yb;
+	}
+
+	return 0;
 }
 </pre>
 </code>
 				</figure>
+
+
+				<h2>xmp03b.c</h2>
+				<figure>
+					<code contenteditable="true">
+<pre class="prettyprint linenums lang-c++" contenteditable="true">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;unistd.h>
+#include &lt;math.h>
+
+#define	EPSILON	(1e-12)
+
+int verbose=0;
+
+double func( double x )
+{
+  return sin(x) - 0.2;
+}
+
+
+double diff( double x )
+{
+  return cos(x);
+}
+
+
+void iterate( double x0, int n )
+{
+  double  y0, x, y, delta;
+
+  y0 = func(x0);
+  x = x0 + ( delta = - y0 / diff( x0 ) );
+  if (n++ > 100) {
+    printf( "Too Many Recursions\n" );
+    return;
+  }
+  if (verbose) {
+    printf( "%03d> %20.14lf\n", n, x );
+  }
+  if ((y = func(x)) == 0) {
+    printf( "Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
+	    n, x, func(x*(1-EPSILON)), y, func(x*(1+EPSILON)) );
+  } else if (fabs(delta) < fabs(x)*EPSILON) {
+    printf( "Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
+	    n, x, func(x*(1-EPSILON)), y, func(x*(1+EPSILON)) );
+  } else {
+    iterate( x, n );
+  }
+}
+
+
+int main (int argc, char **argv) {
+  double  x, y;
+  double  xfrom, xto;
+  int	  xsteps, xidx;
+  char    ch;
+
+  while (( ch = getopt(argc,argv,"v")) != -1 ) {
+    if ( ch == 'v' ) { verbose = 1; }
+  }
+  
+  printf("x: from to steps> ");
+  scanf( "%lf %lf %d", &xfrom, &xto, &xsteps );
+  
+  for( xidx=0; xidx<=xsteps; xidx++ ) {
+    x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
+    if ((y = func(x)) == 0) {
+      printf( "Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
+	      0, x, func(x*(1-EPSILON)), y, func(x*(1+EPSILON)) );
+    } else {
+      if (verbose) {
+	printf( "%03d> %20.14lf\n", 0, x );
+      }
+      iterate( x, 0 );
+    }
+  }
+
+  return 0;
+}
+</pre>
+</code>
+				</figure>
+
+
+				<h2>xmp03c.c</h2>
+				<figure>
+					<code contenteditable="true">
+<pre class="prettyprint linenums lang-c++ " contenteditable="true">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;unistd.h>
+#include &lt;math.h>
+
+int verbose=0;
+
+double func( double x )
+{
+	return sin( x ) - 0.2;
+}
+
+void iterate( double x0, double x1, double y0, double y1, int n )
+{
+	double  x, y;
+
+	x = (x0 * y1 - x1 * y0) / (y1 - y0);
+	y = func(x);
+	if (n++ > 100) {
+		printf( "Too Many Recursions\n" );
+	return;
+}
+
+	if (verbose) {
+		printf( "%03d> %20.14lf %20.14lf %20.14lf %12.2le\n", n, x0, x, x1, y );
+	}
+
+	if (y == 0) {
+		printf( "Ans(%03d): %20.14lf %16.6le\n", n, x, y );
+	} else if (fabs(x-x0) < fabs(x) * 1e-10) {
+		printf( "Ans(%03d): %20.14lf %16.6le\n", n, x, y );
+	} else if (fabs(x-x1) < fabs(x) * 1e-10) {
+		printf( "Ans(%03d): %20.14lf %16.6le\n", n, x, y );
+	} else if (y0 * y < 0) {
+		iterate( x0, x, y0, y, n );
+	} else {
+		iterate( x, x1, y, y1, n );
+	}
+}
+
+int main (int argc, char **argv) {
+	double x0, x, y0, y;
+	double xfrom, xto;
+	int xsteps, xidx;
+	char ch;
+	
+	while (( ch = getopt(argc,argv,"v")) != -1 ) {
+		if ( ch == 'v' ) { verbose = 1; }
+	}
+	
+	printf("x: from to steps> ");
+	scanf( "%lf %lf %d", &xfrom, &xto, &xsteps );
+
+	x0 = xfrom;
+	if ((y0 = func(x0)) == 0) {
+		printf( "Ans(%03d): %20.14lf %16.6le\n", 0, x0, y0 );
+	}
+
+	for( xidx=1; xidx<=xsteps; xidx++ ) {
+		x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
+		y = func(x);
+		if (y == 0) {
+		printf( "Ans(%03d): %20.14lf %16.6le\n", 0, x, y );
+		} else if (y0 * y < 0) {
+		iterate(x0, x, y0, y, 0);
+		}
+		x0 = x; y0 = y;
+	}
+
+	return 0;
+}
+</pre>
+</code>
+				</figure>
+			</figure>
+
+
+			<h2>xmp03c_assginment.c</h2>
+			<figure>
+				<code contenteditable="true">
+<pre class="prettyprint linenums lang-c++ " contenteditable="true">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;unistd.h>
+#include &lt;math.h>
+
+int verbose = 0;
+
+double func(double x)
+{
+	return log(x) - 2.0;
+}
+
+void iterate(double x0, double x1, double y0, double y1, int n)
+{
+	double x, y;
+
+	x = (x0 * y1 - x1 * y0) / (y1 - y0);
+	y = func(x);
+	if (n++ > 100)
+	{
+		printf("Too Many Recursions\n");
+		return;
+	}
+
+	if (verbose)
+	{
+		printf("%03d> %20.14lf %20.14lf %20.14lf %12.2le\n", n, x0, x, x1, y);
+	}
+
+	if (y == 0)
+	{
+		printf("Ans(%03d): %20.14lf %16.6le\n", n, x, y);
+	}
+	else if (fabs(x - x0) < fabs(x) * 1e-10)
+	{
+		printf("Ans(%03d): %20.14lf %16.6le\n", n, x, y);
+	}
+	else if (fabs(x - x1) < fabs(x) * 1e-10)
+	{
+		printf("Ans(%03d): %20.14lf %16.6le\n", n, x, y);
+	}
+	else if (y0 * y < 0)
+	{
+		iterate(x0, x, y0, y, n);
+	}
+	else
+	{
+		iterate(x, x1, y, y1, n);
+	}
+}
+
+int main(int argc, char **argv)
+{
+	double x0, x, y0, y;
+	double xfrom, xto;
+	int xsteps, xidx;
+	char ch;
+
+	while ((ch = getopt(argc, argv, "v")) != -1)
+	{
+		if (ch == 'v')
+		{
+			verbose = 1;
+		}
+	}
+
+	printf("x: from to steps> ");
+	scanf("%lf %lf %d", &xfrom, &xto, &xsteps);
+
+	x0 = xfrom;
+	if ((y0 = func(x0)) == 0)
+	{
+		printf("Ans(%03d): %20.14lf %16.6le\n", 0, x0, y0);
+	}
+
+	for (xidx = 1; xidx <= xsteps; xidx++)
+	{
+		x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
+		y = func(x);
+		if (y == 0)
+		{
+			printf("Ans(%03d): %20.14lf %16.6le\n", 0, x, y);
+		}
+		else if (y0 * y < 0)
+		{
+			iterate(x0, x, y0, y, 0);
+		}
+		x0 = x;
+		y0 = y;
+	}
+
+	return 0;
+}
+</pre>
+</code>
+			</figure>
+			<h2 style="padding-bottom: 1ex; padding-top: 1ex;" >授業内課題</h2>
+			<p>
+				printf の不要部分を消去
+			</p>
+
+			<h2 style="padding-bottom: 1ex; padding-top: 1ex;" >課題</h2>
+			<p>
+				x3 - 6x2 + 3x + 16 = 0 の解<br>
+				各自で作成する方程式 の解（オリジナリティを求む）<br>
+				自分の与えた入力データの正当性 (設定した関数に対して何故そのような入力データで良いのかを論ぜよ)<br>
+				プログラムの持つ収束条件の意味<br>
+				解に期待できる精度<br>
+				得られた解に対して保証できる精度<br>
+				解に期待できる精度を入力から制御する方法 (可能なら各自のプログラムに組み込め)<br>
+				挟み打ち法を、二分法やニュートン法と比較した収束の様子に関する考察<br>
+				挟み打ち法、二分法、ニュートン法の使い分けに関する考察 (ガイドラインを提示せよ)
+			</p>
+
+
+			<h2>C</h2>
+			<figure>
+				<code contenteditable="true">
+<pre class="prettyprint linenums lang-c++ " contenteditable="true">
+
+</pre>
+</code>
+			</figure>
+
 			</div>
 			<div id="footer">
 				<div class="copy">&#169; 2020 Yutoのホームページ</div>

@@ -23,7 +23,7 @@ body {
 
 #main {
 	/* 横幅、左流し */
-	width: 90%;
+	width: 98%;
 }
 
 .content {
@@ -45,8 +45,12 @@ h1 {
 	font-size: 2em;
 }
 h2 {
-	margin: 0;
+	margin: 5px;
 	padding-left: 10px;
+}
+
+p {
+	margin: 0ex 10px;
 }
 
 
@@ -80,7 +84,7 @@ code {
 }
 
 figure {
-	margin-left: 5%;
+	margin-left: 1%;
 }
 
 @media screen and (max-device-width: 480px) {

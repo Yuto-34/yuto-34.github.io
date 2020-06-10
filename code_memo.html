@@ -64,42 +64,34 @@
 
 int verbose = 0;
 
-double func(double x)
-{
+double func(double x){
 	return sin(x) - 0.2;
 }
 
-void iterate(double a, double b, int n)
-{
+void iterate(double a, double b, int n){
 	double ya, yb, c, yc;
 	c = ( a + b ) / 2.0;
 	ya = func(a);
 	yb = func(b);
 	yc = func(c);
-	if ( n++ > 100 )
-	{
+	if ( n++ > 100 ){
 		printf("Too Many Recursions\n");
 		return;
 	}
-	if (verbose)
-	{
+	if (verbose){
 		printf("%03d> %18.14lf %18.14lf %18.14lf  %10.1le %10.1le\n",
 			   n, a, c, b, fabs((a - b) / c), yc);
 	}
-	if (yc == 0)
-	{
+	if (yc == 0){
 		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
 	}
-	else if (fabs(a - b) < fabs(c) * 1e-12)
-	{
+	else if (fabs(a - b) < fabs(c) * 1e-12){
 		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
 	}
-	else if ((a == c) || (c == b))
-	{
+	else if ((a == c) || (c == b)){
 		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
 	}
-	else if (ya * yc < 0)
-	{
+	else if (ya * yc < 0){
 		iterate(a, c, n);
 	}
 	else

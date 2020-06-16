@@ -62,36 +62,47 @@
 #include &lt;unistd.h>
 #include &lt;math.h>
 
+// 二分法による方程式の解法
+// u1910098 植松 悠杜
 int verbose = 0;
 
-double func(double x){
+double func(double x)
+{ //求めたい関数の決定
 	return sin(x) - 0.2;
 }
 
-void iterate(double a, double b, int n){
+void iterate(double a, double b, int n)
+{
 	double ya, yb, c, yc;
-	c = ( a + b ) / 2.0;
+
+	c = (a + b) / 2.0;
 	ya = func(a);
 	yb = func(b);
 	yc = func(c);
-	if ( n++ > 100 ){
+	if (n++ > 100)
+	{
 		printf("Too Many Recursions\n");
 		return;
 	}
-	if (verbose){
+	if (verbose)
+	{
 		printf("%03d> %18.14lf %18.14lf %18.14lf  %10.1le %10.1le\n",
 			   n, a, c, b, fabs((a - b) / c), yc);
 	}
-	if (yc == 0){
+	if (yc == 0)
+	{
 		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
 	}
-	else if (fabs(a - b) < fabs(c) * 1e-12){
+	else if (fabs(a - b) &lt; fabs(c) * 1e-12)
+	{
 		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
 	}
-	else if ((a == c) || (c == b)){
+	else if ((a == c) || (c == b))
+	{
 		printf("Ans(%03d): %20.14lf %10.1le\n", n, c, yc);
 	}
-	else if (ya * yc < 0){
+	else if (ya * yc &lt; 0)
+	{
 		iterate(a, c, n);
 	}
 	else
@@ -107,6 +118,8 @@ int main(int argc, char **argv)
 	int xsteps, xidx;
 	char ch;
 
+	// getopt関数とはコマンドライン引数のオプション(ハイフン'-'で始まる文字)を解析する関数である。
+	// unistd.hをインクルードして使う。
 	while ((ch = getopt(argc, argv, "v")) != -1)
 	{
 		if (ch == 'v')
@@ -124,7 +137,7 @@ int main(int argc, char **argv)
 		printf("Ans(%03d): %20.14lf %16.6le\n", 0, a, ya);
 	}
 
-	for (xidx = 1; xidx <= xsteps; xidx++)
+	for (xidx = 1; xidx &lt;= xsteps; xidx++)
 	{
 		b = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
 		yb = func(b);
@@ -132,7 +145,7 @@ int main(int argc, char **argv)
 		{
 			printf("Ans(%03d): %20.14lf %16.6le\n", 0, b, yb);
 		}
-		else if (ya * yb < 0)
+		else if (ya * yb &lt; 0)
 		{
 			iterate(a, b, 0);
 		}
@@ -156,151 +169,92 @@ int main(int argc, char **argv)
 #include &lt;unistd.h>
 #include &lt;math.h>
 
-#define	EPSILON	(1e-12)
+// ニュートン法による方程式の解法
+// u1910098 植松 悠杜
+#define EPSILON (1e-12)
 
-int verbose=0;
+int verbose = 0;
 
-double func( double x )
+double func(double x)
 {
-  return sin(x) - 0.2;
+	return sin(x) - 0.2;
 }
 
-
-double diff( double x )
+double diff(double x)
 {
-  return cos(x);
+	return cos(x);
 }
 
-
-void iterate( double x0, int n )
+void iterate(double x0, int n)
 {
-  double  y0, x, y, delta;
+	double y0, x, y, delta;
 
-  y0 = func(x0);
-  x = x0 + ( delta = - y0 / diff( x0 ) );
-  if (n++ > 100) {
-    printf( "Too Many Recursions\n" );
-    return;
-  }
-  if (verbose) {
-    printf( "%03d> %20.14lf\n", n, x );
-  }
-  if ((y = func(x)) == 0) {
-    printf( "Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
-	    n, x, func(x*(1-EPSILON)), y, func(x*(1+EPSILON)) );
-  } else if (fabs(delta) < fabs(x)*EPSILON) {
-    printf( "Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
-	    n, x, func(x*(1-EPSILON)), y, func(x*(1+EPSILON)) );
-  } else {
-    iterate( x, n );
-  }
-}
-
-
-int main (int argc, char **argv) {
-  double  x, y;
-  double  xfrom, xto;
-  int	  xsteps, xidx;
-  char    ch;
-
-  while (( ch = getopt(argc,argv,"v")) != -1 ) {
-    if ( ch == 'v' ) { verbose = 1; }
-  }
-  
-  printf("x: from to steps> ");
-  scanf( "%lf %lf %d", &xfrom, &xto, &xsteps );
-  
-  for( xidx=0; xidx<=xsteps; xidx++ ) {
-    x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
-    if ((y = func(x)) == 0) {
-      printf( "Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
-	      0, x, func(x*(1-EPSILON)), y, func(x*(1+EPSILON)) );
-    } else {
-      if (verbose) {
-	printf( "%03d> %20.14lf\n", 0, x );
-      }
-      iterate( x, 0 );
-    }
-  }
-
-  return 0;
-}
-</pre>
-</code>
-				</figure>
-
-
-				<h2>xmp03c.c</h2>
-				<figure>
-					<code contenteditable="true">
-<pre class="prettyprint linenums lang-c++ " contenteditable="true">
-#include &lt;stdio.h>
-#include &lt;stdlib.h>
-#include &lt;unistd.h>
-#include &lt;math.h>
-
-int verbose=0;
-
-double func( double x )
-{
-	return sin( x ) - 0.2;
-}
-
-void iterate( double x0, double x1, double y0, double y1, int n )
-{
-	double  x, y;
-
-	x = (x0 * y1 - x1 * y0) / (y1 - y0);
-	y = func(x);
-	if (n++ > 100) {
-		printf( "Too Many Recursions\n" );
-	return;
-}
-
-	if (verbose) {
-		printf( "%03d> %20.14lf %20.14lf %20.14lf %12.2le\n", n, x0, x, x1, y );
+	y0 = func(x0);
+	x = x0 + (delta = -y0 / diff(x0));
+	if (n++ > 100)
+	{
+		printf("Too Many Recursions\n");
+		return;
 	}
-
-	if (y == 0) {
-		printf( "Ans(%03d): %20.14lf %16.6le\n", n, x, y );
-	} else if (fabs(x-x0) < fabs(x) * 1e-10) {
-		printf( "Ans(%03d): %20.14lf %16.6le\n", n, x, y );
-	} else if (fabs(x-x1) < fabs(x) * 1e-10) {
-		printf( "Ans(%03d): %20.14lf %16.6le\n", n, x, y );
-	} else if (y0 * y < 0) {
-		iterate( x0, x, y0, y, n );
-	} else {
-		iterate( x, x1, y, y1, n );
+	if (verbose)
+	{
+		printf("%03d> %20.14lf\n", n, x);
+	}
+	if ((y = func(x)) == 0)
+	{
+		printf("Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
+		n, x, func(x * (1 - EPSILON)), y, func(x * (1 + EPSILON))
+	);
+	}
+	else if (fabs(delta) &lt; fabs(x) * EPSILON)
+	{
+		printf(
+			"Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n",
+			n, x, func(x * (1 - EPSILON)), y, func(x * (1 + EPSILON))
+		);
+	}
+	else
+	{
+		iterate(x, n);
 	}
 }
 
-int main (int argc, char **argv) {
-	double x0, x, y0, y;
+int main(int argc, char **argv)
+{
+	double x, y;
 	double xfrom, xto;
 	int xsteps, xidx;
 	char ch;
-	
-	while (( ch = getopt(argc,argv,"v")) != -1 ) {
-		if ( ch == 'v' ) { verbose = 1; }
-	}
-	
-	printf("x: from to steps> ");
-	scanf( "%lf %lf %d", &xfrom, &xto, &xsteps );
 
-	x0 = xfrom;
-	if ((y0 = func(x0)) == 0) {
-		printf( "Ans(%03d): %20.14lf %16.6le\n", 0, x0, y0 );
-	}
-
-	for( xidx=1; xidx<=xsteps; xidx++ ) {
-		x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
-		y = func(x);
-		if (y == 0) {
-		printf( "Ans(%03d): %20.14lf %16.6le\n", 0, x, y );
-		} else if (y0 * y < 0) {
-		iterate(x0, x, y0, y, 0);
+	while ((ch = getopt(argc, argv, "v")) != -1)
+	{
+		if (ch == 'v')
+		{
+			verbose = 1;
 		}
-		x0 = x; y0 = y;
+	}
+
+	printf("x: from to steps> ");
+	scanf("%lf %lf %d", &xfrom, &xto, &xsteps);
+
+	for (xidx = 0; xidx &lt;= xsteps; xidx++)
+	{
+		x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
+		if ((y = func(x)) == 0)
+		{
+			printf(
+				"Ans(%03d): %20.14lf %16.5le %12.5le %12.5le\n", 
+				0, x, func(x * (1 - EPSILON)), y, func(x * (1 + EPSILON))
+			);
+		}
+		else
+		{
+			if (verbose)
+			{
+				printf("%03d> %20.14lf\n", 0, x);
+			}
+			iterate(x, 0);
+		}
 	}
 
 	return 0;
@@ -311,7 +265,7 @@ int main (int argc, char **argv) {
 			</figure>
 
 
-			<h2>xmp03c_assginment.c</h2>
+			<h2>xmp03c.c</h2>
 			<figure>
 				<code contenteditable="true">
 <pre class="prettyprint linenums lang-c++ " contenteditable="true">
@@ -320,11 +274,13 @@ int main (int argc, char **argv) {
 #include &lt;unistd.h>
 #include &lt;math.h>
 
+// 挟み撃ち法による方程式の解法
+// u1910098 植松 悠杜
 int verbose = 0;
 
 double func(double x)
 {
-	return log(x) - 2.0;
+	return sin(x) - 0.2;
 }
 
 void iterate(double x0, double x1, double y0, double y1, int n)
@@ -348,15 +304,15 @@ void iterate(double x0, double x1, double y0, double y1, int n)
 	{
 		printf("Ans(%03d): %20.14lf %16.6le\n", n, x, y);
 	}
-	else if (fabs(x - x0) < fabs(x) * 1e-10)
+	else if (fabs(x - x0) &lt; fabs(x) * 1e-10)
 	{
 		printf("Ans(%03d): %20.14lf %16.6le\n", n, x, y);
 	}
-	else if (fabs(x - x1) < fabs(x) * 1e-10)
+	else if (fabs(x - x1) &lt; fabs(x) * 1e-10)
 	{
 		printf("Ans(%03d): %20.14lf %16.6le\n", n, x, y);
 	}
-	else if (y0 * y < 0)
+	else if (y0 * y &lt; 0)
 	{
 		iterate(x0, x, y0, y, n);
 	}
@@ -390,7 +346,7 @@ int main(int argc, char **argv)
 		printf("Ans(%03d): %20.14lf %16.6le\n", 0, x0, y0);
 	}
 
-	for (xidx = 1; xidx <= xsteps; xidx++)
+	for (xidx = 1; xidx &lt;= xsteps; xidx++)
 	{
 		x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
 		y = func(x);
@@ -398,7 +354,7 @@ int main(int argc, char **argv)
 		{
 			printf("Ans(%03d): %20.14lf %16.6le\n", 0, x, y);
 		}
-		else if (y0 * y < 0)
+		else if (y0 * y &lt; 0)
 		{
 			iterate(x0, x, y0, y, 0);
 		}

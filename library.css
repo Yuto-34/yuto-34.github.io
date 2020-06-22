@@ -61,7 +61,7 @@ a:hover {
 }
 
 .nidan {
-	width: 130%;
+	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;

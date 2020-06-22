@@ -80,12 +80,12 @@ table, td, th {
 }
 
 table {
-	width: 130%;
+	width: 100%;
 }
 
 
 .content {
-	padding: 0 30px 10px 30px;
+	padding: 0 10px 10px 30px;
 	font-size: 13px;
 	line-height: 150%;
 }
@@ -180,8 +180,7 @@ div.note_harf {
 
 #main {
 	/* 横幅、左流し */
-	width: 640px;
-	float: left;
+	width: 95%;
 }
 
 #outer {
@@ -213,6 +212,10 @@ div.note_harf {
 	height: 110px;
 	clear: left;
 	text-align: center;
+}
+
+#tanni3 {
+	border-top: dotted 1px black;
 }
 
 

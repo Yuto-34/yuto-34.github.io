@@ -26,7 +26,7 @@ a:hover {
 	/*画像の幅*/
 	height: 16px;
 	/*画像の高さ*/
-	background-image: url(./another_tab.png);
+	background-image: url(./img/another_tab.png);
 	background-size: contain;
 	vertical-align: middle;
 	margin-left: 3px;

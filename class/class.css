@@ -1,0 +1,219 @@
+body {
+	/* 背景色、余白設定 */
+	background-color: #EBE9E1;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+
+li {
+	list-style: disc;
+}
+
+p {
+	font-size: 17px;
+	margin: 1em 0;
+	line-height: 150%;
+}
+
+p.scroll {
+	overflow-y: scroll;
+}
+
+img {
+	border: 0;
+}
+
+hr {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: #ccc;
+	height: 1px;
+}
+
+h1 {
+	font-size: 24px;
+	text-align: left;
+	color: #033;
+	padding: 44px 0 0 34px;
+	margin: 0;
+	font-family: メイリオ, Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+blockquote {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin: 10px;
+}
+
+h1 a {
+	font-weight: bold;
+	color: #033;
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 20px;
+	margin: 0;
+	padding: 7px 0 9px 4px;
+}
+
+h3 {
+	font-size: 20px;
+	padding: 5px 0 3px 4px;
+	margin-right: 20px;
+}
+
+h4 {
+	font-size: 20px;
+	padding-left: 4px;
+}
+
+table, td, th {
+	border: black 1px solid;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table {
+	width: 130%;
+}
+
+
+.content {
+	padding: 0 30px 10px 30px;
+	font-size: 13px;
+	line-height: 150%;
+}
+
+.title {
+	height: 35px;
+	line-height: 35px;
+	font-size: 13px;
+	padding: 0 0 0 35px;
+	margin: 0;
+	font-weight: bold;
+	color: #fff;
+	background-color: rgb(221, 41, 80);
+}
+
+.side {
+	font-size: 13px;
+	padding: 6px 0 10px 14px;
+	margin: 0;
+	background-color: #DBE6DE;
+	font-weight: bold;
+	color: #777;
+}
+
+.side a {
+	color: #036;
+	text-decoration: none;
+}
+
+.no_line_bottom {
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: none;
+	border-left: 1px solid black;
+}
+
+.no_line_top {
+	border-top: none;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.bar {
+	border-top: 1px solid #999;
+}
+
+.copy {
+	padding: 20px 0 0 0;
+}
+
+
+div.note_harf {
+	font-size: 14px;
+	width: 45%;
+	padding: 1ex 0em 1ex 1em;
+	background-color: antiquewhite;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+}
+
+.side a:hover {
+	text-decoration: underline;
+}
+
+.side ul {
+	margin: 0;
+	padding: 4px 0;
+}
+
+.side li {
+	margin: 7px 0 7px 20px;
+	list-style: disc;
+	padding: 0;
+}
+
+.new {
+	padding-left: .4em;
+	width: 90%;
+	height: 12ex;
+	border: black solid;
+	overflow-y: scroll;
+}
+
+#left {
+	float: left;
+}
+
+#main {
+	/* 横幅、左流し */
+	width: 640px;
+	float: left;
+}
+
+#outer {
+	/* 背景色、余白、フォント、ラインハイト */
+	background-color: #fff;
+	margin: 0px auto;
+	width: 960px;
+	font-size: 13px;
+	line-height: 150%;
+	padding: 0;
+	color: #222;
+}
+
+#right {
+	width: 290px;
+	color: rgb(221, 41, 80);
+	font-size: 13px;
+	float: left;
+}
+
+#header {
+	/* 高さ指定 */
+	height: 90px;
+}
+
+#footer {
+	color: #666;
+	font-size: 12px;
+	height: 110px;
+	clear: left;
+	text-align: center;
+}
+
+
+@media screen and (max-device-width: 480px) {}

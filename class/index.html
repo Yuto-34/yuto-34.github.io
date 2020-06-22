@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-162881724-2');
+	</script>
+	<link rel="stylesheet" href="./import.css" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="keywords" content="ページのキーワード1,2,3" />
+	<meta name="description" content="ページの説明" />
+	<meta name="viewport" content="width=device-width" />
+	<script
+		src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: { equationNumbers: { autoNumber: "AMS" }},
+			tex2jax: {
+				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+				processEscapes: true
+			},
+			"HTML-CSS": { matchFontHeight: false },
+			displayAlign: "left",
+			displayIndent: "2em"
+		});
+	</script>
+	<meta name="msapplication-square70x70logo" content="../favicons/site-tile-70x70.png">
+	<meta name="msapplication-square150x150logo" content="../favicons/site-tile-150x150.png">
+	<meta name="msapplication-wide310x150logo" content="../favicons/site-tile-310x150.png">
+	<meta name="msapplication-square310x310logo" content="../favicons/site-tile-310x310.png">
+	<meta name="msapplication-TileColor" content="#0078d7">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/android-chrome-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/android-chrome-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/android-chrome-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/android-chrome-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/android-chrome-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/android-chrome-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/android-chrome-152x152.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/android-chrome-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/android-chrome-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="../favicons/icon-160x160.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="24x24" href="../favicons/icon-24x24.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/icon-32x32.png">
+	<link rel="manifest" href="../favicons/manifest.json">
+	<title>電通大の授業</title>
+</head>
+
+<body>
+	<div id="outer">
+		<div id="header">
+			<h1>Classes of UEC</h1>
+		</div>
+		<div id="main">
+			<div class="content">
+				<h2 class="bar">更新情報</h2>
+				<p class="new">
+					1年次授業 <a href="./1_1.html">前期</a> 完成 (2020/4/22)
+					<br>Topicに ブックマークしとけリスト, UEC関連Twitter を追加 (2020/4/22)
+					<br><a href="./1_1.html">前期</a> 必修科目については終了。 (2020/4/21)
+					<br>1年次授業 <a href="./1_1.html">前期</a>の中身を作成(途中) (2020/4/20)
+					<br>Topic に1年次授業を追加 (2020/4/17)
+					<br>レイアウトを変更 (2020/4/17)
+					<br>Topic を追加 (2020/4/5)
+					<br>現在の履修状況(予定) を追加
+					<br>ページ開設 (2020/4/5)
+				</p>
+
+
+				<h3>Topic</h3>
+				<div class="nidan">
+					<div class="nidan_left">
+						<h4 style="font-size: 16px;">ブックマークしとけリスト</h4>
+						<dl>
+							<dt><a target="blank" class="exit" rel="noopener" href="http://www.ceuec.g-edu.uec.ac.jp/">
+									基礎教育WEB情報 </a></dt>
+							<dd> 各種ページの公式まとめサイト </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://webclass.cdel.uec.ac.jp/webclass/?acs_=b49af9f3"> webclass </a></dt>
+							<dd> 言わずもがな？ お知らせ・教材配布・課題提出等に使われる </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://joho.g-edu.uec.ac.jp/moodle3/my/"> UEC JB Moodle </a></dt>
+							<dd> コンリテ、基礎プロで使われる </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://campusweb.office.uec.ac.jp/campusweb/campussquare.do?_flowExecutionKey=_c869D0E30-C484-67A5-C5DE-41C507B4B851_k563F3891-0F13-4975-D99C-5888BEC896FA">
+									Campus Square </a></dt>
+							<dd> 履修登録等、成績開示が行われる </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="http://kyoumu.office.uec.ac.jp/kyuukou/kyuukou.html"> 休講情報 </a></dt>
+							<dd> 電通大の随時休講情報(学事休講を除く)はここにある </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://www.uec.ac.jp/campus/academic/calendar/pdf/2019/kyuugyou.pdf"> 学事休講
+								</a></dt>
+							<dd> 学事休講情報はここにある </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="http://kyoumu.office.uec.ac.jp/syllabus/2020/GakkiIchiran_31_0.html"> 2020年度
+									シラバス </a></dt>
+							<dd> 2020年度のシラバスを検索できる </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="http://kyoumu.office.uec.ac.jp/timet/"> 時間割 </a></dt>
+							<dd> 時間割のダウンロードができる </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="http://www.sugaku-ensyu.e-one.uec.ac.jp/"> 数学演習 </a></dt>
+							<dd> 数学演習の資料がいっぱいある </dd>
+							<dt><a target="blank" class="exit" rel="noopener" href="https://joho.g-edu.uec.ac.jp/joho/">
+									情報部会 </a></dt>
+							<dd> 久野さんの資料等が転がってる </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="http://www.passport.uec.ac.jp/uecpp2019/seminar2019.html"> UECパスポートセミナー </a>
+							</dt>
+							<dd> 通称パスセミ に関するお知らせ等がある<br>休講情報なども </dd>
+							<dt><a target="blank" class="exit" rel="noopener" href="https://www.lib.uec.ac.jp/"> 図書館
+								</a></dt>
+							<dd> 　</dd>
+							<dt><a target="blank" class="exit" rel="noopener" href="http://tanaka-lab.net/class/"> 化概
+								</a></dt>
+							<dd> 化学概論第二の資料(授業PDF)がゴロゴロしてる </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://portfolio.edu.uec.ac.jp/index.php"> UECfolio</a></dt>
+							<dd> 実験Aで一度使った<br>今後使用予定らしい </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://materials.g-edu.uec.ac.jp/moodle-latest/my/"> Moodle </a></dt>
+							<dd> 今後色々と使用予定らしい </dd>
+						</dl>
+					</div>
+					<div class="nidan_right">
+						<dl>
+							<h4 style="font-size: 16px;">UEC関連Twitter</h4>
+
+							<dt><a target="blank" class="exit" rel="noopener" href="https://twitter.com/uectokyo?s=20">
+									公式 </a></dt>
+							<dd> 電通大の公式アカウント<br>多岐にわたるお知らせをする </dd>
+							<dt><a target="blank" class="exit" rel="noopener" href="https://twitter.com/uec_aao?s=20">
+									教務課 </a></dt>
+							<dd> 主に授業に関してのお知らせ </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/uec_2lang?s=20">二外公式 </a></dt>
+							<dd> 第二外国語関連のお知らせ </dd>
+							<dt><a target="blank" class="exit" rel="noopener" href="https://twitter.com/ueclib?s=20">
+									図書館 </a></dt>
+							<dd> 図書館の運営等に関してのお知らせ </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/UEC_coop_sb?s=20"> 書籍・購買チーム </a></dt>
+							<dd> 生協内の書籍(教科書含む)をメインとしたお知らせ </dd>
+							<dt><a target="blank" class="exit" rel="noopener" href="https://twitter.com/ykuno?s=20"> 久野靖
+								</a></dt>
+							<dd> 煽り人だが、技術的質問には答えてくれることが多い<br>エゴサ、監視が趣味のように思える </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/kyukou_uec?s=20"> 休講情報bot </a></dt>
+							<dd> かなり正確な休講情報を教えてくれる<br>有能 </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/shokujinjp?s=20"> 食神餃子王 </a></dt>
+							<dd> 電通大生なら一度は訪れるであろう食神の垢<br>5番辛口を完食すると、お知らせをさせてくれる(安易に挑まないように) </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/uec_soudan?s=20"> 学生何でも相談室 </a></dt>
+							<dd> </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/uec_campuslife?s=20"> 学生生活支援 </a></dt>
+							<dd> </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/uecgakusei?s=20"> 学生支援センター </a></dt>
+							<dd> </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/UEC_traningroom?s=20"> トレセン情報 </a></dt>
+							<dd> </dd>
+							<dt><a target="blank" class="exit" rel="noopener"
+									href="https://twitter.com/kagakuseimeiUEC?s=20"> Ⅲ類 化生 </a></dt>
+							<dd> </dd>
+						</dl>
+					</div>
+				</div>
+
+
+
+				<h4 style="font-size: 16px;">1年次 授業について</h4>
+				<p>
+					<a href="./1_1.html">前期</a><br>
+					<s>
+						<!-- <a href="./1_2.html"> -->後期</s> (準備中)</a>
+				</p>
+				<h4 style="font-size: 16px;">1年次 資料まとめ</h4>
+				<div class="nidan">
+					<div class="note_harf">
+						<h4 style="font-size: 16px;">前期</h4>
+						<ul>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1OGPzOIdTl4TLUPq1SBV0yDXXnLLaojfg">ASE</a>
+								(Academic Spoken English)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1472mkUuR0Ax5XkFxdQtAGUnk6tmlr_Ll">AWE</a>
+								(Academic Written English)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1kwE2aUu-9fRRu-6JsnmU7zBy_oAptDyd">基礎科学実験</a>
+							</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1lNClj9KM_IQhti_55VxlnhQi_IPDc-9r">化概</a>
+								(化学概論第一)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1bo9jFnleiOS4DgVMJoBcf8OSS9D3mmb4">物概</a>
+								(物理学概論第一)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1pxe-qgi7QFodQrWHK4_zPBOjUGcJ9s6G">コミケ</a>
+								(コミュニケーション科学)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1pL4DJWbVI-ttuyPJ9EGj8B-pyM3Q4Cer">線形</a>
+								(線形代数学第一)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1W_fuc9W6zHdJfDqW4TwrpSgjZ3UruG0a">微積</a>
+								(微分積分学第一)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="http://www.sugaku-ensyu.e-one.uec.ac.jp/">数演</a> (数学演習第一)</li>
+							<!-- <li><a target="blank" class="exit" rel="noopener"  href=""></a></li> -->
+						</ul>
+					</div>
+					<div class="note_harf">
+						<h4 style="font-size: 16px;">後期</h4>
+						<ul>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1kkFtAqQkRalFKMz0Lrws2KmhOn8dKedN">力学</a>
+							</li>
+							<li>(不)<a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1KuOQjOk23o4PdCm4Pom5imFRHvA1yx-j">健康論</a>
+							</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1vKtjZqhf_XnLOPbHfqhovxcVKllGXi5P">物概第二</a>
+								(物理学概論第二)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1rHqn4MXsmdtrciEoTXGVjPZ0u9HfanMQ">線形</a>
+								(線形代数学第二)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1vkP2MAQIJGX4dBDm82UnXVfAl3MSXDsr">微積</a>
+								(微分積分学第二)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="http://www.sugaku-ensyu.e-one.uec.ac.jp/">数演</a> (数学演習第二)</li>
+							<li><a target="blank" class="exit" rel="noopener"
+									href="https://drive.google.com/open?id=1MLvb4fTRnW0MvJsggfWSKN4KgYrv2Klk">解析</a>
+								(解析学)</li>
+							<!-- <li><a target="blank" class="exit" rel="noopener"  href=""></a></li> -->
+						</ul>
+					</div>
+					<br clear="both">
+				</div>
+
+				<h4>現在の履修状況(予定)</h4>
+				<p>
+					クリックするとシラバスが開きます。
+				</p>
+				<table style="font-size: 15px;">
+					<tr>
+						<th style="width: 3%;"></th>
+						<th style="width: 17.4%;">月</th>
+						<th style="width: 17.4%;">火</th>
+						<th style="width: 17.4%;">水</th>
+						<th style="width: 17.4%;">木</th>
+						<th style="width: 17.4%;">金</th>
+					</tr>
+					<tr>
+						<th rowspan="2" style="height: 5ex;"> 1 </th>
+						<td class="no_line_bottom"> - </td>
+						<td rowspan="2"> - </td>
+						<td rowspan="2"> - </a></td>
+						<td rowspan="2"> - </td>
+						<td class="no_line_bottom"> - </td>
+					</tr>
+					<tr>
+						<td rowspan="2" style="border-top: dotted 1px black;"> <a target="blank" class="exit"
+								rel="noopener" href="./syllabus/kisodenjikigaku.pdf"> 基礎電磁気学<br> および演習 </a></td>
+						<td rowspan="2" style="border-top: dotted 1px black;"> <a target="blank" class="exit"
+								rel="noopener" href="./syllabus/kougakukisosuugaku.pdf"> 工学基礎数学<br>および演習 </a></td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 2 </th>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/neturikigaku.pdf"> 熱力学 </a>
+						</td>
+						<td> (人文科目) </a></td>
+						<td> - </td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 3 </th>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/suuchikaiseki.pdf"> 数値解析 </a>
+						</td>
+						<td>
+							<!-- <a target="blank" class="exit" rel="noopener"  href="./syllabus/"></a> --> AES</a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/hukusokansuuronn.pdf">
+								複素関数論</a> </td>
+						<td> - </td>
+						<td>
+							<!-- <a target="blank" class="exit" rel="noopener"  href="./syllabus/"></a> --> 微積第一<br>(再履)
+							</a> </td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 4 </th>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/hutugo.pdf"> 仏語第一<br>(再履)</a>
+						</td>
+						<td> 化概第一<br>(再履)
+						</td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/kisodenkikairo.pdf">
+								基礎電気回路</a> </td>
+						<td> - </td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/eigoenshu.pdf"> 英語演習</a>
+						</td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 5 </th>
+						<td> - </td>
+						<td> - </td>
+						<td> 物概第一<br>(再履) </td>
+						<td> - </td>
+						<td> - </td>
+					</tr>
+				</table>
+				<h4><a href="../index.html">Yuto のページ</a>へ</h4>
+			</div>
+		</div>
+
+
+		<div id="right">
+			<div class="title">
+				<h3>Item</h3>
+			</div>
+			<div class="side">
+				<ul>
+					<li><a target="blank" class="exit" rel="noopener" href="./jinbun/jinbun.pdf">人文2020 (PDF)</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="copy">
+				&#169; 2019 Yutoのホームページ
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

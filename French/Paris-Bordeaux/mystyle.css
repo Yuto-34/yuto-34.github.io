@@ -1,0 +1,147 @@
+body {
+	color: black;
+	margin: 0em;
+	float: center;
+	text-align: center;
+}
+.main {
+	display: grid;
+	grid-template-areas: "b c f" "d d d";
+	grid-template-columns: 10% 1fr 10%;
+	grid-template-rows: 1fr 15%;
+}
+/* header {
+	grid-area: a;
+	background-color: coral;
+	padding: 1em;
+} */
+aside {
+	grid-area: b;
+	background-color: wheat;
+	padding: 1em;
+}
+aside2 {
+	grid-area: f;
+	background-color: wheat;
+	padding: 1em;
+}
+section {
+	grid-area: c;
+	background-color:blanchedalmond;
+	color:black;
+	padding: 1em;
+}
+footer {
+	grid-area: d;
+	padding: 1em;
+	background-color: wheat;
+}
+section2 {
+	grid-area: a;
+	background-color: coral;
+}
+div.sotowaku3 {
+	float: center;
+	width:100%;
+	background-color: #F5F5F5;
+	margin:5% ;
+}
+div.a {
+	text-align: center;
+	float: left;
+	width: 40%;
+	background-color: #F5F5F5;
+	margin:0;
+	padding: 10px;
+	border: solid 1px #DFDFDF;
+}
+div.b {
+	text-align: center;
+	float: left;
+	width: 40%;
+	background-color: #F5F5F5;
+	margin: 0;
+	border: solid 1px #DFDFDF;
+	padding: 10px;
+}
+a.right {
+	text-align: right;
+	float: right;
+	border: 0ch;
+}
+a.center {
+	text-align: center;
+	float: center;
+}
+a.left {
+	text-align: left;
+	float: left;
+}
+h1 {
+	padding-left: 1em;
+	height: 2em;
+	vertical-align: middle;
+}
+h2.a1 {
+	padding-left: 1em;
+	background-color: rgb(255, 134, 154);
+}
+h2.a2 {
+	padding-left: 1em;
+	background-color: darkorange;
+}
+h3.a1 {
+	padding-left: 2em;
+	margin-right: 6%;
+	background-color: rgb(255, 178, 152);
+}
+h3.a2 {
+	padding-left: 2em;
+	margin-right: 6%;
+	background-color: rgb(253, 177, 84);
+}
+h4.a2 {
+	padding-left: 3em;
+	margin-right: 7%;
+	background-color: rgb(253, 177, 84);
+}
+table.a1 {
+	text-align: left;
+}
+table {
+	margin-left: 5%;
+	margin-right: 2%;
+	border: 1pt black solid;
+	text-align: center;
+	overflow-x: scroll;
+}
+td, th {
+	margin-top: auto;
+	margin-bottom: 10%;
+	margin-right: 5%;
+	margin-left: 5%;
+	padding: 2px 8px;
+	border: 1pt black solid;
+	text-align: center;
+}
+td.a1 {
+	text-align: center;
+}
+p.a1 {
+	text-align: left;
+}
+b.a1 {
+	font-size: large;
+}
+.back_lightorange {
+	background-color: rgb(253, 177, 84);
+}
+.under_lightorange {
+	background: linear-gradient(transparent 0%, rgb(253, 177, 84));
+}
+.under_orange {
+	background: linear-gradient(transparent 70%, darkorange 100%);
+}
+.under_pink1 {
+	background: linear-gradient(transparent 60%, rgb(255, 178, 152));
+}

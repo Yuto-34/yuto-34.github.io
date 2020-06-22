@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-162881724-2');
+	</script>
+	<!-- jQueryの指定 -->
+	<script src="jquery-3.2.1.min.js"></script>
+
+	<!-- 共通部分の読み込み -->
+	<!-- <script type="text/javascript">
+		$(function () {
+			// header.htmlをid属性「header」という名前で読み込むように指定する
+			$("#header").load("header.html");
+		});
+	</script> -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<!-- ＃リンクのスムーズスクロール -->
+	<script>
+		$(function () {
+			// #で始まるリンクをクリックしたら実行されます
+			$('a[href^="#"]').click(function () {
+				// スクロールの速度
+				var speed = 400; // ミリ秒で記述
+				var href = $(this).attr("href");
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				var position = target.offset().top;
+				$('body,html').animate({ scrollTop: position }, speed, 'swing');
+				return false;
+			});
+		});
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width" />
+	<script
+		src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: { equationNumbers: { autoNumber: "AMS" }},
+			tex2jax: {
+				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+				processEscapes: true
+			},
+			"HTML-CSS": { matchFontHeight: false },
+			displayAlign: "left",
+			displayIndent: "2em"
+		});
+	</script>
+	<meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
+	<meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
+	<meta name="msapplication-wide310x150logo" content="./favicons/site-tile-310x150.png">
+	<meta name="msapplication-square310x310logo" content="./favicons/site-tile-310x310.png">
+	<meta name="msapplication-TileColor" content="#0078d7">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="./favicons/android-chrome-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="./favicons/android-chrome-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="./favicons/android-chrome-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/android-chrome-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="./favicons/android-chrome-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="./favicons/android-chrome-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="./favicons/android-chrome-152x152.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./favicons/android-chrome-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="./favicons/android-chrome-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="./favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="./favicons/icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="./favicons/icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="./favicons/icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="./favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="./favicons/icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="./favicons/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="./favicons/icon-160x160.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="./favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="./favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./favicons/icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="./favicons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="./favicons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="24x24" href="./favicons/icon-24x24.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/icon-32x32.png">
+	<link rel="manifest" href="./favicons/manifest.json">
+	<!-- ###################################################
+	<script type="text/javascript" src="./JS/index.js"></script>
+				ここからはページ毎に変更する
+	################################################### -->
+	<link rel="stylesheet" type="text/css" href="./import.css" />
+	<meta name="keywords"
+		content="Yuto, Yuto's Page, フランス語, French, 主語人称代名詞 , etre , être , 不定冠詞 , 名詞 , 指示代名詞 , ce , 形容詞 , 性数 , 性数一致 , er動詞 , ir動詞 , 定冠詞 , 疑問文 , 疑問文の作り方 , 否定疑問文 , 指示形容詞 , avoir , 近接未来 , 否定文 , aller , 疑問代名詞 ,  ,  ,  ,  , " />
+	<meta name="description" content="フランス語についてゆる～く書いてます。更新速度もゆっくり目です。" />
+	<title>Yuto's French</title>
+</head>
+
+<body>
+
+	<div class="header" id="i0">
+		<h1>
+			Yutoの覚え書き
+		</h1>
+	</div>
+
+	<div><!-- はじめに -->
+		<h2 class="a1"> はじめに </h2>
+		<p>
+			このページではフランス語の文法事項を網羅していきます。 順番は著者が好きな(学びやすいと思った)順に並べています、ご了承ください。
+		</p>
+	</div>
+
+	<div><!-- 目次 -->
+		<h2 class="a1"> 目次 </h2>
+		<div class="contents_list">
+			<a href="#i1">1. 主語人称代名詞( ≒ I, you, he, she )</a><br>
+			<a href="#i2">2. 動詞「&ecirc;tre」( ≒ be )</a><br>
+			<a href="#i3">3. 名詞と不定冠詞 ( ≒ a,an )</a><br>
+			<a href="#i4">4. 指示代名詞 ce ( ≒ it )</a><br>
+			<a href="#i5">5. 形容詞の性・数一致と位置</a><br>
+			<a href="#i6">6. 規則動詞 -er</a><br>
+			<a href="#i7">7. 定冠詞</a><br>
+			<a href="#i8">8. 疑問文</a><br>
+			<a href="#i9">9. 指示形容詞 ce</a><br>
+			<a href="#i10">10. 動詞「avoir」</a><br>
+			<a href="#i11">11. 否定文</a><br>
+			<a href="#i12">12. 動詞「aller」</a><br>
+			<a href="#i13">13. 近接未来</a><br>
+			<a href="#i14">14. 疑問代名詞 que, qui</a><br>
+			<a href="#i15">15. 所有形容詞</a><br>
+			<!-- <a href="#i16">16. </a><br> -->
+			<!-- <a href="#i17">17. </a><br> -->
+			<!-- <a href="#i18">18. </a><br> -->
+			<!-- <a href="#i19">19. </a><br> -->
+			<!-- <a href="#i20">20. </a><br> -->
+			<!-- <a href="#i21">21. </a><br> -->
+			<!-- <a href="#i22">22. </a><br> -->
+			<!-- <a href="#i23">23. </a><br> -->
+			<!-- <a href="#i24">24. </a><br> -->
+			<!-- <a href="#i25">25. </a><br> -->
+			<!-- <a href="#i26">26. </a><br> -->
+			<!-- <a href="#i27">27. </a><br> -->
+		</div>
+
+	</div>
+
+	<div id="i1">
+		<h2 class="a2">1. 主語人称代名( ≒ I, you, he, she )
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+
+		<p>
+			主語人称代名詞とはなんぞや？<br> きっと多くの人がそう感じたでしょう。 あるいはそうでない人もいるかもしれません。
+			<br> 主語人称代名詞とは、まあ簡単に言ってしまえば
+			<span class="under_orange">ただの主語</span>です。<br> 分解して考えてみましょう。
+			<br>
+		</p>
+		<p>
+			<b>主語</b> = そのまんまです(笑)<br>
+			<b>人称</b> = 英語でも使った、一人称、二人称、三人称単数とかの人称です。 すなわち自分との関係性ですね。
+			<br>
+			<b>代名詞</b> = 言ってしまえばそのまんまです。固有名詞とか普通名詞でない、"君"や、"彼・彼女"といった名詞です。
+		</p>
+		<p>
+			この3つを横に並べたせいで難しいように思えますね(笑)<br> 繰り返しますが、要するに主語人称代名詞とはただの主語なんです。
+			<br> 英語の <span class="under_pink1"> I, you, he, she </span>にに相当するものと考えてください。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption">主語人称代名詞</p>
+				<table>
+					<tr>
+						<td></td>
+						<td style="background-color: lightcyan;" colspan="2">単数</td>
+						<td style="background-color:rgb(255, 204, 224);" colspan="2">複数</td>
+					</tr>
+					<tr>
+						<td>一人称</td>
+						<td style="background-color: lightcyan;">私は</td>
+						<th style="background-color: lightcyan;">je</th>
+						<td style="background-color:rgb(255, 204, 224);">私たちは</td>
+						<th style="background-color:rgb(255, 204, 224);">nous</th>
+					</tr>
+					<tr>
+						<td>二人称</td>
+						<td style="background-color: lightcyan;">君は</td>
+						<th style="background-color: lightcyan;">tu</th>
+						<td style="background-color:rgb(255, 204, 224);">君たちは</td>
+						<th style="background-color:rgb(255, 204, 224);">vous</th>
+					</tr>
+					<tr>
+						<td>三人称(男)</td>
+						<td style="background-color: lightcyan;">彼は</td>
+						<th style="background-color: lightcyan;">il</th>
+						<td style="background-color:rgb(255, 204, 224);">彼らは</td>
+						<th style="background-color:rgb(255, 204, 224);">ils</th>
+					</tr>
+					<tr>
+						<td>三人称(女)</td>
+						<td style="background-color: lightcyan;">彼女は</td>
+						<th style="background-color: lightcyan;">elle</th>
+						<td style="background-color:rgb(255, 204, 224);">彼女たちは</td>
+						<th style="background-color:rgb(255, 204, 224);">elles</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="note">
+			<h4>注意点</h4>
+			<p>
+				tu は相手と親しい関係にある場合にのみ用いる。<br> それ以外の場合に用いると失礼に当たるので、通常 vous を用いる。
+			</p>
+		</div>
+	</div>
+
+	<div id="i2">
+		<h2 class="a2">2. 動詞「&ecirc;tre」( ≒ be )
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			フランス語の動詞は、<span class="under_orange">"主語の人称"</span>と<span class="under_orange">"数"</span>に応じて活用変化します。<br>
+			英語と同様に規則変化、不規則変化をする動詞があります。
+		</p>
+		<p>
+			今回学習する &ecirc;tre ( ≒ be )は、不規則変化をする動詞です。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption">&ecirc;tre</p>
+				<table>
+					<tr>
+						<td></td>
+						<td>単数</td>
+						<td></td>
+						<td>複数</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>一人称</td>
+						<th>je suis</th>
+						<td>= I am</td>
+						<th>nous sommes</th>
+						<td>= we are</td>
+					</tr>
+					<tr>
+						<td>二人称</td>
+						<th>tu es</th>
+						<td>= you are</td>
+						<th>vous &ecirc;tes</th>
+						<td>= you are</td>
+					</tr>
+					<tr>
+						<td>三人称(男)</td>
+						<th>il est</th>
+						<td>= he is</td>
+						<th>ils sont</th>
+						<td>= they are</td>
+					</tr>
+					<tr>
+						<td>三人称(女)</td>
+						<th>elle est</th>
+						<td>= she is</td>
+						<th>elles sont</th>
+						<td>= they are</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<p>
+			英語とは異なり、三人称男女でも動詞が分かれます。<br> これは今後とても重要になるので、全力で丁寧に覚えましょう。
+		</p>
+	</div>
+
+	<div id="i3">
+		<h2 class="a2">3. 名詞と不定冠詞 ( ≒ a,an )
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			名詞は大きく以下の2種類あります。
+		</p>
+		<ul>
+			<li>男性名詞
+			<li>女性名詞
+		</ul>
+		<p>
+			また、それぞれに複数の形があり、語尾にs(無音)をつけます。
+		</p>
+		<p>
+			それに伴って、不定冠詞にも活用が起きます(aをanに変えるようなもの)。<br> ただし、英語とは異なり発音に変化は起きません。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption">不定冠詞</p>
+				<table>
+					<tr>
+						<td></td>
+						<td>男性</td>
+						<td>女性</td>
+					</tr>
+					<tr>
+						<td>単数</td>
+						<th>un</th>
+						<th>une</th>
+					</tr>
+					<tr>
+						<td>複数</td>
+						<th colspan="2">des</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<p>
+			例
+		</p>
+		<ul>
+			<li><b>un</b> crayon</li>
+			<li><b>des</b> crayons</li>
+			<li><b>une</b> maison</li>
+			<li><b>des</b> maisons</li>
+		</ul>
+	</div>
+
+	<div id="i4">
+		<h2 class="a2">4. 指示代名詞 ce ( ≒ it )
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			ただの代名詞。性・数に関わりなく用いられる。<br>
+			<span class="under_orange"> 単数の名詞</span>や<span class="under_orange">形容詞</span>を指して使うときは、<span
+				class="under_orange">C'est(Ce + est)</span>となり、<span class="under_pink1">複数の名詞</span>を指すときは、<span
+				class="under_pink1">Ce sont</span>となる。
+		</p>
+		<p>
+			例
+		</p>
+		<ul>
+			<li><b>C'</b>est un crayon.<br> それは鉛筆です。(男性単数名詞をとる)
+			<li><b>C'</b>est une maison.<br> それは家です。(女性単数名詞をとる)
+			<li><b>Ce</b> sont des cahiers.<br> それはいくつかのノートです。(男性だが複数名詞をとる)
+			<li><b>C'</b>est petit.<br> それは小さいです。(形容詞をとる)
+		</ul>
+	</div>
+
+	<div id="i5">
+		<h2 class="a2">5. 形容詞の性・数一致と位置
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			形容詞はそれがかかる名刺・代名詞の性・数に一致します。 原則として女性系は男性系に-eが付きます。 また、複数形の場合は-sがつきます。 形容詞の位置は原則として名詞の後ろですが、
+			petit・joliのように
+			<span class="under_orange">日常的によく使われる、短い名詞</span>の場合は、名詞の前につきます。
+		</p>
+		<p>
+			例
+		</p>
+		<ul>
+			<li>C' est( Ce + est ) un dictionnaire japonais.</li>
+			<li>C' est( Ce + est ) une voiture japonais<b><i>e</i></b>.<br> お気づきかもしれませんが、voiture は女性名詞です。"車"という名詞です。</li>
+			<li>Ce sont des dictionnaire japonais.</li>
+			<li>Ce sont des voitures japonais<b><i>es</i></b>.</li>
+		</ul>
+		<p>
+			ここまでは形容詞の基本的な用法です。
+		</p>
+		<ul>
+			<li>C' est( Ce + est ) un grand dictionnaire.
+			<li>C' est( Ce + est ) une petit<b><i>e</i></b> voiture.</li>
+			<li>Ce sont des petit<b><i>s</i></b> dictionnaire.</li>
+			<li>Ce sont des grand<b><i>es</i></b> voitures.</li>
+		</ul>
+		<p>
+			例外の形容詞はこのように扱います。
+		</p>
+	</div>
+
+	<div id="i6">
+		<h2 class="a2">6. 規則動詞 -er
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			語尾が -er で終わる動詞は規則的な活用変化をします。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption"> 一般系 &lt;<i>-er </i>&gt;</p>
+				<table>
+					<tr>
+						<td>je</td>
+						<th>-e</th>
+						<td>nous</td>
+						<th>-ons</th>
+					</tr>
+					<tr>
+						<td>tu</td>
+						<th>-es</th>
+						<td>vous</td>
+						<th>-ez</th>
+					</tr>
+					<tr>
+						<td>il/elle</td>
+						<th>-e</th>
+						<td>ils/elles</td>
+						<th>-ent</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="table">
+			<div class="inner">
+				<p class="caption"><span style="font-weight: lighter;"> chant</span>er 歌う</p>
+				<table>
+					<tr>
+						<td>je</td>
+						<td>chant<b><i>e</i></b></td>
+						<td>nous</td>
+						<td>chant<b><i>ons</i></b></td>
+					</tr>
+					<tr>
+						<td>tu</td>
+						<td>chant<b><i>es</i></b></td>
+						<td>vous</td>
+						<td>chant<b><i>ez</i></b></td>
+					</tr>
+					<tr>
+						<td>il/elle</td>
+						<td>chant<b><i>e</i></b></td>
+						<td>ils/elles</td>
+						<td>chant<b><i>ent</i></b></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<p>
+			つべこべ言わず覚えてください。<br> この他にも、habiter : 住む, parler : 話す, chercher : 捜す, aimer : 好き などがあります。
+		</p>
+		<p>
+			また、habiterにおいて"h"は発音されず、リエゾンやエリズィヨンをします。
+		</p>
+	</div>
+	<!-- リエゾン、エリズィヨンの説明 -->
+
+	<div id="i7">
+		<h2 class="a2">7. 定冠詞
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			定冠詞は英語で言う"the"に相当するものです。<br>
+			<a href="#i3">不定冠詞</a>と同様に男性形・女性系・複数形があります。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption">定冠詞</p>
+				<table>
+					<tr>
+						<td></td>
+						<td>男性</td>
+						<td>女性</td>
+					</tr>
+					<tr>
+						<td>単数</td>
+						<th>le</th>
+						<th>la</th>
+					</tr>
+					<tr>
+						<td>複数</td>
+						<th colspan="2">les</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="table">
+			<div class="inner">
+				<p class="caption"> 定冠詞を用いた単語の例 </p>
+				<table>
+					<tr>
+						<th>la rue</th>
+						<td>通り</td>
+						<th>la place</th>
+						<td>広場</td>
+						<th>le pont</th>
+						<td>橋</td>
+					</tr>
+					<tr>
+						<th>la post</th>
+						<td>郵便局</td>
+						<th>le commissariat</th>
+						<td>警察署</td>
+						<th>l'hotel de ville</th>
+						<td>市役所</td>
+					</tr>
+					<tr>
+						<th>le métro</th>
+						<td>地下鉄</td>
+						<th>la station de métro</th>
+						<td>地下鉄の駅</td>
+						<th>le jardin</th>
+						<td>公園</td>
+					</tr>
+					<tr>
+						<th>le musée</th>
+						<td>美術館</td>
+						<th>l'église</th>
+						<td>教会</td>
+						<td colspan="2"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div id="i8">
+		<h2 class="a2">8. 疑問文
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			疑問文の作り方は3つあります。
+		</p>
+		<ol>
+			<li> 平叙文のまま語尾に"?"をつける。</li>
+			<li> 文頭に"Est-ce que"をつける。</li>
+			<li> 主語と動詞を倒置しハイフンで結ぶ。</li>
+		</ol>
+		<p>
+			例<br> Vous parlez fran&ccedil;ais.について考える
+		</p>
+		<ol>
+			<li> Vous parlez fran&ccedil;ais <b><i>?</i></b></li>
+			<li> <b><i>Est-ce que</i></b> vous parlez fran&ccedil;ais ?</li>
+			<li> <b><i>Parlez-vous</i></b> fran&ccedil;ais ?</li>
+		</ol>
+	</div>
+
+	<div id="i9">
+		<h2 class="a2">9. 指示形容詞 ce
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			指示形容詞 ce とは、「あの、この、その」を表す形容詞です。英語の this, that に当たるものと考えてください。
+		</p>
+		<p>
+			指示形容詞も、相変わらず、かかる名詞によって形が変化します。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption">指示形容詞</p>
+				<table>
+					<tr>
+						<td></td>
+						<td>男性</td>
+						<td>女性</td>
+					</tr>
+					<tr>
+						<td>単数</td>
+						<th>ce</th>
+						<th>cette</th>
+					</tr>
+					<tr>
+						<td>複数</td>
+						<th colspan="2">ces</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<p>
+			例
+		</p>
+		<ul>
+			<li><b>ce</b> stylo</li>
+			<li><b>cette</b> voiture</li>
+			<li><b>ces</b> cahiers</li>
+			<li style="list-style: none;"> ※stylo は男性名詞でペンの意 </li>
+		</ul>
+		<div class="note">
+			<h4>補注</h4>
+			<p>
+				<b>母音</b>または無音の<b>h</b>で始まる男性名詞の前で、ce は cet　となる。
+			</p>
+			<p>
+				例
+				<ul>
+					<li style="list-style: none;">ce &eacute;tudiant → <b>cet</b> &eacute;tudiant</li>
+					<li style="list-style: none;">※&eacute;tudiant = student(男性名詞)</li>
+				</ul>
+
+			</p>
+		</div>
+	</div>
+
+	<div id="i10">
+		<h2 class="a2">10. 動詞「avoir」
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			avoir は、重要な不規則変化をする動詞の一つで、「持つ」という意味です。
+			後の複合過去等の文法で多用します。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption">avoir <span style="font-weight: lighter;"> 持つ(=have)</span></p>
+				<table>
+					<tr>
+						<th>j' (je)</th>
+						<th>ai</th>
+						<td>nous</td>
+						<th>avons</th>
+					</tr>
+					<tr>
+						<td>tu</td>
+						<th>as</th>
+						<td>vous</td>
+						<th>avez</th>
+					</tr>
+					<tr>
+						<td>il/elle</td>
+						<th>a</th>
+						<td>ils/elles</td>
+						<th>ont</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<p>
+			例
+		</p>
+		<ul>
+			<li>J'<b>ai</b> un fr&eacute;re.</li>
+			<li>Tu <b>as</b> une voiture.</li>
+			<li>Il <b>a</b> un stylo.</li>
+		</ul>
+	</div>
+
+	<div id="i11">
+		<h2 class="a2">
+			11. 否定文<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			否定文の作り方は簡単です。動詞を 'ne' と 'pas' で挟むだけです。
+		</p>
+		<p>
+			難しく考えず、例を見てみましょう。
+		</p>
+		<ul>
+			<li> Je <b>ne</b> suis <b>pas</b> chinois. </li>
+			<li> Je <b>n'</b>ai <b>pas</b> un fr&eacute;re. </li>
+			<li> Ce <b>n'</b>est <b>pas</b> un hôtel. </li>
+			<li style="list-style: none;">※ chinois : 中国人</li>
+		</ul>
+
+		<div class="note">
+			<p>
+				否定文で、直接目的語の前に置かれた不定冠詞、部分冠詞は de になります。
+			</p>
+			<p>
+				例
+			</p>
+			<p>
+				J'ai un stylo. → Je n'ai pas <b>un</b> stylo. → Je n'ai pas <b>de</b> stylo.
+			</p>
+			※ 直接目的語とは、動詞の動作対象のこと。<br>
+			　 SVOにおいてOに当たるもの
+		</div>
+		<p>
+			否定疑問文も作ることができます。倒置するときは、neと動詞を一つと見て平叙文と同じように疑問分を作ります。
+		</p>
+		<p>
+			例
+		</p>
+		<ul>
+			<li> Vous ne &ecirc;tes pas chinois ? </li>
+			<li> N'avez-vous pas un fr&eacute;re ? </li>
+			<li> N'est-ce pas un hôtel ? </li>
+		</ul>
+	</div>
+
+	<div id="i12">
+		<h2 class="a2">12. 動詞「aller」
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			こいつも重要な不規則変化動詞の一つです。
+			心してかかってください。
+			後の近接未来という文法で使います。
+			単体だと「行く」という意を持ちます。
+		</p>
+		<div class="table">
+			<div class="inner">
+				<p class="caption">aller <span style="font-weight: lighter;"> 行く(=go) </span> </p>
+				<table>
+					<tr>
+						<td> je </td>
+						<th>vais</th>
+						<td>nous</td>
+						<th>allons</th>
+					</tr>
+					<tr>
+						<td>tu</td>
+						<th>vas</th>
+						<td>vous</td>
+						<th>allez</th>
+					</tr>
+					<tr>
+						<td>il/elle</td>
+						<th>va</th>
+						<td>ils/elles</td>
+						<th>vont</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<p>
+			例
+		</p>
+		<ul>
+			<li> Je <b>vais</b> à Bordeaux. </li>
+			<li> Ils <b>vont</b> à Tokyo. </li>
+			<li> Elle ne <b>va</b> pas New York. </li>
+		</ul>
+	</div>
+
+	<div id="i13">
+		<h2 class="a2">13. 近接未来<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			近接未来というのは、英語で言う "be goiing to" にあたるものです。「～しようとする」「～するつもりだ」という近い未来を表します。また、近接未来では、実現がほぼ確実である近い未来を表現できます。
+		</p>
+		<p>
+			では用法を見てみましょう。
+		</p>
+		<p>
+			&emsp;&emsp;<strong>主語 + aller + 不定詞(動詞の原形)</strong>
+		</p>
+		<p>
+			上記の形で近接未来を表します。<br>
+			難しいことは兎に角、具体例を見てみましょう。
+		</p>
+		<p>
+			例
+		</p>
+		<ul>
+			<li> Je <b>vais visiter</b> à Bordeaux. </li>
+			<li> Vous <b>allez voyager</b> Paris. </li>
+			<li style="list-style: none;">※ voyager : 旅行する</li>
+			<li> Ils <b>vont prendre</b> TGB. </li>
+			<li style="list-style: none;">※ prendre : (乗り物に)乗る </li>
+			<li style="list-style: none;">※ TGB : 超高速列車 </li>
+		</ul>
+	</div>
+
+	<div id="i14">
+		<h2 class="a2">14. 疑問代名詞 que, qui
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			この章は多少重いかと思います。覚悟しろ
+		</p>
+		<p>
+			疑問代名詞は "que" と "qui" の二つあります。
+			それぞれ、英語で言う "what" "who" にあたります。
+		</p>
+		<p>
+			疑問代名詞の用法は名前の通り疑問文を作る働きです。疑問文の作り方は、"que" と "qui" 等しく3パターンあります。形は全て、<a href="#i8">疑問文</a> 2つめに近い形になります。
+		</p>
+		<ul>
+			<li>[何が/誰が]～か？のように、疑問の対象が"主語"になるパターン</li>
+			<li>[何を/誰を]～か？のように、疑問の対象が"目的語"になるパターン</li>
+			<li>それは[何/誰]か？のように疑問の対象が"属詞"になるパターン</li>
+			<li style="list-style: none;">※属詞とは、SVCのCにあたるもの、すなわち &ecirc;tre の後ろに来るもののことです。</li>
+		</ul>
+		<p>
+			どのパターンでも、「誰」に関しての疑問文では、<span class="under_orange">文頭に "Que" </span>、「何」に関しての疑問文では、<span class="under_orange">文頭に "Qui"</span>をつけます。
+		</p>
+		<p>
+			ではようやく形を見ていきましょう。
+		</p>
+		<h5> 疑問の対象が"主語"パターン </h5>
+		<ul>
+			<li> <b>Qu'est-ce <i>qui</i></b> ne va pas ? </li>
+			<li style="list-style: none; font-size: small;"> <b>何が</b>上手くいかないのですか？ </li>
+			<li> <b>Qui est-ce <i>qui</i></b> parle ? </li>
+			<li style="list-style: none; font-size: small;"> <b>誰が</b>話しているのですか？ </li>
+		</ul>
+		<h5> 疑問の対象が"目的語"パターン </h5>
+		<ul>
+			<li> <b>Qu'est-ce que</b> vous faites ? </li>
+			<li style="list-style: none; font-size: small;"> <b>何を</b>していますか？ </li>
+			<li> <b>Qui est-ce que</b> cous aimez ? </li>
+			<li style="list-style: none; font-size: small;"> <b>誰を</b>好きですか？ </li>
+		</ul>
+		<h5> 疑問の対象が"属詞"パターン </h5>
+		<ul>
+			<li> <b>Qu'est-ce que</b> c'est ? </li>
+			<li style="list-style: none; font-size: small;"> それは<b>何</b>ですか？ </li>
+			<li> <b>Qui</b> est-ce ? </li>
+			<li style="list-style: none; font-size: small;"> それは<b>誰</b>ですか？<br> </li>
+		</ul>
+		<div class="note">
+		<p>
+			気づいたかもしれませんが、<span class="under_orange">疑問の対象が"主語"の場合、 est-ce の後ろには問答無用で qui</span> が付きます。
+		</p>
+		<p>
+			属詞パターンのとき、Qui est-ce que c'est ? とはならないので注意
+		</p>
+		</div>
+
+		<ul class="kome">
+			<li>"que"や"qui"を文末に持ってくると、くだけた表現になります。その場合、"que"は"quoi"に変化します。</li>
+			<li> "que"や"qui"は、前置詞とともに用いることができます。 </li>
+		</ul>
+		<p>
+			恐らく暫くしたら詳細説明を入れると思います。
+		</p>
+	</div><!-- 説明不足 --><!-- faire, partirも使っちゃえ -->
+
+	<div id="i15">
+		<h2  class="a2">15. 所有形容詞
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+		<p>
+			所有形容詞とは、そのまま所有(所属)を表す時に用いる形容詞です。英語で言う、my, your, him, her, our, their にあたります。英語の場合、所有形容詞の形は所有者のみに依存します。しかしフランス語では、所有者 + 所有物の性数に依存します。
+		</p>
+	</div>
+
+	<!-- <div id="i16">
+		<h2  class="a2">16. 所有形容詞
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i17">
+		<h2  class="a2">17. 疑問形容詞
+			<br>
+			
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i18">
+		<h2  class="a2">18. 人称代名詞の強勢形
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i19">
+		<h2  class="a2">19. 指示代名詞celui
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i20">
+		<h2  class="a2">20. il y a~の表現
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i21">
+		<h2  class="a2">
+			21. je voudrais~の表現
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i22">
+		<h2 class="a2">
+			<br><a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i23">
+		<h2 class="a2">
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i24">
+		<h2 class="a2">
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<!-- <div id="i25">
+		<h2 class="a2">
+			<br>
+			<a class="top" href="#i0">top</a>
+		</h2>
+
+	</div> -->
+
+	<div class="footer">
+		<div style="text-align: center; padding: 1ex 0em;">
+			<a href="../index.html">Yuto's page</a>
+		</div>
+		<div style="text-align: center;">
+			<a target="blank" class="exit" rel="noopener" href="./V_list.html">動詞リスト</a>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

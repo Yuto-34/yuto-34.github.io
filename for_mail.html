@@ -217,14 +217,10 @@
 				<td>
 					<input
 						type="text"
-						pattern="\d*"
-						oncopy="return false"
-						onpaste="return false"
-						style="ime-mode:disabled"
-						maxlength="7"
+						maxlength="8"
 						id="your_address"
 						value=''
-						placeholder="例) 1910001"
+						placeholder="例) a1910001"
 						required
 					>
 				</td>
@@ -248,11 +244,8 @@
 			</tr>
 			<tr>
 				<td>
-					<select
-						name='howmuch'
-						id="howmuch"
-					>
-						<option value="error">提出する授業回を選択</option>
+					<select id="howmuch">
+						<option>提出する授業回を選択</option>
 						<option value="07">7</option>
 						<option value="08">8</option>
 						<option value="09">9</option>
@@ -293,7 +286,6 @@
 				</td>
 			</tr>
 		</table>
-		<p style="margin:0 5px;"> ※学籍番号に対してエラーメッセージが表示されることがありますが，無視してかまいません． </p>
 	</form>
 	<script type="text/javascript">
 
@@ -316,14 +308,10 @@
 				<td>
 					<input
 						type="text"
-						pattern="\d*"
-						oncopy="return false"
-						onpaste="return false"
-						style="ime-mode:disabled"
-						maxlength="7"
+						maxlength="8"
 						id="your_address2"
 						value=''
-						placeholder="例) 1910001"
+						placeholder="例) a1910001"
 						required
 					>
 				</td>
@@ -347,10 +335,7 @@
 			</tr>
 			<tr>
 				<td>
-					<select
-						name='howmuch2'
-						id="howmuch2"
-					>
+					<select id="howmuch2">
 						<option value="error">提出する授業回を選択</option>
 						<option value="06/29">7</option>
 						<option value="07/06">8</option>

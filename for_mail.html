@@ -131,7 +131,8 @@
 				width: 100%;
 				margin: 0 1%;
 			}
-			*{
+
+			* {
 				font-size: x-large;
 			}
 
@@ -165,7 +166,8 @@
 				width: 100%;
 				margin: 0 1%;
 			}
-			*{
+
+			* {
 				font-size: xx-large;
 			}
 
@@ -214,9 +216,11 @@
 			<tr>
 				<td>
 					<input
-						type="tell"
-						style="ime-mode:disabled;"
-						pattern="^[0-9]"
+						type="text"
+						pattern="\d*"
+						oncopy="return false"
+						onpaste="return false"
+						style="ime-mode:disabled"
 						maxlength="7"
 						id="your_address"
 						value=''
@@ -289,7 +293,7 @@
 				</td>
 			</tr>
 		</table>
-
+		<p style="margin:0 5px;"> ※学籍番号に対してエラーメッセージが表示されることがありますが，無視してかまいません． </p>
 	</form>
 	<script type="text/javascript">
 
@@ -311,9 +315,11 @@
 			<tr>
 				<td>
 					<input
-						type="tell"
-						style="ime-mode:disabled;"
-						pattern="^[0-9]"
+						type="text"
+						pattern="\d*"
+						oncopy="return false"
+						onpaste="return false"
+						style="ime-mode:disabled"
 						maxlength="7"
 						id="your_address2"
 						value=''

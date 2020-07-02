@@ -120,7 +120,7 @@
 			padding: 10px 10px;
 			font-size: 14px;
 			color: #FFF;
-			background-color: rgb(255, 182, 65);
+			background-color: rgb(250, 174, 52);
 			border-radius: 5px;
 			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 		}
@@ -217,6 +217,63 @@
 </head>
 
 <body>
+	<h1>
+		About your data
+	</h1>
+	<form>
+		<table>
+			<tr>
+				<td>
+					名前
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input
+					type="text"
+					id="your_name"
+					value=''
+					placeholder="例) 電通 太郎"
+					required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					学籍番号
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input
+					type="text"
+					maxlength="8"
+					id="your_address"
+					value=''
+					placeholder="例) a1910001"
+					required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					個人メールアドレス
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input
+					type="email"
+					id="bcc"
+					value=''
+					placeholder="example@example.com">
+				</td>
+			</tr>
+			<tr>
+				<td>
+
+				</td>
+			</tr>
+		</table>
+	</form>
 
 	<h1 style="color: #C00;"> 心理学 メールフォーム</h1>
 	<form
@@ -229,47 +286,11 @@
 				</td>
 			</tr>
 			<tr>
-				<td> 学籍番号 </td>
+				<td hidden> 名前 </td>
 			</tr>
 			<tr>
-				<td>
-					<input
-						type="text"
-						maxlength="8"
-						id="your_address"
-						value=''
-						placeholder="例) a1910001"
-						required
-					>
-				</td>
-			</tr>
-			<tr>
-				<td> 名前 </td>
-			</tr>
-			<tr>
-				<td>
-					<input
-						type="text"
-						id="your_name"
-						value=''
-						placeholder="例) 電通 太郎"
-						required
-					>
-				</td>
-			</tr>
-			<tr>
-				<td>
+				<td hidden>
 					個人メールにも送りたい場合(任意)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input 
-						type="email"
-						id="bcc"
-						value=''
-						placeholder="example@example.com"
-					>
 				</td>
 			</tr>
 			<tr>
@@ -280,8 +301,6 @@
 			<tr>
 				<td>
 					<select id="howmuch" required>
-						<option>選択してください</option>
-						<option value="07">7</option>
 						<option value="08">8</option>
 						<option value="09">9</option>
 						<option value="10">10</option>
@@ -301,7 +320,7 @@
 					<textarea
 						type='text'
 						value=''
-						placeholder='メール本文&#13;(コピペ推奨)'
+						placeholder='メール本文(コピペ推奨)'
 						id='txt_data'
 						maxlength="1500"
 						wrap="hard"
@@ -325,58 +344,14 @@
 
 	</script>
 
-	<h1 style="color: rgb(255, 182, 65);"> 数値解析 出席確認メール(kbk)</h1>
+	<h1 style="color: rgb(250, 174, 52);"> 数値解析 出席確認メール(kbk)</h1>
 	<form
 		id="form2"
 		action="#"
 	>
-		<table style="border: rgb(255, 182, 65) double 3px;">
+		<table style="border: rgb(250, 174, 52) double 3px;">
 			<tr>
 				<td>
-				</td>
-			</tr>
-			<tr>
-				<td> 学籍番号 </td>
-			</tr>
-			<tr>
-				<td>
-					<input
-						type="text"
-						maxlength="8"
-						id="your_address2"
-						value=''
-						placeholder="例) a1910001"
-						required
-					>
-				</td>
-			</tr>
-			<tr>
-				<td> 名前 </td>
-			</tr>
-			<tr>
-				<td>
-					<input
-						type="text"
-						id="your_name2"
-						value=''
-						placeholder="例) 電通 太郎"
-						required
-					>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					個人メールにも送りたい場合(任意)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input 
-						type="email"
-						id="bcc2"
-						value=''
-						placeholder="example@example.com"
-					>
 				</td>
 			</tr>
 			<tr>
@@ -387,8 +362,6 @@
 			<tr>
 				<td>
 					<select id="howmuch2" required>
-						<option value="error">選択してください</option>
-						<option value="06/29">7</option>
 						<option value="07/06">8</option>
 						<option value="07/13">9</option>
 						<option value="07/20">10</option>
@@ -410,32 +383,32 @@
 						id='txt_data2'
 						wrap="hard"
 						style="white-space: pre-wrap;"
-						rows="25"
+						rows="26"
 					>
-(1) 講義中の課題&#13;
-ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ&#13;
-(課題の内容に応じて，形式は異なる．)&#13;
-&#13;
-(2) 取組状況&#13;
-取り組んだ課題：演習問題○○，○○&#13;
-報告する課題：演習問題○○&#13;
-&#13;
-実行結果：&#13;
---- from here&#13;
---- to here&#13;
-&#13;
-ソース・プログラム：&#13;
---- from here&#13;
-#include &lt;stdio.h>&#13;
-&#13;
-/* 1910001 Dentsu Taro */&#13;
-&#13;
-main () {&#13;
-	printf("Hello, World!\n");&#13;
-}&#13;
---- to here&#13;
-&#13;
-考察：&#13;
+(1) 講義中の課題
+ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
+(課題の内容に応じて，形式は異なる．)
+
+(2) 取組状況
+取り組んだ課題：演習問題○○，○○
+報告する課題：演習問題○○
+
+実行結果：
+--- from here
+--- to here
+
+ソース・プログラム：
+--- from here
+#include &lt;stdio.h>
+
+/* 1910001 Dentsu Taro */
+
+main () {
+	printf("Hello, World!\n");
+}
+--- to here
+
+考察：
 ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
 					</textarea>
 				</td>
@@ -454,7 +427,7 @@ main () {&#13;
 	</form>
 	<script
 		type="text/javascript"
-		src="./for_mail.js"
+		src="./mail.js"
 	></script>
 </body>
 

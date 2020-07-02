@@ -60,6 +60,10 @@
 			font-size: large;
 		}
 
+		a {
+			color: rgb(32, 32, 228);
+		}
+
 		a:hover {
 			color: red;
 		}
@@ -196,80 +200,75 @@
 		}
 
 	</style>
-<!-- ###################################################
+	<!-- ###################################################
 	<script type="text/javascript" src="./JS/index.js"></script>
 				ここからはページ毎に変更する
 	################################################### -->
-<link
-	rel="stylesheet"
-	type="text/css"
-	href=""
-/>
-<meta
-	name="keywords"
-	content="Yuto, UEC19, Yuto's Page, UEC, 心理学A, メール, mail, テンプレート,,"
-/>
-<meta
-	name="description"
-	content="心理学A のメールフォームです．"
-/>
-<title>心理学Aメールフォーム</title>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href=""
+	/>
+	<meta
+		name="keywords"
+		content="Yuto, UEC19, Yuto's Page, UEC, 心理学A, メール, mail, テンプレート,,"
+	/>
+	<meta
+		name="description"
+		content="心理学A のメールフォームです．"
+	/>
+	<title>心理学Aメールフォーム</title>
 </head>
 
 <body>
-	<h1>
-		About your data
-	</h1>
+
+	<h1> About Your Data </h1>
 	<form>
 		<table>
 			<tr>
-				<td>
-					名前
-				</td>
+				<td> 名前 </td>
 			</tr>
 			<tr>
 				<td>
 					<input
-					type="text"
-					id="your_name"
-					value=''
-					placeholder="例) 電通 太郎"
-					required>
+						type="text"
+						id="your_name"
+						value=''
+						placeholder="例) 電通 太郎"
+						required
+					>
 				</td>
 			</tr>
 			<tr>
-				<td>
-					学籍番号
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input
-					type="text"
-					maxlength="8"
-					id="your_address"
-					value=''
-					placeholder="例) a1910001"
-					required>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					個人メールアドレス(任意)
-				</td>
+				<td> 学籍番号 </td>
 			</tr>
 			<tr>
 				<td>
 					<input
-					type="email"
-					id="bcc"
-					value=''
-					placeholder="example@example.com">
+						type="text"
+						maxlength="8"
+						id="your_address"
+						value=''
+						placeholder="例) a1910001"
+						required
+					>
+				</td>
+			</tr>
+			<tr>
+				<td> 個人メールアドレス(任意) </td>
+			</tr>
+			<tr>
+				<td>
+					<input
+						type="email"
+						id="bcc"
+						value=''
+						placeholder="example@example.com"
+					>
 				</td>
 			</tr>
 			<tr>
 				<td>
-
 				</td>
 			</tr>
 		</table>
@@ -289,18 +288,17 @@
 				<td hidden> 名前 </td>
 			</tr>
 			<tr>
-				<td hidden>
-					個人メールにも送りたい場合(任意)
-				</td>
+				<td hidden> 個人メールにも送りたい場合(任意) </td>
+			</tr>
+			<tr>
+				<td> 提出する授業回 </td>
 			</tr>
 			<tr>
 				<td>
-					提出する授業回
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<select id="howmuch" required>
+					<select
+						id="howmuch"
+						required
+					>
 						<option value="08">8</option>
 						<option value="09">9</option>
 						<option value="10">10</option>
@@ -341,6 +339,9 @@
 		</table>
 	</form>
 
+	<div style="float: right; margin-top: 1ex;">
+		<a href="./mail_na.html">数値解析のメールフォームへ</a>
+	</div>
 	<script
 		type="text/javascript"
 		src="./mail.js"

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE
+	html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xml:lang="ja"
+	lang="ja"
+>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-162881724-2');
+
+	</script>
+	<!-- jQueryの指定 -->
+	<script
+		type="text/javascript"
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+	></script>
+	<script
+		type="text/javascript"
+		src="https://code.jquery.com/jquery-3.1.0.min.js"
+	></script>
+	<!-- ＃リンクのスムーズスクロール -->
+	<script>
+		$(function () {
+			// #で始まるリンクをクリックしたら実行されます
+			$('a[href^="#"]').click(function () {
+				// スクロールの速度
+				var speed = 400; // ミリ秒で記述
+				var href = $(this).attr("href");
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				var position = target.offset().top;
+				$('body,html').animate({
+					scrollTop: position
+				}, speed, 'swing');
+				return false;
+			});
+		});
+
+	</script>
+	<style>
+		* {
+			background-color: antiquewhite;
+			color: black;
+			font-size: large;
+		}
+
+		a {
+			color: rgb(32, 32, 228);
+		}
+
+		a:hover {
+			color: red;
+		}
+
+		select {
+			font-size: large;
+		}
+
+		textarea {
+			white-space: pre-wrap;
+			color: black;
+		}
+
+		#css {
+			width: 1000px;
+			margin: 0 auto;
+		}
+
+		td {
+			font-size: large;
+			width: 95%;
+		}
+
+		input {
+			font-size: large;
+			width: 95%;
+		}
+
+		textarea {
+			font-size: large;
+			width: 95%;
+		}
+
+		table {
+			width: 98%;
+		}
+
+		.btn {
+			display: block;
+			cursor: pointer;
+			width: 150px;
+			text-align: center;
+			margin: 20px auto 10px;
+			padding: 10px 10px;
+			font-size: 14px;
+			color: #FFF;
+			background-color: #C00;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+		}
+
+		.btn_2 {
+			display: block;
+			cursor: pointer;
+			width: 150px;
+			text-align: center;
+			margin: 20px auto 10px;
+			padding: 10px 10px;
+			font-size: 14px;
+			color: #FFF;
+			background-color: rgb(250, 174, 52);
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+		}
+
+		@media (max-width: 1200px) and (min-width: 990px) {
+			#css {
+				/* 狭いブラウザとタブレット向け */
+				width: 100%;
+				margin: 0 1%;
+			}
+
+			* {
+				font-size: x-large;
+			}
+
+			td {
+				font-size: x-large;
+				width: 95%;
+			}
+
+			input {
+				font-size: x-large;
+				width: 95%;
+			}
+
+			textarea {
+				font-size: x-large;
+				width: 95%;
+			}
+
+			table {
+				width: 98%;
+			}
+
+			select {
+				font-size: x-large;
+			}
+		}
+
+		@media screen and (max-width: 990px) {
+			#css {
+				/* スマホ向け */
+				width: 100%;
+				margin: 0 1%;
+			}
+
+			* {
+				font-size: xx-large;
+			}
+
+			td {
+				font-size: xx-large;
+				width: 95%;
+			}
+
+			input {
+				font-size: xx-large;
+				width: 95%;
+			}
+
+			textarea {
+				font-size: xx-large;
+				width: 95%;
+			}
+
+			table {
+				width: 98%;
+			}
+
+			select {
+				font-size: xx-large;
+			}
+		}
+
+	</style>
+	<!-- ###################################################
+	<script type="text/javascript" src="./JS/index.js"></script>
+				ここからはページ毎に変更する
+	################################################### -->
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href=""
+	/>
+	<meta
+		name="keywords"
+		content="Yuto, UEC19, Yuto's Page, UEC, 心理学A, メール, mail, テンプレート,,"
+	/>
+	<meta
+		name="description"
+		content="心理学A のメールフォームです．"
+	/>
+	<title>心理学Aメールフォーム</title>
+</head>
+
+<body>
+
+	<h1> About Your Data </h1>
+	<form>
+		<table>
+			<tr>
+				<td hidden> 名前 </td>
+			</tr>
+			<tr>
+				<td hidden>
+					<input
+						type="text"
+						id="your_name"
+						value='青木 辰磨'
+						placeholder="例) 電通 太郎"
+						required
+					>
+				</td>
+			</tr>
+			<tr>
+				<td hidden> 学籍番号 </td>
+			</tr>
+			<tr>
+				<td hidden>
+					<input
+						type="text"
+						maxlength="8"
+						id="your_address"
+						value='a1910002'
+						placeholder="例) a1910001"
+						required
+					>
+				</td>
+			</tr>
+			<tr>
+				<td> 個人メールアドレス(任意) </td>
+			</tr>
+			<tr>
+				<td>
+					<input
+						type="email"
+						id="bcc"
+						value=''
+						placeholder="example@example.com"
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	<h1 style="color: #C00;"> 心理学 メールフォーム</h1>
+	<form
+		id="form1"
+		action="#"
+	>
+		<table style="border: #C00 double 3px;">
+			<tr>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td hidden> 名前 </td>
+			</tr>
+			<tr>
+				<td hidden> 個人メールにも送りたい場合(任意) </td>
+			</tr>
+			<tr>
+				<td> 提出する授業回 </td>
+			</tr>
+			<tr>
+				<td>
+					<select
+						id="howmuch"
+						required
+					>
+						<option value="08">8</option>
+						<option value="09">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> 本文 </td>
+			</tr>
+			<tr>
+				<td>
+					<textarea
+						type='text'
+						value=''
+						placeholder='メール本文(コピペ推奨)'
+						id='txt_data'
+						maxlength="1500"
+						wrap="hard"
+						style="white-space: pre-wrap; height: 100px;"
+					></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input
+						type="submit"
+						onclick="psy()"
+						value="メールアプリ起動"
+						style="background-color:#C01; color: white;"
+					>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	<div style="float: right; margin-top: 1ex;">
+		<a href="./mail_na.html">数値解析のメールフォームへ</a>
+	</div>
+	<script
+		type="text/javascript"
+		src="./mail.js"
+	></script>
+</body>
+
+</html>

@@ -196,80 +196,75 @@
 		}
 
 	</style>
-<!-- ###################################################
+	<!-- ###################################################
 	<script type="text/javascript" src="./JS/index.js"></script>
 				ここからはページ毎に変更する
 	################################################### -->
-<link
-	rel="stylesheet"
-	type="text/css"
-	href=""
-/>
-<meta
-	name="keywords"
-	content="Yuto, UEC19, Yuto's Page, UEC, 心理学A, 数値解析, メール, mail, テンプレート,,"
-/>
-<meta
-	name="description"
-	content="心理学A, 数値解析(久保木先生)のメールフォームです．"
-/>
-<title>UECメールフォーム</title>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href=""
+	/>
+	<meta
+		name="keywords"
+		content="Yuto, UEC19, Yuto's Page, UEC, 心理学A, 数値解析, メール, mail, テンプレート,,"
+	/>
+	<meta
+		name="description"
+		content="心理学A, 数値解析(久保木先生)のメールフォームです．"
+	/>
+	<title>UECメールフォーム</title>
 </head>
 
 <body>
-	<h1>
-		About your data
-	</h1>
+
+	<h1> About your data </h1>
 	<form>
 		<table>
 			<tr>
-				<td>
-					名前
-				</td>
+				<td> 名前 </td>
 			</tr>
 			<tr>
 				<td>
 					<input
-					type="text"
-					id="your_name"
-					value='植松 悠杜'
-					placeholder="例) 電通 太郎"
-					required>
+						type="text"
+						id="your_name"
+						value='植松 悠杜'
+						placeholder="例) 電通 太郎"
+						required
+					>
 				</td>
 			</tr>
 			<tr>
-				<td>
-					学籍番号
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input
-					type="text"
-					maxlength="8"
-					id="your_address"
-					value='u1910098'
-					placeholder="例) a1910001"
-					required>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					個人メールアドレス
-				</td>
+				<td> 学籍番号 </td>
 			</tr>
 			<tr>
 				<td>
 					<input
-					type="email"
-					id="bcc"
-					value='utomatsu@gmail.com'
-					placeholder="example@example.com">
+						type="text"
+						maxlength="8"
+						id="your_address"
+						value='u1910098'
+						placeholder="例) a1910001"
+						required
+					>
+				</td>
+			</tr>
+			<tr>
+				<td> 個人メールアドレス </td>
+			</tr>
+			<tr>
+				<td>
+					<input
+						type="email"
+						id="bcc"
+						value='utomatsu@gmail.com'
+						placeholder="example@example.com"
+					>
 				</td>
 			</tr>
 			<tr>
 				<td>
-
 				</td>
 			</tr>
 		</table>
@@ -289,18 +284,17 @@
 				<td hidden> 名前 </td>
 			</tr>
 			<tr>
-				<td hidden>
-					個人メールにも送りたい場合(任意)
-				</td>
+				<td hidden> 個人メールにも送りたい場合(任意) </td>
+			</tr>
+			<tr>
+				<td> 提出する授業回 </td>
 			</tr>
 			<tr>
 				<td>
-					提出する授業回
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<select id="howmuch" required>
+					<select
+						id="howmuch"
+						required
+					>
 						<option value="08">8</option>
 						<option value="09">9</option>
 						<option value="10">10</option>
@@ -340,9 +334,6 @@
 			</tr>
 		</table>
 	</form>
-	<script type="text/javascript">
-
-	</script>
 
 	<h1 style="color: rgb(255, 182, 65);"> 数値解析 出席確認メール(kbk)</h1>
 	<form
@@ -355,13 +346,14 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
-					提出する授業回
-				</td>
+				<td> 提出する授業回 </td>
 			</tr>
 			<tr>
 				<td>
-					<select id="howmuch2" required>
+					<select
+						id="howmuch2"
+						required
+					>
 						<option value="07/06">8</option>
 						<option value="07/13">9</option>
 						<option value="07/20">10</option>
@@ -410,7 +402,7 @@ main () {
 
 考察：
 ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
-					</textarea>
+</textarea>
 				</td>
 			</tr>
 			<tr>
@@ -424,6 +416,117 @@ main () {
 				</td>
 			</tr>
 		</table>
+	</form>
+
+	<h1 style="color: green;"> 数値解析 課題提出メール(kbk)</h1>
+	<form
+		id="form2"
+		action="#"
+	>
+		<table style="border: green double 3px;">
+			<tr>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td> 提出する課題 </td>
+			</tr>
+			<tr>
+				<td>
+					<select
+						id="howmuch3"
+						required
+					>
+						<option value="No.3">3</option>
+						<option value="No.4">4</option>
+						<option value="No.5">5</option>
+						<option value="No.6">6</option>
+						<option value="No.7">7</option>
+						<option value="No.8">8</option>
+						<option value="No.9">9</option>
+						<option value="No.10">10</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> 提出回数 </td>
+			</tr>
+			<tr>
+				<td>
+					<select
+						id="hand_in"
+						required
+					>
+						<option value="">1</option>
+						<option value="(2)">2</option>
+						<option value="(3)">3</option>
+						<option value="(4)">4</option>
+						<option value="(5)">5</option>
+						<option value="(6)">6</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> 本文 </td>
+			</tr>
+			<tr>
+				<td>
+					<textarea
+						type='text'
+						value=''
+						id='txt_data3'
+						wrap="hard"
+						style="white-space: pre-wrap;"
+						rows="18"
+					>
+実行結果：
+--- from here
+--- to here
+
+ソース・プログラム：
+--- from here
+#include &lt;stdio.h>
+
+/* 1910001 Dentsu Taro */
+
+main () {
+printf("Hello, World!\n");
+}
+--- to here
+
+考察：
+ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
+</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input
+						type="submit"
+						onclick="na_handin()"
+						value="メールアプリ起動"
+						style="background-color:green; color: white;"
+					>
+				</td>
+			</tr>
+		</table>
+		<p>
+			※注意点
+		</p>
+		<ul>
+			<li>
+				添付ファイルとはせずに，本文に書き込むこと． 
+			</li>
+			<li>
+				必ず何らかの考察を行うこと．
+			</li>
+			<li>
+				一つのファイルにすべての必要なデータを含ませること
+			</li>
+			<li>
+				必ず， 1) ソース・プログラムの最初の部分にコメントとして， プログラム作成者の学籍番号，氏名を記入しておくこと 2) ひとつのプログラムだけで，課題の要求するすべての機能を， 実現すること
+			</li>
+		</ul>
 	</form>
 	<script
 		type="text/javascript"

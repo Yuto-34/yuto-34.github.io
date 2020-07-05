@@ -1,36 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE
-	html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
->
-<html
-	xmlns="http://www.w3.org/1999/xhtml"
-	xml:lang="ja"
-	lang="ja"
->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"
-    ></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-        gtag('config', 'UA-162881724-3');
-    </script>
+		gtag('config', 'UA-162881724-3');
+	</script>
 	<!-- jQueryの指定 -->
-	<script
-		type="text/javascript"
-		src="https://code.jquery.com/jquery-3.4.1.min.js"
-	></script>
-	<script
-		type="text/javascript"
-		src="https://code.jquery.com/jquery-3.1.0.min.js"
-	></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<!-- ＃リンクのスムーズスクロール -->
 	<script>
 		$(function () {
@@ -196,27 +180,18 @@
 		}
 
 	</style>
-<!-- ###################################################
+	<!-- ###################################################
 	<script type="text/javascript" src="./JS/index.js"></script>
 				ここからはページ毎に変更する
 	################################################### -->
-<link
-	rel="stylesheet"
-	type="text/css"
-	href=""
-/>
-<meta
-	name="keywords"
-	content="Yuto, UEC19, Yuto's Page, UEC, 数値解析, メール, mail, テンプレート,,"
-/>
-<meta
-	name="description"
-	content="数値解析(久保木先生)のメールフォームです．"
-/>
-<title>数値解析メールフォーム</title>
+	<link rel="stylesheet" type="text/css" href="" />
+	<meta name="keywords" content="Yuto, UEC19, Yuto's Page, UEC, 数値解析, メール, mail, テンプレート,," />
+	<meta name="description" content="数値解析(久保木先生)のメールフォームです．" />
+	<title>数値解析メールフォーム</title>
 </head>
 
 <body>
+
 	<h1> About Your Data </h1>
 	<div style="float: right;">
 		<a href="./mail_psy.html">心理学Aのメールフォームへ</a>
@@ -224,63 +199,38 @@
 	<form>
 		<table>
 			<tr>
+				<td> 名前 </td>
+			</tr>
+			<tr>
 				<td>
-					名前
+					<input type="text" id="your_name" value='' placeholder="例) 電通 太郎" required>
+				</td>
+			</tr>
+			<tr>
+				<td> 学籍番号 </td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" maxlength="8" id="your_address" value='' placeholder="例) a1910001" required>
+				</td>
+			</tr>
+			<tr>
+				<td> 個人メールアドレス(任意) </td>
+			</tr>
+			<tr>
+				<td>
+					<input type="email" id="bcc" value='' placeholder="example@example.com">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input
-					type="text"
-					id="your_name"
-					value=''
-					placeholder="例) 電通 太郎"
-					required>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					学籍番号
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input
-					type="text"
-					maxlength="8"
-					id="your_address"
-					value=''
-					placeholder="例) a1910001"
-					required>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					個人メールアドレス(任意)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input
-					type="email"
-					id="bcc"
-					value=''
-					placeholder="example@example.com">
-				</td>
-			</tr>
-			<tr>
-				<td>
-
 				</td>
 			</tr>
 		</table>
 	</form>
 
 	<h1 style="color: rgb(255, 182, 65);"> 数値解析 出席確認メール(kbk)</h1>
-	<form
-		id="form2"
-		action="#"
-	>
+	<form id="form2" action="#">
 		<table style="border: rgb(255, 182, 65) double 3px;">
 			<tr>
 				<td>
@@ -291,10 +241,7 @@
 			</tr>
 			<tr>
 				<td>
-					<select
-						id="howmuch2"
-						required
-					>
+					<select id="howmuch2" required>
 						<option value="07/06">8</option>
 						<option value="07/13">9</option>
 						<option value="07/20">10</option>
@@ -310,14 +257,7 @@
 			</tr>
 			<tr>
 				<td>
-					<textarea
-						type='text'
-						value=''
-						id='txt_data2'
-						wrap="hard"
-						style="white-space: pre-wrap;"
-						rows="26"
-					>
+					<textarea type='text' value='' id='txt_data2' wrap="hard" style="white-space: pre-wrap;" rows="26">
 (1) 講義中の課題
 ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
 (課題の内容に応じて，形式は異なる．)
@@ -348,22 +288,14 @@ main () {
 			</tr>
 			<tr>
 				<td>
-					<input
-						type="submit"
-						onclick="na()"
-						value="メールアプリ起動"
-						style="background-color:rgb(251, 171, 41); "
-					>
+					<input type="submit" onclick="na()" value="メールアプリ起動" style="background-color:rgb(251, 171, 41); ">
 				</td>
 			</tr>
 		</table>
 	</form>
 
 	<h1 style="color: green;"> 数値解析 課題提出メール(kbk)</h1>
-	<form
-		id="form2"
-		action="#"
-	>
+	<form id="form2" action="#">
 		<table style="border: green double 3px;">
 			<tr>
 				<td>
@@ -374,10 +306,7 @@ main () {
 			</tr>
 			<tr>
 				<td>
-					<select
-						id="howmuch3"
-						required
-					>
+					<select id="howmuch3" required>
 						<option value="No.3">3</option>
 						<option value="No.4">4</option>
 						<option value="No.5">5</option>
@@ -394,10 +323,7 @@ main () {
 			</tr>
 			<tr>
 				<td>
-					<select
-						id="hand_in"
-						required
-					>
+					<select id="hand_in" required>
 						<option value="">1</option>
 						<option value="(2)">2</option>
 						<option value="(3)">3</option>
@@ -412,14 +338,7 @@ main () {
 			</tr>
 			<tr>
 				<td>
-					<textarea
-						type='text'
-						value=''
-						id='txt_data3'
-						wrap="hard"
-						style="white-space: pre-wrap;"
-						rows="18"
-					>
+					<textarea type='text' value='' id='txt_data3' wrap="hard" style="white-space: pre-wrap;" rows="18">
 実行結果：
 --- from here
 --- to here
@@ -442,37 +361,19 @@ printf("Hello, World!\n");
 			</tr>
 			<tr>
 				<td>
-					<input
-						type="submit"
-						onclick="na_handin()"
-						value="メールアプリ起動"
-						style="background-color:green; color: white;"
-					>
+					<input type="submit" onclick="na_handin()" value="メールアプリ起動" style="background-color:green; color: white;">
 				</td>
 			</tr>
 		</table>
-		<p>
-			※注意点
-		</p>
+		<p> ※注意点 </p>
 		<ul>
-			<li>
-				添付ファイルとはせずに，本文に書き込むこと． 
-			</li>
-			<li>
-				必ず何らかの考察を行うこと．
-			</li>
-			<li>
-				一つのファイルにすべての必要なデータを含ませること
-			</li>
-			<li>
-				必ず， 1) ソース・プログラムの最初の部分にコメントとして， プログラム作成者の学籍番号，氏名を記入しておくこと 2) ひとつのプログラムだけで，課題の要求するすべての機能を， 実現すること
-			</li>
+			<li> 添付ファイルとはせずに，本文に書き込むこと． </li>
+			<li> 必ず何らかの考察を行うこと． </li>
+			<li> 一つのファイルにすべての必要なデータを含ませること </li>
+			<li> 必ず， 1) ソース・プログラムの最初の部分にコメントとして， プログラム作成者の学籍番号，氏名を記入しておくこと 2) ひとつのプログラムだけで，課題の要求するすべての機能を， 実現すること </li>
 		</ul>
 	</form>
-	<script
-		type="text/javascript"
-		src="./mail.js"
-	></script>
+	<script type="text/javascript" src="./mail.js"></script>
 </body>
 
 </html>

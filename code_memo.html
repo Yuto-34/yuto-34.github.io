@@ -1,64 +1,230 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE
-    html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
->
-<html
-    xmlns="http://www.w3.org/1999/xhtml"
-    xml:lang="ja"
-    lang="ja"
->
-
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"
-    ></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
-        gtag('config', 'UA-162881724-3');
-    </script>
-    <meta
-        http-equiv="Content-Type"
-        content="text/html; charset=utf-8"
-    />
-    <meta
-        http-equiv="Content-Style-Type"
-        content="text/css"
-    />
-    <meta
-        http-equiv="Content-Script-Type"
-        content="text/javascript"
-    />
-    <meta
-        name="viewport"
-        content="width=device-width"
-    />
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c&lang=html&lang=css&lang=js"></script>
-    <script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			TeX: { 
-				equationNumbers: { autoNumber: "AMS" },
-				extensions: ['color.js']
-			},
-			tex2jax: {
-				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-				processEscapes: true
-			},
-			"HTML-CSS": { matchFontHeight: false },
-			displayAlign: "left",
-			displayIndent: "2em"
-			messageStyle: 'none'
-			TeX: {}
-			linebreaks: {
-				overflow-x: auto;
-			}
-		});
-	</script>
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-162881724-3');
+
+</script>
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+    $(function() {
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+            // スクロールの速度
+            var speed = 400; // ミリ秒で記述
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $('body,html').animate({
+                scrollTop: position
+            }, speed, 'swing');
+            return false;
+        });
+    });
+
+</script>
+<style>
+    * {
+        background-color: antiquewhite;
+        color: black;
+        font-size: large;
+    }
+
+    a {
+        color: rgb(32, 32, 228);
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    select {
+        font-size: large;
+    }
+
+    textarea {
+        white-space: pre-wrap;
+        color: black;
+    }
+
+    #css {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    td {
+        font-size: large;
+        width: 95%;
+    }
+
+    input {
+        font-size: large;
+        width: 95%;
+    }
+
+    textarea {
+        font-size: large;
+        width: 95%;
+    }
+
+    table {
+        width: 98%;
+    }
+
+    .btn {
+        display: block;
+        cursor: pointer;
+        width: 150px;
+        text-align: center;
+        margin: 20px auto 10px;
+        padding: 10px 10px;
+        font-size: 14px;
+        color: #FFF;
+        background-color: #C00;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn_2 {
+        display: block;
+        cursor: pointer;
+        width: 150px;
+        text-align: center;
+        margin: 20px auto 10px;
+        padding: 10px 10px;
+        font-size: 14px;
+        color: #FFF;
+        background-color: rgb(250, 174, 52);
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 1200px) and (min-width: 990px) {
+        #css {
+            /* 狭いブラウザとタブレット向け */
+            width: 100%;
+            margin: 0 1%;
+        }
+
+        * {
+            font-size: x-large;
+        }
+
+        td {
+            font-size: x-large;
+            width: 95%;
+        }
+
+        input {
+            font-size: x-large;
+            width: 95%;
+        }
+
+        textarea {
+            font-size: x-large;
+            width: 95%;
+        }
+
+        table {
+            width: 98%;
+        }
+
+        select {
+            font-size: x-large;
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        #css {
+            /* スマホ向け */
+            width: 100%;
+            margin: 0 1%;
+        }
+
+        * {
+            font-size: xx-large;
+        }
+
+        td {
+            font-size: xx-large;
+            width: 95%;
+        }
+
+        input {
+            font-size: xx-large;
+            width: 95%;
+        }
+
+        textarea {
+            font-size: xx-large;
+            width: 95%;
+        }
+
+        table {
+            width: 98%;
+        }
+
+        select {
+            font-size: xx-large;
+        }
+    }
+
+</style>
+<meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
+<meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="./favicons/site-tile-310x150.png">
+<meta name="msapplication-square310x310logo" content="./favicons/site-tile-310x310.png">
+<meta name="msapplication-TileColor" content="#0078d7">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="36x36" href="./favicons/android-chrome-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./favicons/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="./favicons/android-chrome-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicons/android-chrome-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="./favicons/android-chrome-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="./favicons/android-chrome-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="./favicons/android-chrome-152x152.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="./favicons/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="./favicons/android-chrome-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="36x36" href="./favicons/icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./favicons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="./favicons/icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="./favicons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="./favicons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="./favicons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="160x160" href="./favicons/icon-160x160.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="196x196" href="./favicons/icon-196x196.png">
+<link rel="icon" type="image/png" sizes="256x256" href="./favicons/icon-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="./favicons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="24x24" href="./favicons/icon-24x24.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicons/icon-32x32.png">
+<link rel="manifest" href="./favicons/manifest.json">
     <!-- ###################################################
 				ここからはページ毎に変更する
 	################################################### -->

@@ -1,264 +1,304 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
-
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
-		gtag('config', 'UA-162881724-3');
-	</script>
-	<!-- jQueryの指定 -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-	<!-- ＃リンクのスムーズスクロール -->
-	<script>
-		$(function () {
-			// #で始まるリンクをクリックしたら実行されます
-			$('a[href^="#"]').click(function () {
-				// スクロールの速度
-				var speed = 400; // ミリ秒で記述
-				var href = $(this).attr("href");
-				var target = $(href == "#" || href == "" ? 'html' : href);
-				var position = target.offset().top;
-				$('body,html').animate({
-					scrollTop: position
-				}, speed, 'swing');
-				return false;
-			});
-		});
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-	</script>
-	<style>
-		* {
-			background-color: antiquewhite;
-			color: black;
-			font-size: large;
-		}
+    gtag('config', 'UA-162881724-3');
 
-		a {
-			color: rgb(32, 32, 228);
-		}
+</script>
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+    $(function() {
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+            // スクロールの速度
+            var speed = 400; // ミリ秒で記述
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $('body,html').animate({
+                scrollTop: position
+            }, speed, 'swing');
+            return false;
+        });
+    });
 
-		a:hover {
-			color: red;
-		}
+</script>
+<style>
+    * {
+        background-color: antiquewhite;
+        color: black;
+        font-size: large;
+    }
 
-		select {
-			font-size: large;
-		}
+    a {
+        color: rgb(32, 32, 228);
+    }
 
-		textarea {
-			white-space: pre-wrap;
-			color: black;
-		}
+    a:hover {
+        color: red;
+    }
 
-		#css {
-			width: 1000px;
-			margin: 0 auto;
-		}
+    select {
+        font-size: large;
+    }
 
-		td {
-			font-size: large;
-			width: 95%;
-		}
+    textarea {
+        white-space: pre-wrap;
+        color: black;
+    }
 
-		input {
-			font-size: large;
-			width: 95%;
-		}
+    #css {
+        width: 1000px;
+        margin: 0 auto;
+    }
 
-		textarea {
-			font-size: large;
-			width: 95%;
-		}
+    td {
+        font-size: large;
+        width: 95%;
+    }
 
-		table {
-			width: 98%;
-		}
+    input {
+        font-size: large;
+        width: 95%;
+    }
 
-		.btn {
-			display: block;
-			cursor: pointer;
-			width: 150px;
-			text-align: center;
-			margin: 20px auto 10px;
-			padding: 10px 10px;
-			font-size: 14px;
-			color: #FFF;
-			background-color: #C00;
-			border-radius: 5px;
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-		}
+    textarea {
+        font-size: large;
+        width: 95%;
+    }
 
-		.btn_2 {
-			display: block;
-			cursor: pointer;
-			width: 150px;
-			text-align: center;
-			margin: 20px auto 10px;
-			padding: 10px 10px;
-			font-size: 14px;
-			color: #FFF;
-			background-color: rgb(250, 174, 52);
-			border-radius: 5px;
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-		}
+    table {
+        width: 98%;
+    }
 
-		@media (max-width: 1200px) and (min-width: 990px) {
-			#css {
-				/* 狭いブラウザとタブレット向け */
-				width: 100%;
-				margin: 0 1%;
-			}
+    .btn {
+        display: block;
+        cursor: pointer;
+        width: 150px;
+        text-align: center;
+        margin: 20px auto 10px;
+        padding: 10px 10px;
+        font-size: 14px;
+        color: #FFF;
+        background-color: #C00;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
 
-			* {
-				font-size: x-large;
-			}
+    .btn_2 {
+        display: block;
+        cursor: pointer;
+        width: 150px;
+        text-align: center;
+        margin: 20px auto 10px;
+        padding: 10px 10px;
+        font-size: 14px;
+        color: #FFF;
+        background-color: rgb(250, 174, 52);
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
 
-			td {
-				font-size: x-large;
-				width: 95%;
-			}
+    @media (max-width: 1200px) and (min-width: 990px) {
+        #css {
+            /* 狭いブラウザとタブレット向け */
+            width: 100%;
+            margin: 0 1%;
+        }
 
-			input {
-				font-size: x-large;
-				width: 95%;
-			}
+        * {
+            font-size: x-large;
+        }
 
-			textarea {
-				font-size: x-large;
-				width: 95%;
-			}
+        td {
+            font-size: x-large;
+            width: 95%;
+        }
 
-			table {
-				width: 98%;
-			}
+        input {
+            font-size: x-large;
+            width: 95%;
+        }
 
-			select {
-				font-size: x-large;
-			}
-		}
+        textarea {
+            font-size: x-large;
+            width: 95%;
+        }
 
-		@media screen and (max-width: 990px) {
-			#css {
-				/* スマホ向け */
-				width: 100%;
-				margin: 0 1%;
-			}
+        table {
+            width: 98%;
+        }
 
-			* {
-				font-size: xx-large;
-			}
+        select {
+            font-size: x-large;
+        }
+    }
 
-			td {
-				font-size: xx-large;
-				width: 95%;
-			}
+    @media screen and (max-width: 990px) {
+        #css {
+            /* スマホ向け */
+            width: 100%;
+            margin: 0 1%;
+        }
 
-			input {
-				font-size: xx-large;
-				width: 95%;
-			}
+        * {
+            font-size: xx-large;
+        }
 
-			textarea {
-				font-size: xx-large;
-				width: 95%;
-			}
+        td {
+            font-size: xx-large;
+            width: 95%;
+        }
 
-			table {
-				width: 98%;
-			}
+        input {
+            font-size: xx-large;
+            width: 95%;
+        }
 
-			select {
-				font-size: xx-large;
-			}
-		}
+        textarea {
+            font-size: xx-large;
+            width: 95%;
+        }
 
-	</style>
-	<!-- ###################################################
+        table {
+            width: 98%;
+        }
+
+        select {
+            font-size: xx-large;
+        }
+    }
+
+</style>
+<meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
+<meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="./favicons/site-tile-310x150.png">
+<meta name="msapplication-square310x310logo" content="./favicons/site-tile-310x310.png">
+<meta name="msapplication-TileColor" content="#0078d7">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="36x36" href="./favicons/android-chrome-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./favicons/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="./favicons/android-chrome-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicons/android-chrome-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="./favicons/android-chrome-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="./favicons/android-chrome-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="./favicons/android-chrome-152x152.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="./favicons/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="./favicons/android-chrome-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="36x36" href="./favicons/icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./favicons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="./favicons/icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="./favicons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="./favicons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="./favicons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="160x160" href="./favicons/icon-160x160.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="196x196" href="./favicons/icon-196x196.png">
+<link rel="icon" type="image/png" sizes="256x256" href="./favicons/icon-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="./favicons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="24x24" href="./favicons/icon-24x24.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicons/icon-32x32.png">
+<link rel="manifest" href="./favicons/manifest.json">
+<!-- ###################################################
 	<script type="text/javascript" src="./JS/index.js"></script>
 				ここからはページ毎に変更する
 	################################################### -->
-	<link rel="stylesheet" type="text/css" href="" />
-	<meta name="keywords" content="Yuto, UEC19, Yuto's Page, UEC, 数値解析, メール, mail, テンプレート,," />
-	<meta name="description" content="数値解析(久保木先生)のメールフォームです．" />
-	<title>数値解析メールフォーム</title>
+<link rel="stylesheet" type="text/css" href="">
+<meta name="keywords" content="Yuto, UEC19, Yuto's Page, UEC, 数値解析, メール, mail, テンプレート,,">
+<meta name="description" content="数値解析(久保木先生)のメールフォームです．">
+<title>数値解析メールフォーム</title>
 </head>
-
 <body>
-
-	<h1> About Your Data </h1>
-	<div style="float: right;">
-		<a href="./mail_psy.html">心理学Aのメールフォームへ</a>
-	</div>
-	<form>
-		<table>
-			<tr>
-				<td> 名前 </td>
-			</tr>
-			<tr>
-				<td>
-					<input type="text" id="your_name" value='' placeholder="例) 電通 太郎" required>
-				</td>
-			</tr>
-			<tr>
-				<td> 学籍番号 </td>
-			</tr>
-			<tr>
-				<td>
-					<input type="text" maxlength="8" id="your_address" value='' placeholder="例) a1910001" required>
-				</td>
-			</tr>
-			<tr>
-				<td> 個人メールアドレス(任意) </td>
-			</tr>
-			<tr>
-				<td>
-					<input type="email" id="bcc" value='' placeholder="example@example.com">
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
-			</tr>
-		</table>
-	</form>
-
-	<h1 style="color: rgb(255, 182, 65);"> 数値解析 出席確認メール(kbk)</h1>
-	<form id="form2" action="#">
-		<table style="border: rgb(255, 182, 65) double 3px;">
-			<tr>
-				<td>
-				</td>
-			</tr>
-			<tr>
-				<td> 提出する授業回 </td>
-			</tr>
-			<tr>
-				<td>
-					<select id="howmuch2" required>
-						<option value="07/06">8</option>
-						<option value="07/13">9</option>
-						<option value="07/20">10</option>
-						<option value="07/27">11</option>
-						<option value="08/03">12</option>
-						<option value="08/17">13</option>
-						<option value="08/31">14</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td> 本文 </td>
-			</tr>
-			<tr>
-				<td>
-					<textarea type='text' value='' id='txt_data2' wrap="hard" style="white-space: pre-wrap;" rows="26">
-(1) 講義中の課題
+<h1> About Your Data</h1>
+<div style="float: right;">
+    <a href="./mail_psy.html">心理学Aのメールフォームへ</a>
+</div>
+<form>
+    <table>
+        <tr>
+            <td> 名前</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="your_name" value='' placeholder="例) 電通 太郎" required>
+            </td>
+        </tr>
+        <tr>
+            <td> 学籍番号</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" maxlength="8" id="your_address" value='' placeholder="例) a1910001" required>
+            </td>
+        </tr>
+        <tr>
+            <td> 個人メールアドレス(任意)</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="email" id="bcc" value='' placeholder="example@example.com">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</form>
+<h1 style="color: rgb(255, 182, 65);"> 数値解析 出席確認メール(kbk)</h1>
+<form id="form2" action="#">
+    <table style="border: rgb(255, 182, 65) double 3px;">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td> 提出する授業回</td>
+        </tr>
+        <tr>
+            <td>
+                <select id="howmuch2" required>
+                    <option value="07/06">8</option>
+                    <option value="07/13">9</option>
+                    <option value="07/20">10</option>
+                    <option value="07/27">11</option>
+                    <option value="08/03">12</option>
+                    <option value="08/17">13</option>
+                    <option value="08/31">14</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> 本文</td>
+        </tr>
+        <tr>
+            <td>
+                <textarea type="text" value='' id="txt_data2" wrap="hard" style="white-space: pre-wrap;" rows="26">
+                            (1) 講義中の課題
 ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
 (課題の内容に応じて，形式は異なる．)
 
@@ -282,64 +322,61 @@ main () {
 --- to here
 
 考察：
-ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
-</textarea>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="submit" onclick="na()" value="メールアプリ起動" style="background-color:rgb(251, 171, 41); ">
-				</td>
-			</tr>
-		</table>
-	</form>
-
-	<h1 style="color: green;"> 数値解析 課題提出メール(kbk)</h1>
-	<form id="form2" action="#">
-		<table style="border: green double 3px;">
-			<tr>
-				<td>
-				</td>
-			</tr>
-			<tr>
-				<td> 提出する課題 </td>
-			</tr>
-			<tr>
-				<td>
-					<select id="howmuch3" required>
-						<option value="No.3">3</option>
-						<option value="No.4">4</option>
-						<option value="No.5">5</option>
-						<option value="No.6">6</option>
-						<option value="No.7">7</option>
-						<option value="No.8">8</option>
-						<option value="No.9">9</option>
-						<option value="No.10">10</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td> 提出回数 </td>
-			</tr>
-			<tr>
-				<td>
-					<select id="hand_in" required>
-						<option value="">1</option>
-						<option value="(2)">2</option>
-						<option value="(3)">3</option>
-						<option value="(4)">4</option>
-						<option value="(5)">5</option>
-						<option value="(6)">6</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td> 本文 </td>
-			</tr>
-			<tr>
-				<td>
-					<textarea type='text' value='' id='txt_data3' wrap="hard" style="white-space: pre-wrap;" rows="18">
-実行結果：
+ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" onclick="na()" value="メールアプリ起動" style="background-color:rgb(251, 171, 41); ">
+            </td>
+        </tr>
+    </table>
+</form>
+<h1 style="color: green;"> 数値解析 課題提出メール(kbk)</h1>
+<form id="form2" action="#">
+    <table style="border: green double 3px;">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td> 提出する課題</td>
+        </tr>
+        <tr>
+            <td>
+                <select id="howmuch3" required>
+                    <option value="No.3">3</option>
+                    <option value="No.4">4</option>
+                    <option value="No.5">5</option>
+                    <option value="No.6">6</option>
+                    <option value="No.7">7</option>
+                    <option value="No.8">8</option>
+                    <option value="No.9">9</option>
+                    <option value="No.10">10</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> 提出回数</td>
+        </tr>
+        <tr>
+            <td>
+                <select id="hand_in" required>
+                    <option value="">1</option>
+                    <option value="(2)">2</option>
+                    <option value="(3)">3</option>
+                    <option value="(4)">4</option>
+                    <option value="(5)">5</option>
+                    <option value="(6)">6</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> 本文</td>
+        </tr>
+        <tr>
+            <td>
+                <textarea type="text" value='' id="txt_data3" wrap="hard" style="white-space: pre-wrap;" rows="18">
+                            実行結果：
 --- from here
 --- to here
 
@@ -355,25 +392,23 @@ printf("Hello, World!\n");
 --- to here
 
 考察：
-ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ
-</textarea>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="submit" onclick="na_handin()" value="メールアプリ起動" style="background-color:green; color: white;">
-				</td>
-			</tr>
-		</table>
-		<p> ※注意点 </p>
-		<ul>
-			<li> 添付ファイルとはせずに，本文に書き込むこと． </li>
-			<li> 必ず何らかの考察を行うこと． </li>
-			<li> 一つのファイルにすべての必要なデータを含ませること </li>
-			<li> 必ず， 1) ソース・プログラムの最初の部分にコメントとして， プログラム作成者の学籍番号，氏名を記入しておくこと 2) ひとつのプログラムだけで，課題の要求するすべての機能を， 実現すること </li>
-		</ul>
-	</form>
-	<script type="text/javascript" src="./mail.js"></script>
+ｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘｘ</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" onclick="na_handin()" value="メールアプリ起動" style="background-color:green; color: white;">
+            </td>
+        </tr>
+    </table>
+    <p> ※注意点</p>
+    <ul>
+        <li> 添付ファイルとはせずに，本文に書き込むこと．</li>
+        <li> 必ず何らかの考察を行うこと．</li>
+        <li> 一つのファイルにすべての必要なデータを含ませること</li>
+        <li> 必ず， 1) ソース・プログラムの最初の部分にコメントとして， プログラム作成者の学籍番号，氏名を記入しておくこと 2) ひとつのプログラムだけで，課題の要求するすべての機能を， 実現すること</li>
+    </ul>
+</form>
+<script type="text/javascript" src="./mail.js"></script>
 </body>
-
 </html>

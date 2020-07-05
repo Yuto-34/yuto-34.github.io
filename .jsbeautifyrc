@@ -1,0 +1,16 @@
+{
+	"html": {
+		"eol": "\n",
+		"end_with_newline": true,
+		"preserve_newlines": true,
+		"max_preserve_newlines": 5,
+		"indent_inner_html": false,
+		"brace_style": "collapse",
+		"indent_scripts": "normal",
+		"wrap_line_length": 0,
+		"wrap_attributes": "auto",
+		"extra_liners": ["br"],
+		"indent_body_inner_html": false,
+		"indent_head_inner_html": false
+	}
+}

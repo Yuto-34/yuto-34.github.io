@@ -42,6 +42,6 @@ function na_handin() {
 	teacher_address = 'nu2analysis@mt.mce.uec.ac.jp';
 	private_address = document.getElementById('bcc').value;
 	subjects = numbers + version + ' ' + student_number + ' ' + student_name ;
-	bodys = student_number + student_name + '%0D%0A' + txtDatas;
+	bodys = student_number + student_name + '%0D%0A' + '%0D%0A' + txtDatas;
 	location.href = 'mailto:' + teacher_address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subjects + '&body=' + bodys;
 };

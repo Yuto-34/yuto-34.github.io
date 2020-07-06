@@ -11,7 +11,7 @@ function psy() {
 	address = address1 + ',' + address2;
 	private_address = document.getElementById('bcc').value;
 	subject = '31-' + student_number + '-' + number;
-	body = student_number + student_name + '%0D%0A' + txtData;
+	body = number + '回目授業レポート' + student_number + student_name + '%0D%0A' + '%0D%0A' + txtData;
 	location.href = 'mailto:' + address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subject + '&body=' + body;
 };
 

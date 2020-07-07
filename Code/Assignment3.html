@@ -48,6 +48,10 @@
     displayIndent: "2em"
 });
 </script>
+
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+
 <meta charset="utf-8" />
 <meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
 <meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
@@ -99,6 +103,28 @@
 <link rel="stylesheet" type="text/css" href="./import_1.css" />
 <meta name="description" content="UEC19 Yutoの課題メモ" />
 <title>Code Memo</title>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<style>
+
+	.check {
+        position: relative;
+        left: -13px;
+		list-style-type: none !important;
+		/*ポチ消す*/
+    }
+
+	.check:before {
+        font-weight: 900;
+		font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        position: relative;
+        left: -7px;
+		/*左端からのアイコンまで*/
+		color: #ffb03f;
+		/*アイコン色*/
+	}
+
+</style>
 </head>
 
 <body>
@@ -122,34 +148,28 @@
 				この時、以下の条件をすべて満たした、<b>ひとつのプログラム</b>を作成すること。
 			</p>
 			<ol>
-				<li>
-					最初に、 被積分関数を代数(数式)的に積分して原始関数を (手計算で) 求め、 これを C 言語の関数として定義した上で、 積分範囲の上限と下限を与えることにより 厳密な積分値を計算して出力する。
-				</li>
-				<li>
-					次に、 課題に与えられた被積分関数を C の関数として定義し、 これを用いて Simpson の 3/8 公式 (三次のニュートン・コーツ公式) にしたがって 数値積分を行ない 結果を求める。 ここで分割数 (分点の数-1:公式を適用する回数ではないことに注意) は実行時に入力することとし、 入力された分割数の満たすべき条件などをチェックして 満足なものが与えられるまで入力を要求し続けること。 また、 分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返すこと。
-				</li>
+				<li> 最初に、 被積分関数を代数(数式)的に積分して原始関数を (手計算で) 求め、 これを C 言語の関数として定義した上で、 積分範囲の上限と下限を与えることにより 厳密な積分値を計算して出力する。 </li>
+				<li> 次に、 課題に与えられた被積分関数を C の関数として定義し、 これを用いて Simpson の 3/8 公式 (三次のニュートン・コーツ公式) にしたがって 数値積分を行ない 結果を求める。 ここで分割数 (分点の数-1:公式を適用する回数ではないことに注意) は実行時に入力することとし、 入力された分割数の満たすべき条件などをチェックして 満足なものが与えられるまで入力を要求し続けること。 また、 分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返すこと。 </li>
 			</ol>
 			<p> 以上について、 得られた積分結果と その計算方法や分割数・精度などについて 考察を行なうこと。 また、 各自で任意の被積分関数ひとつについて、 同様の考察を行なえ。
 
 				<br> さらに、 余裕のある者は、 他の公式を用いた結果とも比較してみよ。 ただし、精度の比較を行なう際には、 関数値を計算する分点数の総数をおおよそ等しくして考察すること。 </p>
 			<p> まとめると，ポイントは以下 </p>
 			<ul>
-				<li>ひとつのプログラムとして，Simpsonの3/8公式による数値積分を実行するプログラムを完成する．
-			</ul>
-			<ol>
-				<li>被積分関数の原始関数を求めて，C言語の関数として定義，厳密解を求め，出力する機能を実装する．
-				<li>入力された分割数が適当な値でない場合は，再度，入力を要求する機能を有する．
-				<li>分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返す．
-				<li>計算方法の原理に関する説明．
-				<li>各自で被積分関数を用意して，結果を示す．
-				<li>分割数が精度に及ぼす影響を考察する．必要に応じてグラフを添付してもよいこととする．
+				<li>ひとつのプログラムとして，Simpsonの3/8公式による数値積分を実行するプログラムを完成する． </li>
+                <li class="check">被積分関数の原始関数を求めて，C言語の関数として定義，厳密解を求め，出力する機能を実装する．</li>
+				<li>入力された分割数が適当な値でない場合は，再度，入力を要求する機能を有する．</li>
+				<li>分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返す．</li>
+				<li>計算方法の原理に関する説明．</li>
+				<li>各自で被積分関数を用意して，結果を示す．</li>
+				<li>分割数が精度に及ぼす影響を考察する．必要に応じてグラフを添付してもよいこととする．</li>
 				<li>その他．
-			</ol>
+            </ul>
 			<p> 余裕があれば， </p>
 			<ul>
-				<li>他の公式との比較．(その際には分点数の総数を等しくして考察)
+				<li>他の公式との比較．(その際には分点数の総数を等しくして考察)</li>
             </ul>
-            
+
 			<h2> 対応資料 </h2>
 			<p>
 				<a class="exit" rel="noopenner" target="blanc" href="https://drive.google.com/drive/folders/1AUsVRRk54RYw0GY2iKGJbU-hZ8txxda6?usp=sharing">Google Drive</a>
@@ -221,10 +241,17 @@ int main(int argc, char **argv)
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;unistd.h&gt;
+
 /* 1910098 Yuto Uematsu */
 /* 課題 */
 
-double fun(double x) { return (((x + 2) * x + 3) * x + 4) * x + 5; }
+double fun(double x) { 
+	return x * exp(x);
+}
+
+double func(double x) {
+	return (x - 1) * exp(x);
+}
 
 int main(int argc, char **argv) {
     double x, sum;

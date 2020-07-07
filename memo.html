@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-162881724-3');
+
+</script>
+
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+	$(function() {
+		// #で始まるリンクをクリックしたら実行されます
+		$('a[href^="#"]').click(function() {
+			// スクロールの速度
+			var speed = 400; // ミリ秒で記述
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({
+				scrollTop: position
+			}, speed, 'swing');
+			return false;
+		});
+	});
+
+</script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c&lang=html&lang=css&lang=js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" }},
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+    },
+    "HTML-CSS": { matchFontHeight: false },
+    displayAlign: "left",
+    displayIndent: "2em"
+});
+</script>
+<meta charset="utf-8" />
+<meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
+<meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="./favicons/site-tile-310x150.png">
+<meta name="msapplication-square310x310logo" content="./favicons/site-tile-310x310.png">
+<meta name="msapplication-TileColor" content="#0078d7">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="36x36" href="./favicons/android-chrome-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./favicons/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="./favicons/android-chrome-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicons/android-chrome-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="./favicons/android-chrome-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="./favicons/android-chrome-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="./favicons/android-chrome-152x152.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="./favicons/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="./favicons/android-chrome-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="36x36" href="./favicons/icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./favicons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="./favicons/icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="./favicons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="./favicons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="./favicons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="160x160" href="./favicons/icon-160x160.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="196x196" href="./favicons/icon-196x196.png">
+<link rel="icon" type="image/png" sizes="256x256" href="./favicons/icon-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="./favicons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="24x24" href="./favicons/icon-24x24.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicons/icon-32x32.png">
+<link rel="manifest" href="./favicons/manifest.json">
+<!-- ###################################################
+				ここからはページ毎に変更する
+	################################################### -->
+<link rel="stylesheet" type="text/css" href="./import_1.css" />
+<meta name="keywords" content="Yuto, UEC19, Yuto's Page, フランス語, French, LaTeX, " />
+<meta name="description" content="UEC19のYutoが運営するHPです。ゆる～くやってます" />
+<title>Code Memo</title>
+</head>
+
+<body>
+
+<div id="outer">
+
+	<h1 class="bar">Code Memo</h1>
+
+	<div id="main">
+
+		<div class="content">
+
+			<h2> 課題No.3 </h2>
+            <h3 style="padding-bottom: 1ex; padding-top: 1ex;">課題</h3>
+            <p>
+                次の定積分を数値積分によって求め、正確な積分値と比較考察せよ。
+            </p>
+            \[
+                \int_{-1}^{1} xe^x \mathrm{d}x
+            \]
+            <p>
+                この時、以下の条件をすべて満たした、<b>ひとつのプログラム</b>を作成すること。
+            </p>
+            <ol>
+                <li>
+                    最初に、 被積分関数を代数(数式)的に積分して原始関数を (手計算で) 求め、 これを C 言語の関数として定義した上で、 積分範囲の上限と下限を与えることにより 厳密な積分値を計算して出力する。
+                </li>
+                <li>
+                    次に、 課題に与えられた被積分関数を C の関数として定義し、 これを用いて Simpson の 3/8 公式 (三次のニュートン・コーツ公式) にしたがって 数値積分を行ない 結果を求める。 ここで分割数 (分点の数-1:公式を適用する回数ではないことに注意) は実行時に入力することとし、 入力された分割数の満たすべき条件などをチェックして 満足なものが与えられるまで入力を要求し続けること。 また、 分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返すこと。
+                </li>
+            </ol>
+			<p> 以上について、 得られた積分結果と その計算方法や分割数・精度などについて 考察を行なうこと。 また、 各自で任意の被積分関数ひとつについて、 同様の考察を行なえ。
+
+				<br> さらに、 余裕のある者は、 他の公式を用いた結果とも比較してみよ。 ただし、精度の比較を行なう際には、 関数値を計算する分点数の総数をおおよそ等しくして考察すること。 </p>
+			<p> まとめると，ポイントは以下 </p>
+			<ul>
+				<li>ひとつのプログラムとして，Simpsonの3/8公式による数値積分を実行するプログラムを完成する．
+			</ul>
+			<ol>
+				<li>被積分関数の原始関数を求めて，C言語の関数として定義，厳密解を求め，出力する機能を実装する．
+				<li>入力された分割数が適当な値でない場合は，再度，入力を要求する機能を有する．
+				<li>分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返す．
+				<li>計算方法の原理に関する説明．
+				<li>各自で被積分関数を用意して，結果を示す．
+				<li>分割数が精度に及ぼす影響を考察する．必要に応じてグラフを添付してもよいこととする．
+				<li>その他．
+			</ol>
+			<p> 余裕があれば， </p>
+			<ul>
+				<li>他の公式との比較．(その際には分点数の総数を等しくして考察)
+			</ul>
+
+			<h2> コード </h2>
+			<h3> 04j.c </h3>
+			<figure>
+				<code contenteditable="true">
+					<pre class="prettyprint linenums lang-c" contenteditable="true">
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;unistd.h>
+#include &lt;math.h>
+
+/* シンプソン 3/8 公式 */
+
+double fun(double x)
+{
+    return (((x + 2) * x + 3) * x + 4) * x + 5;
+}
+
+int main(int argc, char **argv)
+{
+    double x, sum;
+    double xfrom, xto, hh;
+    int xsteps, xidx;
+
+    printf("x: from to steps> ");
+    if (argc >= 3)
+    {
+        xfrom = atof(argv[1]);
+        xto = atof(argv[2]);
+        xsteps = atol(argv[3]);
+        printf("%lf %lf %d\n", xfrom, xto, xsteps);
+    }
+    else
+    {
+        scanf("%lf %lf %d", &xfrom, &xto, &xsteps);
+    }
+
+    if (xsteps % 3)
+    {
+        printf("Bad steps\n");
+        exit(1);
+    }
+
+    sum = 0;
+    hh = (xto - xfrom) / xsteps;
+    for (xidx = 0; xidx < xsteps; xidx += 3)
+    {
+        x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps; /* 内分点の計算 */
+        sum += 2 * fun(x) + 3 * (fun(x + hh) + fun(x + 2 * hh));
+    }
+    sum += -fun(xfrom) + fun(xto);
+    sum *= 3.0 * (xto - xfrom) / (8.0 * xsteps);
+    printf("ans:\t%20.15lf\n", sum);
+    return 0;
+}
+</pre>
+				</code>
+			</figure>
+
+			<h3> Ass.c </h3>
+			<figure>
+				<code contenteditable="true">
+					<pre class="prettyprint linenums lang-c" contenteditable="true">
+#include &lt;math.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+/* 1910098 Yuto Uematsu */
+/* 課題 */
+
+double fun(double x) { return (((x + 2) * x + 3) * x + 4) * x + 5; }
+
+int main(int argc, char **argv) {
+    double x, sum;
+    double xfrom, xto, hh;
+    int xsteps, xidx;
+
+    printf("x: from to steps&gt; ");
+    if (argc &gt;= 3) {
+        xfrom = atof(argv[1]);
+        xto = atof(argv[2]);
+        xsteps = atol(argv[3]);
+        printf("%lf %lf %d\n", xfrom, xto, xsteps);
+    } else {
+        scanf("%lf %lf %d", &xfrom, &xto, &xsteps);
+    }
+
+    if (xsteps % 3) {
+        printf("Bad steps\n");
+        exit(1);
+    }
+
+    sum = 0;
+    hh = (xto - xfrom) / xsteps;
+    for (xidx = 0; xidx &lt; xsteps; xidx += 3) {
+        x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps; /* 内分点の計算 */
+        sum += 2 * fun(x) + 3 * (fun(x + hh) + fun(x + 2 * hh));
+    }
+    sum += -fun(xfrom) + fun(xto);
+    sum *= 3.0 * (xto - xfrom) / (8.0 * xsteps);
+    printf("ans:\t%20.15lf\n", sum);
+    return 0;
+}
+</pre>
+				</code>
+			</figure>
+			<h3> 対応資料 </h3>
+			<p>
+				<a class="exit" rel="noopenner" target="blanc" href="https://drive.google.com/drive/folders/1AUsVRRk54RYw0GY2iKGJbU-hZ8txxda6?usp=sharing">Google Drive</a>
+			</p>
+			
+
+
+			<!-- <h2>C</h2>
+			<figure>
+				<code contenteditable="true">
+<pre class="prettyprint linenums lang-c++ " contenteditable="true">
+
+</pre>
+</code>
+			</figure> -->
+		</div>
+
+		<div id="footer">
+
+			<div class="copy">&#169; 2020 Yutoのホームページ</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

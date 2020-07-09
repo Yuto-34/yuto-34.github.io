@@ -161,7 +161,7 @@
                 <li class="check"> 厳密解を求め，出力する機能を実装 </li>
 				<li class="check">入力された分割数が適当な値でない場合は，再度，入力を要求する機能を有する．</li>
 				<li class="check">分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返す．</li>
-				<li>計算方法の原理に関する説明．</li>
+				<li><a href="#explain">計算方法の原理に関する説明．</a></li>
 				<li>各自で被積分関数を用意して，結果を示す．</li>
 				<li>分割数が精度に及ぼす影響を考察する．必要に応じてグラフを添付してもよいこととする．</li>
 				<li>その他．
@@ -243,7 +243,7 @@ int main(int argc, char **argv) {
             sum += 2 * fun(x) + 3 * (fun(x + hh) + fun(x + 2 * hh));
         }
         sum += -fun(xfrom) + fun(xto);
-        sum *= 3.0 * (xto - xfrom) / (8.0 * xsteps);
+        sum *= 3.0 * hh / 8.0;
         printf(" ans :%20.15lf\nexact:%20.15lf\n", sum, solidans);
         // 計算 to here
         printf("x: steps> ");
@@ -264,6 +264,29 @@ int main(int argc, char **argv) {
 </pre>
 </code>
 			</figure> -->
+		</div>
+		<div>
+			<h2 id="explain">計算方法の原理に関する説明</h2>
+			<textarea style="width: 100%;" rows="50">
+solidans = exact(xfrom, xto);
+まずここで厳密解を求め，solidansに代入します．
+sum = 0;
+積分結果を代入するdouble型を用意します．
+hh = (xto - xfrom) / xsteps;
+区分求積法の一つの微小区間幅を求め，hhと定義します．
+for (xidx = 0; xidx < xsteps; xidx += 3) {
+(int)xidx を用意し，xstepを超えないように3ずつ増加させます．
+これは一回での積分領域を指定してます．
+	x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps;
+	ここで内分点を求め，xとします．
+	この内分点は，積分区間の左端です．
+	sum += 2 * fun(x) + 3 * (fun(x + hh) + fun(x + 2 * hh));
+	sum に
+}
+sum += -fun(xfrom) + fun(xto);
+sum *= 3.0 * hh / 8.0;
+printf(" ans :%20.15lf\nexact:%20.15lf\n", sum, solidans);
+</textarea>
 		</div>
 
 		<div id="footer">

@@ -190,17 +190,17 @@
 /* 課題(simpton) */
 
 double fun(double x) {
-    //
+    // 被積分関数
     return x * exp(x);
 }
 
 double func(double x) {
-    //
+    // 原始関数
     return (x - 1) * exp(x);
 }
 
 double exact(int xfrom, int xto) {
-    //
+    // 厳密解
     return func(xto) - func(xfrom);
 }
 

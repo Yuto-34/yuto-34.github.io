@@ -188,40 +188,31 @@
 
 /* シンプソン 3/8 公式 */
 
-double fun(double x)
-{
-    return (((x + 2) * x + 3) * x + 4) * x + 5;
-}
+double fun(double x) { return (((x + 2) * x + 3) * x + 4) * x + 5; }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     double x, sum;
     double xfrom, xto, hh;
     int xsteps, xidx;
 
     printf("x: from to steps> ");
-    if (argc >= 3)
-    {
+    if (argc >= 3) {
         xfrom = atof(argv[1]);
         xto = atof(argv[2]);
         xsteps = atol(argv[3]);
         printf("%lf %lf %d\n", xfrom, xto, xsteps);
-    }
-    else
-    {
+    } else {
         scanf("%lf %lf %d", &xfrom, &xto, &xsteps);
     }
 
-    if (xsteps % 3)
-    {
+    if (xsteps % 3) {
         printf("Bad steps\n");
         exit(1);
     }
 
     sum = 0;
     hh = (xto - xfrom) / xsteps;
-    for (xidx = 0; xidx < xsteps; xidx += 3)
-    {
+    for (xidx = 0; xidx < xsteps; xidx += 3) {
         x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps; /* 内分点の計算 */
         sum += 2 * fun(x) + 3 * (fun(x + hh) + fun(x + 2 * hh));
     }

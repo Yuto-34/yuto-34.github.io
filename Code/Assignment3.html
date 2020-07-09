@@ -177,56 +177,6 @@
 			</p>
 
 			<h2> Code </h2>
-			<h3> xmp04j.c </h3>
-			<figure>
-				<code contenteditable="true">
-					<pre class="prettyprint linenums lang-c" contenteditable="true">
-#include &lt;stdio.h>
-#include &lt;stdlib.h>
-#include &lt;unistd.h>
-#include &lt;math.h>
-
-/* シンプソン 3/8 公式 */
-
-double fun(double x) {
-	return (((x + 2) * x + 3) * x + 4) * x + 5;
-}
-
-int main(int argc, char **argv) {
-    double x, sum;
-    double xfrom, xto, hh;
-    int xsteps, xidx;
-
-    printf("x: from to steps> ");
-    if (argc >= 3) {
-        xfrom = atof(argv[1]);
-        xto = atof(argv[2]);
-        xsteps = atol(argv[3]);
-        printf("%lf %lf %d\n", xfrom, xto, xsteps);
-    } else {
-        scanf("%lf %lf %d", &xfrom, &xto, &xsteps);
-    }
-
-    if (xsteps % 3) {
-        printf("Bad steps\n");
-        exit(1);
-    }
-
-    sum = 0;
-    hh = (xto - xfrom) / xsteps;
-    for (xidx = 0; xidx < xsteps; xidx += 3) {
-        x = (xfrom * (xsteps - xidx) + xto * xidx) / xsteps; /* 内分点の計算 */
-        sum += 2 * fun(x) + 3 * (fun(x + hh) + fun(x + 2 * hh));
-    }
-    sum += -fun(xfrom) + fun(xto);
-    sum *= 3.0 * (xto - xfrom) / (8.0 * xsteps);
-    printf("ans:\t%20.15lf\n", sum);
-    return 0;
-}
-</pre>
-				</code>
-			</figure>
-
 			<h3> Ass.c </h3>
 			<figure>
 				<code contenteditable="true">

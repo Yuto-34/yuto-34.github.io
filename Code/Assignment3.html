@@ -211,7 +211,8 @@ int main(int argc, char **argv) {
     int xsteps, xidx;
     double solidans = 0;
 
-    // 必要な数値の入力 from here
+    // 数値の入力 from here
+	// 入力を終了したいときは0以下の数を入力
     printf("x: steps> ");
     while (scanf("%d", &xsteps) != EOF) {
         if (xsteps == 0) {
@@ -231,6 +232,7 @@ int main(int argc, char **argv) {
                 scanf("%d", &xsteps);
             }
         }
+		// 数値の入力 to here
         // 計算 form here
         solidans = exact(xfrom, xto);
         sum = 0;

@@ -35,7 +35,7 @@
 	});
 
 </script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c&lang=html&lang=css&lang=js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c&lang=html&lang=css&lang=js&lang=bash&lang=sh"></script>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({
     TeX: { equationNumbers: { autoNumber: "AMS" }},
@@ -162,7 +162,7 @@
 				<li class="check">入力された分割数が適当な値でない場合は，再度，入力を要求する機能を有する．</li>
 				<li class="check">分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返す．</li>
 				<li class="check"><a href="#explain">計算方法の原理に関する説明．</a></li>
-				<li>各自で被積分関数を用意して，結果を示す．</li>
+				<li class="check">各自で被積分関数を用意して，結果を示す．</li>
 				<li>分割数が精度に及ぼす影響を考察する．必要に応じてグラフを添付してもよいこととする．</li>
 				<li>その他．
             </ul>
@@ -258,7 +258,7 @@ int main(int argc, char **argv) {
 		</div>
 		<div>
 			<h2 id="explain">計算方法の原理に関する説明</h2>
-			<textarea style="width: 100%;" rows="50">
+			<textarea style="width: 100%;" rows="25">
 solidans = exact(xfrom, xto);
 まずここで厳密解を求め，solidansに代入します．
 sum = 0;
@@ -288,8 +288,47 @@ printf(" ans :%20.15lf\nexact:%20.15lf\n", sum, solidans);
 			<h2>被積分関数：$\sin^2 x\cos x $</h2>
 			<figure>
 				<code contenteditable="true">
-<pre class="prettyprint lang-c++ " contenteditable="true">
-
+<pre class="prettyprint lang-bash" lang-sh contenteditable="true">
+$ gcc -g -o Ass2 Ass2.c -lm
+$ ./Ass2
+x: steps> 3
+ ans :   0.343032340476047
+exact:   0.397215491060637
+error:   0.136407445842333
+x: steps> 6
+ ans :   0.396897563486291
+exact:   0.397215491060637
+error:   0.000800390673328
+x: steps> 9
+ ans :   0.397163558145452
+exact:   0.397215491060637
+error:   0.000130742421568
+x: steps> 90
+ ans :   0.397215486529763
+exact:   0.397215491060637
+error:   0.000000011406589
+x: steps> 900
+ ans :   0.397215491060185
+exact:   0.397215491060637
+error:   0.000000000001139
+x: steps> 9000
+ ans :   0.397215491060637
+exact:   0.397215491060637
+error:   0.000000000000001
+x: steps> 90000
+ ans :   0.397215491060637
+exact:   0.397215491060637
+error:  -0.000000000000001
+x: steps> 900000
+ ans :   0.397215491060645
+exact:   0.397215491060637
+error:  -0.000000000000020
+x: steps> 9000000
+ ans :   0.397215491060638
+exact:   0.397215491060637
+error:  -0.000000000000003
+x: steps> -1
+$ 
 </pre>
 </code>
 			</figure>

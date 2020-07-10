@@ -194,7 +194,7 @@ double fun(double x) {
     return x * exp(x);
 }
 
-double func(double x) {
+long double func(double x) {
     // 原始関数
     return (x - 1) * exp(x);
 }
@@ -205,11 +205,11 @@ double exact(int xfrom, int xto) {
 }
 
 int main(int argc, char **argv) {
-    double x, sum, hh;
+    long double x, sum, hh;
     double xfrom = -1;
     double xto = 1;
     int xsteps, xidx;
-    double solidans = 0;
+    long double solidans = 0;
 
     // 数値の入力 from here
     // 入力を終了したいときは0以下の数を入力
@@ -235,8 +235,8 @@ int main(int argc, char **argv) {
         }
         sum += -fun(xfrom) + fun(xto);
         sum *= 3.0 * hh / 8.0;
-        printf(" ans :%20.15lf\nexact:%20.15lf\n", sum, solidans);
-        printf("error:%20.15lf\n", (solidans - sum) / solidans);
+        printf(" ans :%20.30Lf\nexact:%20.30Lf\n", sum, solidans);
+        printf("error:%20.30Lf\n", fabs((solidans - sum) / solidans));
         // 計算 to here
     }
     return 0;
@@ -380,11 +380,16 @@ $
 分割数が精度に及ぼす影響について考察する．
 上記結果の通り，分割数を10倍すると，相対誤差はおおよそ10^4スケールで減少していく．
 しかし，ある一定の値を超えると，今度は逆に多少誤差が大きくなる．
+理論的には，分割を多くしていくことで精度は単調増加するはずである．
 その原因は，関数の波の数が増えることで，元来曲線に近かったものが，波の数(分点)が増えたせいでかえって波が曲線に添わなくなるからであると推測される．
+この推測の根拠は分割数が一定値までは誤差の絶対値が単調減少であるのに対し，分割数一定値を超えてしまうと単調増加に変わるからである．
 その具体的な例として，f(x) = 1/(1 + 25x^2)がある．
 これは分割数4の時は比較的きれいに曲線に沿い，誤差が小さくなる．
 一方分割点を8にすると今度は曲線から離れてしまう．
 このような現象は，どんな関数であっても起こりうると考えられ，その結果分割数を多くしても精度が一定以上上がらないという現象が起こることが分かる．
+また，誤差の最小値がおおよそ10^-15 オーダーであることも分かった．
+これ以上誤差が小さくならない原因は，丸め誤差だと推測される．
+積分値を計算する際に1よりも大きな数になる．その時のdouble型で表せる誤差の最小がe^-15オーダーであると推測される．
 </textarea>
 			</div>
 

@@ -161,7 +161,7 @@
                 <li class="check"> 厳密解を求め，出力する機能を実装 </li>
 				<li class="check">入力された分割数が適当な値でない場合は，再度，入力を要求する機能を有する．</li>
 				<li class="check">分割数として零または負の値が与えられるまで、 分割数の入力と数値積分結果の出力を何回でも繰り返す．</li>
-				<li><a href="#explain">計算方法の原理に関する説明．</a></li>
+				<li class="check"><a href="#explain">計算方法の原理に関する説明．</a></li>
 				<li>各自で被積分関数を用意して，結果を示す．</li>
 				<li>分割数が精度に及ぼす影響を考察する．必要に応じてグラフを添付してもよいこととする．</li>
 				<li>その他．
@@ -255,15 +255,6 @@ int main(int argc, char **argv) {
 			</figure>
 
 
-
-			<!-- <h2>C</h2>
-			<figure>
-				<code contenteditable="true">
-<pre class="prettyprint linenums lang-c++ " contenteditable="true">
-
-</pre>
-</code>
-			</figure> -->
 		</div>
 		<div>
 			<h2 id="explain">計算方法の原理に関する説明</h2>
@@ -281,13 +272,36 @@ for (xidx = 0; xidx < xsteps; xidx += 3) {
 	ここで内分点を求め，xとします．
 	この内分点は，積分区間の左端です．
 	sum += 2 * fun(x) + 3 * (fun(x + hh) + fun(x + 2 * hh));
-	sum に
+	sum にxでの値の2倍，(x + hh)での値の3倍，(x + 2hh)での値の3倍を加える．
+	ここで係数が[2 3 3]であるのは，シンプソン公式での重みが[1 3 3 1]であり，端で重なり合うことを考えると
+	[1 3 3 2 3 3 2 ... 1]となるので，理にかなっている．
 }
 sum += -fun(xfrom) + fun(xto);
+左右の重みのずれを補正する．
 sum *= 3.0 * hh / 8.0;
+全体に3 * hh / 8の重みをかける．
+これで3/8公式にあてはめることができた．
+したがって計算は理にかなっているといえる．
 printf(" ans :%20.15lf\nexact:%20.15lf\n", sum, solidans);
 </textarea>
 		</div>
+			<h2>被積分関数：$\sin^2 x\cos x $</h2>
+			<figure>
+				<code contenteditable="true">
+<pre class="prettyprint lang-c++ " contenteditable="true">
+
+</pre>
+</code>
+			</figure>
+
+			<!-- <h2>C</h2>
+			<figure>
+				<code contenteditable="true">
+<pre class="prettyprint linenums lang-c++ " contenteditable="true">
+
+</pre>
+</code>
+			</figure> -->
 
 		<div id="footer">
 

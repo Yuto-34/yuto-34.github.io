@@ -212,27 +212,18 @@ int main(int argc, char **argv) {
     double solidans = 0;
 
     // 数値の入力 from here
-	// 入力を終了したいときは0以下の数を入力
-    printf("x: steps> ");
-    while (scanf("%d", &xsteps) != EOF) {
-        if (xsteps == 0) {
-            exit(1);
-        }
-        if (xsteps < 0) {
+    // 入力を終了したいときは0以下の数を入力
+    while (1) {
+        printf("x: steps> ");
+        scanf("%d", &xsteps);
+        if (xsteps <= 0) {
             return 0;
         }
-        while (xsteps % 3) {
+        if (xsteps % 3) {
             printf("Bad steps\n");
-            xfrom, xto, xsteps = 0;
-            printf("x: steps> ");
-            if (argc >= 2) {
-                xsteps = atol(argv[1]);
-                printf("%d\n", xsteps);
-            } else {
-                scanf("%d", &xsteps);
-            }
+            continue;
         }
-		// 数値の入力 to here
+        // 数値の入力 to here
         // 計算 form here
         solidans = exact(xfrom, xto);
         sum = 0;
@@ -245,8 +236,8 @@ int main(int argc, char **argv) {
         sum += -fun(xfrom) + fun(xto);
         sum *= 3.0 * hh / 8.0;
         printf(" ans :%20.15lf\nexact:%20.15lf\n", sum, solidans);
+        printf("error:%20.15lf\n", (solidans - sum) / solidans);
         // 計算 to here
-        printf("x: steps> ");
     }
     return 0;
 }

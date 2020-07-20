@@ -35,7 +35,7 @@
 	});
 
 </script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c&lang=html&lang=css&lang=js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c&lang=html&lang=css&lang=js&lang=bash&lang=sh"></script>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({
     TeX: { equationNumbers: { autoNumber: "AMS" }},
@@ -48,6 +48,10 @@
     displayIndent: "2em"
 });
 </script>
+
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+
 <meta charset="utf-8" />
 <meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
 <meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
@@ -97,39 +101,167 @@
 				ここからはページ毎に変更する
 	################################################### -->
 <link rel="stylesheet" type="text/css" href="./import_1.css" />
-<meta name="description" content="UEC19 Yutoのメモ" />
+<meta name="description" content="UEC19 Yutoの課題メモ" />
 <title>Code Memo</title>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<style>
+
+	.check {
+        position: relative;
+        left: -13px;
+		list-style-type: none !important;
+		/*ポチ消す*/
+    }
+
+	.check:before {
+        font-weight: 900;
+		font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        position: relative;
+        left: -7px;
+		/*左端からのアイコンまで*/
+		color: #ffb03f;
+		/*アイコン色*/
+	}
+
+</style>
 </head>
 
 <body>
 
 <div id="outer">
 
-	<h1 class="bar">Code Memo</h1>
+	<h1 class="bar">課題No.4</h1>
 
 	<div id="main">
 
 		<div class="content">
 
-            <h2> <a href="./Assignment4.html">課題No.4</a> </h2>
-            <h2> 参考資料+$\alpha$ </h2>
+			<h2> 課題 </h2>
+			<p>
+				次の微分方程式をルンゲ・クッタ法により t = 0 から t = 3 まで数値的に解き、 計算精度を考察せよ。
+			</p>
+			\[
+				\dfrac{\mathrm{d}^2x}{\mathrm{d}t^2} + t\dfrac{\mathrm{d}x}{\mathrm{d}t} + 20 x = 0
+			\]
+			\[
+				t = 0においてx = 1, \dfrac{\mathrm{d}x}{\mathrm{d}t} = 0
+			\]
+			<p>
+				刻み幅を変更しながら得られた計算結果から、 その計算の精度などについて考察を行ない、 t = 3 のときの真の値を推測せよ。 なお、微分方程式を解く区間は、必要があれば各自で変更しても良い。 また、 各自で任意の微分方程式ひとつについて、 同様の考察を行なえ。
+			</p>
+			<p>ポイントは以下 </p>
+			<ul>
+				<li>指定の常微分方程式を数値解析により求めるプログラムを完成する．</li>
+                <li>刻み幅を変更して解析し，精度などについて考察する．必要に応じてグラフを添付してもよいこととする．</li>
+                <li>$t = 3$ のときの真の値を推測する．</li>
+				<li>各自で任意の微分方程式ひとつについて，同様の考察をする．</li>
+				<li>その他．
+            </ul>
 
-			<h2> 04g.c </h2>
+			<h2> 対応資料 </h2>
+			<p>
+				<a class="exit" rel="noopenner" target="blanc" href="https://drive.google.com/drive/folders/1AUsVRRk54RYw0GY2iKGJbU-hZ8txxda6?usp=sharing">Google Drive</a>
+			</p>
+
+			<h2> Code </h2>
+			<h3> Ass.c </h3>
 			<figure>
 				<code contenteditable="true">
-					<pre class="prettyprint linenums lang-c++" contenteditable="true">
-#include &lt;stdio.h>
-#include &lt;stdlib.h>
-#include &lt;unistd.h>
-#include &lt;math.h>
+					<pre class="prettyprint linenums lang-c" contenteditable="true">
+#include &lt;math.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+
+/* 1910098 Yuto Uematsu */
+/* 課題(ルンゲクッタ) */
+
+double func( double x, double y ) {
+	return x + y;
+}
+
+
+int main (int argc, char **argv) {
+	double  x, y, a, b, c, d, delta;
+	double  xfrom, xto, h, hh;
+	int	  n;
+
+
+	printf("x0 y0 xto xinterval> ");
+	scanf( "%lf %lf %lf %lf", &xfrom, &y, &xto, &h );
+
+	n = 0;
+	x = xfrom;
+	hh = h / 2.0;
+	while ( x <= xto ) {
+		a = h * func( x,      y         );
+		b = h * func( x + hh, y + a/2.0 );
+		c = h * func( x + hh, y + b/2.0 );
+		d = h * func( x + h,  y + c     );
+		delta = ( a + 2.0*b + 2.0*c + d ) / 6.0;
+		printf( "%5d %20.14lf %20.14lf %20.14lf\n", n, x, y, delta );
+		n++;
+		x = xfrom + h * n;		/* 誤差の累積を避ける */
+		y += delta;
+	}
+
+	return 0;
+}
 </pre>
 				</code>
 			</figure>
 
-				</code>
-			</figure>
 
+		</div>
+			<h2> 実行結果例 </h2>
+			<figure>
+				<code contenteditable="true">
+<pre class="prettyprint lang-bash" lang-sh contenteditable="true">
+> ./xmp05c
+x0 y0 xto xinterval> 0 0 1 0.25
+    0     0.00000000000000     0.00000000000000     0.03401692708333
+    1     0.25000000000000     0.03401692708333     0.11468254195319
+    2     0.50000000000000     0.14869946903653     0.21825855687968
+    3     0.75000000000000     0.36695802591620     0.35125191328512
+    4     1.00000000000000     0.71820993920132     0.52201763409933
+
+> ./xmp05c
+x0 y0 xto xinterval> 0 0 1 0.125
+    0     0.00000000000000     0.00000000000000     0.00814819335938
+    1     0.12500000000000     0.00814819335938     0.02587663475424
+    2     0.25000000000000     0.03402482811362     0.04596558609191
+    3     0.37500000000000     0.07999041420553     0.06872934500667
+    4     0.50000000000000     0.14871975921220     0.09452405729501
+    5     0.62500000000000     0.24324381650721     0.12375328892276
+    6     0.75000000000000     0.36699710542997     0.15687433993503
+    7     0.87500000000000     0.52387144536499     0.19440539905174
+    8     1.00000000000000     0.71827684441673     0.23693365088471
+
+> ./xmp05c
+x0 y0 xto xinterval> 0 0 1 0.0625
+    0     0.00000000000000     0.00000000000000     0.00199445088704
+    1     0.06250000000000     0.00199445088704     0.00615398508227
+    2     0.12500000000000     0.00814843596931     0.01058178615135
+    3     0.18750000000000     0.01873022212066     0.01529515581903
+    4     0.25000000000000     0.03402537793969     0.02031251167525
+    5     0.31250000000000     0.05433788961494     0.02565345914232
+    6     0.37500000000000     0.07999134875727     0.03133886808350
+    7     0.43750000000000     0.11133021684077     0.03739095435241
+    8     0.50000000000000     0.14872117119317     0.04383336660195
+    9     0.56250000000000     0.19255453779512     0.05069127869191
+   10     0.62500000000000     0.24324581648703     0.05799148805635
+   11     0.68750000000000     0.30123730454338     0.06576252041511
+   12     0.75000000000000     0.36699982495849     0.07403474123867
+   13     0.81250000000000     0.44103456619715     0.08284047440186
+   14     0.87500000000000     0.52387504059901     0.09221412849007
+   15     0.93750000000000     0.61608916908908     0.10219233125150
+   16     1.00000000000000     
+</pre>
+</code>
+			</figure>
 			
+
 			<!-- <h2>C</h2>
 			<figure>
 				<code contenteditable="true">
@@ -138,7 +270,6 @@
 </pre>
 </code>
 			</figure> -->
-		</div>
 
 		<div id="footer">
 

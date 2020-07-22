@@ -177,36 +177,61 @@
 /* 1910098 Yuto Uematsu */
 /* 課題(ルンゲクッタ) */
 
-double func( double x, double y ) {
-	return x + y;
-}
+int verbose = 0, query = 1;
 
+double func(double t, double x, double v) { return -0.1 * x; }
 
-int main (int argc, char **argv) {
-	double  x, y, a, b, c, d, delta;
-	double  xfrom, xto, h, hh;
-	int	  n;
+double vtox(double t, double x, double v) { return v; }
 
+int main(int argc, char **argv) {
+    double t, tfrom, tto, h;
+    double x, a, b, c, d, delta;
+    double v, va, vb, vc, vd, vdelta;
+    int n, interval = 1;
+    char ch;
 
-	printf("x0 y0 xto xinterval> ");
-	scanf( "%lf %lf %lf %lf", &xfrom, &y, &xto, &h );
+    while ((ch = getopt(argc, argv, "vp:i:")) != -1) {
+        if (ch == 'v') {
+            verbose = 1;
+        }
+        if (ch == 'p') {
+            query = 0;
+            sscanf(optarg, "%lf,%lf,%lf,%lf,%lf", &tfrom, &x, &v, &tto, &h);
+        }
+        if (ch == 'i') {
+            interval = atol(optarg);
+        }
+    }
 
-	n = 0;
-	x = xfrom;
-	hh = h / 2.0;
-	while ( x <= xto ) {
-		a = h * func( x,      y         );
-		b = h * func( x + hh, y + a/2.0 );
-		c = h * func( x + hh, y + b/2.0 );
-		d = h * func( x + h,  y + c     );
-		delta = ( a + 2.0*b + 2.0*c + d ) / 6.0;
-		printf( "%5d %20.14lf %20.14lf %20.14lf\n", n, x, y, delta );
-		n++;
-		x = xfrom + h * n;		/* 誤差の累積を避ける */
-		y += delta;
-	}
+    if (query) {
+        printf("t0 x0 v0 tto tinterval> ");
+        scanf("%lf %lf %lf %lf %lf", &tfrom, &x, &v, &tto, &h);
+    }
 
-	return 0;
+    n = 0;
+    t = tfrom;
+    while (t <= tto) {
+        a = h * vtox(t, x, v);
+        va = h * func(t, x, v);
+        b = h * vtox(t + h / 2.0, x + a / 2.0, v + va / 2.0);
+        vb = h * func(t + h / 2.0, x + a / 2.0, v + va / 2.0);
+        c = h * vtox(t + h / 2.0, x + b / 2.0, v + vb / 2.0);
+        vc = h * func(t + h / 2.0, x + b / 2.0, v + vb / 2.0);
+        d = h * vtox(t + h, x + c, v + vc);
+        vd = h * func(t + h, x + c, v + vc);
+        delta = (a + 2.0 * b + 2.0 * c + d) / 6.0;
+        vdelta = (va + 2.0 * vb + 2.0 * vc + vd) / 6.0;
+
+        if (n % interval == 0) {
+            printf("%20.14lf %20.14lf %20.14lf %20.14lf %20.14lf\n", t, x, v, delta, vdelta);
+        }
+        n++;
+        t = tfrom + h * n;
+        x += delta;
+        v += vdelta;
+    }
+
+    return 0;
 }
 </pre>
 				</code>

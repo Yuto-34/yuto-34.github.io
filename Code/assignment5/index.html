@@ -374,7 +374,7 @@ int main(int argc, char **argv) {
         for (j = 0; j < n; j++) {
             matA[i][j] /= C;
             if (C == 0) {
-                printf("Pivot element = 0");
+                printf("\nEmergency stopped.\nType-1: Pivot element = 0: A[%d][%d] \n\n",i + 1, i + 1);
                 return 1;
             }
             // inv 逆行列計算用 追加
@@ -391,6 +391,11 @@ int main(int argc, char **argv) {
 
                 for (j = 0; j < n; j++) {
                     matA[k][j] -= matA[i][j] * C;
+                    if (fabs(matA[k][j]) >= 1000) {
+                        dump(n);
+                        printf("\nEmergency stopped.\nType-2: Ill conditioned matrix: A[%d][%d];%lf \n\n",k + 1, j + 1, matA[k][j]);
+                        return 1;
+                    }
                     // inv 逆行列計算用 追加
                     matE[k][j] -= matE[i][j] * C;
                 }
@@ -417,12 +422,6 @@ int main(int argc, char **argv) {
                 printf("\n");
             }
             printf("\n");
-            for (i = 0; i < n; i++) {
-                for (j = 0; j < n; j++) {
-                    printf("%12.5lf ", matE[i][j]);
-                }
-                printf("\n");
-            }
         }
     }
     return 0;

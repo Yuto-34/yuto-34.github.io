@@ -317,7 +317,7 @@ int main(int argc, char **argv) {
 </pre>
 				</code>
 			</figure>
-			<h3> Ass.c(改変中) </h3>
+			<h3> Ass.c(改変後) </h3>
 			<figure>
 				<code contenteditable="true">
 					<pre class="prettyprint linenums lang-c" contenteditable="true">
@@ -339,7 +339,8 @@ void dump(int n) {
     for (k = 0; k < n; k++) {
         printf("\n");
         for (j = 0; j < n; j++) printf(" %12.4le", matA[k][j]);
-        printf("%12.5le", vecX[k]);
+        printf("  |%12.5le | ", vecX[k]);
+        for (j = 0; j < n; j++) printf(" %12.4le", matE[k][j]);
     }
     printf("\n");
 }

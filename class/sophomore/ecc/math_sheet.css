@@ -92,19 +92,32 @@ p {
     margin: 0.2ex 0.1em;
 }
 
-a {
-    color: aquamarine;
-}
-
 a.class {
     color: #4351a1;
+}
+
+
+.exit::after {
+	content: '';
+	/*何も入れない*/
+	display: inline-block;
+	/*忘れずに！*/
+	width: 16px;
+	/*画像の幅*/
+	height: 16px;
+	/*画像の高さ*/
+	background-image: url(../../../img/another_tab.png);
+	background-size: contain;
+	vertical-align: middle;
+    margin-left: 3px;
+    margin-bottom: 2px;
 }
 
 a:hover {
     color: red;
 }
 
-.a {
+a {
     color: rgba(248, 203, 0, 0.849);
 }
 

@@ -122,171 +122,41 @@
 				<li><a class="a" href="#i3">答え</a></li>
 				<li><a class="a" href="#i4">解答解説</a></li>
 				<ul>
-					<li><a class="a" href="#i5">(1)～(4)</a></li>
-					<li><a class="a" href="#i6">(5), (6)</a></li>
-					<li><a class="a" href="#i7">(7), (8)</a></li>
-					<li><a class="a" href="#i8">(9), (10)</a></li>
 				</ul>
 			</ul>
 		</div>
 		<h2 id="i1">問題</h2>
-		<div style="float: left; margin-right:1em; margin-left:5em; max-width:400px;">
-			<img style="max-width:100%; object-fit: contain; display: block;" src="../img/ecc14-2.png">
+		<div style="float: left; margin-right:1em; margin-left:5em; margin-bottom: 1ex; padding-bottom: 1ex; max-width:400px;">
+			<img style="max-width:100%; object-fit: contain; display: block;" src="../img/ecc14-1.png">
 		</div>
 		<p>
-			図の回路において、交流電源の出力(実効値)$E$、角周波数$\omega$、位相角$\theta$はそれぞれ$25\mathrm{V}$、$2000\mathrm{rad/s}$、$0$である。また、$R = 3\Omega$、$L = 0.4 \mathrm{mH}$、$C = 500\mathrm{\mu F}$である。交流電源は$+$記号側を正とし、電流は矢印の向きを正とする。<br>
-			(1)ループ電流$\dot{I_1}$ を$a+jb$ [A]としたときの$a$を答えよ。<br>
-			(2)ループ電流$\dot{I_1}$を$a+jb$ [A]としたときの$b$を答えよ。<br>
-			(3)ループ電流$\dot{I_2}$を$a+jb$ [A]としたときの$a$を答えよ。<br>
-			(4)ループ電流$\dot{I_2}$を$a+jb$[A]としたときの$b$を答えよ。<br>
-			(5)$\dot{I_R}$の実効値はいくらか。単位も含めて答えよ。<br>
-			(6)$\dot{I_R}$の位相角を$\alpha$としたときの$\tan\alpha$の値を答えよ。<br>
-			(7)$\dot{I_L}$の実効値はいくらか。単位も含めて答えよ。<br>
-			(8)$\dot{I_L}$の位相角を$\alpha$としたときの$\tan\alpha$の値を答えよ。<br>
-			(9)$\dot{I_C}$の実効値はいくらか。単位も含めて答えよ。<br>
-			(10)$\dot{I_C}$の位相角を$\alpha$としたときの$\tan\alpha$の値を答えよ。
+			図の回路において，$E_1 = 2\mathrm{V}$, $E_2 = 4\mathrm{V}$, $R_1 = 4 \Omega$, $R_2 = 3\Omega$, $R_3 = 5\Omega$, $I_S = 5\mathrm{A}$ とする．電流 $i_1$, $i_2$, $i_3$と A 点の電位$V_A$はそれぞれいくらか．向きが矢印と逆になる場合は負数で答えること．
 		</p>
+		<div class="clear"></div>
 		<h3 id="i2">条件</h3>
 		<div class="note" style="width:36em ; margin: auto 0em auto 8em; padding-left: .0em;">
 			\begin{align*}
-			E &: 25 \mathrm{V} \\
-			\omega &: 2000 \mathrm{rad/s} \\
-			\theta &: 0 \mathrm{rad} \\
-			R &: 3 \Omega \\
-			L &: 0.4 \mathrm{mH} \\
-			C &: 500 \mathrm{\mu F}
+			E_1 &= 2\mathrm{V} &
+			E_2 &= 4\mathrm{V} \\
+			I_S &= 5\mathrm{A} \\
+			R_1 &= 4 \Omega &
+			R_2 &= 3\Omega &
+			R_3 &= 5\Omega
 			\end{align*}
+			<p style="padding-left: 2em;">電流 $i_1$, $i_2$, $i_3$と A 点の電位$V_A$を求めよ．</p>
 		</div>
 		<h2 id="i3">答え</h2>
 		<table style="margin: 0ex 1em 1ex 5em;">
 			<tr>
-				<td style="width: 40%; height:2ex;">(1) 3</td>
-				<td style="width: 40%;">(6) $-\dfrac{4}{3}$</td>
+				<td style="width: 40%; height:2ex;">(1) 1A</td>
+				<td style="width: 40%;">(3) 2A</td>
 			</tr>
 			<tr>
-				<td style="height: 2ex;">(2) -4</td>
-				<td>(7) 25A</td>
-			</tr>
-			<tr>
-				<td style="height: 2ex;">(3) 15</td>
-				<td>(8) $-\dfrac{4}{3}$</td>
-			</tr>
-			<tr>
-				<td style="height: 2ex;">(4) -20</td>
-				<td>(9) 20A</td>
-			</tr>
-			<tr>
-				<td style="height: 2ex;">(5) 5A</td>
-				<td>(10) $-\dfrac{4}{3}$</td>
+				<td style="height: 2ex;">(2) 2A</td>
+				<td>(4) 6V</td>
 			</tr>
 		</table>
 		<h2 id="i4">解答解説</h2>
-		<h3 id="i5"> (1)～(4)</h3>
-
-		<div style="margin: 0ex 1em 0ex 6em;">
-			<p>
-				$\dot{I_1}$と$\dot{I_2}$を求める.
-
-				$\dot{I_1}$と$\dot{I_2}$について，連立方程式を立てる．
-			</p>
-			$$
-			\begin{align}
-			\begin{cases}
-			E &= R\dot{I_1} + Z_C(\dot{I_1} - \dot{I_2}) \\
-			0 &= Z_L\dot{I_2} + Z_C(\dot{I_2} - \dot{I_1})
-			\end{cases} \label{renritsu}
-			\end{align}
-			$$
-
-			<p>$\dot{I_2}$について，$\dot{I_1}$について解く．</p>
-
-			$$
-			\begin{align*}
-			0 &= Z_L\dot{I_2} + Z_C(\dot{I_2} - \dot{I_1}) \\
-			&= 0.8j \dot{I_2} -j(\dot{I_2} - \dot{I_1}) \\
-			0.2j \dot{I_2} &= j\dot{I_1} \\
-			\dot{I_2} &= 5\dot{I_1}
-			\end{align*}
-			$$
-
-			<p>($\ref{renritsu}$)式，上式に$\dot{I_2}$を代入．</p>
-
-			$$
-			\begin{align*}
-			\therefore
-			E &=R\dot{I_1} + Z_C(\dot{I_1} - 5\dot{I_1}) \\
-			25 &= 3 \dot{I_1} + 4j\dot{I_1} \\
-			&= (3 + 4j)\dot{I_1} \\
-			\dot{I_1} &= \dfrac{25(3 - 4j)}{(3 + 4j)(3 - 4j)} \\
-			&= 3 - 4j \\
-			\therefore \dot{I_2} &= 15 - 20j
-			\end{align*}
-			$$
-		</div>
-
-		<h3 id="i6"> (5), (6)</h3>
-		<div style="margin: 0ex 1em 0ex 6em;">
-			<p>$R$：抵抗に流れる電流$=\dot{I_1}$</p>
-
-			$$
-			\begin{align*}
-			\dot{I_1} &= 3 - 4j\\
-			|\dot{I_1}| &= \sqrt{3^2 + 4^2}\\
-			&= 5\\
-			\therefore& 5 \mathrm{A}
-			\end{align*}
-			$$
-
-			$$
-			\begin{align*}
-			\tan\alpha &= \dfrac{-4}{3}\\
-			&=-\dfrac{4}{3}
-			\end{align*}
-			$$
-
-		</div>
-
-		<h3 id="i7"> (7), (8)</h3>
-		<div style="margin: 0ex 1em 0ex 6em;">
-			<p>$L$：コイルに流れる電流$=\dot{I_2}$</p>
-
-			$$
-			\begin{align*}
-			\dot{I_2} &= 15 - 20j \\
-			|\dot{I_2}| &= \sqrt{15^2 + 20^2} \\
-			&= 25
-			\end{align*}
-			$$
-
-			$$
-			\begin{align*}
-			\tan\alpha &= \dfrac{-20}{15}\\
-			&=-\dfrac{4}{3}
-			\end{align*}
-			$$
-		</div>
-
-		<h3 id="i8"> (9), (10)</h3>
-		<div style="margin: 0ex 1em 0ex 6em;">
-
-			<p>$C$：コンデンサに流れる電流$=\dot{I_1} - \dot{I_2}$</p>
-
-			$$
-			\begin{align*}
-			\dot{I_1} - \dot{I_2} &= 3 - 4j - (15 - 20j)\\
-			&= -12 + 16j\\
-			|\dot{I_1} - \dot{I_2}| &= \sqrt{12^2 + 16^2}\\
-			&= \sqrt{144 + 256}\\
-			&= 20
-			\end{align*}
-			$$
-
-			$$
-			\begin{align*}
-			\tan\alpha &= \dfrac{16}{-12}\\
-			&=-\dfrac{4}{3}
-			\end{align*}
-			$$
 
 		</div>
 

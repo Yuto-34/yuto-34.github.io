@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-162881724-3');
+
+	</script>
+
+	<!-- 文字コードの指定 -->
+	<meta charset="UTF-8">
+
+	<!-- jQueryの指定 -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<!-- ＃リンクのスムーズスクロール -->
+	<script>
+		$(function() {
+			// #で始まるリンクをクリックしたら実行されます
+			$('a[href^="#"]').click(function() {
+				// スクロールの速度
+				var speed = 400; // ミリ秒で記述
+				var href = $(this).attr("href");
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				var position = target.offset().top;
+				$('body,html').animate({
+					scrollTop: position
+				}, speed, 'swing');
+				return false;
+			});
+		});
+
+	</script>
+	<script src="https: //cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/x-mathjax-config"> MathJax.Hub.Config({
+TeX: { equationNumbers: { autoNumber: "AMS" }},
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+processEscapes: true
+},
+"HTML-CSS": { matchFontHeight: false },
+displayAlign: "left",
+displayIndent: "2em"
+});
+</script>
+	<meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
+	<meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
+	<meta name="msapplication-wide310x150logo" content="./favicons/site-tile-310x150.png">
+	<meta name="msapplication-square310x310logo" content="./favicons/site-tile-310x310.png">
+	<meta name="msapplication-TileColor" content="#0078d7">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="./favicons/android-chrome-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="./favicons/android-chrome-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="./favicons/android-chrome-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/android-chrome-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="./favicons/android-chrome-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="./favicons/android-chrome-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="./favicons/android-chrome-152x152.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./favicons/android-chrome-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="./favicons/android-chrome-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="./favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="./favicons/icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="./favicons/icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="./favicons/icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="./favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="./favicons/icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="./favicons/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="./favicons/icon-160x160.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="./favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="./favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./favicons/icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="./favicons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="./favicons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="24x24" href="./favicons/icon-24x24.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/icon-32x32.png">
+	<link rel="manifest" href="./favicons/manifest.json">
+	<!-- ###################################################
+<script type="text/javascript" src="./JS/index.js"></script>
+ここからはページ毎に変更する
+################################################### -->
+	<meta name="description" content="UEC19のYutoが運営するHPです。ゆる～くやってます" />
+	<meta name="keywords" content="Yuto, UEC19, Yuto's Page, フランス語, French, LaTeX, " />
+	<link rel="stylesheet" type="text/css" href="./import.css" />
+	<title>Yuto's Page</title>
+</head>
+<body>
+<div class="outer">
+	<div class="body">
+		<h1>基礎電気回路 課題 14-2 </h1>
+		<h2 style="color: rgb(255, 216, 44); border: none;">目次</h2>
+		<div class="list">
+			<!-- 目次 -->
+			<ul style="list-style: none; padding: 0em;">
+				<li><a class="a" href="#i1"></a></li>
+			</ul>
+		</div>
+		<h2>問題</h2>
+		<div style="float: left; margin-right:1em; margin-left:5em; max-width:400px;">
+			<img style="max-width:100%; object-fit: contain; display: block;" src="../img/ecc14-2.png">
+		</div>
+		<p>
+			図の回路において、交流電源の出力(実効値)$E$、角周波数$\omega$、位相角$\theta$はそれぞれ$25\mathrm{V}$、$2000\mathrm{rad/s}$、$0$である。また、$R = 3\Omega$、$L = 0.4 \mathrm{mH}$、$C = 500\mathrm{\mu F}$である。交流電源は$+$記号側を正とし、電流は矢印の向きを正とする。<br>
+			(1)ループ電流$\dot{I_1}$ を$a+jb$ [A]としたときの$a$を答えよ。<br>
+			(2)ループ電流$\dot{I_1}$を$a+jb$ [A]としたときの$b$を答えよ。<br>
+			(3)ループ電流$\dot{I_2}$を$a+jb$ [A]としたときの$a$を答えよ。<br>
+			(4)ループ電流$\dot{I_2}$を$a+jb$[A]としたときの$b$を答えよ。<br>
+			(5)$\dot{I_R}$の実効値はいくらか。単位も含めて答えよ。<br>
+			(6)$\dot{I_R}$の位相角を$\alpha$としたときの$\tan\alpha$の値を答えよ。<br>
+			(7)$\dot{I_L}$の実効値はいくらか。単位も含めて答えよ。<br>
+			(8)$\dot{I_L}$の位相角を$\alpha$としたときの$\tan\alpha$の値を答えよ。<br>
+			(9)$\dot{I_C}$の実効値はいくらか。単位も含めて答えよ。<br>
+			(10)$\dot{I_C}$の位相角を$\alpha$としたときの$\tan\alpha$の値を答えよ。
+		</p>
+		<h3>条件</h3>
+		<div class="note" style="width:36em ; margin: auto 0em auto 8em; padding-left: .0em;">
+			\begin{align*}
+			E &: 25 \mathrm{V} \\
+			\omega &: 2000 \mathrm{rad/s} \\
+			\theta &: 0 \mathrm{rad} \\
+			R &: 3 \Omega \\
+			L &: 0.4 \mathrm{mH} \\
+			C &: 500 \mathrm{\mu F}
+			\end{align*}
+		</div>
+		<h2>答え</h2>
+		<table style="margin: 0ex 1em 1ex 5em;">
+			<tr>
+				<td style="width: 40%; height:2ex;">(1) 3</td>
+				<td style="width: 40%;">(6) $-\dfrac{4}{3}$</td>
+			</tr>
+			<tr>
+				<td style="height: 2ex;">(2) -4</td>
+				<td>(7) 25A</td>
+			</tr>
+			<tr>
+				<td style="height: 2ex;">(3) 15</td>
+				<td>(8) $-\dfrac{4}{3}$</td>
+			</tr>
+			<tr>
+				<td style="height: 2ex;">(4) -20</td>
+				<td>(9) 20A</td>
+			</tr>
+			<tr>
+				<td style="height: 2ex;">(5) 5A</td>
+				<td>(10) $-\dfrac{4}{3}$</td>
+			</tr>
+		</table>
+		<h2>解答解説</h2>
+		<h3> (1)～(4)</h3>
+
+		<div style="margin: 0ex 1em 0ex 6em;">
+			<p>
+				$\dot{I_1}$と$\dot{I_2}$を求める.
+
+				$\dot{I_1}$と$\dot{I_2}$について，連立方程式を立てる．
+			</p>
+			$$
+			\begin{align}
+			\begin{cases}
+			E &= R\dot{I_1} + Z_C(\dot{I_1} - \dot{I_2}) \\
+			0 &= Z_L\dot{I_2} + Z_C(\dot{I_2} - \dot{I_1})
+			\end{cases} \label{renritsu}
+			\end{align}
+			$$
+
+			<p>$\dot{I_2}$について，$\dot{I_1}$について解く．</p>
+
+			$$
+			\begin{align*}
+			0 &= Z_L\dot{I_2} + Z_C(\dot{I_2} - \dot{I_1}) \\
+			&= 0.8j \dot{I_2} -j(\dot{I_2} - \dot{I_1}) \\
+			0.2j \dot{I_2} &= j\dot{I_1} \\
+			\dot{I_2} &= 5\dot{I_1}
+			\end{align*}
+			$$
+
+			<p>($\ref{renritsu}$)式，上式に$\dot{I_2}$を代入．</p>
+
+			$$
+			\begin{align*}
+			\therefore
+			E &=R\dot{I_1} + Z_C(\dot{I_1} - 5\dot{I_1}) \\
+			25 &= 3 \dot{I_1} + 4j\dot{I_1} \\
+			&= (3 + 4j)\dot{I_1} \\
+			\dot{I_1} &= \dfrac{25(3 - 4j)}{(3 + 4j)(3 - 4j)} \\
+			&= 3 - 4j \\
+			\therefore \dot{I_2} &= 15 - 20j
+			\end{align*}
+			$$
+		</div>
+
+		<h3> (5), (6)</h3>
+		<div style="margin: 0ex 1em 0ex 6em;">
+			<p>$R$：抵抗に流れる電流$=\dot{I_1}$</p>
+
+			$$
+			\begin{align*}
+			\dot{I_1} &= 3 - 4j\\
+			|\dot{I_1}| &= \sqrt{3^2 + 4^2}\\
+			&= 5\\
+			\therefore& 5 \mathrm{A}
+			\end{align*}
+			$$
+
+			$$
+			\begin{align*}
+			\tan\alpha &= \dfrac{-4}{3}\\
+			&=-\dfrac{4}{3}
+			\end{align*}
+			$$
+
+		</div>
+
+		<h3> (7), (8)</h3>
+		<div style="margin: 0ex 1em 0ex 6em;">
+			<p>$L$：コイルに流れる電流$=\dot{I_2}$</p>
+
+			$$
+			\begin{align*}
+			\dot{I_2} &= 15 - 20j \\
+			|\dot{I_2}| &= \sqrt{15^2 + 20^2} \\
+			&= 25
+			\end{align*}
+			$$
+
+			$$
+			\begin{align*}
+			\tan\alpha &= \dfrac{-20}{15}\\
+			&=-\dfrac{4}{3}
+			\end{align*}
+			$$
+		</div>
+
+		<h3> (9), (10)</h3>
+		<div style="margin: 0ex 1em 0ex 6em;">
+
+			<p>$C$：コンデンサに流れる電流$=\dot{I_1} - \dot{I_2}$</p>
+
+			$$
+			\begin{align*}
+			\dot{I_1} - \dot{I_2} &= 3 - 4j - (15 - 20j)\\
+			&= -12 + 16j\\
+			|\dot{I_1} - \dot{I_2}| &= \sqrt{12^2 + 16^2}\\
+			&= \sqrt{144 + 256}\\
+			&= 20
+			\end{align*}
+			$$
+
+			$$
+			\begin{align*}
+			\tan\alpha &= \dfrac{16}{-12}\\
+			&=-\dfrac{4}{3}
+			\end{align*}
+			$$
+
+		</div>
+
+	</div>
+	<div class="footer">
+		<address>
+			by <a class="class" target="blank" rel="noopener" href="http://yuto924.starfree.jp">Yuto</a><br>
+			Contact:
+			<a class="class" target="blank" rel="noopener" href="mailto:yuto.for.uni@gmail.com">Mail</a> ,
+			<a class="class" target="blank" rel="noopener" href="https://instagram.com/Yuto1249">Instagram</a>
+			,
+			<a class="class" target="blank" rel="noopener" href="https://twitter.com/Yutto_924">Twitter</a>
+		</address>
+	</div>
+</div>
+</body>
+</html>

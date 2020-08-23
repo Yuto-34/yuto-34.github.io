@@ -106,7 +106,7 @@ a.class {
 	/*画像の幅*/
 	height: 16px;
 	/*画像の高さ*/
-	background-image: url(../../../img/another_tab.png);
+	background-image: url(../../../img/another_tab_Y.png);
 	background-size: contain;
 	vertical-align: middle;
     margin-left: 3px;
@@ -132,7 +132,7 @@ a {
 
 .clear {
     clear: both;
-    /*floatの解除、ここがポイント* /  
+    /*floatの解除、ここがポイント*/  
 }
 
 

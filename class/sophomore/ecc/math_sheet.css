@@ -27,8 +27,8 @@
 .footer {
     FONT-VARIANT: JIS04;
     width: 100%;
-    background-color: lightgray;
-    color: gray;
+    background-color: rgb(170, 169, 169);
+    color: rgb(212, 212, 212);
     font-size: 12px;
     margin: 0px 0px 0px 0px;
     padding: 10px 13px 10px 13px;
@@ -97,7 +97,7 @@ a {
 }
 
 a.class {
-    color: #282a36;
+    color: #4351a1;
 }
 
 a:hover {

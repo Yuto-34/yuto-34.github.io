@@ -87,6 +87,15 @@ h4 {
     margin: auto;
 }
 
+h4.header {
+    color: rgb(223, 128, 5);
+    font-size: 1.25em;
+    border-bottom: solid 3px rgb(223, 128, 5);
+    margin: 2ex 0em 1ex 3em;
+    max-width: 28em;
+    padding-left: 0.2em;
+}
+
 p {
     padding: 0.3ex .3em .3ex 4em;
     margin: 0.2ex 0.1em;

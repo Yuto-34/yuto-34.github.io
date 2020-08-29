@@ -172,12 +172,47 @@
 		</table>
 
 		<h2 id="i4">解答解説</h2>
-		<!-- <h3 id="setten">節点法</h3>
+		<h3 id="setten">節点法</h3>
 		<div style="margin-left: 6em;">
 			<p>
-				節点法を用いて，Aにおいて入出流する電流について考える．
+				節点法を用いて，Aにおいて入出流する電流について考える．<br>
+				節点Aにおいては$5\mathrm{A}$の電流が流れ込むので，
+				$$
+					\begin{align}
+						5 = i_1 + i_2 + i_3 \label{base}
+					\end{align}
+				$$
+				が成り立つ．
 			</p>
-		</div> -->
+			<p>
+				ここで抵抗$R_1$，$R_2$，$R_3$を流れる電流と電位差の関係性は次のようにまとめられる．
+				$$
+					\begin{align}
+						i_1 &= \dfrac{x - 2}{4} \label{i1} \\
+						i_2 &= \dfrac{x - 0}{3} \label{i2} \\
+						i_3 &= \dfrac{x - (-4)}{5} = \dfrac{x + 4}{5} \label{i3}
+					\end{align}
+				$$
+				ここで式($\ref{i1}$), ($\ref{i2}$), ($\ref{i3}$)を式($\ref{base}$)に代入すると，
+				$$
+					\begin{align*}
+						5 &= \dfrac{x - 2}{4} + \dfrac{x}{3} + \dfrac{x + 4}{5} \\
+						300 &= 47x + 18 \\
+						47x &= 282 \\
+						x &= 6
+					\end{align*}
+				$$
+				となるので，節点Aでの電位は$6$Vであることが分かった．<br>
+				この電位を式($\ref{i1}$), ($\ref{i2}$), ($\ref{i3}$)に代入することで，それぞれの電流は次のように求められる．
+				$$
+					\begin{align*}
+						i_1 &= \dfrac{x - 2}{4} = \dfrac{6 - 2}{4} = 1\mathrm{A} \\
+						i_2 &= \dfrac{x}{3} = \dfrac{6}{3} = 2\mathrm{A} \\
+						i_3 &= \dfrac{x + 4}{5} = \dfrac{6 + 4}{5} = 2\mathrm{A}
+					\end{align*}
+				$$
+			</p>
+		</div>
 
 
 		<h3 id="kasane">重ね合わせの原理</h3>

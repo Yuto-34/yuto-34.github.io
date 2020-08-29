@@ -122,6 +122,11 @@
 				<li><a class="a" href="#i3">答え</a></li>
 				<li><a class="a" href="#i4">解答解説</a></li>
 				<ul>
+					<li><a class="a" href="#i5">$E_1$のとき</a></li>
+					<li><a class="a" href="#i6">$E_2$のとき</a></li>
+					<li><a class="a" href="#i7">$I_S$のとき</a></li>
+					<li><a class="a" href="#i8">総和</a></li>
+					<li><a class="a" href="#i9">$V_A$</a></li>
 				</ul>
 			</ul>
 		</div>
@@ -157,6 +162,128 @@
 			</tr>
 		</table>
 		<h2 id="i4">解答解説</h2>
+		<p>
+			重ね合わせの原理を適用して考える．
+
+			1. $E_1$以外の電圧源を短絡，電流源を開放して考える．
+			2. $E_2$以外の電圧源を短絡，電流源を開放して考える．
+			3. $I_S$以外の電圧源を短絡する．
+			4. それぞれの場合の電流値を合計する．
+		</p>
+
+		<h4 id="i5"> $E_1$ の時 </h4>
+
+		<p>
+			$
+			\begin{align*}
+			R &= R_1 + R_{2 + 3(並列)} \\
+			&= 5 + \dfrac{5 \times 3}{5 + 3} \\
+			&= \dfrac{47}{8}
+			\end{align*}
+			$
+
+			$
+			\begin{align*}
+			I_{(全体)} = i_1 &= \dfrac{V}{R} \\
+			&= \dfrac{2}{\frac{47}{8}} \\
+			&= \dfrac{16}{47}
+			\end{align*}
+			$
+
+			$
+			\begin{align*}
+			i_2 : i_3 &= \dfrac{1}{R_2} : \dfrac{1}{R_3} \\
+			R_2 i_2 &= R_3i_3 \\
+			R_2 i_2 &= R_3i_1 - R_3i_2 \\
+			(R_2 + R_3) \cdot i_2 &= R_3i_1 \\
+			i_2 &= \dfrac{R_3}{R_2 + R_3}i_1 \\
+			i_2 &= \dfrac{5}{8}\dfrac{16}{47} \\
+			&= \dfrac{2 \times 5}{47} \\
+			&= \dfrac{10}{47} \\
+			\therefore i_3 &= \dfrac{6}{47}
+			\end{align*}
+			$
+
+			$
+			\begin{align*}
+			V_2 &= E_1 - R_1 i_1 \\
+			&= 2 - 4 \times \dfrac{16}{47}
+			&= \dfrac{94}{47} - \dfrac{64}{47} \\
+			&= \dfrac{30}{47}
+			\end{align*}
+			$
+
+			$
+			\begin{align*}
+			\therefore
+			\begin{cases}
+			i_1 &= -\dfrac{16}{47} \\
+			i_2 &= \dfrac{10}{47} \\
+			i_3 &= \dfrac{6}{47}
+			\end{cases}
+			\end{align*}
+			$
+		</p>
+
+		<h4 id="i6"> $E_2$ の時 </h4>
+
+		<p>
+			$E_1$の時と同様に考えて計算をすると，以下が求まる．
+		</p>
+
+		<p>
+			$\begin{align*}
+			i_1 &= -\dfrac{12}{47} &
+			i_2 &= -\dfrac{16}{47} &
+			i_3 &= \dfrac{28}{47}
+			\end{align*}$
+		</p>
+
+		<h4 id="i7"> $I_s$ の時 </h4>
+
+		<p>
+			電圧源を短絡して計算をすると，以下が求まる．
+		</p>
+
+		<p>
+			$\begin{align*}
+			i_1 &= \dfrac{75}{47} &
+			i_2 &= \dfrac{100}{47} &
+			i_3 &= -\dfrac{60}{47}
+			\end{align*}$
+		</p>
+
+		<h4 id="i8"> 総和 </h4>
+
+		<p>
+			上で求めた$i_1$～$i_3$の和がそれぞれの電圧に等しいので，
+		</p>
+
+		<p>
+			$
+			\begin{align*}
+			\begin{cases}
+			i_1 &= -\dfrac{16}{47} - \dfrac{12}{47} + \dfrac{75}{47} \\&= 1\\
+			i_2 &= \dfrac{10}{47} - \dfrac{16}{47} + \dfrac{100}{47} \\&= 2\\
+			i_3 &= \dfrac{6}{47} + \dfrac{28}{47} -\dfrac{60}{47} \\&= 2
+			\end{cases}
+			\end{align*}
+			$
+		</p>
+
+		<h4 id="i9"> $V_A$ </h4>
+
+		<p>
+			アースが基準電位になっているので，$V_A$は$R_2$の電圧降下に等しい．
+		</p>
+		<p>
+			$
+			\begin{align*}
+			V_A &= 2\mathrm{A} \times 3\Omega \\
+			&= 6\mathrm{V}
+			\end{align*}
+			$
+		</p>
 
 	</div>
 

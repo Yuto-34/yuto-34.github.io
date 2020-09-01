@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'UA-162881724-3');
+
+</script>
+<!-- 文字コードの指定 -->
+<meta charset="UTF-8">
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+	$(function() {
+		// #で始まるリンクをクリックしたら実行されます
+		$('a[href^="#"]').click(function() {
+			// スクロールの速度
+			var speed = 400; // ミリ秒で記述
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({
+				scrollTop: position
+			}, speed, 'swing');
+			return false;
+		});
+	});
+
+</script>
+
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+
+<!-- syntacs highlight -->
+<script src="https: //cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
+
+<!-- Mathjax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({
+	TeX: { equationNumbers: { autoNumber: "AMS" }},
+	tex2jax: {
+	inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+	processEscapes: true
+	},
+	"HTML-CSS": { matchFontHeight: false },
+	displayAlign: "left",
+	displayIndent: "2em"
+	});
+	</script>
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../favicons/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="196x196" href="../../favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../../favicons/icon-512x512.png">
+<link rel="manifest" href="../../favicons/manifest.json">
+<!-- ###################################################
+	<script type="text/javascript" src="./JS/index.js"></script>
+	ここからはページ毎に変更する
+	################################################### -->
+<meta name="description" content="VSCodeに関するメモ1" />
+<meta name="keywords" content="Yuto, UEC19, Yuto's Page, VSCode" />
+<link rel="stylesheet" type="text/css" href="./import.css" />
+<script src="main.js" type="text/javascript"></script>
+<title>Yuto's Page</title>
+</head>
+<body>
+<header class="header">
+	<!--ここに header.htmlが読み込まれる-->
+</header>
+<div class="outer">
+	<div style="background: black; display: inline-block; width:100%; padding-left:12%; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;" class="head">
+		<h1>VSCodeを邪魔したアプリの話</h1>
+	</div>
+	<div class="contents" style="display: block; background-color:gray; margin:10px;">
+		<h3>目次</h3>
+		<ul>
+			<li><a href="#how">経緯</a></li>
+			<li><a href="#sit">状況</a></li>
+			<li><a href="#why">原因</a></li>
+			<li><a href="#howto">究明方法及び結果</a></li>
+			<li><a href="#deal">対策</a></li>
+			<li><a href="#con">考察</a></li>
+		</ul>
+	</div>
+	<div class="contents">
+
+		<h2 id="how">経緯</h2>
+		<p>
+			急にVSCode内のマルチカーソルに対応するショートカットコマンド <code class="inline">Ctrl</code> + <code class="inline">Alt</code> + <code class="inline">[Arrow]</code> が使えなくなった．
+		</p>
+		<p>
+			多用するショートカットで非常に困るので，状況判断と対策を行った．
+		</p>
+
+		<h2 id="sit">状況</h2>
+		<p>
+			<code class="inline">Ctrl</code> + <code class="inline">Alt</code> + <code class="inline">[Arrow]</code> を押しても無反応
+		</p>
+
+		<h2 id="why">原因</h2>
+		<p>
+			インテルグラフィックスコマンドセンターというアプリ．<br>
+			ショートカットホットキーとして，<code class="inline">Ctrl</code> + <code class="inline">Alt</code> が割り振られている事によるバグであると思われる．<br>
+			ショートカットホットキーの設定をオフにしても効果がなかった．
+		</p>
+
+		<h2 id="howto">究明方法及び結果</h2>
+		<p>
+			タスクマネージャーと<a href="https://freesoft-100.com/review/kbv.html">kbv</a>というアプリを用いて行った．<br>
+			<img width="50%" alt="kbv" src="./kbv.png">kbv実行画像
+		</p>
+		<p>
+			VSCode内設定の <code class="inline">Ctrl</code> + <code class="inline">K</code> <code class="inline">Ctrl</code> + <code class="inline">S</code> でキーボードショートカットを開き，設定を変更しようとしたところ，キーボード入力として認識されていないように感じた．<br>
+			そこで，kbv(仮想キーボードを表示するアプリ)を用いて <code class="inline">Ctrl</code> + <code class="inline">Alt</code> + <code class="inline">[Arrow]</code> が認識されているかを判断したところ，入力として認識されていなかった．
+		</p>
+		<p>
+			レジストリにゴミが入ったことを疑い，まずレジストリの復元を試した．<br>
+			幸運にも昔取ったバックアップがあり，復元してみたが，効果はなかった．<br>
+		</p>
+		<p>
+			次にkbvで逐一確認しながら，タスクマネージャーを使って裏で動いているアプリを1つずつ落としていった．<br>
+			インテルグラフィックスコマンドセンターというアプリを落としたところ，キーボードの不具合がなくなった．
+		</p>
+
+		<h2 id="deal">対策</h2>
+		<p>
+			そもそもインテルグラフィックスコマンドセンターを使う必要性がなかった為，アプリのアンインストールを行った．<br>
+			アプリ内の設定を変更するだけの対策は不可能であった．(2020/09/01)
+		</p>
+
+		<h2 id="con">考察</h2>
+		<p>
+			あくまで推測に留まるが，恐らくインテルアプリのホットキー設定をoffにすることで， <code class="inline">Ctrl</code> + <code class="inline">Alt</code> + <code class="inline">[Arrow]</code> の動作をキャンセルしている．
+			その結果，副作用としてあたかもキー入力自体が無効化されているように見えているものと思われる．
+			今回この症状が出てネット検索をするも，具体的な解決策が見つからなかったためここに記す．
+		</p>
+
+
+
+		<!-- div*3>a -->
+		<!-- div>ul>li>a*5 -->
+		<!-- ul>li*5 -->
+
+	</div>
+	<footer class="footer">
+		<!--ここに footer.htmlが読み込まれる-->
+	</footer>
+</div>
+</body>
+</html>

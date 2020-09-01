@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	*, *:before, *:after {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		color: black;
+	}
+	.contents {
+		min-height: 100vh;
+		margin: auto;
+		padding: 1em 0 10em 0;
+		background: rgb(236, 240, 241);
+	}
+	footer #button {
+		position: relative;
+		width: 10em;
+		height: 2em;
+		margin: 0 auto;
+		padding: 0.2em;
+		cursor: pointer;
+		-webkit-transition: all 1s ease;
+				transition: all 1s ease;
+		text-align: center;
+		color: #00acc1;
+		border-radius: 3px 3px 0px 0px;
+		background: #006064;
+	}
+	footer #button:hover {
+		position: relative;
+		width: 10em;
+		height: 2em;
+		-webkit-transition: all 1s ease;
+				transition: all 1s ease;
+	}
+	footer {
+		position: fixed;
+		z-index: 999;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		width: 100%;
+		height: 1.5em;
+		margin: 0 auto;
+		-webkit-transition: all 1s ease;
+				transition: all 1s ease;
+	}
+	footer:hover {
+		height: 10em;
+		-webkit-transition: all 1s ease;
+				transition: all 1s ease;
+	}
+	footer #container {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #006064;
+	}
+	footer #cont {
+		margin: 0 auto;
+		padding: 1em;
+		color: #00acc1;
+	}
+	footer .copyright {
+		float: left;
+		width: 50%;
+	}
+	footer .copyright p {
+		font-size: 0.7em;
+		line-height: 2em;
+		padding-left: 10%;
+		letter-spacing: 1px;
+		color: #ffffff;
+	}
+	footer .sns {
+		float: right;
+		width: 50%;
+	}
+	footer .sns a {
+		font-weight: bold;
+		line-height: 2em;
+		width: 2em;
+		margin: auto 0.1em;
+		float: right;
+		-webkit-transition: all, 0.3s;
+				transition: all, 0.3s;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border-radius: 4px;
+		background-color: #00acc1;
+	}
+	footer .sns a:hover {
+		-webkit-transition: all, 0.3s;
+				transition: all, 0.3s;
+		background-color: #222222;
+	}
+	footer .sns .insta {
+		background-color: #e4405f;
+	}
+	footer .sns .fb {
+		background-color: #3b5999;
+	}
+	footer .sns .tw {
+		background-color: #55acee;
+	}
+</style>
+</head>
+<body>
+	<div class="contents">
+		<h1>Contents</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<footer>
+		<div id="button">footer</div>
+		<div id="container">
+		<div id="cont">
+			<div class="copyright">
+				<p>© 2018 - Organisation</p>
+			</div>
+			<div class="sns">
+				<a href="#" class="insta"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></a>
+				<a href="#" class="tw"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a>
+				<a href="#" class="fb"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		</div>
+	</footer>
+</body>
+</html>

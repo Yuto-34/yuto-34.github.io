@@ -1,0 +1,99 @@
+* {
+    /* background: black; */
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.outer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* 均等配置(始点終点余白0) */
+    justify-content: fix-start;
+    flex-direction:column; /* x-y入れ替え */
+    align-items: center; /* 中央揃え */
+    margin: 0px auto;
+    background: rgb(78, 78, 78);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.contents {
+    background: black;
+    /* max-width: 80%;
+    width: 1200px; */
+    min-width: 750px;
+    max-width: 1200px;
+    width: 75%;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0px 150px 0px 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    /* display: block; */
+    /* max-width: 80%; */
+    /* border-bottom: solid aquamarine 3px; */
+    color: aquamarine;
+    margin: 1ex 1em;
+    margin-left: 0ex;
+    font-size: 2.5em;
+}
+
+h2 {
+    display: block;
+    max-width: 70%;
+    border-bottom: solid aquamarine 3px;
+    margin-top: 1ex;
+}
+
+h3 {
+    display: block;
+    margin-top: 5px;
+    font-size: x-large;
+    max-width: 65%;
+    border-bottom: solid aquamarine 3px;
+}
+
+p {
+    font-size: large;
+    /* line-height: 3ex; */
+    margin-top: .3ex !important;
+    margin-bottom: 1ex !important;
+    padding-left: 1em !important; 
+}
+
+ul>li {
+    font-size: large;
+    /* line-height: 3ex; */
+    margin-top: .3ex !important;
+    /* margin-bottom: 1ex !important; */
+    margin-left: 1em !important; 
+}
+
+code.inline {
+    /* padding: 5px 10px 5px 10px; */
+    color: white;
+    display: inline-block;
+    background: rgb(51, 51, 51);
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-family: monospace;
+}
+
+
+@media (max-width: 500px) {
+    main div.animal {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+
+    .contents {
+        width: 100%;
+        max-width: none;
+    }
+}

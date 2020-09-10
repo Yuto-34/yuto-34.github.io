@@ -98,108 +98,96 @@
 
 		<div class="content">
 
-				<h2> 提出課題 6 </h2>
+			<h2> 提出課題 6 </h2>
 
-				<p>
-					上記で与えられた ヤコビ法を用いて N 元一次連立方程式
-				</p>
-				<p>
-					[ A ] { x } = { b }
-				</p>
-				<p>
-					の解 x を求めるプログラムに対して，
-					以下の問に答えよ．
-				</p>
-
-
-				<ol>
-					<li> プログラム例にて，vecXとvecTの役割の違いを説明せよ．
-					<li> プログラム例おける収束判定(誤差評価)法を説明せよ．
-					<li> matA[i][j]の各行 i において，非零要素が存在する左端位置 j_min と右端位置 j_maxを
-						出力できるようにプログラムを修正せよ
-						(各行において計算に必要とされる範囲を求める)．
-					<li> 上の結果を用いて，
-						<!--収束演算を開始する前に係数マトリクス中の非零要素を探し，-->
-						反復計算の必要な範囲を局限するようにプログラムを修正せよ．
-					<li> 44x44.dat を入力データとして用いた結果を示すこと．
-					<li> 各自が用意したdataを用いた結果を示すこと．<br><br>
-						<strong>余裕があれば</strong>
-					<li> 収束する場合と収束しない場合の方程式/行列の特徴を考察せよ．
-					<li> 時間に余裕のある者は，
-						反復計算を行なう上で必要となる積和演算の回数を数え上げることができるようにせよ．
-						反復計算の必要な範囲を局限した場合としない場合とで定量的な比較を行なえ．
-					<li> さらに時間に余裕のある者は，
-						Gauss-Jordan 法で解を求めるのに必要となる乗除算と加減算の回数を計算し，
-						Jacobi 法で必要となる計算回数と定量的な比較を行なえ．
-					<li> さらに時間に余裕のある者は，
-						マトリクス中の零要素のメモリを節約することによって，
-						より大きなマトリクスを扱えるような修正を行ってみよ．
-				</ol>
+			<p>
+				上記で与えられた ヤコビ法を用いて N 元一次連立方程式
+			</p>
+			<p>
+				[ A ] { x } = { b }
+			</p>
+			<p>
+				の解 x を求めるプログラムに対して，
+				以下の問に答えよ．
+			</p>
 
 
-				<p>
-					課題提出用データファイルとしては，
-					/class/mce/NumAnalysis/44x44.dat と各自が用意したものとの二つ以上を用い，
-					これを標準入力から リダイレクトによって 読み込んで
-					計算した結果をレポートに示すこと．
-					<br>
-					なお， 連立方程式によっては， 収束しない場合もあるので注意すること．
-					収束する場合と収束しない場合との特徴を考察できれば， さらに良い．
-				</p>
+			<ol>
+				<li> プログラム例にて，vecXとvecTの役割の違いを説明せよ．
+				<li> プログラム例おける収束判定(誤差評価)法を説明せよ．
+				<li> matA[i][j]の各行 i において，非零要素が存在する左端位置 j_min と右端位置 j_maxを
+					出力できるようにプログラムを修正せよ
+					(各行において計算に必要とされる範囲を求める)．
+				<li> 上の結果を用いて，
+					<!--収束演算を開始する前に係数マトリクス中の非零要素を探し，-->
+					反復計算の必要な範囲を局限するようにプログラムを修正せよ．
+				<li> 44x44.dat を入力データとして用いた結果を示すこと．
+				<li> 各自が用意したdataを用いた結果を示すこと．<br><br>
+					<strong>余裕があれば</strong>
+				<li> 収束する場合と収束しない場合の方程式/行列の特徴を考察せよ．
+				<li> 時間に余裕のある者は，
+					反復計算を行なう上で必要となる積和演算の回数を数え上げることができるようにせよ．
+					反復計算の必要な範囲を局限した場合としない場合とで定量的な比較を行なえ．
+				<li> さらに時間に余裕のある者は，
+					Gauss-Jordan 法で解を求めるのに必要となる乗除算と加減算の回数を計算し，
+					Jacobi 法で必要となる計算回数と定量的な比較を行なえ．
+				<li> さらに時間に余裕のある者は，
+					マトリクス中の零要素のメモリを節約することによって，
+					より大きなマトリクスを扱えるような修正を行ってみよ．
+			</ol>
 
+			<p>
+				課題提出用データファイルとしては，
+				/class/mce/NumAnalysis/44x44.dat と各自が用意したものとの二つ以上を用い，
+				これを標準入力から リダイレクトによって 読み込んで
+				計算した結果をレポートに示すこと．
+				<br>
+				なお， 連立方程式によっては， 収束しない場合もあるので注意すること．
+				収束する場合と収束しない場合との特徴を考察できれば， さらに良い．
+			</p>
 
-				<hr>
-				<p>
-					<a href="./xmp09b.output.txt"> 実行結果例 (この例と同じ出力になる必要はない) </a>
-					<!-- , 実行ファイル例: /class/mce/NumAnalysis/xmp09b<br> -->
-					<!-- 入力データ例: /class/mce/NumAnalysis/{44x44,816x816}.dat,
-/class/mce/NumAnalysis/Jacobi0?.dat,
-/class/mce/NumAnalysis/heat0?.dat -->
-				</p>
+			<hr>
+			<p>
+				<a href="./xmp09b.output.txt"> 実行結果例 (この例と同じ出力になる必要はない) </a>
+			</p>
 
-				<p>
-					入力データ内容<br>
-					<a href="./input_data/44x44.dat"> 44x44.dat</a>,
-					<a href="./input_data/816x816.dat"> 816x816.dat</a>,
-					<a href="./input_data/heat01.dat"> heat01.dat</a>,
-					<a href="./input_data/heat02.dat"> heat02.dat</a>,
-					<a href="./input_data/heat03.dat"> heat03.dat</a>,
-					<a href="./input_data/heat04.dat"> heat04.dat</a>,
-					<a href="./input_data/heat05.dat"> heat05.dat</a>,
-					<a href="./input_data/heat06.dat"> heat06.dat</a>,
-					<a href="./input_data/heat07.dat"> heat07.dat</a>,
-					<a href="./input_data/heat08.dat"> heat08.dat</a>,
-					<a href="./input_data/heat09.dat"> heat09.dat</a>
-				</p>
+			<p>
+				入力データ内容<br>
+				<a href="./code/44x44.dat"> 44x44.dat</a>,
+				<a href="./code/816x816.dat"> 816x816.dat</a>,
+				<a href="./code/heat01.dat"> heat01.dat</a>,
+				<a href="./code/heat02.dat"> heat02.dat</a>,
+				<a href="./code/heat03.dat"> heat03.dat</a>,
+				<a href="./code/heat04.dat"> heat04.dat</a>,
+				<a href="./code/heat05.dat"> heat05.dat</a>,
+				<a href="./code/heat06.dat"> heat06.dat</a>,
+				<a href="./code/heat07.dat"> heat07.dat</a>,
+				<a href="./code/heat08.dat"> heat08.dat</a>,
+				<a href="./code/heat09.dat"> heat09.dat</a>
+			</p>
 
-				<!--
-<p>
-<b>提出期限: 2015 年 8 月 5 日 18 時</b>
-</p>
--->
+			<hr>
 
-				<hr>
+			<p>
+				なお，これらの入力データは以下に示すような温度分布の有限要素解析中に現れるものである．
+			</p>
 
-				<p>
-					なお，これらの入力データは以下に示すような温度分布の有限要素解析中に現れるものである．
-				</p>
+			<table border=2>
+				<tr>
+					<td align=middle> <img src="./img/44x44.jpg">
+					<td align=middle> <img src="./img/816x816.jpg">
+				<tr>
+					<td align=middle> [ 44x44.dat ]
+					<td align=middle> [ 816x816.dat ]
+			</table>
 
-				<table border=2>
-					<tr>
-						<td align=middle> <img src="./img/44x44.jpg">
-						<td align=middle> <img src="./img/816x816.jpg">
-					<tr>
-						<td align=middle> [ 44x44.dat ]
-						<td align=middle> [ 816x816.dat ]
-				</table>
+			<hr>
 
-				<hr>
-
-				<h2 id="program"> Code </h2>
-				<h3> Ass.c(改変前) </h3>
-				<figure>
-					<code contenteditable="true">
-						<pre class="prettyprint linenums lang-c" contenteditable="true">
+			<h2 id="program"> Code </h2>
+			<h3> Ass.c(改変前) </h3>
+			<figure>
+				<code contenteditable="true">
+					<pre class="prettyprint linenums lang-c" contenteditable="true">
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;unistd.h&gt;
@@ -375,12 +363,12 @@ int main(int argc, char **argv) {
     return 0;
 }
 </pre>
-					</code>
-				</figure>
-				<h3> Ass.c(改変後) </h3>
-				<figure>
-					<code contenteditable="true">
-						<pre class="prettyprint linenums lang-c" contenteditable="true">
+				</code>
+			</figure>
+			<h3> Ass.c(改変後) </h3>
+			<figure>
+				<code contenteditable="true">
+					<pre class="prettyprint linenums lang-c" contenteditable="true">
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;
@@ -389,21 +377,21 @@ int main(int argc, char **argv) {
 // Fauss-Jordan
 
 </pre>
-					</code>
-				</figure>
+				</code>
+			</figure>
 
 
-		<h2> 実行結果</h2>
-		<figure>
-			<code contenteditable="true">
-				<pre class="prettyprint lang-bash lang-bash lang=bash" contenteditable="true">
+			<h2> 実行結果</h2>
+			<figure>
+				<code contenteditable="true">
+					<pre class="prettyprint lang-bash lang-bash lang=bash" contenteditable="true">
 
 </pre>
-			</code>
-		</figure>
+				</code>
+			</figure>
 
 
-		<!-- <h2>C</h2>
+			<!-- <h2>C</h2>
 			<figure>
 				<code contenteditable="true">
 <pre class="prettyprint linenums lang-c++ " contenteditable="true">
@@ -412,12 +400,12 @@ int main(int argc, char **argv) {
 </code>
 			</figure> -->
 
-		<div id="footer">
+			<div id="footer">
 
-			<div class="copy">&#169; 2020 Yutoのホームページ</div>
+				<div class="copy">&#169; 2020 Yutoのホームページ</div>
+			</div>
 		</div>
 	</div>
-</div>
 </body>
 
 </html>

@@ -167,8 +167,7 @@ int main(int argc, char **argv) {
     times(&tto); /* 計算時間計測終了 */
     printf("%03d: ", cc);
     V_Write(vecX); /* 最終解の書き出し */
-    printf("    user cpu time: %.2lf [sec]\n\n",
-           (double)(tto.tms_utime - tfrom.tms_utime) / sysconf(_SC_CLK_TCK));
+    printf("    user cpu time: %.2lf [sec]\n\n", (double)(tto.tms_utime - tfrom.tms_utime) / sysconf(_SC_CLK_TCK));
 
     return 0;
 }

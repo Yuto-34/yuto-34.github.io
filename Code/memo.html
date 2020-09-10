@@ -1,11 +1,106 @@
-#include <limits.h>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/times.h>  // 構造体tmsを使うために必要．
-#include <time.h>
-#include <unistd.h>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-162881724-3');
+
+</script>
+
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+	$(function() {
+		// #で始まるリンクをクリックしたら実行されます
+		$('a[href^="#"]').click(function() {
+			// スクロールの速度
+			var speed = 400; // ミリ秒で記述
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({
+				scrollTop: position
+			}, speed, 'swing');
+			return false;
+		});
+	});
+
+</script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c&lang=html&lang=css&lang=js&lang=bash&lang=sh"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" }},
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+    },
+    "HTML-CSS": { matchFontHeight: false },
+    displayAlign: "left",
+    displayIndent: "2em"
+});
+</script>
+
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
+<link rel="manifest" href="../favicons/manifest.json">
+<!-- ###################################################
+				ここからはページ毎に変更する
+	################################################### -->
+<link rel="stylesheet" type="text/css" href="./import_1.css" />
+<meta name="description" content="数値解析の課題メモ" />
+<title>NA Assignment 5</title>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<!-- <meta http-equiv="refresh" content="5;URL=./index.html"> -->
+<style>
+	.check {
+		position: relative;
+		left: -13px;
+		list-style-type: none !important;
+		/*ポチ消す*/
+	}
+
+	.check:before {
+		font-weight: 900;
+		font-family: "Font Awesome 5 Free";
+		content: "\f00c";
+		position: relative;
+		left: -7px;
+		/*左端からのアイコンまで*/
+		color: #ffb03f;
+		/*アイコン色*/
+	}
+
+</style>
+</head>
+
+<body>
+<h2>最終課題</h2>
+<figure>
+	<code contenteditable="true">
+		<pre class="prettyprint linenums lang-c" contenteditable="true">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+#include &lt;time.h&gt;
+#include &lt;sys/times.h> // 構造体tmsを使うために必要&gt;
+#include &lt;limits.h&gt;
 
 #ifndef SIZE
 #define SIZE (1024)
@@ -60,17 +155,16 @@ int main(int argc, char **argv) {
     C = 0;
     prec = 1e-5;
 
-// オプション処理 開始
     while ((ch = getopt(argc, argv, "vms:i:p:")) != -1) {
-        if (ch == 'v') { /* おしゃべり */
+        if (ch == 'v') {
             verbose = 1;
-        }
-        if (ch == 'm') { /* マップ表示選択 */
+        } /* おしゃべり */
+        if (ch == 'm') {
             map = 1;
-        }
-        if (ch == 's') { /* 連立元数 Size */
+        } /* マップ表示選択 */
+        if (ch == 's') {
             n = atoi(optarg);
-        }
+        } /* 連立元数 Size */
         if (ch == 'i') { /* 初期値 */
             C = atof(optarg);
         }
@@ -83,14 +177,13 @@ int main(int argc, char **argv) {
             prec = 1.0 / prec;
         }
     }
-// オプション処理終了
 
-    if (n == 0) { // nが0の時の処理
+    if (n == 0) {
         printf("Size: ");
         scanf("%d", &n);
         printf("\n");
     }
-    if (n > SIZE) { /* エラー処理 (n > SIZE) */
+    if (n > SIZE) { /* エラー処理 */
         printf("error: Size should be less than or equal to %d.\n", SIZE);
         return 1;
     }
@@ -171,3 +264,9 @@ int main(int argc, char **argv) {
 
     return 0;
 }
+</pre>
+	</code>
+</figure>
+</body>
+
+</html>

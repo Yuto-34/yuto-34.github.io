@@ -140,8 +140,80 @@
 					また，0 が出るとカウンタを1増やし，0以外が出たら j_max に0を代入するアルゴリズムを用いると， j_max が求まる．<br>
 					今回は Simal_Read の段階で処理を施した．
 				</li>
-				<li></li>
-				<li></li>
+				<li>上の結果を用いると，matA を用いた計算での範囲は， j_min ～ (n - j_max) で良いことが分かる．<br>したがって，一部プログラム中ループの範囲を <code>j_min ～ (n - j_max)</code> とした．</li>
+				<li>
+					<figure>
+						<code contenteditable="true">
+							<pre class="prettyprint linenums lang-c" contenteditable="true">
+								44x44.dat
+Size: 44
+
+i:00 min:000  max:038
+i:01 min:000  max:037
+i:02 min:001  max:036
+i:03 min:002  max:036
+i:04 min:000  max:034
+i:05 min:000  max:033
+i:06 min:001  max:032
+i:07 min:002  max:032
+i:08 min:004  max:030
+i:09 min:004  max:029
+i:10 min:005  max:028
+i:11 min:006  max:028
+i:12 min:008  max:026
+i:13 min:008  max:025
+i:14 min:009  max:024
+i:15 min:010  max:024
+i:16 min:012  max:022
+i:17 min:012  max:021
+i:18 min:013  max:020
+i:19 min:014  max:020
+i:20 min:016  max:018
+i:21 min:016  max:017
+i:22 min:017  max:016
+i:23 min:018  max:016
+i:24 min:020  max:014
+i:25 min:020  max:013
+i:26 min:021  max:012
+i:27 min:022  max:012
+i:28 min:024  max:010
+i:29 min:024  max:009
+i:30 min:025  max:008
+i:31 min:026  max:008
+i:32 min:028  max:006
+i:33 min:028  max:005
+i:34 min:029  max:004
+i:35 min:030  max:004
+i:36 min:032  max:002
+i:37 min:032  max:001
+i:38 min:033  max:000
+i:39 min:034  max:000
+i:40 min:036  max:002
+i:41 min:036  max:001
+i:42 min:037  max:000
+i:43 min:038  max:000
+
+001: ............................................
+002: ............................................
+003: 11111111111111111111111111111111111111111111
+004: 11111111111111111111111111111111111111111111
+005: 22121122222222222222222222222222222222222222
+006: 22222222222222222222222222222222222222222222
+007: 33222233333333333333333333333333333333333333
+008: 33333333333333333333333333333333333333333333
+009: 33333333334444444444444444444444444444444444
+010: 44443444444444444444444444444444444444444444
+011: 44444444444454555555555555555555555555555555
+012: 55454555555555555555555555555555555555555555
+013: 55555555555555556666666666666666666666666666
+014: 66565566666666666666666666666666666666666666
+014:   7.71481447e+01  5.45982466e+01  1.62434955e+01  2.08767081e+01  1.58208741e+01  1.76480760e+01  2.11478887e+01  1.95708211e+01  2.03088701e+01  2.01762933e+01  1.98188367e+01  2.01109192e+01  1.99771545e+01  1.99840889e+01  2.00256930e+01  1.99781003e+01  2.00007726e+01  2.00018763e+01  1.99964262e+01  2.00029647e+01  1.99993830e+01  1.99997639e+01  2.00005416e+01  1.99988551e+01  1.99993978e+01  2.00000696e+01  1.99999530e+01  1.99994954e+01  1.99994162e+01  2.00000207e+01  2.00000386e+01  1.99993998e+01  1.99993995e+01  2.00000304e+01  2.00000277e+01  1.99994021e+01  1.99995232e+01  2.00000403e+01  2.00000407e+01  1.99995228e+01  1.99981029e+01  1.99995128e+01  1.99995127e+01  1.99981030e+01
+	user cpu time: 0.00 [sec]
+
+</pre>
+						</code>
+					</figure>
+				</li>
 				<li></li>
 			</ol>
 
@@ -203,7 +275,7 @@
 #include &lt;string.h&gt;
 #include &lt;math.h&gt;
 #include &lt;time.h&gt;
-#include &lt;sys/times.h> // 構造体tmsを使うために必要&gt;
+#include &lt;sys/times.h&gt; // 構造体tmsを使うために必要.
 #include &lt;limits.h&gt;
 
 #ifndef SIZE
@@ -374,13 +446,179 @@ int main(int argc, char **argv) {
 			<figure>
 				<code contenteditable="true">
 					<pre class="prettyprint linenums lang-c" contenteditable="true">
+#include &lt;limits.h&gt;
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/times.h&gt;  // 構造体tmsを使うために必要.
+#include &lt;time.h&gt;
 #include &lt;unistd.h&gt;
 
 // 1910098 Yuto Uematsu
-// Fauss-Jordan
+// Jacobi 法
 
+#ifndef SIZE
+#define SIZE (1024)
+#endif
+#ifndef LIMIT
+#define LIMIT (200)
+#endif
+
+double matA[SIZE][SIZE], vecB[SIZE], vecX[SIZE], vecT[SIZE];
+int n, verbose;
+
+int j_min[SIZE];
+int j_max[SIZE];
+
+void Simal_Read(double a[SIZE][SIZE], double b[SIZE]) { /* 連立方程式の読み込み */
+    for (int i = 0; i < n; i++) {
+        int flag = 1;
+        for (int j = 0; j < n; j++) {
+            scanf("%lf", &(a[i][j]));
+            if (a[i][j] == 0) {
+                j_max[i]++;
+                if (flag) j_min[i]++;
+            } else {
+                flag = 0;
+                j_max[i] = 0;
+            }
+        }
+        scanf("%lf", &(b[i]));
+        printf("i:%.2d min:%.3d  max:%.3d\n", i, j_min[i], j_max[i]);
+    }
+    printf("\n");
+}
+
+void Simal_Write(double a[SIZE][SIZE], double b[SIZE]) { /* 連立方程式の書き出し */
+    int i, j;
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            printf("%11.3le ", a[i][j]);
+        }
+        printf("  %11.3le\n", b[i]);
+    }
+}
+
+void V_Write(double a[SIZE]) { /* ベクトルの書き出し */
+    int i;
+    for (i = 0; i < n; i++) {
+        printf(" %15.8le", a[i]);
+    }
+    printf("\n");
+}
+
+int main(int argc, char **argv) {
+    int i, j, k, cont, cc, dig, map;
+    double C, Sum, prec, p;
+    struct tms tfrom, tto;
+    char ch, *ptr;
+
+    n = 0;
+    verbose = 0;
+    map = 0;
+    C = 0;
+    prec = 1e-5;
+
+    // オプション処理 開始
+    while ((ch = getopt(argc, argv, "vms:i:p:")) != -1) {
+        if (ch == 'v') verbose = 1 /* おしゃべり */;
+        if (ch == 'm') map = 1 /* マップ表示選択 */;
+        if (ch == 's') n = atoi(optarg) /* 連立元数 Size */;
+        if (ch == 'i') C = atof(optarg) /* 初期値 */;
+        if (ch == 'p') { /* 要求精度 (桁数) */
+            j = atoi(optarg);
+            prec = 1.0;
+            for (i = 0; i < j; i++) prec *= 10.0;
+            prec = 1.0 / prec;
+        }
+    }
+    // オプション処理終了
+
+    if (n == 0) {  // nが0の時の処理
+        printf("Size: ");
+        scanf("%d", &n);
+        printf("%d\n", n);
+        printf("\n");
+    }
+    if (n > SIZE) { /* エラー処理 (n > SIZE) */
+        printf("error: Size should be less than or equal to %d.\n", SIZE);
+        return 1;
+    }
+
+    for (i = 0; i < n; i++) vecX[i] = C; /* vecX準備；初期値代入 */
+
+    Simal_Read(matA, vecB);      /* 問題の読み込み */
+    if (verbose) {               // -vならば
+        Simal_Write(matA, vecB); /* 清書 */
+    }
+
+    // 係数マトリクスの下準備：各行を対角成分で割る
+    for (j = 0; j < n; j++) {
+        int c = 0;
+        C = matA[j][j];                              // 対角成分事態に操作は不要
+        for (k = j_min[j]; k < n - j_max[j]; k++) {  // 範囲から0成分を除外
+            c++;
+            if (j != k) {                      //対角でない場合
+                matA[j][k] = -matA[j][k] / C;  //後でmatA[j][k]を足すだけで良いようにしている
+            }
+        }
+        vecB[j] = vecB[j] / C;
+        // printf("j:%d c:%d\n",j,c);
+    }
+
+    times(&tfrom); /* 計算時間計測開始 */
+
+    cc = 0;                         // ただの回数カウンタ
+    cont = 1;                       // 収束判定用
+    while (cont && (cc < LIMIT)) {  // 収束してない && カウンタが上限回数に達していない(200未満)
+        if (!map) {                 // -m で無い場合の処理
+            printf("%03d: ", cc);
+            V_Write(vecX);  // 暫定解の書き出し
+        }
+
+        for (j = 0; j < n; j++) {                        // Jacobi 法による計算
+            Sum = vecB[j];                               // 初期解(対角成分で除済み)
+            for (k = j_min[j]; k < n - j_max[j]; k++) {  // 範囲から0成分を除外
+                if (j != k) {
+                    Sum += matA[j][k] * vecX[k];  // 積和計算, matA の符号は反転済み
+                }
+            }
+            vecT[j] = Sum;  // 次の解として保存
+        }
+        cc++;
+
+        if (map) {
+            printf("%03d: ", cc);
+        }
+        cont = 0;
+        for (i = 0; i < n; i++) {                                                    /* 収束状況の確認 */
+            p = 999;                                                                 // p は精度，初期値999(めっちゃ精度悪い)
+            if (vecT[i] != 0 && (p = fabs((vecT[i] - vecX[i]) / vecT[i])) > prec) {  // 次の解との相対誤差を計算
+                cont = 1;
+            }
+            if (map) {                                                                       /* 有効桁数マップの作成 */
+                dig = (long)(-log(p) / log(10.0) + 0.5);                                     // 少数以下の桁数を計算
+                if (dig > 35) dig = 35;                                                      // 35よりも大きければ35に縮める
+                if (dig < 0) dig = 0;                                                        // 0未満なら0に収める
+                printf("%c", (dig <= 0) ? '.' : ((dig < 10) ? '0' + dig : 'A' + dig - 10));  // 有効桁を特殊な手法で表示
+                if (i % 100 == 99) printf("\n");
+            }
+            vecX[i] = vecT[i];  // 次の解を暫定会に代入
+        }
+        if (map) {
+            printf("\n");
+        }
+    }
+
+    times(&tto); /* 計算時間計測終了 */
+    printf("%03d: ", cc);
+    V_Write(vecX); /* 最終解の書き出し */
+    printf("    user cpu time: %.2lf [sec]\n\n", (double)(tto.tms_utime - tfrom.tms_utime) / sysconf(_SC_CLK_TCK));
+
+    return 0;
+}
 </pre>
 				</code>
 			</figure>

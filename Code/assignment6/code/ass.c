@@ -7,7 +7,7 @@
 #include <time.h>
 #include <unistd.h>
 
-// Yuto Uematsu 1910098
+// 1910098 Yuto Uematsu
 // Jacobi 法
 
 #ifndef SIZE

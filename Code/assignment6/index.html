@@ -65,7 +65,7 @@
 <meta name="description" content="数値解析の課題メモ" />
 <title>NA Assignment 5</title>
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-<!-- <meta http-equiv="refresh" content="5;URL=./index.html"> -->
+<meta http-equiv="refresh" content="60;URL=./index.html">
 <style>
 	.check {
 		position: relative;
@@ -207,8 +207,7 @@
 double matA[SIZE][SIZE], vecB[SIZE], vecX[SIZE], vecT[SIZE];
 int n, verbose;
 
-void Simal_Read(double a[SIZE][SIZE], double b[SIZE]) /* 連立方程式の読み込み */
-{
+void Simal_Read(double a[SIZE][SIZE], double b[SIZE]) { /* 連立方程式の読み込み */
     int i, j;
 
     for (i = 0; i < n; i++) {

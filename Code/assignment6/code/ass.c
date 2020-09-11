@@ -145,7 +145,7 @@ int main(int argc, char **argv) {
                 }
                 printf("%c", (dig <= 0) ? '.' : ((dig < 10) ? '0' + dig : 'A' + dig - 10));
                 if (i % 100 == 99) {
-                    printf("\n     ");
+                    printf("\n");
                 }
             }
             vecX[i] = vecT[i];

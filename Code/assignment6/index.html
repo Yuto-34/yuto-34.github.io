@@ -65,7 +65,7 @@
 <meta name="description" content="数値解析の課題メモ" />
 <title>NA Assignment 5</title>
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-<meta http-equiv="refresh" content="10;URL=./index.html">
+<meta http-equiv="refresh" content="15;URL=./index.html">
 <style>
 	.check {
 		position: relative;
@@ -135,7 +135,11 @@
 			<ol>
 				<li>vecXもvecTも[ A ] { x } = { b }における x であるが，vecXは現在の解であり，vecTは次の解である．</li>
 				<li>vecX と vecTの差を取り，その差が prec(初期値：1x10^(-5))よりも小さくなれば，cont = 1 をしないでループを抜けるようになっている．</li>
-				<li></li>
+				<li>
+					各行に対して，初めから0以外が出るまでカウントすると j_min が求まる．<br>
+					また，0 が出るとカウンタを1増やし，0以外が出たら j_max に0を代入するアルゴリズムを用いると， j_max が求まる．<br>
+					今回は Simal_Read の段階で処理を施した．
+				</li>
 				<li></li>
 				<li></li>
 				<li></li>

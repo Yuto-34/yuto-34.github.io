@@ -7,6 +7,9 @@
 #include <time.h>
 #include <unistd.h>
 
+// Yuto Uematsu 1910098
+// Jacobi 法
+
 #ifndef SIZE
 #define SIZE (1024)
 #endif
@@ -17,15 +20,26 @@
 double matA[SIZE][SIZE], vecB[SIZE], vecX[SIZE], vecT[SIZE];
 int n, verbose;
 
-void Simal_Read(double a[SIZE][SIZE], double b[SIZE]) { /* 連立方程式の読み込み */
-    int i, j;
+int j_min[SIZE];
+int j_max[SIZE];
 
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+void Simal_Read(double a[SIZE][SIZE], double b[SIZE]) { /* 連立方程式の読み込み */
+    for (int i = 0; i < n; i++) {
+        int flag = 1;
+        for (int j = 0; j < n; j++) {
             scanf("%lf", &(a[i][j]));
+            if (a[i][j] == 0) {
+                j_max[i]++;
+                if (flag) j_min[i]++;
+            } else {
+                flag = 0;
+                j_max[i] = 0;
+            }
         }
         scanf("%lf", &(b[i]));
+        printf("i:%.2d min:%.3d  max:%.3d\n", i, j_min[i], j_max[i]);
     }
+        printf("\n");
 }
 
 void Simal_Write(double a[SIZE][SIZE], double b[SIZE]) { /* 連立方程式の書き出し */
@@ -62,13 +76,9 @@ int main(int argc, char **argv) {
     // オプション処理 開始
     while ((ch = getopt(argc, argv, "vms:i:p:")) != -1) {
         if (ch == 'v') verbose = 1 /* おしゃべり */;
-
         if (ch == 'm') map = 1 /* マップ表示選択 */;
-
         if (ch == 's') n = atoi(optarg) /* 連立元数 Size */;
-
         if (ch == 'i') C = atof(optarg) /* 初期値 */;
-
         if (ch == 'p') { /* 要求精度 (桁数) */
             j = atoi(optarg);
             prec = 1.0;
@@ -81,6 +91,7 @@ int main(int argc, char **argv) {
     if (n == 0) {  // nが0の時の処理
         printf("Size: ");
         scanf("%d", &n);
+        printf("%d\n",n);
         printf("\n");
     }
     if (n > SIZE) { /* エラー処理 (n > SIZE) */

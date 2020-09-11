@@ -1,5 +1,51 @@
 44x44.dat
-Size: 
+Size: 44
+
+i:00 min:000  max:038
+i:01 min:000  max:037
+i:02 min:001  max:036
+i:03 min:002  max:036
+i:04 min:000  max:034
+i:05 min:000  max:033
+i:06 min:001  max:032
+i:07 min:002  max:032
+i:08 min:004  max:030
+i:09 min:004  max:029
+i:10 min:005  max:028
+i:11 min:006  max:028
+i:12 min:008  max:026
+i:13 min:008  max:025
+i:14 min:009  max:024
+i:15 min:010  max:024
+i:16 min:012  max:022
+i:17 min:012  max:021
+i:18 min:013  max:020
+i:19 min:014  max:020
+i:20 min:016  max:018
+i:21 min:016  max:017
+i:22 min:017  max:016
+i:23 min:018  max:016
+i:24 min:020  max:014
+i:25 min:020  max:013
+i:26 min:021  max:012
+i:27 min:022  max:012
+i:28 min:024  max:010
+i:29 min:024  max:009
+i:30 min:025  max:008
+i:31 min:026  max:008
+i:32 min:028  max:006
+i:33 min:028  max:005
+i:34 min:029  max:004
+i:35 min:030  max:004
+i:36 min:032  max:002
+i:37 min:032  max:001
+i:38 min:033  max:000
+i:39 min:034  max:000
+i:40 min:036  max:002
+i:41 min:036  max:001
+i:42 min:037  max:000
+i:43 min:038  max:000
+
 001: ............................................
 002: ............................................
 003: 11111111111111111111111111111111111111111111

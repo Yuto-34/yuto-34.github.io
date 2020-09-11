@@ -39,7 +39,6 @@ void Simal_Write(double a[SIZE][SIZE], double b[SIZE]) { /* 連立方程式の�
     }
 }
 
-
 void V_Write(double a[SIZE]) { /* ベクトルの書き出し */
     int i;
     for (i = 0; i < n; i++) {
@@ -60,32 +59,26 @@ int main(int argc, char **argv) {
     C = 0;
     prec = 1e-5;
 
-// オプション処理 開始
+    // オプション処理 開始
     while ((ch = getopt(argc, argv, "vms:i:p:")) != -1) {
-        if (ch == 'v') { /* おしゃべり */
-            verbose = 1;
-        }
-        if (ch == 'm') { /* マップ表示選択 */
-            map = 1;
-        }
-        if (ch == 's') { /* 連立元数 Size */
-            n = atoi(optarg);
-        }
-        if (ch == 'i') { /* 初期値 */
-            C = atof(optarg);
-        }
+        if (ch == 'v') verbose = 1 /* おしゃべり */;
+
+        if (ch == 'm') map = 1 /* マップ表示選択 */;
+
+        if (ch == 's') n = atoi(optarg) /* 連立元数 Size */;
+
+        if (ch == 'i') C = atof(optarg) /* 初期値 */;
+
         if (ch == 'p') { /* 要求精度 (桁数) */
             j = atoi(optarg);
             prec = 1.0;
-            for (i = 0; i < j; i++) {
-                prec *= 10.0;
-            }
+            for (i = 0; i < j; i++) prec *= 10.0;
             prec = 1.0 / prec;
         }
     }
-// オプション処理終了
+    // オプション処理終了
 
-    if (n == 0) { // nが0の時の処理
+    if (n == 0) {  // nが0の時の処理
         printf("Size: ");
         scanf("%d", &n);
         printf("\n");
@@ -95,9 +88,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    for (i = 0; i < n; i++) {
-        vecX[i] = C; /* 初期値代入 */
-    }
+    for (i = 0; i < n; i++) vecX[i] = C; /* 初期値代入 */
 
     Simal_Read(matA, vecB); /* 問題の読み込み */
     if (verbose) {

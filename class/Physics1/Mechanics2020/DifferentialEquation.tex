@@ -1,8 +1,8 @@
 \documentclass[uplatex]{jsarticle}
 \usepackage[svgnames,table,xcdraw,dvipsnames]{xcolor}
 	\newcommand{\ricardo}[1]{\colorbox{ForestGreen}{\color{white}   \textsf{\textbf{Ricardo}}} \textcolor{ForestGreen}{#1}}
-%\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
-%\usepackage[preskip=1cm]{sectionbreak}
+\usepackage[top=15truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
+% \usepackage[preskip=1cm]{sectionbreak}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[version=3]{mhchem} %<- 化学反応式とか簡単に書けるやつ texdoc mhchem で説明
 \usepackage{amsmath, amssymb, amsfonts}
@@ -131,7 +131,7 @@
 %\clearpage
 
 \renewcommand{\thesection}{その\arabic{section}.}
-\section{}
+\section{$\displaystyle m\dv{x}{t} = \lambda x(t)$}
 
 \begin{align*}
 	m\dv{x}{t} &= \lambda x \\
@@ -142,33 +142,73 @@
 	&= C\exp\qty[\dfrac{\lambda }{m}t] \qq{($\because e^c = \mathrm{const}. = C$)}
 \end{align*}
 
-\section{}
+\section{$\displaystyle m\dv[2]{x}{t} = -kx(t)$}
+\subsection{解}
 
-\begin{align*}
-	m\dv[2]{x}{t} &= -kx
-\end{align*}
-ここで，$f''(x) = -\dfrac{k}{m}f(x)$になる$x$を考える．
+$x(t) = f(t)$としたとき，$f''(t) = -\dfrac{k}{m}f(t)$になる$t$を考える．
 
-例えば
+ここで，
+$$f(t) = \sin t\mbox{のとき，}f''(t) = -\sin t$$
+$$f(t) = \cos t\mbox{のとき，}f''(t) = -\cos t$$
+が成り立つことは有名である．
 
-$$f(x) = \sin x\mbox{のとき，}f''(x) = -\sin x$$
-$$f(x) = \cos x\mbox{のとき，}f''(x) = -\cos x$$
+すなわち，これに任意係数が付いた
+$$f(t) = D_1\sin t\mbox{のとき，}f''(t) = -\sin t$$
+$$f(t) = D_2\cos t\mbox{のとき，}f''(t) = -\cos t$$
+も当然だが成り立つ．
 
 線形性より，
 \[
-	f(x) = \sin x + \cos x
+	f(t) = D_1\sin t + D_2\cos t
 	\Rightarrow
-	f''(x) = -(\sin x + \cos x)
+	f''(t) = -(D_1\sin t + D_2\cos t)
 \]
 
 したがって，
 \[
-	f(x) = \sin \sqrt{\dfrac{k}{m}}x + \sqrt{\dfrac{k}{m}}\cos x
+	f(t) = D_1\sin \sqrt{\dfrac{k}{m}}t + D_2\sqrt{\dfrac{k}{m}}\cos t
 	\Rightarrow
-	f''(x) = -\dfrac{k}{m}(\sin x + \cos x)
+	f''(t) = -\dfrac{k}{m}(D_1\sin t + D_2\cos t)
 \]
 
-すなわち，$f''(x) = -\dfrac{k}{m}f(x)$の解は，$f(x) = \sin \sqrt{\dfrac{k}{m}}x + \sqrt{\dfrac{k}{m}}\cos x$
+すなわち，$f''(t) = -\dfrac{k}{m}f(t)$の解は，$$f(t) = D_1\sin \sqrt{\dfrac{k}{m}}t + D_2\cos\sqrt{\dfrac{k}{m}} t$$
+
+\subsection{別解(厳密な求め方)}
+その1と同じように$x(t)$の解を$e^{\lambda t}$とした上で微分方程式を解く．
+\begin{align*}
+	\dv[2]{x}{t} &= -\dfrac{k}{m}x \\
+	\dv[2]{t}(e^{\lambda t}) &= -\dfrac{k}{m}e^{\lambda t} \\
+	\lambda^2e^{\lambda t} &= -\dfrac{k}{m}e^{\lambda t}  \\
+	\lambda^2 &= -\dfrac{k}{m} \\
+	\lambda &= \pm i \sqrt{\dfrac{k}{m}} \\
+	\therefore x(t) &= \exp\qty[{i \sqrt{\frac{k}{m}}}], \exp[{-i \sqrt{\frac{k}{m}}}]
+\end{align*}
+このとき係数がついていても微分には影響しないので，$c_1,c_2 \in \mathbb{R}$とすると，
+\begin{align*}
+	x_1(t) &= c_1\exp[{i \sqrt{\frac{k}{m}}}] \\
+	x_2(t) &= c_2\exp[{-i \sqrt{\frac{k}{m}}}]
+\end{align*}
+が成り立つ．
+
+線形性より，
+\begin{align*}
+	x(t) &= x_1(t) + x_2(t) \\
+	&= c_1\exp[{i \sqrt{\frac{k}{m}}}] + c_2\exp[{-i \sqrt{\frac{k}{m}}}]
+\end{align*}
+が言える．
+
+ここで，オイラーの等式$e^{i\theta} = \cos \theta + i\sin\theta$を用いると，
+\begin{align*}
+	x(t) &= c_1\qty(\cos\sqrt{\dfrac{k}{m}} + i\sin\sqrt{\dfrac{k}{m}}) + c_2\qty(\cos\sqrt{\dfrac{k}{m}} + i\sin\sqrt{\dfrac{k}{m}}) \\
+	&= (c_1 + c_2)\qty(\cos\sqrt{\dfrac{k}{m}}) + i(c_2 - c_1)\qty(\sin\sqrt{\dfrac{k}{m}})
+\end{align*}
+となる．
+ここで$c_1 + c_2 = C_1, i(c_2 - c_1) = C_2$と再定義して，
+\begin{align*}
+	x(t) = C_1\qty(\cos\sqrt{\dfrac{k}{m}}) + C_2\qty(\sin\sqrt{\dfrac{k}{m}})
+\end{align*}
+
+
 
 
 \end{document}

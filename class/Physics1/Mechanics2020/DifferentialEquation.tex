@@ -1,0 +1,152 @@
+\documentclass[uplatex]{jsarticle}
+\usepackage[svgnames,table,xcdraw,dvipsnames]{xcolor}
+	\newcommand{\ricardo}[1]{\colorbox{ForestGreen}{\color{white}   \textsf{\textbf{Ricardo}}} \textcolor{ForestGreen}{#1}}
+%\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
+%\usepackage[preskip=1cm]{sectionbreak}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[version=3]{mhchem} %<- 化学反応式とか簡単に書けるやつ texdoc mhchem で説明
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{ascmac, fancybox}
+	% \fboxrule=2\fboxrule
+	% \shadowsize=0.05\shadowsize
+\usepackage[nobreak]{cite} %<- 参考文献
+\usepackage[at]{easylist}
+\usepackage{tcolorbox}
+	\tcbuselibrary{raster,skins}
+	\tcbuselibrary{breakable}
+\usepackage{listings, jvlisting}
+	\renewcommand{\lstlistingname}{リスト}
+\usepackage{pgfplots}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{comment}
+\usepackage{bchart}
+\usepackage{cases}
+\usepackage{tikz}
+	\usetikzlibrary{intersections, calc, arrows, patterns, datavisualization}
+% \usepackage[active,tightpage]{preview}
+	% \PreviewEnvironment{tikzpicture}
+	% \RequirePackage{luatex85}
+% \usepackage{luatexja}
+\usepackage{here}
+\usepackage{otf} %\ajRoman{1}でローマ数字が使えるようになる
+\usepackage{url} %<- \url{https://google.co.jp} でurlを適切に挿入できる
+\usepackage{bm}
+\pgfplotsset{compat=1.17}
+
+%useable lang
+%ABAP (R/2 4.3, R/2 5.0, R/3 3.1, R/3 4.6C, R/3 6.10), 
+% ACM, ACMscript, ACSL, Ada (2005, 83, 95), Algol (60, 68), 
+% Ant, Assembler (Motorola68k, x86masm), Awk (gnu, POSIX), 
+% bash, Basic (Visual), C (ANSI, Handel, Objective, Sharp), 
+% C++ (ANSI, GNU, ISO, Visual) Caml (light, Objective), CIL, 
+% Clean, Cobol (1974, 1985, ibm), Comal 80, 
+% command.com (WinXP), Comsol, csh, Delphi, Eiffel, Elan, 
+% erlang, Euphoria, Fortran (03, 08, 77, 90, 95), 
+% GAP, GCL, Gnuplot, hansl, Haskell, HTML, IDL (empty, CORBA), 
+% inform, Java (empty, AspectJ), JVMIS, ksh, 
+% Lingo, Lisp (empty, Auto), LLVM, Logo, Lua (5.0, 5.1, 5.2), 
+% make (empty, gnu), Mathematica (1.0, 3.0, 5.2), Matlab, 
+% Mercury, MetaPost, Miranda, Mizar, ML, Modula-2, MuPAD, 
+% NASTRAN, Oberon-2, OCL (decorative, OMG), Octave, Oz, 
+% Pascal (Borland6, Standard, XSC), Perl, PHP, PL/I, Plasm, 
+% PostScript, POV, Prolog, Promela, PSTricks, Python, R, Reduce, 
+% Rexx, RSL, Ruby, S (empty, PLUS), SAS, Scilab, sh, SHELXL, 
+% Simula (67, CII, DEC, IBM), SPARQL, SQL, tcl (empty, tk), 
+% TeX (AlLaTeX, common, LaTeX, plain, primitive), VBScript, 
+% Verilog, VHDL (empty, AMS), VRML (97), XML, XSLT
+
+\lstset{
+	language=C,
+	basicstyle={\ttfamily\small}, % 書体の指定
+	frame=tRBl, % フレームの指定
+	framesep=20pt, % フレームと中身（コード）の間隔
+	breaklines=true, % 行が長くなった場合の改行
+	linewidth=12cm, % フレームの横幅
+	lineskip=-0.5ex, % 行間の調整
+	tabsize=4, % Tabを何文字幅にするかの指定
+	numberstyle=\scriptsize, % 行番号の書体
+	stepnumber=1, % 行番号をいくつとばしで表示するか．5行ごとに行番号を表示したいときなど
+	numbers=left, % 行番号表示位置．デフォルト：none(行番号なし)，他オプション：left，","right
+	numbersep=10pt, % 行番号と本文の間隔．デフォルト：10pt
+	backgroundcolor=\color[gray]{.97}, % 背景色
+	identifierstyle={\small}, % キーワードでない文字の書体
+	commentstyle={\small\ttfamily \color[rgb]{0,0.5,0}}, % コメントの書体
+	keywordstyle={\small\bfseries \color[rgb]{1,0,0}}, % キーワード(int, ifなど)の書体
+	ndkeywordstyle={\small \color[rgb]{1,1,0}}, % キーワードその2の書体
+	stringstyle={\small\ttfamily \color[rgb]{0,0,1}}, % ""で囲まれたなどの"文字"の書体
+	columns=[l]{fullflexible}, % 書体による列幅の違いを調整するか． オプション：",fixed，"flexible，spaceflexible，fullflexible
+	% xrightmargin=0zw, % 
+	% xleftmargin=3zw, % 
+	morecomment=[l]{//}, % 行コメント
+	morecomment = [s]{/*}{*/}, % 複数行コメント
+	classoffset=0, % 関数名等の色の設定
+	showstringspaces=false, % 半角スペースを表示するか（style に依存
+}
+
+%行数，列数指定用
+\makeatletter
+\def\mojiparline#1{
+	\newcounter{mpl}
+	\setcounter{mpl}{#1}
+	\@tempdima=\linewidth
+	\advance\@tempdima by-\value{mpl}zw
+	\addtocounter{mpl}{-1}
+	\divide\@tempdima by \value{mpl}
+	\advance\kanjiskip by\@tempdima
+	\advance\parindent by\@tempdima
+}
+\makeatother
+\def\linesparpage#1{
+	\baselineskip=\textheight
+	\divide\baselineskip by #1
+}
+
+% \renewcommand{\thepart}{\arabic{part}}
+% \renewcommand{\prepartname}{校正}
+% \renewcommand{\postpartname}{稿}
+%\renewcommand{\thesection}{\arabic{section}.}
+%\renewcommand{\thesubsection}{(\arabic{subsection})}
+%\renewcommand{\thesubsubsection}{{ $ >$}}
+%\renewcommand{\labelenumi}{(\arabic{enumi})}
+%\setcounter{subsection}{15}
+
+%\fallingdotseq ニアリーイコール
+%\qty(){}[] 括弧
+
+\title{  }
+\date{\today}
+\author{ Yuto }
+
+\begin{document}
+% 一行あたり文字数の指定
+% \mojiparline{40}
+% 1ページあたり行数の指定
+% \linesparpage{30}
+\maketitle
+%\tableofcontents
+%\clearpage
+
+\renewcommand{\thesection}{よくでる微分方程式\arabic{section}.}
+\section{}
+
+\begin{align*}
+	m\dv{x}{t} &= \lambda x \\
+	\int\dfrac{\mathrm{d}x}{x} &= \int \dfrac{\lambda }{m} \mathrm{d}t \\
+	\log x &= \dfrac{\lambda }{m}t + c \\
+	x &= \exp\qty[\dfrac{\lambda }{m}t + c] \\
+	&= e^c\exp\qty[\dfrac{\lambda }{m}t] \\
+	&= C\exp\qty[\dfrac{\lambda }{m}t] \qq{($\because e^c = \mathrm{const}. = C$)}
+\end{align*}
+
+\section{}
+
+\begin{align*}
+	m\dv[2]{x}{t} &= km
+\end{align*}
+
+\end{document}
+% Ctrl + Alt + C

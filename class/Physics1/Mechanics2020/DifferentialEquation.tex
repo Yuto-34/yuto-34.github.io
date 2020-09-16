@@ -117,7 +117,7 @@
 %\fallingdotseq ニアリーイコール
 %\qty(){}[] 括弧
 
-\title{  }
+\title{ よくでる微分方程式 }
 \date{\today}
 \author{ Yuto }
 
@@ -130,7 +130,7 @@
 %\tableofcontents
 %\clearpage
 
-\renewcommand{\thesection}{よくでる微分方程式\arabic{section}.}
+\renewcommand{\thesection}{その\arabic{section}.}
 \section{}
 
 \begin{align*}
@@ -145,8 +145,31 @@
 \section{}
 
 \begin{align*}
-	m\dv[2]{x}{t} &= km
+	m\dv[2]{x}{t} &= -kx
 \end{align*}
+ここで，$f''(x) = -\dfrac{k}{m}f(x)$になる$x$を考える．
+
+例えば
+
+$$f(x) = \sin x\mbox{のとき，}f''(x) = -\sin x$$
+$$f(x) = \cos x\mbox{のとき，}f''(x) = -\cos x$$
+
+線形性より，
+\[
+	f(x) = \sin x + \cos x
+	\Rightarrow
+	f''(x) = -(\sin x + \cos x)
+\]
+
+したがって，
+\[
+	f(x) = \sin \sqrt{\dfrac{k}{m}}x + \sqrt{\dfrac{k}{m}}\cos x
+	\Rightarrow
+	f''(x) = -\dfrac{k}{m}(\sin x + \cos x)
+\]
+
+すなわち，$f''(x) = -\dfrac{k}{m}f(x)$の解は，$f(x) = \sin \sqrt{\dfrac{k}{m}}x + \sqrt{\dfrac{k}{m}}\cos x$
+
 
 \end{document}
 % Ctrl + Alt + C

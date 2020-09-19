@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<center>
+	<h1>
+		更新確認用
+	</h1>
+	<h1 style="border: 1px red solid; width: 80%; text-align:center;;">
+		<span id="view_clock"></span>
+
+		<script type="text/javascript">
+			timerID = setInterval('clock()', 01); //0.0001秒毎にclock()を実行
+
+			function clock() {
+				document.getElementById("view_clock").innerHTML = getNow();
+			}
+
+			function getNow() {
+				var now = new Date();
+				var year = now.getFullYear();
+				var mon = now.getMonth() + 1; //１を足すこと
+				var day = now.getDate();
+				var hour = now.getHours();
+				var min = now.getMinutes();
+				var sec = now.getSeconds();
+				var you = now.getDay(); //曜日(0～6=日～土)
+				var date12 = new Date(); //日付オブジェクトから「ミリ秒」を取得する
+				var milliseconds = date12.getMilliseconds();
+
+				//曜日の選択肢
+				var youbi = new Array("日", "月", "火", "水", "木", "金", "土");
+
+				//出力用
+				var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ") "  + hour + "時" + min + "分" + sec + "秒" + milliseconds;
+				return s;
+			}
+
+		</script>
+	</h1>
+	<!-- <h2 style="border: 1px blue solid;">
+		<p>ボタンをクリックすると時間を表示します。</p>
+		<button onclick="dateFunction12()">時間を表示</button>
+		<p id="date012">ここに現在の「時間」が表示されます。</p>
+		<script>
+			function dateFunction12() {
+				//日付オブジェクトを作成する
+				var date12 = new Date();
+				//日付オブジェクトから「ミリ秒」を取得する
+				var milliseconds = date12.getMilliseconds();
+				//段落タグの中身を"date12"で置き換える
+				var pelem012 = document.getElementById("date012");
+				pelem012.innerHTML = "今は" + milliseconds + "ミリ秒です。";
+			}
+
+		</script>
+	</h2> -->
+</center>
+</body>
+</html>

@@ -7,67 +7,95 @@
 		max-width: 100%;
 	}
 
-	div.class {
-		display: block;
+	h1.down {
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	h1.class {
 		width: 100%;
+		position: absolute;
+		top: 20%;
+		left: 00%;
 	}
 
 	@media screen and (max-width: 800px) {
-		h1 {
-			font-size: 300%;
+		h1.class {
+			font-size: 280%;
+		}
+		h1.down {
+			position: relative;
+			margin-top: 50%;
 		}
 	}
 
 	@media screen and (min-width: 1000px) {
-		h1 {
-			font-size: 1100%;
+		h1.class {
+			font-size: 480%;
+		}
+
+		h1.class {
+			
 		}
 	}
 
 </style>
-<meta http-equiv="refresh" content="5; URL=">
+<!-- <meta http-equiv="refresh" content="2; URL="> -->
 <title>リアルタイム時計</title>
+<link rel="stylesheet" media="screen" href="css/normalize.css" />
+<link rel="stylesheet" media="screen" href="css/style.css" />
+<script src="js/countdown.js"></script>
 </head>
 <body>
 
 <center>
-	<h1>
-		<!-- 更新確認用 -->
+	<h1 class="down">
+		Now Time
 	</h1>
-	<div class="class">
-		<h1>
-			<span id="view_clock"></span>
+	<h1 class="class">
+		<span id="view_clock"></span>
 
 
-			<script type="text/javascript">
-				timerID = setInterval('clock()', 01); //0.0001秒毎にclock()を実行
+		<script type="text/javascript">
+			timerID = setInterval('clock()', 01); //0.0001秒毎にclock()を実行
 
-				function clock() {
-					document.getElementById("view_clock").innerHTML = getNow();
-				}
+			function clock() {
+				document.getElementById("view_clock").innerHTML = getNow();
+			}
 
-				function getNow() {
-					var now = new Date();
-					var year = now.getFullYear();
-					var mon = now.getMonth() + 1; //１を足すこと
-					var day = now.getDate();
-					var hour = now.getHours();
-					var min = now.getMinutes();
-					var sec = now.getSeconds();
-					var you = now.getDay(); //曜日(0～6=日～土)
-					var date12 = new Date(); //日付オブジェクトから「ミリ秒」を取得する
-					var milliseconds = date12.getMilliseconds();
+			function getNow() {
+				var now = new Date();
+				var year = now.getFullYear();
+				var mon = now.getMonth() + 1; //１を足すこと
+				var day = now.getDate();
+				var hour = now.getHours();
+				var min = now.getMinutes();
+				var sec = now.getSeconds();
+				var you = now.getDay(); //曜日(0～6=日～土)
+				var date12 = new Date(); //日付オブジェクトから「ミリ秒」を取得する
+				var milliseconds = date12.getMilliseconds();
 
-					//曜日の選択肢
-					var youbi = new Array("日", "月", "火", "水", "木", "金", "土");
+				//曜日の選択肢
+				var youbi = new Array("日", "月", "火", "水", "木", "金", "土");
 
-					//出力用
-					var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ") " + hour + "時" + min + "分" + sec + "秒" + milliseconds;
-					return s;
-				}
+				//出力用
+				var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ") " + hour + "時" + min + "分" + sec + "秒" + milliseconds;
+				return s;
+			}
 
-			</script>
-		</h1>
+		</script>
+	</h1>
+	<div class="bg-gradient"></div>
+	<div class="container">
+		<!-- <h2>Jan.01 2020 0:00 OPEN</h2> -->
+		<h2>化学概論 統一試験まで</h2>
+		<div id="CDT"></div>
+		<footer>
+			<p>
+				Copyright(C) Your_project_name All rights reserved.
+			</p>
+		</footer>
 	</div>
 	<!-- <h2 style="border: 1px blue solid;">
 		<p>ボタンをクリックすると時間を表示します。</p>

@@ -4,7 +4,6 @@
 <style>
 	h1 {
 		text-align: center;
-		max-width: 100%;
 	}
 
 	h1.down {
@@ -14,34 +13,30 @@
 	}
 
 	h1.class {
-		width: 100%;
+		margin: auto 7% auto 7%;
 		position: absolute;
 		top: 20%;
-		left: 00%;
 	}
 
 	@media screen and (max-width: 800px) {
 		h1.class {
-			font-size: 280%;
+			font-size: 250%;
 		}
+
 		h1.down {
 			position: relative;
-			margin-top: 50%;
+			margin-top: 20%;
 		}
 	}
 
 	@media screen and (min-width: 1000px) {
 		h1.class {
-			font-size: 480%;
-		}
-
-		h1.class {
-			
+			font-size: 580%;
 		}
 	}
 
 </style>
-<!-- <meta http-equiv="refresh" content="2; URL="> -->
+<meta http-equiv="refresh" content="10; URL=">
 <title>リアルタイム時計</title>
 <link rel="stylesheet" media="screen" href="css/normalize.css" />
 <link rel="stylesheet" media="screen" href="css/style.css" />
@@ -68,19 +63,21 @@
 				var now = new Date();
 				var year = now.getFullYear();
 				var mon = now.getMonth() + 1; //１を足すこと
-				var day = now.getDate();
-				var hour = now.getHours();
-				var min = now.getMinutes();
-				var sec = now.getSeconds();
+				// var day = now.getotime();
+				var day = ("0" + now.getDate()).slice(-2); // 08
+				var hour = ("0" + now.getHours()).slice(-2);
+				var min = ("0" + now.getMinutes()).slice(-2);
+				var sec = ("0" + now.getSeconds()).slice(-2);
 				var you = now.getDay(); //曜日(0～6=日～土)
-				var date12 = new Date(); //日付オブジェクトから「ミリ秒」を取得する
-				var milliseconds = date12.getMilliseconds();
+				var mil =("0" + now.getMilliseconds()).slice(-3);
+
+				mon = ('0' + mon).slice(-2);
 
 				//曜日の選択肢
 				var youbi = new Array("日", "月", "火", "水", "木", "金", "土");
 
 				//出力用
-				var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ") " + hour + "時" + min + "分" + sec + "秒" + milliseconds;
+				var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ") " + hour + "時" + min + "分" + sec + "秒" + mil;
 				return s;
 			}
 

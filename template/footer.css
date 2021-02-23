@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 .contents {
     margin-bottom: 100px;
 }
@@ -77,6 +76,7 @@ footer .sns .tw {
 
 footer .sns .contact {
     background-color: #2e9b72;
+    font-size: 90%;
 }
 
 .fa-twitter:before {

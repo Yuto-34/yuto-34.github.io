@@ -4,34 +4,23 @@
 }
 
 /* 親要素 */
-div.head_box {
-    background-color: rgb(87, 87, 87);
+header {
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
     /* display: flex; */
     /* flex-wrap: nowrap; */
     /* justify-content: space-around; */
     /* align-items: center; */
-    margin: 0px;
+    /* background-color: rgb(87, 87, 87); */
+    background-color: #9E9E9E;
+    margin: 0;
     padding: 0;
+	box-sizing: border-box;
     width: 100%;
     height: calc(1.5em + 60px);
 }
-
-/* header 要素 ここから */
-/* nav { */
-/* width: 100%; */
-/* } */
-/*  */
-/* nav ul { */
-/* width: 100%; */
-/* } */
-/*  */
-/* nav ul li { */
-/* margin: 0; */
-/* padding: 0; */
-/* list-style: none; */
-/* display: inline-block; */
-/* width: calc(25% - 0.44%); */
-/* } */
 
 nav {
     text-align: center;

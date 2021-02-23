@@ -62,7 +62,6 @@ hereパッケージは，tex出力内の位置固定，siunitxパッケージは
 [$\LaTeX$ソース]()
 
 <details>
-	<summary>tex source</summary>
 	```tex
 	\usepackage[dvipdfmx]{graphix}
 	```

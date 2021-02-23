@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162881724-3');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="keywords" content="ページのキーワード1,2,3" />
+    <meta name="description" content="ページの説明" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: { equationNumbers: { autoNumber: "AMS" }},
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { matchFontHeight: false },
+            displayAlign: "left",
+            displayIndent: "2em"
+        });
+    </script>
+	<meta name="msapplication-square70x70logo" content="../favicons/site-tile-70x70.png">
+	<meta name="msapplication-square150x150logo" content="../favicons/site-tile-150x150.png">
+	<meta name="msapplication-wide310x150logo" content="../favicons/site-tile-310x150.png">
+	<meta name="msapplication-square310x310logo" content="../favicons/site-tile-310x310.png">
+	<meta name="msapplication-TileColor" content="#0078d7">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/android-chrome-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/android-chrome-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/android-chrome-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/android-chrome-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/android-chrome-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/android-chrome-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/android-chrome-152x152.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/android-chrome-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/android-chrome-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="../favicons/icon-160x160.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="24x24" href="../favicons/icon-24x24.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/icon-32x32.png">
+	<link rel="manifest" href="../favicons/manifest.json">
+    <title>7. よく使う環境等</title>
+    <link rel="stylesheet" href="./latex.css" type="text/css" />
+</head>
+<body class="main">
+<header>
+    <h1>有用な環境等</h1>
+</header>
+<section>
+<div id="list">
+    <h3>目次</h3>
+    <ul>
+        <li><a href="#1">余白</a></li>
+        <ul>
+            <li><a href="#1_1">geometry</a></li>
+        </ul>
+        <li><a href="#2">float環境</a></li>
+        <ul>
+            <li><a href="#2_1">固定</a></li>
+            <li><a href="#2_2">図の横並べ</a></li>
+        </ul>
+        <li><a href="#5">箇条書き</a></li>
+        <ul>
+            <li><a href="#5_1">応用編 其の弐</a></li>
+        </ul>
+        <li><a href="#6">数式</a></li>
+        <ul>
+            <li><a href="#6_1">機能の拡大</a></li>
+            <li><a href="#6_3">physicsパッケージ</a></li>
+            <li><a href="#6_4">場合分け(連立方程式)</a></li>
+        </ul>
+        <li><a href="#7">書式</a></li>
+        <ul>
+            <li><a href="#7_1">ローマ数字</a></li>
+            <li><a href="#7_2">太字</a></li>
+            <li><a href="#7_0">文章の二段組</a></li>
+        </ul>
+
+        <li><a href="#8">便利機能</a></li>
+        <ul>
+            <li><a href="#8_1">コメントアウト</a></li>
+            <li><a href="#8_2">脚注</a></li>
+            <li><a href="#8_3">そのままの出力</a></li>
+        </ul>
+        <li><a href="#9">Yutoのてんぷら</a></li>
+    </ul>
+</div>
+
+<div id="1"></div>
+<h3 class="h_1">余白</h3>
+<div id="1_1"></div>
+<h4 class="h_2">geometry</h4>
+<p>
+    余白は、
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage[option]{geometry}
+</pre>
+</code>
+</figure>
+<p>
+    のコマンドで調整出来る。
+</p>
+<p>
+    オプション例としては、<b><cord class="lang-latex" contenteditable="true">[margin=1em]</cord></b> や、<b><cord class="lang-latex" contenteditable="true">[top=3cm, bottom=1ex, right=2cm, left=1cm]</cord></b> などで指定可能。
+</p>
+
+
+<div id="2"></div>
+<h3 class="h_1">float環境</h3>
+<dvi id="2_1"></dvi>
+<h4 class="h_2">固定</h4>
+<p>
+    float環境内に図を置くとき、$\mathrm{\LaTeX}$ の仕様で勝手に位置がずれることがある。そんな時は、float環境を作るコマンドと一緒にオプションとして<b><code contenteditable="true">[H]</code></b>を使えば良い。それだけで固定される。
+</p>
+<p>
+    ただし、このオプションはデフォルト仕様ではないため、次のパッケージを追加する必要がある。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{here}
+</pre>
+</code>
+</figure>
+<p>
+    使用例
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{table}[H]
+    \begin{tabular}{ccc}
+        a & b & c \\
+        d & e & f \\
+        g & h & i
+    \end{tabular}
+\end{table}
+</pre>
+</code>
+</figure>
+
+<dvi id="2_2"></dvi>
+<h4 class="h_2">図の横並べ</h4>
+<p>
+    $\mathrm{\LaTeX}$を使ってるといつの日か、図を横にふたつ以上並べたい！ってことが多分出てくる。そんな時の為のコマンド : <b><code contenteditable="true">minipage</code></b> が用意されている。使い方は以下の通り。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{minipage}{0.5\hsize}
+    \includegraphics[width=7cm]{~.png}
+    \includegraphics[width=7cm]{~.jpg}
+\end{minipage}
+</pre>
+</code>
+</figure>
+<p>
+    オプションは必要に応じて変更可能。また、例は二枚の場合だが、三枚以上でも同様に行える。
+</p>
+
+
+
+<div id="5"></div>
+<h3 class="h_1">箇条書き</h3>
+<dvi id="5_1"></dvi>
+<h4 class="h_2">応用編 其の弐</h4>
+<p>
+    <a href="./5.html#4_4">応用編 其の壱</a>の続き
+</p>
+<p>
+    ここで紹介するのは、箇条書きの簡単な作り方。
+    ただし、括弧付きや好きな文字での箇条書きは使えないので注意！
+</p>
+<p>
+    まずパッケージに
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage[at]{easylist}
+</pre>
+</code>
+</figure>
+<p>
+    を追加する。 <b><code contenteditable="true">[at]</code></b> は忘れがちなので注意。<br>
+    箇条書き部分には、
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{easylist}
+    @ 1
+    @@ 1-1
+    @ 2
+    @@ 2-1
+    @@ 2-2
+\end{easylist}
+</pre>
+</code>
+</figure>
+<p>
+    のように書く。そうすると、
+</p>
+<ul>
+    <li>1</li>
+    <ul><li>1-1</li></ul>
+    <li>2</li>
+    <ul>
+        <li>2-1</li>
+        <li>2-2</li>
+    </ul>
+</ul>
+<p>
+    のように出力される。<br>
+    これを使うと<span class="under_orange">めちゃめちゃ時短出来る</span>から、超オススメ！
+</p>
+
+
+
+<div id="6"></div>
+<h3 class="h_1">数式</h3>
+<dvi id="6_1"></dvi>
+<h4 class="h_2">機能の拡大</h4>
+<p>
+    下の二つを追加することで、$\mathrm{\LaTeX}$ の使い道が大幅に広がる。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{amsmath, amssymb}
+</pre>
+</code>
+</figure>
+
+<p>
+    例えば、以下のようなコマンドが使えるようになる。
+</p>
+<table>
+    <caption>数学記号の拡大</caption>
+    <tr>
+        <td class="line">$\leqq$</td>
+        <td class="line"><code contenteditable="true">\leqq</code></td>
+        <td class="line">$\geqq$</td>
+        <td class="line"><code contenteditable="true">\geqq</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\subseteqq$</td>
+        <td class="line"><code contenteditable="true">\subseteqq</code></td>
+        <td class="line">$\supseteqq$</td>
+        <td class="line"><code contenteditable="true">\supseteqq</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\liminf$</td>
+        <td class="line"><code contenteditable="true">\liminf</code></td>
+        <td class="line">$\limsup$</td>
+        <td class="line"><code contenteditable="true">\limsup</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\varliminf$</td>
+        <td class="line"><code contenteditable="true">\varliminf</code></td>
+        <td class="line">$\varlimsup$</td>
+        <td class="line"><code contenteditable="true">\varlimsup</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\iint$</td>
+        <td class="line"><code contenteditable="true">\iint</code></td>
+        <td class="line">$\iiint$</td>
+        <td class="line"><code contenteditable="true">\iiint</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\idotsint$</td>
+        <td class="line"><code contenteditable="true">\idotsint</code></td>
+        <td class="line">$\mathbb{R}^n$</td>
+        <td class="line"><code contenteditable="true">\mathbb{R}^n</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\mathbb{A}^n$</td>
+        <td class="line"><code contenteditable="true">\mathbb{A}^n</code></td>
+        <td class="line">$\mathbb{B}_i$</td>
+        <td class="line"><code contenteditable="true">\mathbb{B}_i</code></td>
+    </tr>
+</table>
+
+
+
+
+
+<dvi id="6_3"></dvi>
+<h4 class="h_2">physicsパッケージ</h4>
+<p>
+    パッケージの追加
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{physics}
+</pre>
+</code>
+</figure>
+<p>
+    物理で使うような数式(微分記号等)の入力が楽になる、便利なパッケージ。例えば、数式内で()の大きさを自動調整してくれたり、微分記号が勝手にローマン体(立体)にしてくれる。
+</p>
+<table><caption>physicsパッケージで出来ること</caption>
+    <tr>
+        <td class="line">()</td>
+        <td class="line"><code contenteditable="true">\pqty{}</code></td>
+        <td class="line">丸括弧</td>
+    </tr>
+    <tr>
+        <td class="line">[]</td>
+        <td class="line"><code contenteditable="true">\bqty{}</code></td>
+        <td class="line">各括弧</td>
+    </tr>
+    <tr>
+        <td class="line">||</td>
+        <td class="line"><code contenteditable="true">\vqty{}</code></td>
+        <td class="line">絶対値括弧</td>
+    </tr>
+    <tr>
+        <td class="line">{}</td>
+        <td class="line"><code contenteditable="true">\Bqty{}</code></td>
+        <td class="line">中括弧</td>
+    </tr>
+    <tr>
+        <td class="line"><b>$a$</b></td>
+        <td class="line"><code contenteditable="true">\vb{a}</code></td>
+        <td class="line">太字ベクトル</td>
+    </tr>
+    <tr>
+        <td class="line"><b>$\theta$</b></td>
+        <td class="line"><code contenteditable="true">\vb*{\theta}</code></td>
+        <td class="line">太字ベクトル(ギリシャ文字対応)</td>
+    </tr>
+    <tr>
+        <td class="line">$\vec{a}$</td>
+        <td class="line"><code contenteditable="true">\va{a}</code></td>
+        <td class="line">ベクトル表記(上矢印)</td>
+    </tr>
+    <tr>
+        <td class="line">$\vec{\theta}$</td>
+        <td class="line"><code contenteditable="true">\va*{\theta}</code></td>
+        <td class="line">ベクトル表記(上矢印、ギリシャ文字対応)</td>
+    </tr>
+    <tr>
+        <td class="line">∇</td>
+        <td class="line"><code contenteditable="true">\grad</code></td>
+        <td class="line">ナブラ記号</td>
+    </tr>
+    <tr>
+        <td class="line">∇$\Psi$</td>
+        <td class="line"><code contenteditable="true">\grad{\Psi}</code></td>
+        <td class="line">ナブラ記号+文字</td>
+    </tr>
+    <tr>
+        <td class="line">$\exp()$</td>
+        <td class="line"><code contenteditable="true">\exp()</code></td>
+        <td class="line">自然対数の底の指数乗</td>
+    </tr>
+    <tr>
+        <td class="line">$\log()$</td>
+        <td class="line"><code contenteditable="true">\log()</code></td>
+        <td class="line">対数</td>
+    </tr>
+    <tr><td class="line">$\ln()$</td>
+        <td class="line"><code contenteditable="true">\ln()</code></td>
+        <td class="line">自然対数</td>
+    </tr>
+    <tr>
+        <td class="line">$\det()$</td>
+        <td class="line"><code contenteditable="true">\det()</code></td>
+        <td class="line">det</td>
+    </tr>
+    <tr>
+        <td class="line">$\Re{z}$</td>
+        <td class="line"><code contenteditable="true">\Re{z}</code></td>
+        <td class="line">Re</td>
+    </tr>
+    <tr>
+        <td class="line">$\Im{z}$</td>
+        <td class="line"><code contenteditable="true">\Im{z}</code></td>
+        <td class="line">Im</td>
+    </tr>
+    <tr>
+        <td class="line">$\mathrm{d}$</td>
+        <td class="line"><code contenteditable="true">\dd</code></td>
+        <td class="line">微分記号</td>
+    </tr>
+    <tr>
+        <td class="line">$\mathrm{d}x$</td>
+        <td class="line"><code contenteditable="true">\dd x</code></td>
+        <td class="line">d$x$</td>
+    </tr>
+    <tr>
+        <td class="line">$\mathrm{d}^3x$</td>
+        <td class="line"><code contenteditable="true">\dd[3]{x}</code></td>
+        <td class="line">$x$の三階微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\frac{\mathrm{d}}{\mathrm{d}x}$</td>
+        <td class="line"><code contenteditable="true">\dv{x}</code></td>
+        <td class="line">$x$の微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\frac{\mathrm{d}f}{\mathrm{d}x}$</td>
+        <td class="line"><code contenteditable="true">\dv{f}{x}</code></td>
+        <td class="line">$f$を$x$で微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\frac{\mathrm{d}^nf}{\mathrm{d}x^n}$</td>
+        <td class="line"><code contenteditable="true">\dv[n]{f}{x}</code></td>
+        <td class="line">$f$を$x$でn階微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\mathrm{d}f/\mathrm{d}x$</td>
+        <td class="line"><code contenteditable="true">\dv*{f}{x}</code></td>
+        <td class="line">$f$を$x$で微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\frac{\partial}{\partial x}$</td>
+        <td class="line"><code contenteditable="true">\pdv{x}</code></td>
+        <td class="line">$x$の微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\frac{\partial f}{\partial x}$</td>
+        <td class="line"><code contenteditable="true">\pdv{f}{x}</code></td>
+        <td class="line">$f$を$x$で微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\frac{\partial^n f}{\partial x^n}$</td>
+        <td class="line"><code contenteditable="true">\pdv[n]{f}{x}</code></td>
+        <td class="line">$f$を$x$でn階微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\frac{\partial^2 f}{\partial x\partial y}$</td>
+        <td class="line"><code contenteditable="true">\pdv{f}{x}{y}</code></td>
+        <td class="line">$f$を$x$と$y$で微分</td>
+    </tr>
+    <tr>
+        <td class="line">$\partial f/\partial x$</td>
+        <td class="line"><code contenteditable="true">\pdv*{f}{x}</code></td>
+        <td class="line">$f$を$x$で微分</td>
+    </tr>
+</table>
+
+<table><caption>三角関数の表記</caption>
+    <tr>
+        <td class="line">出力</td>
+        <td class="line">入力</td>
+        <td class="line">出力</td>
+        <td class="line">入力</td>
+    </tr>
+    <tr>
+        <td class="line">$\sin(x)$</td>
+        <td class="line"><code contenteditable="true">\sin(x)</code></td>
+        <td class="line">$\sinh(x)$</td>
+        <td class="line"><code contenteditable="true">\sinh(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\arcsin(x)$</td>
+        <td class="line"><code contenteditable="true">\arcsin(x)</code></td>
+        <td class="line">$\mathrm{asin}(x)$</td>
+        <td class="line"><code contenteditable="true">\asin(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\cos(x)$</td>
+        <td class="line"><code contenteditable="true">\cos(x)</code></td>
+        <td class="line">$\cosh(x)$</td>
+        <td class="line"><code contenteditable="true">\csoh(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\arccos(x)$</td>
+        <td class="line"><code contenteditable="true">\arccos(x)</code></td>
+        <td class="line">$\mathrm{acos}(x)$</td>
+        <td class="line"><code contenteditable="true">\acos(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\tan(x)$</td>
+        <td class="line"><code contenteditable="true">\tan(x)</code></td>
+        <td class="line">$\tanh(x)$</td>
+        <td class="line"><code contenteditable="true">\tanh(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\arctan(x)$</td>
+        <td class="line"><code contenteditable="true">\arctan(x)</code></td>
+        <td class="line">$\mathrm{atan}(x)$</td>
+        <td class="line"><code contenteditable="true">\atan(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\csc(x)$</td>
+        <td class="line"><code contenteditable="true">\csc(x)</code></td>
+        <td class="line">$\mathrm{csch}(x)$</td>
+        <td class="line"><code contenteditable="true">\csch(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\mathrm{arccsc}(x)$</td>
+        <td class="line"><code contenteditable="true">\arccsc(x)</code></td>
+        <td class="line">$\mathrm{acsc}(x)$</td>
+        <td class="line"><code contenteditable="true">\acsc(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\sec(x)$</td>
+        <td class="line"><code contenteditable="true">\sec(x)</code></td>
+        <td class="line">$\mathrm{sech}(x)$</td>
+        <td class="line"><code contenteditable="true">\sech(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\mathrm{arcsec}(x)$</td>
+        <td class="line"><code contenteditable="true">\arcsec(x)</code></td>
+        <td class="line">$\mathrm{asec}(x)$</td>
+        <td class="line"><code contenteditable="true">\asec(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\cot(x)$</td>
+        <td class="line"><code contenteditable="true">\cot(x)</code></td>
+        <td class="line">$\coth(x)$</td>
+        <td class="line"><code contenteditable="true">\coth(x)</code></td>
+    </tr>
+    <tr>
+        <td class="line">$\mathrm{arccot}(x)$</td>
+        <td class="line"><code contenteditable="true">\arccot(x)</code></td>
+        <td class="line">$\mathrm{acot}(x)$</td>
+        <td class="line"><code contenteditable="true">\acot(x)</code></td>
+    </tr>
+</table>
+
+<p>
+    詳しくは<a href="http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/physics/physics.pdf">ここ(外部リンク)</a>にあります
+</p>
+
+
+<dvi id="6_4"></dvi>
+<h4 class="h_2">場合分け(連立方程式)</h4>
+<p>
+    場合分けをする場合、cases環境を使用。cases環境はamsmathパッケージに内包されている。
+</p>
+<p>
+    casesは<code contenteditable="true">\begin,end</code>を用いて環境を指定する。改行は<code contenteditable="true">\\</code>で指定する。
+</p>
+<p>
+    例
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{cases}
+    case1 \\
+    case2
+\end{cases}
+</pre>
+</code>
+</figure>
+<p>
+    出力
+</p>
+\begin{cases}
+    case1 \\
+    case2
+\end{cases}
+
+
+<div id="7"></div>
+<h3 class="h_1">書式</h3>
+<div id="7_1"></div>
+<h4 class="h_2">ローマ数字</h4>
+<p>
+    ごく稀にローマ数字を出力したくなる。検索すると、多くのサイトでローマ数字は出力不可と書いてあるが、それは間違いである。ローマ数字は、以下のパッケージを利用するだけで簡単に出力が可能である。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{otf}
+</pre>
+</code>
+</figure>
+<p>
+    ローマ数字を使用したい時は、次のコマンドを入力すれば良い。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\ajRoman{数字}
+</pre>
+</code>
+</figure>
+<p>
+    ここで、<code contenteditable="true">ajRoman</code>の<code contenteditable="true">R</code>を小文字にすると、小文字のローマ数字が出力される。
+</p>
+
+
+<div id="7_2"></div>
+<h4 class="h_2">太字</h4>
+<p>
+    文字を太字にしたい。そんな願望を叶えるのがこのパッケージだ。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{bm}
+</pre>
+</code>
+</figure>
+<p>
+    文中で、<code contenteditable="true">\bm{太字にしたい文字}</code>とすれば、{}内が太字になる。
+</p>
+
+
+<div id="7_0"></div>
+<h4 class="h_2">二段組</h4>
+<p>
+    文章の二段組をしたくなる時がたまにある。そんな時はパッケージ
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{multicol}
+</pre>
+</code>
+</figure>
+<p>
+    を追加して、二段組にしたい部分を
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{multicols}
+    二段組部分
+\end{multicols}
+</pre>
+</code>
+</figure>
+<p>
+    と囲むと、囲んだ範囲が無事二段組となる。ここで注意しなければならないのは、パッケージでは <code contenteditable="true">multicol</code> だが、コマンドは <code contenteditable="true">multicols</code> だということ。
+</p>
+
+
+<div id="8"></div>
+<h3 class="h_1">便利機能</h3>
+<dvi id="8_1"></dvi>
+<h4 class="h_2">コメントアウト</h4>
+<p>
+    ここに至るまで散々と断りなしに使用してきたが、"%" を用いるとコメントアウトすることが出来る。
+    コメントアウトとは、一切出力されない自分用のメモのようなものである。コメントとして、出力からアウト(外す)という意味。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+%以降のこの行はコメントアウトされている。
+</pre>
+</code>
+</figure>
+<p>
+    超便利なので、有効に活用してね。ページの最後に見直す内容とかメモしておくと良いよ。
+</p>
+
+
+
+<dvi id="8_2"></dvi>
+<h4 class="h_2">脚注</h4>
+<p>
+    脚注を付けたい単語・文に、以下のコマンドを付けると脚注を追加できる。
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\footnote[番号]{脚注内容}
+</pre>
+</code>
+</figure>
+<p>
+    番号は省略可能で、省略すると連番となる。
+</p>
+
+
+
+<dvi id="8_3"></dvi>
+<h4 class="h_2">そのままの出力</h4>
+<p>
+    入力内容をそのまま出力したいときは、<code contenteditable="true">verbatim</code>> というコマンドを使う。
+</p>
+<p>
+    例
+</p>
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{verbatim}
+ここに書いた文は
+　　空白、改行も含めて
+　　　　普段コードとして認識される文字も
+そのまま出力することが出来る。
+　もちろんコメントアウトも無効。
+　　\ ! < > { } なんかもそのまま出力
+\end{verbatim}
+</pre>
+</code>
+</figure>
+<p>
+    出力
+</p>
+<pre style="margin-left: 1em;">
+ここに書いた文は
+　　空白、改行も含めて
+　　　　普段コードとして認識される文字も
+そのまま出力することが出来る。
+　もちろんコメントアウトも無効。
+　　\ ! < > { } なんかもそのまま出力
+</pre><br>
+<p>
+    実は文中でも同じようなことが可能なコマンドも存在する。<code contenteditable="true"><b>\verb|ココ|</b></code> に入力した文字はそのまま出力される。ただし、| は例外で、<code contenteditable="true"><b>\verb+|+</b></code> と入力しなくてはならない。
+</p>
+
+
+
+<div id="9"></div>
+<h3 class="h_1">Yutoのてんぷら</h3>
+<p>
+    著者が普段自分用に使ってるテンプレ。多分説明したもの以外は不使用。
+</p>
+
+<figure>
+<code contenteditable="true">
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\documentclass[uplatex]{jsarticle}
+\usepackage[margin=10cm]{geometry}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[at]{easylist}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath, amssymb}
+\usepackage{wrapfig}
+\usepackage{physics}
+\usepackage{cases}
+\usepackage{here}
+\usepackage{otf}
+\usepackage{bm}
+%\renewcommand{\labelenumi}{(\arabic{enumi})}
+
+\title{ write a title here }
+\date{\today}
+\author{ write a author here }
+\begin{document} % ここから本文
+%\maketitle % タイトルを付ける
+%\newpage % タイトルに1ページ
+%\tableofcontents % 目次を作る
+
+\section*{\ajRoman{1}}
+
+
+\section*{\ajroman{2}}
+
+\end{document}
+</pre>
+</code>
+</figure>
+
+
+<center><h4>以上！ お疲れ様 ! </h4></center>
+</section>
+
+<aside>
+    <a href="./0.html">0. はじめに</a><br>
+    <a href="./1.html">1. 導入</a><br>
+    <a href="./2.html">2. 役割と効能</a><br>
+    <a href="./3.html">3. 文書クラス</a><br>
+    <a href="./4.html">4. プリアンブル</a><br>
+    <a href="./5.html">5. 環境</a><br>
+    <a href="./6.html">6. 数式</a><br>
+    <!-- <a href="./7.html"> -->7. よく使う環境等<!-- </a> --><br>
+    <a href="./8.html">8. 特殊文字
+    </a>
+</aside>
+<footer>
+    <a style="float: left;" href="./6.html">前頁</a>
+    <a style="float: right;" href="./8.html">次頁</a>
+    <center><a href="../">top</a></center>
+</footer>
+</body>
+</html>

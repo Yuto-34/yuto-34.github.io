@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162881724-3');
+    </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="keywords" content="ページのキーワード1,2,3" />
+	<meta name="description" content="ページの説明" />
+	<meta name="viewport" content="width=device-width" />
+	<script
+		src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
+	<script type="text/javascript"
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			TeX: { equationNumbers: { autoNumber: "AMS" }},
+			tex2jax: {
+				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+				processEscapes: true
+			},
+			"HTML-CSS": { matchFontHeight: false },
+			displayAlign: "left",
+			displayIndent: "2em"
+		});
+	</script>
+	<meta name="msapplication-square70x70logo" content="../favicons/site-tile-70x70.png">
+	<meta name="msapplication-square150x150logo" content="../favicons/site-tile-150x150.png">
+	<meta name="msapplication-wide310x150logo" content="../favicons/site-tile-310x150.png">
+	<meta name="msapplication-square310x310logo" content="../favicons/site-tile-310x310.png">
+	<meta name="msapplication-TileColor" content="#0078d7">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/android-chrome-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/android-chrome-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/android-chrome-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/android-chrome-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/android-chrome-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/android-chrome-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/android-chrome-152x152.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/android-chrome-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/android-chrome-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="../favicons/icon-160x160.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="24x24" href="../favicons/icon-24x24.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/icon-32x32.png">
+	<link rel="manifest" href="../favicons/manifest.json">
+	<title>8. 特殊文字</title>
+	<link rel="stylesheet" href="./latex.css" type="text/css" />
+</head>
+
+<body class="main">
+	<header>
+		<h1>特殊文字</h1>
+	</header>
+	<section>
+		<div id="list">
+			<h3>目次</h3>
+			<ul>
+				<li><a href="#1">文字装飾</a></li>
+				<li><a href="#2">ギリシャ文字</a></li>
+				<li><a href="#3">演算子</a></li>
+				<li><a href="#4">大型演算子</a></li>
+				<li><a href="#5">矢印</a></li>
+				<li><a href="#6">括弧</a></li>
+				<li><a href="#7">その他</a></li>
+			</ul>
+		</div>
+
+		<center>
+			<div id="1"></div>
+			<h3 class="h_1">文字装飾</h3>
+			<table style="width: 80%">
+				<caption>文字装飾</caption>
+				<tr>
+					<td class="line">$\dot{a}$</td>
+					<td class="line"><code contenteditable="true">\dot{a}</code></td>
+					<td class="line">$\vec{a}$</td>
+					<td class="line"><code contenteditable="true">\vec{a}</code></td>
+					<td class="line">$\tilde{a}$</td>
+					<td class="line"><code contenteditable="true">\tilde{a}</code></td>
+					<td class="line">$\breve{a}$</td>
+					<td class="line"><code contenteditable="true">\breve{a}</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\ddot{a}$</td>
+					<td class="line"><code contenteditable="true">\ddot{a}</code></td>
+					<td class="line">$\hat{a}$</td>
+					<td class="line"><code contenteditable="true">\hat{a}</code></td>
+					<td class="line">$\acute{a}$</td>
+					<td class="line"><code contenteditable="true">\acute{a}</code></td>
+					<td class="line">$\widehat{A}$</td>
+					<td class="line"><code contenteditable="true">\widehat{A}</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\bar{a}$</td>
+					<td class="line"><code contenteditable="true">\bar{a}</code></td>
+					<td class="line">$\check{a}$</td>
+					<td class="line"><code contenteditable="true">\check{a}</code></td>
+					<td class="line">$\grave{a}$</td>
+					<td class="line"><code contenteditable="true">\grave{a}</code></td>
+					<td class="line">$\widetilde{A}$</td>
+					<td class="line"><code contenteditable="true">\widetilde{A}</code></td>
+				</tr>
+			</table>
+
+			<div id="2"></div>
+			<h3 class="h_1">ギリシャ文字</h3>
+			<table style="width: 80%">
+				<tr>
+					<td class="line">$\alpha$</td>
+					<td class="line"><code contenteditable="true">\alpha</code></td>
+					<td class="line">$\mathrm{A}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{A}</code></td>
+					<td class="line">$\xi$</td>
+					<td class="line"><code contenteditable="true">\xi</code></td>
+					<td class="line">$\Xi$</td>
+					<td class="line"><code contenteditable="true">\Xi</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\beta$</td>
+					<td class="line"><code contenteditable="true">\beta</code></td>
+					<td class="line">$\mathrm{B}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{B}</code></td>
+					<td class="line">$o$</td>
+					<td class="line"><code contenteditable="true">o</code></td>
+					<td class="line">$\mathrm{O}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{O}</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\gamma$</td>
+					<td class="line"><code contenteditable="true">\gamma</code></td>
+					<td class="line">$\Gamma$</td>
+					<td class="line"><code contenteditable="true">\Gamma</code></td>
+					<td class="line">$\pi$</td>
+					<td class="line"><code contenteditable="true">\pi</code></td>
+					<td class="line" rowspan="2">$\Pi$</td>
+					<td class="line" rowspan="2"><code contenteditable="true">\Pi</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\delta$</td>
+					<td class="line"><code contenteditable="true">\delta</code></td>
+					<td class="line">$\Delta$</td>
+					<td class="line"><code contenteditable="true">\Delta</code></td>
+					<td class="line">$\varpi$</td>
+					<td class="line"><code contenteditable="true">\varpi</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\epsilon$</td>
+					<td class="line"><code contenteditable="true">\epsilon</code></td>
+					<td class="line" rowspan="2">$\mathrm{E}$</td>
+					<td class="line" rowspan="2"><code contenteditable="true">\mathrm{E}</code></td>
+					<td class="line">$\rho$</td>
+					<td class="line"><code contenteditable="true">\rho</code></td>
+					<td class="line" rowspan="2">$\mathrm{P}$</td>
+					<td class="line" rowspan="2"><code contenteditable="true">\mathrm{P}</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\varepsilon$</td>
+					<td class="line"><code contenteditable="true">\varepsilon</code></td>
+					<td class="line">$\varrho$</td>
+					<td class="line"><code contenteditable="true">\varrho</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\zeta$</td>
+					<td class="line"><code contenteditable="true">\zeta</code></td>
+					<td class="line">$\mathrm{Z}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{Z}</code></td>
+					<td class="line">$\sigma$</td>
+					<td class="line"><code contenteditable="true">\sigma</code></td>
+					<td class="line" rowspan="2">$\Sigma$</td>
+					<td class="line" rowspan="2"><code contenteditable="true">\Sigma</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\eta$</td>
+					<td class="line"><code contenteditable="true">\eta</code></td>
+					<td class="line">$\mathrm{H}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{H}</code></td>
+					<td class="line">$\varsigma$</td>
+					<td class="line"><code contenteditable="true">\varsigma</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\theta$</td>
+					<td class="line"><code contenteditable="true">\theta</code></td>
+					<td class="line" rowspan="2">$\Theta$</td>
+					<td class="line" rowspan="2"><code contenteditable="true">\Theta</code></td>
+					<td class="line">$\tau$</td>
+					<td class="line"><code contenteditable="true">\tau</code></td>
+					<td class="line">$\mathrm{T}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{T}</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\vartheta$</td>
+					<td class="line"><code contenteditable="true">\vartheta</code></td>
+					<td class="line">$\upsilon$</td>
+					<td class="line"><code contenteditable="true">\upsilon</code></td>
+					<td class="line">$\Upsilon$</td>
+					<td class="line"><code contenteditable="true">\Upsilon</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\iota$</td>
+					<td class="line"><code contenteditable="true">\iota</code></td>
+					<td class="line">$\mathrm{I}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{I}</code></td>
+					<td class="line">$\phi$</td>
+					<td class="line"><code contenteditable="true">\phi</code></td>
+					<td class="line" rowspan="2">$\Phi$</td>
+					<td class="line" rowspan="2"><code contenteditable="true">\Phi</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\kappa$</td>
+					<td class="line"><code contenteditable="true">\kappa</code></td>
+					<td class="line">$\mathrm{K}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{K}</code></td>
+					<td class="line">$\varphi$</td>
+					<td class="line"><code contenteditable="true">\varphi</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lambda$</td>
+					<td class="line"><code contenteditable="true">\lambda</code></td>
+					<td class="line">$\Lambda$</td>
+					<td class="line"><code contenteditable="true">\Lambda</code></td>
+					<td class="line">$\chi$</td>
+					<td class="line"><code contenteditable="true">\chi</code></td>
+					<td class="line">$\mathrm{X}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{X}</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\mu$</td>
+					<td class="line"><code contenteditable="true">\mu</code></td>
+					<td class="line">$\mathrm{M}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{M}</code></td>
+					<td class="line">$\psi$</td>
+					<td class="line"><code contenteditable="true">\psi</code></td>
+					<td class="line">$\Psi$</td>
+					<td class="line"><code contenteditable="true">\Psi</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\nu$</td>
+					<td class="line"><code contenteditable="true">\nu</code></td>
+					<td class="line">$\mathrm{N}$</td>
+					<td class="line"><code contenteditable="true">\mathrm{N}</code></td>
+					<td class="line">$\omega$</td>
+					<td class="line"><code contenteditable="true">\omega</code></td>
+					<td class="line">$\Omega$</td>
+					<td class="line"><code contenteditable="true">\Omega</code></td>
+				</tr>
+			</table>
+
+			<div id="3"></div>
+			<h3 class="h_1">演算子</h3>
+			<table style="width: 80%">
+				<tr>
+					<td class="line">$<$< /td>
+					<td class="line"><code contenteditable="true"><</code></td>
+					<td class="line">$>$</td>
+					<td class="line"><code contenteditable="true">></code></td>
+					<td class="line">$=$</td>
+					<td class="line"><code contenteditable="true">=</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\leq$</td>
+					<td class="line"><code contenteditable="true">\leq</code></td>
+					<td class="line">$\geq$</td>
+					<td class="line"><code contenteditable="true">\geq</code></td>
+					<td class="line">$\equiv$</td>
+					<td class="line"><code contenteditable="true">\equiv</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\le$</td>
+					<td class="line"><code contenteditable="true">\le</code></td>
+					<td class="line">$\geq$</td>
+					<td class="line"><code contenteditable="true">\geq</code></td>
+					<td class="line">$\doteq$</td>
+					<td class="line"><code contenteditable="true">\doteq</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\ll$</td>
+					<td class="line"><code contenteditable="true">\ll</code></td>
+					<td class="line">$\gg$</td>
+					<td class="line"><code contenteditable="true">\gg</code></td>
+					<td class="line">$\sim$</td>
+					<td class="line"><code contenteditable="true">\sim</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\leqslant$</td>
+					<td class="line"><code contenteditable="true">\leqslant</code></td>
+					<td class="line">$\geqslant$</td>
+					<td class="line"><code contenteditable="true">\geqslant</code></td>
+					<td class="line">$\doteqdot$</td>
+					<td class="line"><code contenteditable="true">\doteqdot</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\eqslantless$</td>
+					<td class="line"><code contenteditable="true">\eqslantless</code></td>
+					<td class="line">$\eqslantgtr$</td>
+					<td class="line"><code contenteditable="true">\eqslantgtr</code></td>
+					<td class="line">$\risingdotseq$</td>
+					<td class="line"><code contenteditable="true">\risingdotseq</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\leqq$</td>
+					<td class="line"><code contenteditable="true">\leqq</code></td>
+					<td class="line">$\geqq$</td>
+					<td class="line"><code contenteditable="true">\geqq</code></td>
+					<td class="line">$\fallingdotseq$</td>
+					<td class="line"><code contenteditable="true">\fallingdotseq</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lll$</td>
+					<td class="line"><code contenteditable="true">\lll</code></td>
+					<td class="line">$\ggg$</td>
+					<td class="line"><code contenteditable="true">\ggg</code></td>
+					<td class="line">$\thicksim$</td>
+					<td class="line"><code contenteditable="true">\thicksim</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\llless$</td>
+					<td class="line"><code contenteditable="true">\llless</code></td>
+					<td class="line">$\gggtr$</td>
+					<td class="line"><code contenteditable="true">\gggtr</code></td>
+					<td class="line">$\thickapprox$</td>
+					<td class="line"><code contenteditable="true">\thickapprox</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lesssim$</td>
+					<td class="line"><code contenteditable="true">\lesssim</code></td>
+					<td class="line">$\gtrsim$</td>
+					<td class="line"><code contenteditable="true">\gtrsim</code></td>
+					<td class="line">$\approxeq$</td>
+					<td class="line"><code contenteditable="true">\approxeq</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lessapprox$</td>
+					<td class="line"><code contenteditable="true">\lessapprox</code></td>
+					<td class="line">$\gtrapprox$</td>
+					<td class="line"><code contenteditable="true">\gtrapprox</code></td>
+					<td class="line">$\backsim$</td>
+					<td class="line"><code contenteditable="true">\backsim</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lessgtr$</td>
+					<td class="line"><code contenteditable="true">\lessgtr</code></td>
+					<td class="line">$\gtrless$</td>
+					<td class="line"><code contenteditable="true">\gtrless</code></td>
+					<td class="line">$\backsimeq$</td>
+					<td class="line"><code contenteditable="true">\backsimeq</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\prec$</td>
+					<td class="line"><code contenteditable="true">\prec</code></td>
+					<td class="line">$\succ$</td>
+					<td class="line"><code contenteditable="true">\succ</code></td>
+					<td class="line">$\simeq$</td>
+					<td class="line"><code contenteditable="true">\simeq</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\preceq$</td>
+					<td class="line"><code contenteditable="true">\preceq</code></td>
+					<td class="line">$\succeq$</td>
+					<td class="line"><code contenteditable="true">\succeq</code></td>
+					<td class="line">$\approx$</td>
+					<td class="line"><code contenteditable="true">\approx</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\subset$</td>
+					<td class="line"><code contenteditable="true">\subset</code></td>
+					<td class="line">$\supset$</td>
+					<td class="line"><code contenteditable="true">\supset</code></td>
+					<td class="line">$\cong$</td>
+					<td class="line"><code contenteditable="true">\cong</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\subseteq$</td>
+					<td class="line"><code contenteditable="true">\subseteq</code></td>
+					<td class="line">$\supseteq$</td>
+					<td class="line"><code contenteditable="true">\supseteq</code></td>
+					<td class="line">$\propto$</td>
+					<td class="line"><code contenteditable="true">\propto</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\in$</td>
+					<td class="line"><code contenteditable="true">\in</code></td>
+					<td class="line">$\ni$</td>
+					<td class="line"><code contenteditable="true">\ni</code></td>
+					<td class="line">$\models$</td>
+					<td class="line"><code contenteditable="true">\models</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\curlyeqprec$</td>
+					<td class="line"><code contenteditable="true">\curlyeqprec</code></td>
+					<td class="line">$\curlyeqsucc$</td>
+					<td class="line"><code contenteditable="true">\curlyeqsucc</code></td>
+					<td class="line">$\therefore$</td>
+					<td class="line"><code contenteditable="true">\therefore</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\precsim$</td>
+					<td class="line"><code contenteditable="true">\precsim</code></td>
+					<td class="line">$\succsim$</td>
+					<td class="line"><code contenteditable="true">\succsim</code></td>
+					<td class="line">$\because$</td>
+					<td class="line"><code contenteditable="true">\because</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\precapprox$</td>
+					<td class="line"><code contenteditable="true">\precapprox</code></td>
+					<td class="line">$\succapprox$</td>
+					<td class="line"><code contenteditable="true">\succapprox</code></td>
+					<td class="line">$\between$</td>
+					<td class="line"><code contenteditable="true">\between</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\subseteqq$</td>
+					<td class="line"><code contenteditable="true">\subseteqq</code></td>
+					<td class="line">$\supseteqq$</td>
+					<td class="line"><code contenteditable="true">\supseteqq</code></td>
+					<td class="line">$\pitchfork$</td>
+					<td class="line"><code contenteditable="true">\pitchfork</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\Subset$</td>
+					<td class="line"><code contenteditable="true">\Subset</code></td>
+					<td class="line">$\Subset$</td>
+					<td class="line"><code contenteditable="true">\Subset</code></td>
+					<td class="line">$\backepsilon$</td>
+					<td class="line"><code contenteditable="true">\backepsilon</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\vartriangleleft$</td>
+					<td class="line"><code contenteditable="true">\vartriangleleft</code></td>
+					<td class="line">$\vartriangleright$</td>
+					<td class="line"><code contenteditable="true">\vartriangleright</code></td>
+					<td class="line">$\blacktriangleleft$</td>
+					<td class="line"><code contenteditable="true">\blacktriangleleft</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\trianglelefteq$</td>
+					<td class="line"><code contenteditable="true">\trianglelefteq</code></td>
+					<td class="line">$\trianglerighteq$</td>
+					<td class="line"><code contenteditable="true">\trianglerighteq</code></td>
+					<td class="line">$\blacktriangleright$</td>
+					<td class="line"><code contenteditable="true">\blacktriangleright</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\vdash$</td>
+					<td class="line"><code contenteditable="true">\vdash</code></td>
+					<td class="line">$\owns$</td>
+					<td class="line"><code contenteditable="true">\owns</code></td>
+					<td class="line">$\perp$</td>
+					<td class="line"><code contenteditable="true">\perp</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\mid$</td>
+					<td class="line"><code contenteditable="true">\mid</code></td>
+					<td class="line">$\dashv$</td>
+					<td class="line"><code contenteditable="true">\dashv</code></td>
+					<td class="line">$\asymp$</td>
+					<td class="line"><code contenteditable="true">\asymp</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\notin$</td>
+					<td class="line"><code contenteditable="true">\notin</code></td>
+					<td class="line">$\parallel$</td>
+					<td class="line"><code contenteditable="true">\parallel</code></td>
+					<td class="line">$\neq$</td>
+					<td class="line"><code contenteditable="true">\neq</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\pm$</td>
+					<td class="line"><code contenteditable="true">\pm</code></td>
+					<td class="line">$\frown$</td>
+					<td class="line"><code contenteditable="true">\frown</code></td>
+					<td class="line">$\ne$</td>
+					<td class="line"><code contenteditable="true">\ne</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\cdot$</td>
+					<td class="line"><code contenteditable="true">\cdot</code></td>
+					<td class="line">$\div$</td>
+					<td class="line"><code contenteditable="true">\div</code></td>
+					<td class="line">$\star$</td>
+					<td class="line"><code contenteditable="true">\star</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\cdots$</td>
+					<td class="line"><code contenteditable="true">\cdots</code></td>
+					<td class="line">$\setminus$</td>
+					<td class="line"><code contenteditable="true">\setminus</code></td>
+					<td class="line">$\ast$</td>
+					<td class="line"><code contenteditable="true">\ast</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\cup$</td>
+					<td class="line"><code contenteditable="true">\cup</code></td>
+					<td class="line">$\cap$</td>
+					<td class="line"><code contenteditable="true">\cap</code></td>
+					<td class="line">$\circ$</td>
+					<td class="line"><code contenteditable="true">\circ</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\sqcup$</td>
+					<td class="line"><code contenteditable="true">\sqcup</code></td>
+					<td class="line">$\sqcap$</td>
+					<td class="line"><code contenteditable="true">\sqcap</code></td>
+					<td class="line">$\bullet$</td>
+					<td class="line"><code contenteditable="true">\bullet</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\vee$</td>
+					<td class="line"><code contenteditable="true">\vee</code></td>
+					<td class="line">$\wedge$</td>
+					<td class="line"><code contenteditable="true">\wedge</code></td>
+					<td class="line">$\dagger$</td>
+					<td class="line"><code contenteditable="true">\dagger</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lor$</td>
+					<td class="line"><code contenteditable="true">\lor</code></td>
+					<td class="line">$\land$</td>
+					<td class="line"><code contenteditable="true">\land</code></td>
+					<td class="line">$\ddagger$</td>
+					<td class="line"><code contenteditable="true">\ddagger</code></td>
+				</tr>
+			</table>
+
+			<div id="4"></div>
+			<h3 class="h_1">大型演算子</h3>
+			<table style="width: 80%">
+				<tr>
+					<td class="line">$\sum$</td>
+					<td class="line"><code contenteditable="true">\sum</code></td>
+					<td class="line">$\int$</td>
+					<td class="line"><code contenteditable="true">\int</code></td>
+					<td class="line">$\oint$</td>
+					<td class="line"><code contenteditable="true">\oint</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\prod$</td>
+					<td class="line"><code contenteditable="true">\prod</code></td>
+					<td class="line">$\bigcup$</td>
+					<td class="line"><code contenteditable="true">\bigcup</code></td>
+					<td class="line">$\bigvee$</td>
+					<td class="line"><code contenteditable="true">\bigvee</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\coprod$</td>
+					<td class="line"><code contenteditable="true">\coprod</code></td>
+					<td class="line">$\bigcap$</td>
+					<td class="line"><code contenteditable="true">\bigcap</code></td>
+					<td class="line">$\bigwedge$</td>
+					<td class="line"><code contenteditable="true">\bigwedge</code></td>
+				</tr>
+			</table>
+
+			<div id="5"></div>
+			<h3 class="h_1">矢印</h3>
+			<table style="width: 80%">
+				<tr>
+					<td class="line">$\leftarrow$</td>
+					<td class="line"><code contenteditable="true">\leftarrow</code></td>
+					<td class="line">$\Leftarrow$</td>
+					<td class="line"><code contenteditable="true">\Leftarrow</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\rightarrow$</td>
+					<td class="line"><code contenteditable="true">\rightarrow</code></td>
+					<td class="line">$\Rightarrow$</td>
+					<td class="line"><code contenteditable="true">\Rightarrow</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\leftrightarrow$</td>
+					<td class="line"><code contenteditable="true">\leftrightarrow</code></td>
+					<td class="line">$\Leftrightarrow$</td>
+					<td class="line"><code contenteditable="true">\Leftrightarrow</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\rightleftharpoons$</td>
+					<td class="line"><code contenteditable="true">\rightleftharpoons</code></td>
+					<td class="line">$\iff$</td>
+					<td class="line"><code contenteditable="true">\iff</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\rightharpoonup$</td>
+					<td class="line"><code contenteditable="true">\rightharpoonup</code></td>
+					<td class="line">$\leftharpoonup$</td>
+					<td class="line"><code contenteditable="true">\leftharpoonup</code></td>
+				</tr>
+			</table>
+
+			<div id="6"></div>
+			<h3 class="h_1">括弧</h3>
+			<table style="width: 80%">
+				<tr>
+					<td class="line">$\lbrack$</td>
+					<td class="line"><code contenteditable="true">\lbrack</code></td>
+					<td class="line">$\rbrack$</td>
+					<td class="line"><code contenteditable="true">\rbrack</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lbrace$</td>
+					<td class="line"><code contenteditable="true">\lbrace</code></td>
+					<td class="line">$\rbrace$</td>
+					<td class="line"><code contenteditable="true">\rbrace</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\langle$</td>
+					<td class="line"><code contenteditable="true">\langle</code></td>
+					<td class="line">$\rangle$</td>
+					<td class="line"><code contenteditable="true">\rangle</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lfloor$</td>
+					<td class="line"><code contenteditable="true">\lfloor</code></td>
+					<td class="line">$\rfloor$</td>
+					<td class="line"><code contenteditable="true">\rfloor</code></td>
+				</tr>
+				<tr>
+					<td class="line">$/$</td>
+					<td class="line"><code contenteditable="true">/</code></td>
+					<td class="line">$\backslash$</td>
+					<td class="line"><code contenteditable="true">\backslash</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lgroup$</td>
+					<td class="line"><code contenteditable="true">\lgroup</code></td>
+					<td class="line">$\rgroup$</td>
+					<td class="line"><code contenteditable="true">\rgroup</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\lmoustache$</td>
+					<td class="line"><code contenteditable="true">\lmoustache</code></td>
+					<td class="line">$\rmoustache$</td>
+					<td class="line"><code contenteditable="true">\rmoustache</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\arrowvert$</td>
+					<td class="line"><code contenteditable="true">\arrowvert</code></td>
+					<td class="line">$\Arrowvert$</td>
+					<td class="line"><code contenteditable="true">\Arrowvert</code></td>
+				</tr>
+			</table>
+
+			<div id="7"></div>
+			<h3 class="h_1">その他</h3>
+			<table style="width: 80%">
+				<tr>
+					<td class="line">$\dots$</td>
+					<td class="line"><code contenteditable="true">\dots</code></td>
+					<td class="line">$\emptyset$</td>
+					<td class="line"><code contenteditable="true">\emptyset</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\vdots$</td>
+					<td class="line"><code contenteditable="true">\vdots</code></td>
+					<td class="line">$\infty$</td>
+					<td class="line"><code contenteditable="true">\infty</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\ddots$</td>
+					<td class="line"><code contenteditable="true">\ddots</code></td>
+					<td class="line">$\bot$</td>
+					<td class="line"><code contenteditable="true">\bot</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\forall$</td>
+					<td class="line"><code contenteditable="true">\forall</code></td>
+					<td class="line">$\top$</td>
+					<td class="line"><code contenteditable="true">\top</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\exists$</td>
+					<td class="line"><code contenteditable="true">\exists</code></td>
+					<td class="line">$\angle$</td>
+					<td class="line"><code contenteditable="true">\angle</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\partial$</td>
+					<td class="line"><code contenteditable="true">\partial</code></td>
+					<td class="line">$\surd$</td>
+					<td class="line"><code contenteditable="true">\surd</code></td>
+				</tr>
+				<tr>
+					<td class="line">$\prime$</td>
+					<td colspan="3"><code contenteditable="true">\prime</code></td>
+				</tr>
+			</table>
+		</center>
+
+		<center>
+			<h4>以上！ Enjoy ! </h4>
+		</center>
+	</section>
+
+	<aside>
+		<a href="./0.html">0. はじめに</a><br>
+		<a href="./1.html">1. 導入</a><br>
+		<a href="./2.html">2. 役割と効能</a><br>
+		<a href="./3.html">3. 文書クラス</a><br>
+		<a href="./4.html">4. プリアンブル</a><br>
+		<a href="./5.html">5. 環境</a><br>
+		<a href="./6.html">6. 数式</a><br>
+		<a href="./7.html">7. よく使う環境等</a><br>
+		8. 特殊文字
+	</aside>
+	<footer>
+		<a style="float: left;" href="./7.html">前頁</a>
+		<center><a href="../">top</a></center>
+	</footer>
+</body>
+
+</html>

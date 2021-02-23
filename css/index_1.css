@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+}
+
+body {
+    /* 背景色、余白設定 */
+    width: 100%;
+    background-color: #EBE9E1;
+    margin: 0;
+    padding: 0;
+}
+
+#outer {
+    /* 背景色、余白、フォント、ラインハイト */
+    background-color: #fff;
+    margin: 0px auto;
+    width: 90%;
+    font-size: 13px;
+    line-height: 150%;
+    padding: 0 5px;
+    color: #222;
+}
+
+#main {
+    /* 横幅、左流し */
+    width: 98%;
+}
+
+.content {
+    font-size: 13px;
+    line-height: 150%;
+}
+
+#footer {
+    color: #666;
+    font-size: 12px;
+    height: 110px;
+    clear: left;
+    text-align: center;
+}
+
+h1 {
+    margin: 0px;
+    padding: 10px;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 1ex;
+    padding-left: 10px;
+}
+
+h3 {
+    margin: 1ex;
+    padding-left: 10px;
+}
+
+p {
+    margin: 1ex 10px;
+}
+
+
+.bar {
+    border-bottom: 1px solid #999;
+    padding: 10px;
+    margin: 10px;
+}
+
+.copy {
+    padding: 20px 0 0 0;
+}
+
+blockquote {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+}
+
+.new {
+    padding-left: .4em;
+    width: 90%;
+    height: 10ex;
+    border: black solid;
+    overflow-y: scroll;
+}
+
+code {
+    overflow-x: scroll;
+    resize: horizontal;
+}
+
+figure {
+    margin-left: 1%;
+}
+
+@media screen and (max-device-width: 480px) {
+    #outer {
+        width: 100%;
+    }
+
+    #header {
+        width: 100%;
+        clear: both;
+        height: 70px;
+    }
+
+    h1 {
+        padding: 34px 0 0 34px;
+    }
+
+    #main {
+        width: 100%;
+        clear: both;
+    }
+
+    .content {
+        clear: both;
+        font-size: 120%;
+        padding: 0 10px;
+    }
+
+    #right {
+        width: 100%;
+        clear: both;
+    }
+
+    #footer {
+        width: 100%;
+        clear: both;
+    }
+
+    img {
+        zoom: 80%;
+    }
+}

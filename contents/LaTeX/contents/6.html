@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162881724-3');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="keywords" content="ページのキーワード1,2,3" />
+    <meta name="description" content="ページの説明" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: { equationNumbers: { autoNumber: "AMS" }},
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { matchFontHeight: false },
+            displayAlign: "left",
+            displayIndent: "2em"
+        });
+    </script>
+	<meta name="msapplication-square70x70logo" content="../favicons/site-tile-70x70.png">
+	<meta name="msapplication-square150x150logo" content="../favicons/site-tile-150x150.png">
+	<meta name="msapplication-wide310x150logo" content="../favicons/site-tile-310x150.png">
+	<meta name="msapplication-square310x310logo" content="../favicons/site-tile-310x310.png">
+	<meta name="msapplication-TileColor" content="#0078d7">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/android-chrome-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/android-chrome-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/android-chrome-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/android-chrome-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/android-chrome-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/android-chrome-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/android-chrome-152x152.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/android-chrome-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/android-chrome-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="../favicons/icon-160x160.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="24x24" href="../favicons/icon-24x24.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/icon-32x32.png">
+	<link rel="manifest" href="../favicons/manifest.json">
+    <title>6. 数式</title>
+    <link rel="stylesheet" href="./latex.css" type="text/css" />
+</head>
+<body class="main">
+<header>
+    <h1>数式</h1>
+</header>
+<section>
+    <div id="list">
+        <h3>目次</h3>
+        <ul>
+            <li><a href="#1">一般的 ( 庶民的 ) 数式</a></li>
+                <ul>
+                    <li><a href="#1_3">align (オススメ)</a></li>
+                    <li><a href="#1_1">eqation</a></li>
+                    <li><a href="#1_2">equnaray</a></li>
+                </ul>
+            <li><a href="#2">式番号なしの数式</a></li>
+                <ul>
+                    <li><a href="#2_1">推奨系 1</a></li>
+                    <li><a href="#2_2">推奨系 2</a></li>
+                    <li><a href="#2_3">非推奨系</a></li>
+                </ul>
+            <li><a href="#3">文中での数式</a></li>
+            <li><a href="#4">数式に用いる特殊記号等</a></li>
+            <li><a href="#5">その他</a></li>
+                <ul>
+                    <li><a href="#5_1">単位</a></li>
+                    <li><a href="#5_2">数式環境内での日本語</a></li>
+                </ul>
+
+        </ul>
+    </div>
+
+    <div id="1"></div>
+    <h3 class="h_1">一般的 ( 庶民的 ) 数式</h3>
+    <p>
+        数式環境の特徴は、数式がきれいに書ける(数式番号が振られる)ということ！　はもちろんなのですが、その他にも英字が全て斜体になること！実はこいつが意外に厄介者になるときもあるんだよね。
+    </p>
+    <p>
+        まあひとまず置いといて、最もオーソドックスな数式から見てみよう。
+    </p>
+
+    <div id="1_3"></div>
+    <h4 class="h_2">align</h4>
+    <p>
+        alignを使用するためには以下のパッケージを追加する必要がある。これを忘れるとエラーが吐かれるので注意せよ。
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{amsmath}
+</pre>
+</code>
+</figure>
+    <p>
+        alignという数式環境は、以下のコマンドで指定する。
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{align}
+    ここに数式を入力
+\end{align}
+</pre>
+</code>
+</figure>
+    <p>
+        この環境内では数式モードになります。<code class="lang-latex">\\</code>で改行できます。
+    </p>
+    <p>例えば</p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{align}
+    y = ax + b \\
+    z = cx + d + e
+\end{align}
+</pre>
+</code>
+</figure>
+    <p>
+        と入力すると、
+    </p>
+    \begin{align}
+        y = ax + b \\
+        z = cx + d + e
+    \end{align}
+    <p>
+        のように出力されます。
+    </p>
+    <p>
+        しかしこのように上下の式で長さが違うとキレイに揃わない！そんな時！ "<code>&amp</code>" を用いると、キレイに揃えられる！<br>
+        やり方は簡単！揃えたい文字( "＝" 等)の直前に "<code>&amp</code>" を置くだけ！
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{align}
+    y &= ax + b \\
+    z &= cx + d + e
+\end{align}
+</pre>
+</code>
+</figure>
+    <p>
+        例えばこんな感じに入力すると
+        \begin{align}
+            y &= ax + b \\
+            z &= cx + d + e
+        \end{align}
+        こう出力される！ね、簡単で便利っしょ？
+    </p>
+    <p>
+        もし数式番号がいらなかったら、数式の後ろに<code class="lang-latex">\nonumber</code> を付ければ良いだけ。
+    </p>
+    <p>
+        例えば
+    </p>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{align}
+    y &= ax + b \nonumber \\
+    z &= cx + d + e
+\end{align}
+</pre>
+</code>
+</figure>
+    <p>
+        こんな感じに入力すると
+        \begin{align}
+        y &= ax + b \nonumber \\
+        z &= cx + d + e
+        \end{align}
+        こう出力される、以上
+    </p>
+
+
+    <div id="1_1"></div>
+    <h4 class="h_2">equation</h4>
+    <p>
+        equationは、alignの劣化版。何が劣化版かというと、最後から二個目に紹介した "&amp" の機能が使用できない。また、改行したときの数式番号は一番上の数式にのみ付く。<br>
+        他の使い方はほぼ同じ。ただしパッケージの追加は必要ない。
+    </p>
+    <p>
+        例
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{equation}
+    y = ax + b \\
+    z = cx + d + e
+\end{equation}
+</pre>
+</code>
+</figure>
+    <p>
+        \begin{equation}
+            y = ax + b \\
+            z = cx + d + e
+        \end{equation}
+    </p>
+
+
+    <div id="1_2"></div>
+    <h4 class="h_2">eqnarray</h4>
+    <p>
+        eqnarrayもまたalignの劣化版(かなり近い)。違いは、上下揃えの仕方が異なることのみ。
+    </p>
+    <p>
+        alignは、前に"<code class="lang-latex">&amp</code>"を置くだけだったが、eqnarrayでは"<code class="lang-latex">&amp</code>"で挟む必要がある。
+    </p>
+
+    <p>例</p>
+
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{eqnarray}
+    y &=& ax + b \\
+    z &=& cx + d + e
+\end{eqnnray}
+</pre>
+</code>
+</figure>
+    <p>
+        \begin{align}
+            y &= ax + b \\
+            z &= cx + d + e
+        \end{align}
+    </p>
+
+    <div id="2"></div>
+    <h3 class="h_1">式番号なしの数式</h3>
+    <p>
+        まんまです。\align
+    </p>
+    <div id="2_1"></div>
+    <h4 class="h_2">推奨系 1</h4>
+    <p>
+        まず一つ目、equationの式番号が無いバージョン。一応改行もできる。<br>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\[ 数式 \]
+</pre>
+</code>
+</figure>
+        ちょっと可愛いでしょ？だから親近感を覚えて笑
+    </p>
+
+    <div id="2_2"></div>
+    <h4 class="h_2">推奨系 2</h4>
+    <p>
+        2つ目、使い方含めequationと同じ。
+    </p>
+
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{displaymath}
+    数式
+\end{displaymath}
+</pre>
+</code>
+</figure>
+    <p>
+        僕は<code>\[ 数式 \]を強くお勧めする。だって可愛いじゃん？</code>
+    </p>
+
+
+    <div id="2_3"></div>
+    <h4 class="h_2">非推奨系</h4>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+$$ 数式 $$
+</pre>
+</code>
+</figure>
+    <p>
+        という表記法もあるらしい。僕もオススメしない。以上。
+    </p>
+
+
+    <div id="3"></div>
+    <h3 class="h_1">文中での数式</h3>
+    <p>
+        文中で数式を表現したい場合、
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+文章 $ 数式 $ 文章
+</pre>
+</code>
+</figure>
+    <p>
+        とするだけで数式環境が適用される。
+    </p>
+    <p>
+        ところで文中で分数を出力するとどうなるのだろうか。実践してみよう。2分の1は $\frac{1}{2}$ のように出力される。潰れてしまっているのがお判りいただけるだろうか。では次にシグマ記号を出力してみる。$\sum_{i=1}^{n}$ とても綺麗とは言い難い。
+    </p>
+    <p>
+        では綺麗に出力するにはどうしたらいいのだろうか。簡単である。 $を置いた直後に <code>\displaystyle</code>を置けばよい。
+    </p>
+    <p>
+        次のコードを入力すると
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+文章 $\displaystyle \frac{1}{2} $ 文章
+%\frac{}{}は分数を出力するコマンド
+</pre>
+</code>
+</figure>
+
+    <p>
+        文章 $\displaystyle \frac{1}{2} $ 文章
+    </p>
+    <p>
+        このように出力される。シグマ記号でも同様。覚えておくと何かと便利。
+    </p>
+
+    <div id="4"></div>
+    <h3 class="h_1">数式に用いる特殊記号等</h3>
+    <p>
+        数式を $\mathrm{\LaTeX}$ で書くとき、上で挙げた分数やシグマ記号はもちろんのこと、その他諸々の記号もコマンドを用いて書く必要がある。<br>
+        よく使うものからあまり使わないものまで抜粋して<a href="./8.html">ココ</a>にある。有効活用すべし。
+    </p>
+
+    <div id="5"></div>
+    <h3 class="h_1">その他</h3>
+    <p></p>
+    <p></p>
+
+
+    <div id="5_1"></div>
+    <h4 class="h_2">単位</h4>
+    <p>
+        数式環境内で単位を付けるとき、何も考えずつけると斜体になるけど、それはよろしくない。だから数式環境内で単位を使うために使うコマンドが用意されてる。
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\mathrm{単位}
+</pre>
+</code>
+</figure>
+    <p>
+        とすれば良い。これを用いると数式環境内で立体表記が出来る。
+    </p>
+
+
+    <div id="5_2"></div>
+    <h4 class="h_2">数式環境内での日本語</h4>
+    <p>
+        数式環境内でも日本語を用いたいときが多々ある。そんな時に便利なのがこのコマンドである。
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\qq*{日本語}
+\mbox{日本語}
+</pre>
+</code>
+</figure>
+
+    <p>
+        数式を邪魔せず、日本語を用いることが出来る。
+    </p>
+    <p>
+        例
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\[ 5 \div 3 = 1 \qq*{あまり} 2 \]
+\[ 5 \div 3 = 1 \mbox{あまり} 2 \]
+</pre>
+</code>
+</figure>
+    <p>
+        \[ 5 \div 3 = 1 \mbox{あまり} 2 \]
+        \[ 5 \div 3 = 1 \mbox{あまり} 2 \]
+    </p>
+
+
+    <div id="5_2"></div>
+    <h4 class="h_2">添え字、指数</h4>
+    <p>
+        添え字、指数は数式環境内で用いることが出来る。添え字はアンダーバー、指数はハットを使う。
+    </p>
+    <p>
+        例
+    </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\[ y_1 = ax^2 + bx + c \]
+</pre>
+</code>
+</figure>
+    <p>
+        \[ y_1 = ax^2 + bx + c \]
+    </p>
+
+
+<center><h4>以上！ Enjoy ! </h4></center>
+</section>
+
+<aside>
+    <a href="./0.html">0. はじめに</a><br>
+    <a href="./1.html">1. 導入</a><br>
+    <a href="./2.html">2. 役割と効能</a><br>
+    <a href="./3.html">3. 文書クラス</a><br>
+    <a href="./4.html">4. プリアンブル</a><br>
+    <a href="./5.html">5. 環境</a><br>
+    6. 数式<br>
+    <a href="./7.html">7. よく使う環境等</a><br>
+    <a href="./8.html">8. 特殊文字
+    </a>
+</aside>
+<footer>
+    <a style="float: left;" href="./5.html">前頁</a>
+    <a style="float: right;" href="./7.html">次頁</a>
+    <center><a href="../">top</a></center>
+</footer>
+</body>
+</html>

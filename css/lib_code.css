@@ -1,0 +1,200 @@
+/* desert scheme ported from vim to google prettify */
+
+pre.prettyprint, code.prettyprint {
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+	font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	font-size: 14px;
+	line-height: 1.4;
+	background-color: #333;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	overflow: auto;
+	tab-size: 4;
+	-moz-tab-size: 4;
+	/* white-space: nowrap; */
+	/* word-wrap: break-word; */
+	/* resize: horizontal; */
+}
+
+pre.nocode {
+	background-color: none;
+	color: #000
+}
+
+pre .str, code .str {
+	color: #ffa0a0
+}
+
+/* string  - pink */
+
+pre .kwd, code .kwd {
+	color: #f0e68c;
+	font-weight: bold
+}
+
+pre .com, code .com {
+	color: #87ceeb
+}
+
+/* comment - skyblue */
+
+pre .typ, code .typ {
+	color: #98fb98
+}
+
+/* type    - lightgreen */
+
+pre .lit, code .lit {
+	color: #cd5c5c
+}
+
+/* literal - darkred */
+
+pre .pun, code .pun {
+	color: #fff
+}
+
+/* punctuation */
+
+pre .pln, code .pln {
+	color: #fff
+}
+
+/* plaintext */
+
+pre .tag, code .tag {
+	color: #f0e68c;
+	font-weight: bold
+}
+
+/* html/xml tag    - lightyellow */
+
+pre .atn, code .atn {
+	color: #bdb76b;
+	font-weight: bold
+}
+
+/* attribute name  - khaki */
+
+pre .atv, code .atv {
+	color: #ffa0a0
+}
+
+/* attribute value - pink */
+
+pre .dec, code .dec {
+	color: #98fb98
+}
+
+/* decimal         - lightgreen */
+
+pre .k, pre .kc, pre .kd, pre .kp, pre .kr, pre .kt, pre .no, code .k, code .kc, code .kd, code .kp, code .kr, code .kt, code .no {
+	color: #ebd247;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+
+ol.linenums {
+	/* IE indents via margin-left */
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #AEAEAE
+}
+
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8, li.L9 {
+	list-style-type: none;
+	background-color: #333;
+	list-style-position: outside;
+}
+
+pre.em {
+	font-style: norma;
+	margin-left: -16px;
+	margin-right: -16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: #424242;
+	display: inline-block;
+	width: 100%;
+}
+
+.prettyprint ol.linenums>li {
+	list-style-type: decimal;
+}
+
+#list {
+	background-color: aliceblue;
+	padding-left: 1em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/* マーク */
+pre.code::before {
+	content: attr(data-lang);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 0.8em;
+}
+
+pre.lang-html::before {
+	background: #00796b;
+	color: #e0f2f1;
+}
+
+pre.lang-javascript::before {
+	background: #d3cc00;
+	color: #fff8e1;
+}
+
+pre.lang-css::before {
+	background: #ffa000;
+	color: #fff8e1;
+}
+
+@media print {
+	pre.prettyprint {
+		background-color: none
+	}
+	pre .str, code .str {
+		color: #060
+	}
+	pre .kwd, code .kwd {
+		color: #006;
+		font-weight: bold
+	}
+	pre .com, code .com {
+		color: #600;
+		font-style: italic
+	}
+	pre .typ, code .typ {
+		color: #404;
+		font-weight: bold
+	}
+	pre .lit, code .lit {
+		color: #044
+	}
+	pre .pun, code .pun {
+		color: #440
+	}
+	pre .pln, code .pln {
+		color: #000
+	}
+	pre .tag, code .tag {
+		color: #006;
+		font-weight: bold
+	}
+	pre .atn, code .atn {
+		color: #404
+	}
+	pre .atv, code .atv {
+		color: #060
+	}
+}

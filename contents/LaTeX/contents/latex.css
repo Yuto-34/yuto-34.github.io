@@ -1,0 +1,300 @@
+.main {
+	display: grid;
+	grid-template-areas: "a a" "b c" "d d";
+	grid-template-columns: 9em 1fr;
+	grid-template-rows: 10ex 1fr 6ex;
+}
+
+body {
+	margin: 0em;
+	color: black;
+}
+
+header {
+	grid-area: a;
+	background-color: rgb(126, 206, 182);
+}
+
+aside {
+	grid-area: b;
+	padding: 1em;
+	font-size: 0.8em;
+	background-color: rgb(215, 217, 250);
+}
+
+section {
+	grid-area: c;
+	background-color: rgb(255, 255, 255);
+	color: black;
+	padding: 1em;
+}
+
+footer {
+	grid-area: d;
+	padding: 1em;
+	background-color: rgb(122, 211, 194);
+}
+
+h1 {
+	padding-left: 1em;
+	height: 2em;
+	vertical-align: middle;
+}
+
+table {
+	margin-left: 5%;
+	margin-right: 2%;
+	text-align: center;
+	overflow-x: scroll;
+	border-collapse: collapse;
+	width: 80%;
+}
+
+td, th {
+	margin-top: auto;
+	margin-bottom: 10%;
+	margin-right: 5%;
+	margin-left: 5%;
+	padding: 2px 8px;
+	text-align: center;
+}
+
+tr {
+	border: 1px black solid;
+}
+
+p {
+	color: black;
+	padding-left: 1em;
+}
+
+ol.note {
+	padding: 0 0 0 2em;
+	margin: 0;
+}
+
+ol.note li {
+	list-style-type: none;
+	counter-increment: cnt;
+}
+
+.h_1 {
+	padding-left: 1em;
+	margin-right: 5%;
+	background-color: rgb(146, 202, 255);
+}
+
+.h_2 {
+	padding-left: 1.5em;
+	margin-right: 6%;
+	background-color: rgb(234, 243, 106);
+}
+
+.h_3 {
+	padding-left: 1.8em;
+	margin-right: 6%;
+	background-color: rgb(255, 200, 212);
+}
+
+.h_4 {
+	padding-left: 2em;
+	margin-right: 6%;
+	background-color: rgb(253, 177, 84);
+}
+
+.h_5 {
+	padding-left: 3em;
+	margin-right: 7%;
+	background-color: rgb(253, 177, 84);
+}
+
+.prettyprint ol.linenums>li {
+	list-style-type: decimal;
+}
+
+.line {
+	border: 1px black solid;
+}
+
+.line_below {
+	border-bottom: 1px black solid;
+}
+
+.line_top {
+	border-top: 1px black solid;
+}
+
+.no_line {
+	border: none;
+}
+
+#list {
+	background-color: aliceblue;
+	padding-left: 1em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+/* desert scheme ported from vim to google prettify */
+
+pre.prettyprint, code.prettyprint {
+	font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	font-size: 14px;
+	line-height: 1.4;
+	background-color: #333;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+pre.prettyprint {
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+	white-space: pre-wrap;
+}
+
+pre.nocode {
+	background-color: none;
+	color: #000
+}
+
+pre .str, code .str {
+	color: #ffa0a0
+}
+
+/* string  - pink */
+
+pre .kwd, code .kwd {
+	color: #f0e68c;
+	font-weight: bold
+}
+
+pre .com, code .com {
+	color: #87ceeb
+}
+
+/* comment - skyblue */
+
+pre .typ, code .typ {
+	color: #98fb98
+}
+
+/* type    - lightgreen */
+
+pre .lit, code .lit {
+	color: #cd5c5c
+}
+
+/* literal - darkred */
+
+pre .pun, code .pun {
+	color: #fff
+}
+
+/* punctuation */
+
+pre .pln, code .pln {
+	color: #fff
+}
+
+/* plaintext */
+
+pre .tag, code .tag {
+	color: #f0e68c;
+	font-weight: bold
+}
+
+/* html/xml tag    - lightyellow */
+
+pre .atn, code .atn {
+	color: #bdb76b;
+	font-weight: bold
+}
+
+/* attribute name  - khaki */
+
+pre .atv, code .atv {
+	color: #ffa0a0
+}
+
+/* attribute value - pink */
+
+pre .dec, code .dec {
+	color: #98fb98
+}
+
+/* decimal         - lightgreen */
+
+pre .k, pre .kc, pre .kd, pre .kp, pre .kr, pre .kt, pre .no, code .k, code .kc, code .kd, code .kp, code .kr, code .kt, code .no {
+	color: #ebd247;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+
+ol.linenums {
+	/* IE indents via margin-left */
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #AEAEAE
+}
+
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8, li.L9 {
+	list-style-type: none;
+	background-color: #333;
+	list-style-position: outside;
+}
+
+pre.em {
+	font-style: norma;
+	margin-left: -16px;
+	margin-right: -16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: #424242;
+	display: inline-block;
+	width: 100%;
+}
+
+@media print {
+	pre.prettyprint {
+		background-color: none
+	}
+	pre .str, code .str {
+		color: #060
+	}
+	pre .kwd, code .kwd {
+		color: #006;
+		font-weight: bold
+	}
+	pre .com, code .com {
+		color: #600;
+		font-style: italic
+	}
+	pre .typ, code .typ {
+		color: #404;
+		font-weight: bold
+	}
+	pre .lit, code .lit {
+		color: #044
+	}
+	pre .pun, code .pun {
+		color: #440
+	}
+	pre .pln, code .pln {
+		color: #000
+	}
+	pre .tag, code .tag {
+		color: #006;
+		font-weight: bold
+	}
+	pre .atn, code .atn {
+		color: #404
+	}
+	pre .atv, code .atv {
+		color: #060
+	}
+}

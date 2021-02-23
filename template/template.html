@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-162881724-3');
+
+</script>
+<meta charset="UTF-8">
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+    $(function() {
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+            // スクロールの速度
+            var speed = 400; // ミリ秒で記述
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $('body,html').animate({
+                scrollTop: position
+            }, speed, 'swing');
+            return false;
+        });
+    });
+
+</script>
+
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+
+<!-- Syntax highlight -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
+
+<!-- Mthjax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" }},
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			processEscapes: true
+		},
+		"HTML-CSS": { matchFontHeight: false },
+		displayAlign: "left",
+		displayIndent: "2em"
+	});
+</script>
+<!-- ###################################################
+<script type="text/javascript" src="./JS/index.js"></script>
+ここからはページ毎に変更する
+################################################### -->
+<meta name="description" content="" />
+<meta name="keywords" content="Yuto," />
+<link rel="stylesheet" type="text/css" href="" />
+<title>Yuto's Page</title>
+</head>
+
+<body>
+</body>
+
+</html>

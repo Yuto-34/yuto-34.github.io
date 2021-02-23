@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162881724-3');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="keywords" content="ページのキーワード1,2,3" />
+    <meta name="description" content="ページの説明" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: { equationNumbers: { autoNumber: "AMS" }},
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { matchFontHeight: false },
+            displayAlign: "left",
+            displayIndent: "2em"
+        });
+    </script>
+    <title>5. 環境</title>
+    <link rel="stylesheet" href="./latex.css" type="text/css" />
+</head>
+<body class="main">
+    <header>
+        <h1>様々な環境等</h1>
+    </header>
+    <section>
+        <div id="list">
+            <h3>目次</h3>
+            数式は次回
+            <ul>
+                <li><a href="#1">見出し</a></li>
+                <ul>
+                    <li><a href="#1_1">タイトル : title</a></li>
+                    <li><a href="#1_2">大見出し : section</a></li>
+                    <li><a href="#1_3">小見出し : subsection</a></li>
+                    <li><a href="#1_4">超小見出し？ : subsubsection</a></li>
+                </ul>
+                <li><a href="#2">float環境</a></li>
+                <ul>
+                    <li><a href="#2_1">表</a></li>
+                    <ul>
+                        <li><a href="#2_1_1">環境</a></li>
+                        <li><a href="#2_1_2">要素</a></li>
+                        <li><a href="#2_1_3">セル結合</a></li>
+                    </ul>
+                    <li><a href="#2_2">図</a></li>
+                    <ul>
+                        <li><a href="#2_1_1">環境</a></li>
+                        <li><a href="#2_1_2">要素</a></li>
+                    </ul>
+                    <li><a href="#3">表題・図題</a></li>
+                </ul>
+                <li><a href="#4">箇条書き</a></li>
+                <ul>
+                    <li><a href="#4_1">普通のやつ</a></li>
+                    <li><a href="#4_2">数字</a></li>
+                    <li><a href="#4_3">好きな文字で</a></li>
+                    <li><a href="#4_4">応用編 其の弐</a></li>
+                </ul>
+            </ul>
+        </div>
+
+        <div id="1"></div>
+        <h3 class="h_1">見出し</h3>
+        <p>
+        </p>
+
+
+        <div id="1_1"></div>
+        <h4 class="h_2">タイトル</h4>
+        <p>
+            プリアンブルに
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\title{タイトルを入力}
+\date{日付を入力}
+\author{著者を入力}
+</pre>
+</code>
+</figure>
+            そして、<b><code>\begin{document}</code></b>の後ろに
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{document}
+\maketitle
+</pre>
+</code>
+</figure>
+            を置く。
+            そうすると、日付と著者が入ったタイトルが出力される。<br>
+            また、タイトルだけで1ページ使いたい場合は、
+
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{document}
+\maketitle
+\newpage
+</pre>
+</code>
+</figure>
+            とすればよい。
+        </p>
+        <p>
+            要するに、タイトル付きの文書を作成したい場合は、
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\documentclass{jarticle}
+\title{タイトル}
+\date{日付}
+\author{著者}
+\begin{document}
+\maketitle
+    本文
+\end{document}
+</pre>
+</code>
+</figure>
+            とすればよい。
+        </p>
+
+        <div id="1_2"></div>
+        <h4 class="h_2">大見出し</h4>
+        <p>
+            本文中、一番大きな見出しは
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\section{ここに見出しを入力}
+</pre>
+</code>
+</figure>
+            で指定する。実験レポで多用する。
+        </p>
+
+
+        <div id="1_3"></div>
+        <h4 class="h_2">小見出し</h4>
+        <p>
+            本文中、一番大きな見出しは
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\subsection{ここに見出しを入力}
+</pre>
+</code>
+</figure>
+            で指定する。これも実験レポで多用する。<br>
+            安直に sub をひとつ付ければよいだけである。
+        </p>
+
+
+        <div id="1_4"></div>
+        <h4 class="h_2">超小見出し？</h4>
+        <p>
+            本文中、一番大きな見出しは
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\subsubsection{ここに見出しを入力}
+</pre>
+</code>
+</figure>
+            で指定する。まあこれも実験レポで多用する(かも)。<br>
+            安直に sub をふたつ付ければよいだけである。
+        </p>
+
+        <div class="note">
+            <h3>コラム</h3>
+            <p>
+                セクション等には自動で番号が振られるが、時には番号なんていらねぇって時もあるだろう。そんな時は
+            </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\section*{ここに見出しを入力}
+</pre>
+</code>
+</figure>
+            <p>
+                の様に、{} の直前に "*" を置けばよい。
+            </p>
+        </div>
+
+
+        <div id="2"></div>
+        <h3 class="h_1">float 環境</h3>
+        <p>
+            急に聞きなれない単語が飛び出してきてウワッってなった？まあ狙い通りなんだけど(笑)
+            そんなわけで float環境とはなんぞやっていうのを説明させてもらおう。
+        </p>
+        <p>
+            float環境 = (figure + table) 環境
+        </p>
+        <p>
+            ですね、はい。<br>
+            思ったより簡単だった？それとも分からない単語が増えただけ？笑
+        </p>
+        <p>
+            まあ察しついてるかもしれないけど figure, table環境 ってなんだよ？ってことで一応解説。
+        </p>
+        <p>
+            figure環境は図形を挿入するときに使う環境(コマンド)のこと。
+            table環境も同じで、表を挿入するときに使う環境のこと。
+        </p>
+
+        <div id="2_1"></div>
+        <h4 class="h_2">表</h4>
+        <div id="2_1_1"></div>
+        <h5 class="h_3">環境</h5>
+        <p>
+            上でも軽く触れたが、表を挿入するときは table環境を使用する。<br>
+            使い方は簡単♪ begin と end で囲んだ範囲に table環境が適応される。それだけ。
+        </p>
+        <p>
+            要するに、
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{table}
+    表の要素
+\end{table}
+</pre>
+</code>
+</figure>
+            と書けば良いのだ。
+        </p>
+        <div id="2_1_2"></div>
+        <h5 class="h_3">要素</h5>
+        <p>
+            table環境が想定されているものとする。<br>
+            表を作るコマンドは以下の通り。
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{tabular}{#1}
+    #2
+\end{tabular}
+</pre>
+</code>
+</figure>
+        </p>
+        <h5>#1</h5>
+        <p>
+            #1ではセルの"列数"と"水平位置"の指定を行う。<br>
+            例えば、中央揃え3列の場合、#1は <b><code>ccc</code></b>となる(<b>c</b><i>enter</i>)。<br>左揃え4列の場合、#1は <b><code>llll</code></b>(<b>l</b><i>eft</i>)、<br>右揃え5列の場合は<code><b>rrrrr</b></code>(<b>r</b><i>ight</i>)とすればよい。
+
+        </p>
+        <h5>#2</h5>
+        <p>
+            #2ではセルの中身の挿入を行う。<br>
+            #1 : <b><code>cccc</code></b>として具体例を見てみよう。
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{tabular}{|cccc|}
+    \hline
+    採取量 & 透過率 & 吸光度 & 資料の濃度 \\
+    \hline
+    0 & 100 & 0 & 0.0 \\
+    \hline
+    2 & 76.900 & 0.117 & 0.8 \\
+    \hline
+    4 & 59.800 & 0.223 & 1.6 \\
+    \hline
+    6 & 47.067 & 0.327 & 2.4 \\
+    \hline
+    8 & 37.967 & 0.42 & 3.2 \\
+    \hline
+    10 & 30.900 & 0.51 & 4.0 \\
+    \hline
+\end{tabular}
+</pre>
+</code>
+</figure>
+        <table class="line" style="margin-left: 4em;">
+            <tr>
+                <td class="line_below line_top">採取量</td>
+                <td class="line_below line_top">透過率</td>
+                <td class="line_below line_top">吸光度</td>
+                <td class="line_below line_top">資料の濃度</td>
+            </tr>
+            <tr>
+                <td class="no_line">0</td>
+                <td>100</td>
+                <td>0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>76.900</td>
+                <td>0.117</td>
+                <td>0.8</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>59.800</td>
+                <td>0.223</td>
+                <td>1.6</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>47.067</td>
+                <td>0.327</td>
+                <td>2.4</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>37.967</td>
+                <td>0.42</td>
+                <td>3.2</td>
+            </tr>
+            <tr>
+                <td class="line_below">10</td>
+                <td class="line_below">30.900</td>
+                <td class="line_below">0.51</td>
+                <td class="line_below">4.0</td>
+            </tr>
+        </table>
+
+        <p>
+            おわかりいただけただろうか。<br>
+            &amp;がセルの切れ目、$\verb|\\|$ が改行(行の終わり)を表す。また、<code>\hline</code>(<b>h</b>orizontal line)で横線が引ける。
+        </p>
+        <div id=2_1_3></div>
+        <h5 class="h_3">セル結合</h5>
+        <p>
+            セル結合したくなったらまず何も考えずに
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage{multirow}
+</pre>
+</code>
+</figure>
+        <p>
+            をプリアンブルに追加する。
+        </p>
+        <h5>横向きの結合</h5>
+        <p>
+            結合したいセルの最左のセルに
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\multicolumn{またがる列数}{列指定}{中身}
+</pre>
+</code>
+</figure>
+        <p>
+            というコマンドを入力する。<br>
+            ここでいう列指定とは、[<i>l,c,r</i>]いずれかのこと。<br>
+        </p>
+        <p>
+            例えば
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{table}[H]
+    \caption{実験1}
+    \begin{tabular}{|ccccc|}
+        \hline
+        & \multicolumn{2}{c}{Na,$λ_１$} & \multicolumn{2}{c}{Na,$λ_2$}  \\
+        & 一次 & 二次 & 一次 & 二次 \\
+        \hline
+        $θ_L$ & 143$^\circle$25’ & 168$^\circle$13’ & 143$^\circle$24’ & 168$^\circle$9’  \\
+        \hline
+        $θ_R$ & 101$^\circle$57’ & 78$^\circle$7' & 101$^\circle$56’ & 78$^\circle$4’  \\
+        \hline
+        $θ_L－θ_R$ & 41$^\circle$28’ & 90$^\circle$6’ & 41$^\circle$28’ & 90$^\circle$5’  \\
+        \hline
+        $θ_e$ & 21$^\circle$14’ & 45$^\circle$3’ & 20$^\circle$44’ & 45$^\circle$2.5’ \\
+        \hline
+        $θ_L+θ_R$ & 145$^\circle$22’ & 146$^\circle$20’ & 245$^\circle$20’ & 246$^\circle$13’ \\
+        \hline
+    \end{tabular}
+\end{table}
+</pre>
+</code>
+</figure>
+<table class="no_line">
+    <tr>
+        <td class="line_top" class="line_below"></td>
+        <td class="line_top" class="line_below" colspan="2">Na,$λ_1$</td>
+        <td class="line_top" class="line_below" colspan="2">Na,$λ_2$</td>
+    </tr>
+    <tr>
+        <td class="line_below"></td>
+        <td class="line_below">一次</td>
+        <td class="line_below">二次</td>
+        <td class="line_below">一次</td>
+        <td class="line_below">二次</td>
+    </tr>
+    <tr>
+        <td>$\theta_L$</td><td>143°25’</td><td>168°13’</td><td>143°24’</td><td>168°9’</td>
+    </tr>
+    <tr>
+        <td>$\theta_R$</td><td>101°57’</td><td>78°7'</td><td>101°56’</td><td>78°4’</td>
+    </tr>
+    <tr>
+        <td>$\theta_L－\theta_R$</td><td>41°28’</td><td>90°6’</td><td>41°28’</td><td>90°5’</td>
+    </tr>
+    <tr>
+        <td>$\theta_e$</td><td>21°14’</td><td>45°3’</td><td>20°44’</td><td>45°2.5’</td>
+    </tr>
+    <tr>
+        <td class="line_below">$\theta_L+\theta_R$</td><td class="line_below">145°22’</td><td class="line_below">146°20’</td><td class="line_below">245°20’</td><td class="line_below">246°13’</td>
+    </tr>
+</table>
+        <p>
+            の様になる。
+        </p>
+
+
+
+
+        <h5>縦向きの結合</h5>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\multirow{またがる列数}{*}{中身}
+</pre>
+</code>
+</figure>
+
+
+
+        <div id="2_2"></div>
+        <h4 class="h_2">図</h4>
+        <div id="2_2_1"></div>
+        <h5 class="h_3">環境</h5>
+        <p>
+            表を挿入するときは figure環境を使用する。<br>
+            使い方は簡単♪ begin と end で囲んだ範囲に figure環境が適応される。それだけ。
+        </p>
+        <p>
+            要するに、
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{figure}
+    図の挿入
+\end{figure}
+</pre>
+</code>
+</figure>
+        <p>
+            と書けば良いのだ。
+        </p>
+
+
+        <div id="2_2_2"></div>
+        <h5 class="h_3">要素</h5>
+        <p>
+            図を挿入するコマンドは以下の通り。
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{figure}
+    \centering %図を中央に寄せる(無くても良い)
+    \includegraphics[オプション]{ファイル名}
+\end{figure}
+</pre>
+</code>
+</figure>
+        <p>
+            オプションの一例
+        </p>
+        <table>
+            <caption>オプション例</caption>
+            <tr>
+                <td class="line">オプション</td>
+                <td class="line">概要</td>
+                <td class="line">使用例</td>
+            </tr>
+            <tr>
+                <th class="line">height</th>
+                <td class="line">画像の高さを指定</td>
+                <td class="line"><code>[height=5cm]</code> : 画像の高さ5cm</td>
+            </tr>
+            <tr>
+                <th class="line">width</th>
+                <td class="line">画像の幅を指定</td>
+                <td class="line"><code>[width=30mm]</code> : 画像の幅30mm</td>
+            </tr>
+            <tr>
+                <th class="line">scale</th>
+                <td class="line">画像の拡大縮小</td>
+                <td class="line"><code>[scale=0.6]</code> : オリジナル・サイズの0.6倍</td>
+            </tr>
+            <tr>
+                <th class="line">angle</th>
+                <td class="line">画像の角度を指定</td>
+                <td class="line"><code>[angle=90]</code> : 画像を90°回転</td>
+            </tr>
+        </table>
+        <p>
+            カンマで複数個つなげることで同時使用ができる。
+        </p>
+        <p>
+            例 : 画像の横幅5cm、180°回転
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\includegraphics[width=5cm,angle=180]{imagefile.jpg}
+</pre>
+</code>
+</figure>
+        <h5>注意</h5>
+        <p>
+            <span class="under_orange"><code>\includegraphics</code> を使用するには</span>、プリアンブルに
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\usepackage[dvipdfmx]{graphicx}
+</pre>
+</code>
+</figure>
+        <p>
+            を追加する必要がある。
+        </p>
+        <p>
+            図形に対する大抵のエラーはこれを見直せば解決することが多い。
+        </p>
+
+        <div id="3"></div>
+        <h4 class="h_2">表題・図題</h4>
+        <p>
+            表題・図題は次のコマンドを使って指定する。
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\caption{題名を入力}
+</pre>
+</code>
+</figure>
+        <p>
+            このコマンドを、表の場合<code>tabular</code>の上下、図の場合<code>\includegraphics</code>の上下に置くことで、図表の上下に題名を設置することができる。
+        </p>
+
+        <div id="4"></div>
+        <h3 class="h_1">箇条書き</h3>
+        <p>
+            $\mathrm{LaTeX}$の箇条書きは非常に便利！すごく使いやすく、重宝する。
+        </p>
+        <div id="4_1"></div>
+        <h4 class="h_2">ふつうの箇条書き</h4>
+        <p>
+            普通の箇条書きは、 <code><b>itemize</b></code> というコマンドを使う。
+            各項目の先頭には <code><b>\item</b></code> を置く。
+        </p>
+        <p>
+            例
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{itemize}
+    \item 其の壱
+    \item 其の弐
+    \item 其の弎
+\end{itemize}
+</pre>
+</code>
+</figure>
+        <p>
+            出力
+        </p>
+        <ul>
+            <li>其の壱</li>
+            <li>其の弐</li>
+            <li>其の弎</li>
+        </ul>
+
+        <div id="4_2"></div>
+        <h4 class="h_2">数字付き箇条書き</h4>
+        <p>
+            箇条書きにおける各項目の先頭を数字にしたいときは、上の <b><code>itemize</code></b> を <b><code>enumerate</code></b> にすればよいだけ。
+        </p>
+        <p>
+            例
+        </p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{enumerate}
+    \item 其の壱
+    \item 其の弐
+    \item 其の弎
+\end{enumerate}
+</pre>
+</code>
+</figure>
+<p>
+    出力
+</p>
+<ol>
+    <li>其の壱</li>
+    <li>其の弐</li>
+    <li>其の弎</li>
+</ol>
+
+        <div id="4_3"></div>
+        <h4 class="h_2">好きな文字で箇条書き</h4>
+<p>
+    文頭に、数字でも"・"でもなく、好きな文字を置いてリストにしたい！という時も、優秀な$\mathrm{\LaTeX}$は対応してるのだ。
+</p>
+<p>
+    <b><code>\itme[好きな文字]</code></b>とすると、"・"が入力した任意の文字になる。
+</p>
+<p>
+    例
+</p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{enumerate}
+    \item[其の壱] 箇条書きの作り方
+    \item[其の弐] 便利な箇条書き
+    \item[其の弎] 箇条書きの応用
+\end{enumerate}
+</pre>
+</code>
+</figure>
+<p>
+    出力
+</p>
+<table style="border-collapse: separate; margin-left: -5em;">
+    <tr>
+        <td style="text-align: right;">其の壱</td>
+        <td style="text-align: left;">箇条書きの作り方</td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">其の弐</td>
+        <td style="text-align: left;">便利な箇条書き</td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">其の弎</td>
+        <td style="text-align: left;">箇条書きの応用</td>
+    </tr>
+</table>
+
+
+        <div id="4_4"></div>
+        <h4 class="h_2">応用編 其の壱</h4>
+<p>
+    箇条書きをただの数字付きじゃなく、括弧もつけたい！と思った君！残念ながら対応してなんですよ…<br>
+    じゃあ泣き寝入りするしかないのか？と思えばそうではなく、自分で新たに定義出来るのだ。<br>
+    まあ、難しいことは置いといて方法を見てみよう。
+</p>
+<p>
+    実はそれほど難しくもなく、<b><code>\begin{enumerate}</code></b> を置いて、直下に<b><code class="lang-tex">\renewcommand{\labelenumi}{(\arabic{enumi})}</code></b>を置くだけ。
+</p>
+<p>
+    例
+</p>
+<figure>
+<code>
+<pre class="prettyprint linenums lang-latex" contenteditable="true">
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+    \item 其の壱
+    \item 其の弐
+    \item 其の弎
+\end{enumerate}
+</pre>
+</code>
+</figure>
+<p>
+    出力
+</p>
+<table style="border-collapse: separate; margin-left: -9em;">
+    <tr>
+        <td style="text-align: right;">(1)</td>
+        <td style="text-align: left;">其の壱</td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">(2)</td>
+        <td style="text-align: left;">其の弐</td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">(3)</td>
+        <td style="text-align: left;">其の弎</td>
+    </tr>
+</table>
+<p>
+    今回は、数字に()を付けたが、最後の中括弧内を弄ることで他の形式にもできる。
+</p>
+<p>
+    例えば、<b><code>{\arabic{enumi})}</code></b> とすると、<br>
+    1) 其の壱<br>
+    2) 其の弐<br>
+    $\vdots$<br>
+    となる。
+</p>
+
+
+        <center><h4>以上！ Enjoy ! </h4></center>
+    </section>
+
+    <aside>
+        <a href="./0.html">0. はじめに</a><br>
+        <a href="./1.html">1. 導入</a><br>
+        <a href="./2.html">2. 役割と効能</a><br>
+        <a href="./3.html">3. 文書クラス</a><br>
+        <a href="./4.html">4. プリアンブル</a><br>
+        5. 環境<br>
+        <a href="./6.html">6. 数式</a><br>
+        <a href="./7.html">7. よく使う環境等</a><br>
+        <a href="./8.html">8. 特殊文字
+        </a>
+    </aside>
+    <footer>
+        <a style="float: left;" href="./4.html">前頁</a>
+        <a style="float: right;" href="./6.html">次頁</a>
+        <center><a href="../">top</a></center>
+    </footer>
+</body>
+</html>

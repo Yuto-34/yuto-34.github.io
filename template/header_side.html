@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	*,
+	*:before,
+	*:after {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.cp_navi {
+		position: relative;
+		overflow: hidden;
+		width: 360px;
+		height: 360px;
+		position: fixed;
+	}
+
+	.cp_navi #cp_sidenav a {
+		font-size: 20px;
+		position: absolute;
+		left: -100px;
+		width: 130px;
+		height: 54px;
+		padding: 12px 25px;
+		transition: 0.3s;
+		text-decoration: none;
+		color: #ffffff;
+		border-radius: 0 5px 5px 0;
+	}
+
+	.cp_navi #cp_sidenav a:hover {
+		left: -10px;
+	}
+
+	.cp_navi #home {
+		top: 110px;
+		background-color: #da3c41;
+	}
+
+	.cp_navi #news {
+		top: 170px;
+		background-color: #1b2538;
+	}
+
+	.cp_navi #contact {
+		top: 230px;
+		background-color: #2e9b72;
+	}
+
+	.cp_navi #about {
+		top: 290px;
+		background-color: #a62e7a;
+	}
+
+</style>
+</head>
+
+<body>
+
+<div class="cp_navi">
+	<div id="cp_sidenav" class="sidenav">
+		<a href="https://yuto-34.github.io" id="home">Home</a>
+		<a href="#" id="news"><s>News</s></a>
+		<a href="#" id="contact"><s>Contact</s></a>
+		<a href="#" id="about"><s>About</s></a>
+	</div>
+</div>
+
+</body>
+</html>

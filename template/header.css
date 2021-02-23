@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 親要素 */
+div.head_box {
+    background-color: rgb(87, 87, 87);
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+    height: calc(1.5em + 60px);
+}
+
+/* header 要素 ここから */
+/* nav { */
+/* width: 100%; */
+/* } */
+/*  */
+/* nav ul { */
+/* width: 100%; */
+/* } */
+/*  */
+/* nav ul li { */
+/* margin: 0; */
+/* padding: 0; */
+/* list-style: none; */
+/* display: inline-block; */
+/* width: calc(25% - 0.44%); */
+/* } */
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    /* ここで項目の幅を指定します */
+    width: calc((100% - 16.26px) / 4);
+	background-color: #333;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav li:hover {
+    /* 下線の太さや色を指定します */
+    border-bottom: 2px solid #FF7A37;
+}
+
+/* ここまで */
+
+
+a.item {
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color: #a9bce2;
+}
+
+.active {
+    background-color: #da3c41;
+}
+
+@media(max-width: 500) {
+    div.head_box {
+        background-color: blue;
+    }
+}

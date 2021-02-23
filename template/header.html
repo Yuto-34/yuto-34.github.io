@@ -5,13 +5,13 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+	window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-162881724-3');
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'UA-162881724-3');
 
 </script>
 <meta charset="UTF-8">
@@ -19,20 +19,20 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!-- ＃リンクのスムーズスクロール -->
 <script>
-    $(function() {
-        // #で始まるリンクをクリックしたら実行されます
-        $('a[href^="#"]').click(function() {
-            // スクロールの速度
-            var speed = 400; // ミリ秒で記述
-            var href = $(this).attr("href");
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            var position = target.offset().top;
-            $('body,html').animate({
-                scrollTop: position
-            }, speed, 'swing');
-            return false;
-        });
-    });
+	$(function() {
+		// #で始まるリンクをクリックしたら実行されます
+		$('a[href^="#"]').click(function() {
+			// スクロールの速度
+			var speed = 400; // ミリ秒で記述
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({
+				scrollTop: position
+			}, speed, 'swing');
+			return false;
+		});
+	});
 
 </script>
 
@@ -45,7 +45,7 @@
 <!-- Mthjax -->
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
+	MathJax.Hub.Config({
 			TeX: { equationNumbers: { autoNumber: "AMS" }},
 			tex2jax: {
 				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -62,11 +62,96 @@
 ################################################### -->
 <meta name="description" content="" />
 <meta name="keywords" content="Yuto," />
-<link rel="stylesheet" type="text/css" href="" />
-<title>Yuto's Page</title>
+<link rel="stylesheet" type="text/css" href="./header.css" />
+<title>Header|Yuto's Page</title>
 </head>
 
 <body>
+<div class="head_box">
+	<nav>
+		<ul>
+			<li>
+				<a class="active item", href="#home">Home</a>
+			</li>
+			<li>
+				<a class="item" href="#news">News</a>
+			</li>
+			<li>
+				<a class="item" href="#contact">Contact</a>
+			</li>
+			<li>
+				<a class="item" href="#about">About</a>
+			</li>
+		</ul>
+	</nav>
+</div>
 </body>
 
 </html>
+
+
+
+
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- <style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #1b2538;
+		position: fixed;
+	}
+
+	li {
+		float: left;
+		border-right: 1px solid #bbbbbb;
+	}
+
+	li:last-child {
+		border-right: none;
+	}
+
+	li a {
+		display: block;
+		width: 150px;
+		color: white;
+		text-align: center;
+		padding: 30px 24px;
+		text-decoration: none;
+	}
+
+	li a:hover:not(.active) {
+		background-color: #a9bce2;
+	}
+
+	.active {
+		background-color: #da3c41;
+	}
+
+	@media(max-width: 650px) {
+		li a {
+			width: 25%;
+		}
+	}
+
+</style>
+</head>
+<body>
+<nav>
+	<ul>
+		<li><a class="active" href="#home">Home</a></li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#about">About</a></li>
+	</ul>
+</nav>
+</body> -->

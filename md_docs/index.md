@@ -7,7 +7,7 @@
 			font-size: xx-large;
 		}
 		p {
-			color:blue;
+			color:gray;
 			line-height:1.5;
 		}
 	</style>
@@ -55,18 +55,18 @@ LaTeXで回路図を書きたいって思って調べても，日本語の記事
 \usepackage{siunitx}
 ```
 
+を用いること．
+
+hereパッケージは，tex出力内の位置固定，siunitxパッケージは単位等を入れる時に有用な役割である．
+
+[$\LaTeX$ソース]()
+
 <details>
 	<summary>tex source</summary>
 	```tex
 	\usepackage[dvipdfmx]{graphix}
 	```
 </details>
-
-を用いること．
-
-hereパッケージは，tex出力内の位置固定，siunitxパッケージは単位等を入れる時に有用な役割である．
-
-[$\LaTeX$ソース]()
 
 出力
 

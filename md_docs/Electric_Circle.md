@@ -1,17 +1,17 @@
-# LaTeXで回路図を書きたい
-
 <head>
-	<style>
-		h1 {
-			font-weight: 900;
-			font-size: xx-large;
-		}
-		p {
-			color:blue;
-			line-height:1.5;
-		}
-	</style>
+<style>
+	h1 {
+        font-weight: 900;
+        font-size: xx-large;
+    }
+    p {
+        color:blue;
+        line-height:1.5;
+    }
+</style>
 </head>
+
+# LaTeXで回路図を書きたい
 
 ## 前書き
 
@@ -54,13 +54,6 @@ LaTeXで回路図を書きたいって思って調べても，日本語の記事
 \usepackage{here}
 \usepackage{siunitx}
 ```
-
-<details>
-	<summary>tex source</summary>
-	```tex
-	\usepackage[dvipdfmx]{graphix}
-	```
-</details>
 
 を用いること．
 

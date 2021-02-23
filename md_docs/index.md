@@ -7,7 +7,7 @@
 			font-size: xx-large;
 		}
 		p {
-			color:gray;
+			color:black;
 			line-height:1.5;
 		}
 	</style>

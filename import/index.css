@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div.outer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+}
+
+div.main {
+    display: flex;
+    /* 左から右(デフォ) */
+    flex-direction: row;
+    background-color: rgb(173, 173, 173);
+    max-width: 1000px;
+    width: 100%;
+    height: calc(100vh - 170px);
+    box-shadow: -20px -20px 25px 30px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+
+div.border {
+    width: 69%;
+    float: left;
+}
+
+p {
+    text-align: left;
+    margin-left: 4em;
+}
+
+
+/* copy */
+
+#right {
+    color: white;
+    float: left;
+    width: 30%;
+    font-size: 16px;
+    margin-top: 80px;
+    margin-left: 5px;
+}
+
+div.ribbon {
+    background-color: rgb(221, 41, 80);
+    height: 5ex;
+    line-height: 5ex;
+    width: 100%;
+    font-size: 16px;
+}
+
+.side {
+    padding: 6px 0 10px 14px;
+    margin: 0;
+    background-color: #DBE6DE;
+    font-weight: bold;
+    color: #777;
+    box-shadow: 20px 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.side a {
+    color: #036;
+    text-decoration: none;
+}
+
+.side a:hover {
+    text-decoration: underline;
+}
+
+.side ul {
+    margin: 0;
+    padding: 4px 0;
+    text-align: left;
+}
+
+.side li {
+    margin: 7px 0 7px 20px;
+    list-style: disc;
+    padding: 0;
+}
+
+p.scroll {
+    line-height: 5px;
+    overflow-y: scroll;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    font-weight: normal;
+    color: #036;
+}
+
+h1 {
+    display: inline-block;
+    max-width: 1000px;
+    font-size: 24px;
+    text-align: left;
+    color: #033;
+    margin: 0 8em 10px 34px;
+    padding: 40px 10em 0px 0px;
+    font-family: メイリオ, Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+    border-bottom: 1px solid #999;
+}
+
+
+h2 {
+    text-align: left;
+    font-size: 20px;
+    margin: 10px 8em 10px 34px;
+    padding: 7px 0 0px 4px;
+    border-bottom: 1px solid #999;
+}
+
+blockquote {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+}
+
+.new {
+    text-align: left;
+    padding-left: .4em;
+    width: 90%;
+    height: 20ex;
+    border: black solid;
+    overflow-y: scroll;
+    font-size: 18px;
+    line-height: 2.8ex;
+}
+
+ul#left {
+    text-align: left;
+    margin-left: 4em;
+}
+
+li#no_mark {
+    list-style: none;
+}
+
+@media screen and (max-width: 1000px) {
+    div.main {
+        /* 上から下 */
+        flex-direction: column;
+    }
+
+    #right {
+        float: none;
+		width: 80%;
+    }
+
+    div.border {
+        width: 100%;
+        float: none;
+    }
+
+    h1 {
+		width: 100%;
+        padding: 34px 0 0 34px;
+    }
+
+    #main {
+        width: 100%;
+        clear: both;
+    }
+
+    .content {
+        clear: both;
+        font-size: 120%;
+        padding: 0 10px;
+    }
+
+    #right {
+        width: 100%;
+        clear: both;
+    }
+
+    img {
+        zoom: 80%;
+    }
+}

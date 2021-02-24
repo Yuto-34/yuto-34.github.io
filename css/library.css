@@ -26,7 +26,22 @@ a:hover {
 	/*画像の幅*/
 	height: 16px;
 	/*画像の高さ*/
-	background-image: url(./img/another_tab.png);
+	background-image: url(../img/another_tab.png);
+	background-size: contain;
+	vertical-align: middle;
+	margin-left: 3px;
+}
+
+.exitY::after {
+	content: '';
+	/*何も入れない*/
+	display: inline-block;
+	/*忘れずに！*/
+	width: 16px;
+	/*画像の幅*/
+	height: 16px;
+	/*画像の高さ*/
+	background-image: url(../img/another_tab_Y.png);
 	background-size: contain;
 	vertical-align: middle;
 	margin-left: 3px;
@@ -114,120 +129,3 @@ a:hover {
 }
 
 @media screen and (max-device-width: 480px) {}
-
-/* <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
-
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-162881724-2');
-	</script>
-	<!-- jQueryの指定 -->
-	<script src="jquery-3.2.1.min.js"></script>
-
-	<!-- 共通部分の読み込み -->
-	<script type="text/javascript">
-		$(function () {
-			// header.htmlをid属性「header」という名前で読み込むように指定する
-			$("#header").load("header.html");
-		});
-	</script>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta name="viewport" content="width=device-width" />
-	<script
-		src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
-	<script type="text/javascript"
-		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			TeX: { equationNumbers: { autoNumber: "AMS" }},
-			tex2jax: {
-				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-				processEscapes: true
-			},
-			"HTML-CSS": { matchFontHeight: false },
-			displayAlign: "left",
-			displayIndent: "2em"
-		});
-	</script>
-	 <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-	 <!-- ＃リンクのスムーズスクロール -->
-	 <script>
-		$(function(){
-		  // #で始まるリンクをクリックしたら実行されます
-		  $('a[href^="#"]').click(function() {
-			 // スクロールの速度
-			 var speed = 400; // ミリ秒で記述
-			 var href= $(this).attr("href");
-			 var target = $(href == "#" || href == "" ? 'html' : href);
-			 var position = target.offset().top;
-			 $('body,html').animate({scrollTop:position}, speed, 'swing');
-			 return false;
-		  });
-		});
-	 </script>
-	<meta name="msapplication-square70x70logo" content="./favicons/site-tile-70x70.png">
-	<meta name="msapplication-square150x150logo" content="./favicons/site-tile-150x150.png">
-	<meta name="msapplication-wide310x150logo" content="./favicons/site-tile-310x150.png">
-	<meta name="msapplication-square310x310logo" content="./favicons/site-tile-310x310.png">
-	<meta name="msapplication-TileColor" content="#0078d7">
-		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
-	<link rel="icon" type="image/vnd.microsoft.icon" href="./favicons/favicon.ico">
-	<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="36x36" href="./favicons/android-chrome-36x36.png">
-	<link rel="icon" type="image/png" sizes="48x48" href="./favicons/android-chrome-48x48.png">
-	<link rel="icon" type="image/png" sizes="72x72" href="./favicons/android-chrome-72x72.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/android-chrome-96x96.png">
-	<link rel="icon" type="image/png" sizes="128x128" href="./favicons/android-chrome-128x128.png">
-	<link rel="icon" type="image/png" sizes="144x144" href="./favicons/android-chrome-144x144.png">
-	<link rel="icon" type="image/png" sizes="152x152" href="./favicons/android-chrome-152x152.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="./favicons/android-chrome-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="./favicons/android-chrome-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="./favicons/android-chrome-512x512.png">
-	<link rel="icon" type="image/png" sizes="36x36" href="./favicons/icon-36x36.png">
-	<link rel="icon" type="image/png" sizes="48x48" href="./favicons/icon-48x48.png">
-	<link rel="icon" type="image/png" sizes="72x72" href="./favicons/icon-72x72.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/icon-96x96.png">
-	<link rel="icon" type="image/png" sizes="128x128" href="./favicons/icon-128x128.png">
-	<link rel="icon" type="image/png" sizes="144x144" href="./favicons/icon-144x144.png">
-	<link rel="icon" type="image/png" sizes="152x152" href="./favicons/icon-152x152.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="./favicons/icon-160x160.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="./favicons/icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="196x196" href="./favicons/icon-196x196.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="./favicons/icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="./favicons/icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="./favicons/icon-512x512.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/icon-16x16.png">
-	<link rel="icon" type="image/png" sizes="24x24" href="./favicons/icon-24x24.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/icon-32x32.png">
-	<link rel="manifest" href="./favicons/manifest.json">
-	<!-- ###################################################
-	<script type="text/javascript" src="./JS/index.js"></script>
-				ここからはページ毎に変更する
-	################################################### -->
-	<link rel="stylesheet" type="text/css" href="./import.css" />
-	<meta name="keywords" content="Yuto, UEC19, Yuto's Page, フランス語, French, LaTeX, " />
-	<meta name="description" content="UEC19のYutoが運営するHPです。ゆる～くやってます" />
-	<title>Yuto's Page</title>
-</head>
-<body></body>
-</html> */

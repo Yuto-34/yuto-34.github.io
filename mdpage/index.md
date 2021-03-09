@@ -18,3 +18,9 @@
 </script>
 </head>
 test
+
+## math test
+
+$$
+	y = a \times x
+$$

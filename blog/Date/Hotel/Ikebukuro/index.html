@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'UA-162881724-3');
+
+</script>
+<!-- Google Ad -->
+<script data-ad-client="ca-pub-1338532618014473" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- 文字コードの指定 -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja,en">
+
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+	$(function() {
+		// #で始まるリンクをクリックしたら実行されます
+		$('a[href^="#"]').click(function() {
+			// スクロールの速度
+			var speed = 400; // ミリ秒で記述
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({
+				scrollTop: position
+			}, speed, 'swing');
+			return false;
+		});
+	});
+
+</script>
+
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+
+<!-- Syntax highlight -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
+
+<!-- Mthjax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" }},
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			processEscapes: true
+		},
+		"HTML-CSS": { matchFontHeight: false },
+		displayAlign: "left",
+		displayIndent: "2em"
+	});
+</script>
+
+<!-- 共通部分の読み込み -->
+<script type="text/javascript">
+	$(function() {
+		// header.htmlをid属性「header」という名前で読み込むように指定する
+		$("#header").load("../../../../header.html");
+		$("#footer").load("../../../../footer.html");
+	});
+
+</script>
+
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://yuto-34.github.io/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://yuto-34.github.io/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://yuto-34.github.io/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://yuto-34.github.io/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://yuto-34.github.io/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://yuto-34.github.io/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://yuto-34.github.io/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://yuto-34.github.io/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://yuto-34.github.io/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/android-chrome-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/android-chrome-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/android-chrome-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/android-chrome-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/android-chrome-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/android-chrome-152x152.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/android-chrome-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="160x160" href="https://yuto-34.github.io/favicons/icon-160x160.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://yuto-34.github.io/favicons/icon-196x196.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/icon-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuto-34.github.io/favicons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="24x24" href="https://yuto-34.github.io/favicons/icon-24x24.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuto-34.github.io/favicons/icon-32x32.png">
+<link rel="manifest" href="https://yuto-34.github.io/favicons/manifest.json">
+<!-- ###################################################
+<script type="text/javascript" src="./JS/index.js"></script>
+ここからはページ毎に変更する
+################################################### -->
+<meta name="description" content="" />
+<meta name="keywords" content="Yuto," />
+<link rel="stylesheet" type="text/css" href="./import.css" />
+<title>Yuto's Page</title>
+</head>
+
+<body>
+<div class="outer">
+	<div id="header"></div>
+
+	<center>
+		<!-- パンくずリスト -->
+		<div id="breadcrumb_area">
+			<ul id="breadcrumb_list">
+				<li class="bread_li"><a class="bread" href="https://Yuto-34.github.io">HOME</a></li>
+				<li class="bread_li"><a class="bread" href="../../../">blog</a></li>
+				<li class="bread_li"><a class="bread" href="../../">Date</a></li>
+				<li class="bread_li"><a class="bread" href="../">Hotel</a></li>
+				<li class="bread_li"><a class="bread" href="./">池袋</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<h1>Ikebukuro's Hotel</h1>
+			<h2 style="border: none;">目次</h2>
+			<div class="toc">
+				<ul>
+					<li><a href="./#AILU">HOTEL AILU</a></li>
+					<li><a href="./#DOMANI">HOTEL DOMANI</a></li>
+					<li><a href="./#SEVEN">RAMSES SEVEN</a></li>
+					<li><a href="./#BARU">AROMA BARU</a></li>
+					<li><a href="./#LIXIA">LIXIA</a></li>
+					<li><a href="./#AREAS">HOTEL AREAS</a></li>
+				</ul>
+			</div>
+			<h2 id="AILU"><a style="text-decoration: none; font-weight:bold;" href="https://www.hotel-ailu.com/">HOTEL AILU</a></h2>
+			<h3>禁煙ルーム</h3>
+			<p>
+				スーペリア 205，206 のみ
+			</p>
+			<h3>料金</h3>
+			<p>
+				フリータイム (月～金曜日 1部) 7,900 円(スーペリア)<br>
+				クーポン：https://www.hotel-ailu.com/coupon/
+			</p>
+			<h3>google map</h3>
+			<dl>
+				<dd>総合評価</dd>
+				<dt>4.4</dt>
+				<dd>評価2以下</dd>
+				<dt>なし</dt>
+				<dd>特筆事項</dd>
+				<dt>なし</dt>
+			</dl>
+			<p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8685210172303!2d139.70642521553984!3d35.72945193493278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5cf8a038b1%3A0xbce97c8ddce158ad!2sHOTEL%20AILU!5e0!3m2!1sja!2sjp!4v1616767396536!5m2!1sja!2sjp" width="800" height="400" style="border:0; margin: 11px 0 11px 0;" allowfullscreen="" loading="lazy"></iframe>
+			</p>
+			<h3>レビューから</h3>
+			<ol>
+				<li class="review">内装はシックでモダンでオシャレ。ギラギラ感もない。「いかにもラブホ！」って感じが苦手な人でも、ここは安心して入れると思う。<br>
+					部屋・風呂ともに広く、清掃も行き届いている。<br>
+					軟水風呂がホテルの売りの一つみたいですが、バスタブに湯を張って全身浴したら、確かにとてもよく温まりました。<br>
+					フリータイムも池袋のファッションホテルの中では長い方で、のんびり過ごせます。<br>
+					受付で鍵をもらう形式ですが、ここは同性カップルもOKだとハピホテ等に記載されているだけあって、女性二人の入室でも変な対応をされなかったのも高ポイントです。<br>
+					禁煙ルームが増えてほしいので、そこだけは残念なので期待を込めて星4つ。</li>
+				<li class="review">宿泊で泊まりました！<br>
+					部屋が広くて綺麗です◎<br>
+					ゆっくりくつろげる空間でした！<br>
+					また利用したいです(( *´ `)"</li>
+				<li class="review">素敵でした。また利用したいと思います。</li>
+			</ol>
+			<h2 id="DOMANI"><a style="text-decoration: none; font-weight:bold;" href="http://hotel-domani.com/">Hotel DOMANI</a></h2>
+			<h3>禁煙ルーム</h3>
+			<p>
+				スーペリア303, 305，デラックス702
+			</p>
+			<h3>料金</h3>
+			<p>
+				クーポン：https://hotel-domani.com/coupon/
+			</p>
+			<dl>
+				<dd>スーペリア</dd>
+				<dt>フリータイム (月～金 1部) 6:00 ～17:00：8,000 円</dt>
+				<dd>デラックス</dd>
+				<dt>フリータイム (月～金 1部) 6:00 ～17:00：9,500 円</dt>
+			</dl>
+			<h3>google map</h3>
+			<dl>
+				<dd>総合評価</dd>
+				<dt>4.0</dt>
+				<dd>評価2以下</dd>
+				<dt>1: 1/3程度</dt>
+				<dd>特筆事項</dd>
+				<dt>AILUの姉妹ホテル</dt>
+			</dl>
+			<p>
+				<!-- map 埋め込み -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8744457843763!2d139.70636051555974!3d35.72930623494065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5cf8ff4bbd%3A0x67bca3293afbc155!2z44OJ44Oe44O844OL772cSG90ZWwgRE9NQU5J!5e0!3m2!1sja!2sjp!4v1616769733476!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</p>
+			<h3>レビューから</h3>
+			<ol>
+				<li class="review">
+					天気の子に登場していたので、興味が出て泊まってみました<br>
+					お値段は張るものの、部屋も広いし綺麗だし、アメニティも豪華で大満足です<br>
+					お風呂にシャワーが2つついてて最初は？だったんですが、使う分になって、2人一緒にシャワーを浴びれました<br>
+					カラオケが、最近のタッチパッド？を使ってするタイプじゃなくて、カタログからリモコンで番号を入れるタイプだったので驚きました。カタログを調べるよりも、カタログ会社？のHPに行って曲名を検索する方が速いです<br>
+					ただ、常夜灯が見つからなくて照明の調整に苦労しました
+				</li>
+				<li class="review">
+					隣のAILUと比べると、こちらはよりラブホっぽい内装ですが、それでもチープさはなく、やはり清掃が行き届いているため清潔感があり、お風呂などは高級感さえ漂っています。<br>
+					フリータイムもAILUと同じ長めの設定で、ゆっくり過ごせます。軟水風呂も温まる。<br>
+					こちらも、女性二人で行っても変な対応はされませんでした。
+				</li>
+				<li class="review">
+					いつ行っても外れなしの安定さがあります
+				</li>
+			</ol>
+			<h2 id=""SEVEN><a style="text-decoration: none; font-weight:bold;" href="https://ramses-grp.com/ramses-seven">RAMUSES SEVEN</a></h2>
+			<h3>禁煙ルーム</h3>
+			<p>
+				C<br>
+				休憩(3h)：平日	¥5,500<br>
+				301, 303, 305, 601, 603, 605<br>
+				D<br>
+				休憩(3h)：平日	¥4,900<br>
+				302, 602
+			</p>
+			<h3>料金</h3>
+			<p>
+			</p>
+			<h3>google map</h3>
+			<dl>
+				<dd>総合評価</dd>
+				<dt>4.1</dt>
+				<dd>評価2以下</dd>
+				<dt>恐らく1ずつ</dt>
+				<dd>特筆事項</dd>
+				<dt>
+					フロントのおばさんが微妙<br>
+					狭い<br>
+					東口側
+				</dt>
+			</dl>
+			<p>
+				<!-- map 埋め込み -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3238.9430568845733!2d139.71145741555958!3d35.72761893503324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1616770055022!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</p>
+			<h3>レビューから</h3>
+			<ol>
+				<li class="review">
+					ショートタイム・休憩・宿泊が規定通りでない。<br>
+					おばさんがちょっと上からな態度
+				</li>
+				<li class="review">
+					フロントおばさんの気分で宿泊か休憩か変わる摩訶不思議なホテル。<br>
+					フロントから「宿泊のみです！」と叫び、休憩では入らせないぞと言わんばかりに門前払いさせられるラブホ。
+				</li>
+				<li class="review">
+					狭いけど安くて綺麗なホテルです
+				</li>
+			</ol>
+			<h2 id="LIXIA"><a style="text-decoration: none; font-weight:bold;" href="http://happyhotel.jp/detail/detail_top.jsp?id=25900764">LIXIA</a></h2>
+			<h3>禁煙ルーム</h3>
+			<p>
+				なさげ
+			</p>
+			<h3>料金</h3>
+			<p>
+				5:00～17:00 の間で最大 12時間ご利用 ¥5500 ～¥7200
+			</p>
+			<h3>google map</h3>
+			<dl>
+				<dd>総合評価</dd>
+				<dt>4.0</dt>
+				<dd>評価2以下</dd>
+				<dt>2/7</dt>
+				<dd>特筆事項</dd>
+				<dt>
+					HP無し<br>
+					情報が少ない<br>
+					低評価は少ないが，母数も少ない<br>
+					露天風呂が売り<br>
+					Yuto評価低め
+				</dt>
+			</dl>
+			<p>
+				<!-- map 埋め込み -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3238.670165456316!2d139.71039011555976!3d35.734329534664944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1616770342749!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</p>
+			<h3>レビューから</h3>
+			<ol>
+				<li class="review">内装も料金のわりにきれい</li>
+				<li class="review">エリアスが満室の時に利用しました。アメニティはまずまずです。</li>
+				<li class="review">バスルームが広くて使い易い</li>
+			</ol>
+			<h2 id="BARU"><a style="text-decoration: none; font-weight:bold;" href="http://hotelaroma.jp/">AROMA BARU</a></h2>
+			<h3>禁煙ルーム</h3>
+			<p>
+				なさげ
+			</p>
+			<h3>料金</h3>
+			<p>
+				DAYUSE：4800～7500
+			</p>
+			<h3>google map</h3>
+			<dl>
+				<dd>総合評価</dd>
+				<dt>4.2</dt>
+				<dd>評価2以下</dd>
+				<dt>各1</dt>
+				<dd>特筆事項</dd>
+				<dt>微妙だ…</dt>
+			</dl>
+			<p>
+				<!-- map 埋め込み -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.65333652419!2d139.71025531555992!3d35.734743334642104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d60914a2f81%3A0xa85f2ef59fb6623f!2sAROMA%20BARU!5e0!3m2!1sja!2sjp!4v1616770476763!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</p>
+			<h3>レビューから</h3>
+			<ol>
+				<li class="review">
+					とても素敵なホテルだったのに<br>
+					2020/7/7チェックアウト時の女性受付が最悪で楽しい気分が一瞬で冷めた。<br>
+					<br>
+					お釣りをトレーに投げて渡す。<br>
+					借りていた充電コードを返すとき<br>
+					まとめていなかったのは悪かったかもしれないが<br>
+					「ありがとうございました」<br>
+					に対して<br>
+					「まじありえない」<br>
+					と吐き捨て睨みつけてくる。<br>
+					とても悲しい気持ちになった。<br>
+					<br>
+					2度と行かない。
+				</li>
+				<li class="review">
+					都心にあるのに落ち着く大人のホテルでした^^<br>
+					また利用したいです！
+				</li>
+				<li class="review">
+					立地は駅からそこまで遠くなくて良かったです<br>
+					リノベかわからないけど室内は綺麗で、換気の悪い浴室もカビが目立つという事はありませんでした<br>
+					減点として<br>
+					・電源コンセントが少ない 照明に電源の殆どを奪われ、携帯の充電に困る可能性があります<br>
+					湯沸かしのポットも結局洗面台の電源を借りる始末<br>
+					・掛け布団が毛布だった 冷房が効いてるので寒いっす。エアコン調整しろよって話でもあるんですがせめて薄がけ布団がよかった <br>
+					・VODの見方がわからない VODボタンで画面が切り替わるも、その後矢印とか何押しても反応せず… 使い方もわからずみることができませんでした<br>
+					説明書欲しい<br>
+					加点 <br>
+					・宿泊は朝食サービス 簡易的ですがパンとジュースがついてきます<br>
+					もちろんウェルカムドリンク的なインスタントコーヒー等は別であります<br>
+					・スイート宿泊でも15000円程度と割安でした<br>
+					ファミリープランもあり確かに家族でこの値段なら別に立地(ラブホ街)を除けば十分じゃないかと。
+				</li>
+			</ol>
+			<h2 id="AREAS"><a style="text-decoration: none; font-weight:bold;" href="https://www.hotel-areas.com/">HOTEL AREAS</a></h2>
+			<h3>禁煙ルーム</h3>
+			<p>
+				C<br>
+				102, 203, 207, 303, 306
+			</p>
+			<h3>料金</h3>
+			<p>
+				￥5,500：102<br>
+				￥5,900：207, 303, 306<br>
+				￥6,500：203
+			</p>
+			<h3>google map</h3>
+			<dl>
+				<dd>総合評価</dd>
+				<dt>3.5</dt>
+				<dd>評価2以下</dd>
+				<dt>
+					そこそこ
+				</dt>
+				<dd>特筆事項</dd>
+				<dt>
+					基本が4
+				</dt>
+			</dl>
+			<p>
+				<!-- map 埋め込み -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.670958502359!2d139.71068641555985!3d35.734310034665974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d60bf850cff%3A0xd233c72d7336daef!2zSE9URUwgQVJFQVMg5rGg6KKL77yI44Ko44Oq44Ki44K577yJ!5e0!3m2!1sja!2sjp!4v1616770705027!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</p>
+			<h3>レビューから</h3>
+			<ol>
+				<li class="review">
+					値段の割に結構綺麗だった
+				</li>
+				<li class="review">
+					駅から歩いて近い立地でなおかつ綺麗な部屋なのを考えたら、かなりお得です。
+				</li>
+				<li class="review">
+					池袋のラブホテルでは使いやすいホテルです。
+				</li>
+			</ol>
+		</div>
+	</center>
+</div>
+
+<div id="footer">
+	<!-- header.htmlをここに表示する -->
+</div>
+
+</body>
+
+</html>

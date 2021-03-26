@@ -14,8 +14,10 @@ div.outer {
 
 div.main {
     display: flex;
-    /* 左から右(デフォ) */
-    flex-direction: row;
+    /* 上から下 */
+    flex-direction: column;
+    /* 折り返しなし(デフォ) */
+    flex-wrap: nowrap;
     background-color: rgb(173, 173, 173);
     max-width: 1000px;
     width: 100%;
@@ -24,47 +26,42 @@ div.main {
     overflow-y: auto;
 }
 
-div.border {
-    width: 65%;
-    float: left;
-}
-
 p {
     text-align: left;
     margin-left: 4em;
 }
 
 div #breadcrumb_area {
-	width: 100%;
-	max-width: 1000px;
-	height: 3ex;
-	display: block;
-	background-color: beige;
+    width: 100%;
+    max-width: 1000px;
+    height: 3ex;
+    display: block;
+    background-color: beige;
 }
 
 ul #breadcrumb_list {
-	line-height: 5px;
-	display: flex;
+    line-height: 5px;
+    display: flex;
 }
 
 .bread_li {
-	list-style: none;
-	display: inline-block;
-	text-align: left;
-	float: left;
-	padding: 0 3px;
+    list-style: none;
+    /* display: inline-block; */
+    text-align: left;
+    float: left;
+    padding: 0 3px;
 }
 
 .bread_li::after {
-	content: " >";
+    content: " >";
 }
 
 .bread_li:last-child::after {
-	content: none;
+    content: none;
 }
 
 a .bread {
-	color: pink;
+    color: pink;
 }
 
 /* .content {
@@ -73,16 +70,42 @@ a .bread {
 	padding: 0 10px;
 } */
 
+.toc {
+	text-align: left;
+	border: white 10px double;
+	margin: 10px 34px 10px 34px;
+	background-color: #036;
+	color: gray;
+}
+
+.toc li {
+	list-style: none;
+	margin-left: 1em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.toc a {
+	color: gray;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: larger;
+}
+
+.toc a:hover{
+	color: whitesmoke;
+}
+
 
 /* copy */
 
 #right {
     color: white;
-    float: left;
-    width: 30%;
+    width: 90%;
     font-size: 16px;
-    margin-top: 100px;
-    margin-left: 5px;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-bottom: 50px;
 }
 
 div.ribbon {
@@ -91,7 +114,7 @@ div.ribbon {
     line-height: 5ex;
     width: 100%;
     font-size: 16px;
-	line-height: 4ex;
+    line-height: 4ex;
 }
 
 .side {
@@ -138,26 +161,59 @@ a {
     color: #036;
 }
 
-h1 {
-    display: inline-block;
-	width: calc(100% - 35%);
-    max-width: 1000px;
-    font-size: 24px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+dl,
+dd,
+dt {
     text-align: left;
-    color: #033;
-    margin: 0 15em 10px 34px;
-    padding: 20px 0em 0px 0px;
-    font-family: メイリオ, Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
-    border-bottom: 1px solid #999;
 }
 
-
-h2 {
+h1 {
+    display: inline-block;
+    width: calc(100% - 35%);
+    max-width: 1000px;
+    color: #033;
     text-align: left;
-    font-size: 20px;
+    font-size: xx-large;
     margin: 10px 8em 10px 34px;
     padding: 7px 0 0px 4px;
     border-bottom: 1px solid #999;
+    font-family: メイリオ, Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+h2 {
+    text-align: left;
+    font-size: x-large;
+    margin: 10px 8em 10px 34px;
+    padding: 7px 0 0px 4px;
+    border-bottom: 1px solid #999;
+}
+
+h3 {
+    font-size: larger;
+    margin: 10px 8em 10px 34px;
+    padding: 7px 0 0px 4px;
+}
+
+dd {
+    margin: 0 0 0 34px;
+	font-weight: bold;
+}
+
+dt {
+    margin: 0 0 0 calc(34px + 1em);
+}
+
+li.review {
+	margin: 0 1em 20px calc(34px + 2em);
+	/* list-style: none; */
 }
 
 blockquote {
@@ -175,7 +231,7 @@ p.new {
     overflow-y: scroll;
     font-size: 18px;
     line-height: 2.8ex;
-	margin: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 ul#left {
@@ -195,7 +251,9 @@ li#no_mark {
 
     #right {
         float: none;
-		width: 80%;
+        width: 80%;
+        width: 100%;
+        clear: both;
     }
 
     div.border {
@@ -204,9 +262,9 @@ li#no_mark {
     }
 
     h1 {
-		width: 100%;
+        width: 100%;
         padding: 34px 0 0 34px;
-		margin: 0;
+        margin: 0;
     }
 
     #main {
@@ -218,11 +276,6 @@ li#no_mark {
         clear: both;
         font-size: 120%;
         padding: 0 10px;
-    }
-
-    #right {
-        width: 100%;
-        clear: both;
     }
 
     img {

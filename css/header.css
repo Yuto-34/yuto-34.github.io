@@ -21,65 +21,16 @@ header div {
     height: 100px;
 }
 
-nav {
-    width: 55%;
-    display: inline-block;
+header div.icon {
+    width: 100px;
+    float: left;
 }
 
-nav ul {
-    height: 100px;
-}
-
-/* 絶対消さない */
-nav ul li {
-    list-style: none;
-    width: 24%;
-    height: 100px;
-    display: inline-block;
-    text-align: center;
-    /* background-color: #333; */
-}
-
-nav li:hover {
-    /* 下線の太さや色を指定します */
-    border-bottom: 2px solid #FF7A37;
-}
-
-/* 絶対消さない */
-nav ul li a:hover {
-    /* 下線の太さや色を指定します */
-    border-bottom: 2px solid #FF7A37;
-}
-
-nav ul li a {
+header div a {
     text-decoration: none;
-    color: whitesmoke;
-    height: 100px;
-    line-height: 80px;
-    font-weight: bold;
-    font-size: x-large;
 }
 
-/* 絶対消さない */
-nav ul li a:hover:not(.active) {
-    background-color: #a9bce2;
-}
-
-/* ここまで */
-a.item {
-    display: inline-block;
-    background-color: gray;
-    height: 80px;
-    margin: 16px 0 0 0;
-    width: 100%;
-    padding: auto 0;
-}
-
-.item a:hover:not(.active) {
-    background-color: #a9bce2;
-}
-
-span.title {
+header div a span.title {
     display: inline-block;
     margin-left: 10px;
     line-height: 100px;
@@ -89,33 +40,118 @@ span.title {
     font-family: fantasy;
 }
 
+header nav {
+    width: 60%;
+    display: inline-block;
+}
 
-div.icon {
-    width: 100px;
-    float: left;
+header nav ul {
+    height: 100px;
 }
 
 /* 絶対消さない */
-a.item.active {
+header nav ul li {
+    list-style: none;
+    width: calc(24% - 5px);
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    /* background-color: #333; */
+}
+
+header nav li:hover:not(.active) {
+    /* 下線の太さや色を指定します */
+    border-bottom: 2px solid #FF7A37;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    height: 100px;
+    line-height: 80px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+/* 絶対消さない */
+header nav ul li a:hover:not(.active) {
+    background-color: #a9bce2;
+}
+
+/* 絶対消さない */
+header nav ul li a:hover:not(.active) {
+    /* 下線の太さや色を指定します */
+    border-bottom: 2px solid #FF7A37;
+}
+
+/* ここまで */
+header nav ul li a.item {
+    display: inline-block;
+    background-color: gray;
+    height: 80px;
+    margin: 16px 0 0 0;
+    width: 100%;
+    padding: auto 0;
+}
+
+/* 絶対消さない */
+header nav ul li a.item.active {
     background-color: #da3c41;
 }
 
-@media screen and (max-width: 800px) {
-    /* header { */
-    /* height: 200px; */
-    /* flex-direction: column; */
-    /* } */
-    /*  */
-    /* nav { */
-    /* width: 100%; */
-    /* } */
-    /*  */
-    /* nav ul { */
-    /* width: 100%; */
-    /* } */
+header nav ul li a.item:hover:not(.active) {
+    background-color: #a9bce2;
+}
+
+@media screen and (max-width: 860px) {
+    header {
+        height: 190px;
+        flex-direction: column;
+    }
+
+    header div a span.title {
+        display: block;
+        /* width: calc(100% - 100px); */
+        margin-left: calc(100px);
+        width: 5em;
+        line-height: 100px;
+        text-align: center;
+        color: pink;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+	header nav ul li {
+		height: 90px;
+	}
+
+    header nav ul li a.item {
+        display: inline-block;
+        background-color: gray;
+        height: 80px;
+        margin: 6px 0 0 0;
+        width: 100%;
+        padding: auto 0;
+    }
 }
 
 @media screen and (max-width: 500px) {
+
+    header nav ul li a {
+        font-size: large;
+        font-weight: normal;
+    }
+
+    header nav ul li {
+        /* width: 20%; */
+    }
+
     /* div.head_box { */
     /* background-color: blue; */
     /* } */

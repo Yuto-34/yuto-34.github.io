@@ -12,52 +12,6 @@ body {
 	grid-template-rows: 10ex 1fr 6ex;
 }
 
-header {
-	grid-area: a;
-	background-color: whitesmoke;
-	padding-left: 2em;
-	border-color: aquamarine;
-	border-width: 2px;
-	border-style: solid;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-}
-
-aside {
-	grid-area: b;
-	background-color: rgb(243, 248, 255);
-	padding-left: .2em;
-	padding-top: 2ex;
-	font-size: small;
-	border-color: aquamarine;
-	border-width: 2px;
-	border-style: solid;
-	border-top: none;
-	border-bottom: none;
-	border-left: none;
-}
-
-section {
-	grid-area: c;
-	background-color: rgb(250, 250, 250);
-	color: black;
-	padding: 1em;
-	padding-top: none;
-}
-
-footer {
-	grid-area: d;
-	background-color: cornsilk;
-	padding: 1em;
-	border-color: aquamarine;
-	border-width: 2px;
-	border-style: solid;
-	border-bottom: none;
-	border-left: none;
-	border-right: none;
-}
-
 table {
 	max-width: 60em;
 	width: 90%;

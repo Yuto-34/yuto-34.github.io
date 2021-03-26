@@ -1,16 +1,16 @@
 div.note {
-	width: calc(74%);
-	margin-top: 1ex;
-	margin-left: 5%;
-	margin-right: 2%;
-	padding: 2ex 2em 2ex 1.5em;
-	background-color: antiquewhite;
-	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-o-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-khtml-border-radius: 8px;
+    width: calc(74%);
+    margin-top: 1ex;
+    margin-left: 5%;
+    margin-right: 2%;
+    padding: 2ex 2em 2ex 1.5em;
+    background-color: antiquewhite;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -khtml-border-radius: 8px;
 }
 
 a:hover {
@@ -18,114 +18,82 @@ a:hover {
 }
 
 .exit::after {
-	content: '';
-	/*何も入れない*/
-	display: inline-block;
-	/*忘れずに！*/
-	width: 16px;
-	/*画像の幅*/
-	height: 16px;
-	/*画像の高さ*/
-	background-image: url(../img/another_tab.png);
-	background-size: contain;
-	vertical-align: middle;
-	margin-left: 3px;
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 16px;
+    /*画像の幅*/
+    height: 16px;
+    /*画像の高さ*/
+    background-image: url(../img/another_tab.png);
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 3px;
 }
 
 .exitY::after {
-	content: '';
-	/*何も入れない*/
-	display: inline-block;
-	/*忘れずに！*/
-	width: 16px;
-	/*画像の幅*/
-	height: 16px;
-	/*画像の高さ*/
-	background-image: url(../img/another_tab_Y.png);
-	background-size: contain;
-	vertical-align: middle;
-	margin-left: 3px;
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 16px;
+    /*画像の幅*/
+    height: 16px;
+    /*画像の高さ*/
+    background-image: url(../img/another_tab_Y.png);
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 3px;
 }
 
 .back_lightorange {
-	background-color: rgb(253, 177, 84);
+    background-color: rgb(253, 177, 84);
 }
 
 .under_lightorange {
-	background: linear-gradient(transparent 0%, rgb(253, 177, 84));
+    background: linear-gradient(transparent 0%, rgb(253, 177, 84));
 }
 
 .under_orange {
-	background: linear-gradient(transparent 70%, darkorange 100%);
+    background: linear-gradient(transparent 70%, darkorange 100%);
 }
 
 .under_pink1 {
-	background: linear-gradient(transparent 60%, rgb(255, 178, 152));
+    background: linear-gradient(transparent 60%, rgb(255, 178, 152));
 }
 
 .no_line_bottom {
-	border-bottom: none;
+    border-bottom: none;
 }
 
 .no_line_top {
-	border-top: none;
+    border-top: none;
 }
 
 .no_line {
-	border: none;
-}
-
-.nidan {
-	width: 100%;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
-.nidan_left {
-	width: 50%;
-	padding: 1em;
-	background-color: floralwhite;
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-o-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-khtml-border-radius: 15px;
-}
-
-.nidan_right {
-	width: 50%;
-	padding: 1em;
-	background-color: ghostwhite;
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-o-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-khtml-border-radius: 15px;
+    border: none;
 }
 
 .text_center {
-	text-align: center;
+    text-align: center;
 }
 
 .text_left {
-	text-align: left;
+    text-align: left;
 }
 
 
 .text_right {
-	text-align: right;
+    text-align: right;
 }
 
 .font_large {
-	font-size: large;
+    font-size: large;
 }
 
 .font_small {
-	font: small;
+    font: small;
 }
 
 @media screen and (max-device-width: 480px) {}

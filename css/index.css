@@ -71,51 +71,51 @@ a .bread {
 } */
 
 .toc {
-	text-align: left;
-	border: white 10px double;
-	margin: 10px 34px 10px 34px;
-	background-color: #036;
-	color: gray;
+    text-align: left;
+    border: white 10px double;
+    margin: 10px 34px 10px 34px;
+    background-color: #036;
+    color: gray;
 }
 
 .toc li {
-	list-style: none;
-	margin-left: 1em;
-	margin-top: 5px;
-	margin-bottom: 5px;
+    list-style: none;
+    margin-left: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .toc a {
-	color: gray;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: larger;
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
 }
 
-.toc a:hover{
-	color: whitesmoke;
+.toc a:hover {
+    color: whitesmoke;
 }
 
 div.topic_box {
-	display: block;
-	background-color: rgb(155, 194, 209);
-	width: 70%;
-	padding: 1em;
-	margin: 1em;
-	/* 角を丸くする */
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-o-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-khtml-border-radius: 15px;
+    display: block;
+    background-color: rgb(155, 194, 209);
+    width: 70%;
+    padding: 1em;
+    margin: 1em;
+    /* 角を丸くする */
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -khtml-border-radius: 15px;
 }
 
 /* copy */
 
 #right {
     color: white;
-	max-width: 90%;
+    max-width: 90%;
     width: 900px;
     font-size: 16px;
     margin-top: 50px;
@@ -216,9 +216,15 @@ h3 {
     padding: 7px 0 0px 4px;
 }
 
+h4 {
+    font-size: large;
+    margin: 10px 8em 10px 34px;
+    padding: 7px 0 0px 4px;
+}
+
 dd {
     margin: 0 0 0 34px;
-	font-weight: bold;
+    font-weight: bold;
 }
 
 dt {
@@ -226,8 +232,8 @@ dt {
 }
 
 li.review {
-	margin: 0 1em 20px calc(34px + 2em);
-	/* list-style: none; */
+    margin: 0 1em 20px calc(34px + 2em);
+    /* list-style: none; */
 }
 
 blockquote {

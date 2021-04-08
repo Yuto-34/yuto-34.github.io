@@ -15,6 +15,7 @@ body {
 table {
 	max-width: 60em;
 	width: 90%;
+	margin-left: 5%;
 }
 
 table, td, th {

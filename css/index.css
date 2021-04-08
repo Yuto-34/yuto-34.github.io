@@ -223,12 +223,12 @@ h4 {
 }
 
 dd {
-    margin: 0 0 0 34px;
+    margin: 0 0 0 calc(34px + 1em);
     font-weight: bold;
 }
 
 dt {
-    margin: 0 0 0 calc(34px + 1em);
+    margin: 0 0 0 calc(34px + 2em);
 }
 
 li.review {

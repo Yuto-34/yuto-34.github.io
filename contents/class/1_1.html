@@ -1,32 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
-
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
 
-		gtag('config', 'UA-162881724-2');
-	</script>
-	<link rel="stylesheet" href="./class_table.css" type="text/css" />
-	<link rel="stylesheet" href="../library.css" type="text/css" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta name="keywords" content="ページのキーワード1,2,3" />
-	<meta name="description" content="ページの説明" />
-	<meta name="viewport" content="width=device-width" />
-	<script
-		src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"></script>
-	<script type="text/javascript"
-		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'UA-162881724-2');
+
+</script>
+<!-- Google Ad -->
+<script data-ad-client="ca-pub-1338532618014473" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 文字コードの指定 -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja,en">
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+	$(function() {
+		// #で始まるリンクをクリックしたら実行されます
+		$('a[href^="#"]').click(function() {
+			// スクロールの速度
+			var speed = 400; // ミリ秒で記述
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({
+				scrollTop: position
+			}, speed, 'swing');
+			return false;
+		});
+	});
+
+</script>
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+<!-- Syntax highlight -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
+<!-- Mthjax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
 			TeX: { equationNumbers: { autoNumber: "AMS" }},
 			tex2jax: {
 				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -37,350 +56,350 @@
 			displayIndent: "2em"
 		});
 	</script>
-	<meta name="msapplication-square70x70logo" content="../favicons/site-tile-70x70.png">
-	<meta name="msapplication-square150x150logo" content="../favicons/site-tile-150x150.png">
-	<meta name="msapplication-wide310x150logo" content="../favicons/site-tile-310x150.png">
-	<meta name="msapplication-square310x310logo" content="../favicons/site-tile-310x310.png">
-	<meta name="msapplication-TileColor" content="#0078d7">
-	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
-	<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
-	<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/android-chrome-36x36.png">
-	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/android-chrome-48x48.png">
-	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/android-chrome-72x72.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/android-chrome-96x96.png">
-	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/android-chrome-128x128.png">
-	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/android-chrome-144x144.png">
-	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/android-chrome-152x152.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-chrome-192x192.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/android-chrome-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/android-chrome-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/android-chrome-512x512.png">
-	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/icon-36x36.png">
-	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/icon-48x48.png">
-	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/icon-72x72.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/icon-96x96.png">
-	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/icon-128x128.png">
-	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/icon-144x144.png">
-	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/icon-152x152.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="../favicons/icon-160x160.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-196x196.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/icon-16x16.png">
-	<link rel="icon" type="image/png" sizes="24x24" href="../favicons/icon-24x24.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/icon-32x32.png">
-	<link rel="manifest" href="../favicons/manifest.json">
-	<title>1年前期</title>
+<!-- 共通部分の読み込み -->
+<script type="text/javascript">
+	$(function() {
+		// header.htmlをid属性「header」という名前で読み込むように指定する
+		$("#header").load("https://yuto-34.github.io/import/header.html");
+		$("#footer").load("https://yuto-34.github.io/import/footer.html");
+	});
+
+</script>
+<meta name="msapplication-square70x70logo" content="/site-tile-70x70.png">
+<meta name="msapplication-square150x150logo" content="/site-tile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="/site-tile-310x150.png">
+<meta name="msapplication-square310x310logo" content="/site-tile-310x310.png">
+<meta name="msapplication-TileColor" content="#0078d7">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://yuto-34.github.io/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://yuto-34.github.io/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://yuto-34.github.io/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://yuto-34.github.io/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://yuto-34.github.io/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://yuto-34.github.io/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://yuto-34.github.io/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://yuto-34.github.io/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://yuto-34.github.io/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/android-chrome-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/android-chrome-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/android-chrome-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/android-chrome-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/android-chrome-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/android-chrome-152x152.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/android-chrome-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="160x160" href="https://yuto-34.github.io/favicons/icon-160x160.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://yuto-34.github.io/favicons/icon-196x196.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/icon-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuto-34.github.io/favicons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="24x24" href="https://yuto-34.github.io/favicons/icon-24x24.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuto-34.github.io/favicons/icon-32x32.png">
+<link rel="manifest" href="https://yuto-34.github.io/favicons/manifest.json">
+<!-- ###################################################
+	<script type="text/javascript" src="./JS/index.js"></script>
+	ここからはページ毎に変更する
+################################################### -->
+<link rel="stylesheet" type="text/css" href="./import.css" />
+<title>1年前期</title>
 </head>
-
-<body class="main">
-
-	<header>
-		<h1>1年 前期</h1>
-	</header>
-
-	<aside>
-		<table class="no_line">
-			<tr>
-				<td class="no_line"><a href="#1"> 月1 </a></td>
-				<td class="no_line" style="text-align: left;">第二外国語 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#2"> 月2 </a></td>
-				<td class="no_line" style="text-align: left;">体育 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#3"> 火2 </a></td>
-				<td class="no_line" style="text-align: left;">ASE </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#4"> 火3 </a></td>
-				<td class="no_line" style="text-align: left;">コンリテ </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#5"> 火4 </a></td>
-				<td class="no_line" style="text-align: left;">物概 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#6"> 水1 </a></td>
-				<td class="no_line" style="text-align: left;">微積 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#7"> 水3 </a></td>
-				<td class="no_line" style="text-align: left;">数演 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#8"> 木1 </a></td>
-				<td class="no_line" style="text-align: left;">コミケ </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#9"> 木2 </a></td>
-				<td class="no_line" style="text-align: left;">選択二外 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#10"> 木3 </a></td>
-				<td class="no_line" style="text-align: left;">線形 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#11"> 金1 </a></td>
-				<td class="no_line" style="text-align: left;">AWE </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#12"> 金2 </a></td>
-				<td class="no_line" style="text-align: left;">化概 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#13"> 金3$\cdot$4 </a></td>
-				<td class="no_line" style="text-align: left;">実験A </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#14"> 火5 </a></td>
-				<td class="no_line" style="text-align: left;">教育心理 </td>
-			</tr>
-			<tr>
-				<td class="no_line"><a href="#15"> 金5 </a></td>
-				<td class="no_line" style="text-align: left;">特活 </td>
-			</tr>
-		</table>
-	</aside>
-
-	<section>
-		<h2>時間割</h2>
-
-		<table style="font-size: 14px;">
-			<tr>
-				<th style="width: 3%;"></th>
-				<th style="width: 17.4%;">月</th>
-				<th style="width: 17.4%;">火</th>
-				<th style="width: 17.4%;">水</th>
-				<th style="width: 17.4%;">木</th>
-				<th style="width: 17.4%;">金</th>
-			</tr>
-			<tr>
-				<th style="height: 5ex;"> 1 </th>
-				<td></td>
-				<td></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/biseki.pdf"> 微積第一 </a></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/komike.pdf"> コミケ </a></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/AWE_higuchi.pdf"> AWE </a></td>
-			</tr>
-			<tr>
-				<th style="height: 5ex;"> 2 </th>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/french.pdf"> 仏語第一 </a></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/ASE.pdf"> ASE </a></td>
-				<td></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/french_sentaku.pdf"> 選択仏語 </a></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/introduction_to_chemistry.pdf"> 化概第一 </a></td>
-			</tr>
-			<tr>
-				<th style="height: 5ex;"> 3 </th>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/PE.pdf"> 健康・体力<br>つくり実習 </a></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/computer_literacy.pdf"> コンリテ </a></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/suuenn.pdf"> 数演 </a></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/senkei.pdf"> 線形第一 </a></td>
-				<td rowspan="2"><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/basic_sience_experinment_A.pdf"> 基礎(クソ)科学実験A </a></td>
-			</tr>
-			<tr>
-				<th style="height: 5ex;"> 4 </th>
-				<td></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/introduction_to_phisics.pdf"> 物概第一 </a></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th style="height: 5ex;"> 5 </th>
-				<td></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/kyouiku.pdf"> 教育心理 </a></td>
-				<td></td>
-				<td></td>
-				<td><a target="blank" class="exit" rel="noopener"  href="./syllabus/1_1/kin5.pdf"> 特活・総合の<br>指導法 </a></td>
-		</table>
-
-		<h2> 授業について </h2>
-		<h3><span class="under_orange"> 成績について </span></h3>
-		<p>
-			成績は上から「秀・優・良・可・不可」の順になっていて、GPにするとそれぞれ「4・3・2・1・0」である。GPとはグレードポイントのことであり、成績を表す共通の指数である。一般的には平均と取ったGPA(グレード ポイント アヴェレージ)を用いることが多い。
-		</p>
-
-		<h3><span class="under_orange"> 類分けについて </span></h3>
-		<p>
-			類分けは、GP×単位数 の合計順に配属が決定する。
-			令和元年度は、類分け科目として 「コンリテ・物概・微積・数演・線形・化概」のGPが使われた。以下令和元年度における類分け科目には、印として☆を付ける。
-		</p>
-
-		<h3><span class="under_orange"> 必修 </span></h3>
-		<h4 id="4">コンリテ☆ 2単位</h4>
-		<p>
-			正式名称をコンピュータリテラシという、	<a target="blank" class="exit" rel="noopener" href="https://twitter.com/ykuno?s=20">久野 靖</a>教授でおなじみの教科。高校までろくにコンピュータを使ってこなかった著者にとっては少々難易度の高めの教科であった。なお、プログラミングは殆ど行わない(ラスト二回程度の授業では行った)。タッチタイプが出来ないと他の人に後れを取るかもしれない。
-		</p>
-		<p>
-			あまり大きな声では言えないが、動画を見ずとも優は取れる科目。ただしテキストの熟読は必須。
-		</p>
-		<p>
-			テスト時は、専用のテキストPDFを見ることができる。その為暗記は必要ないが、解法等は予め頭に入れておくと良い点が期待できる。
-		</p>
-
-		<h4 id="5">物概☆ 2単位</h4>
-		<p>
-			正式名称を物理学概論第一という。
-			正直な話、授業を聞いていなくても過去問が解ければ成績が期待できる科目である。
-			高校物理の延長かと思いきや、急に微分方程式を解くことになるので、ある程度授業を聞いていないとついていけなくなるかもしれない。
-		</p>
-
-		<h4 id="6">微積☆ 2単位</h4>
-		<p>
-			正式名称を微分積分学第一という。
-			ほんっっっっっっとうに先生に左右される教科。
-			所謂先生ガチャ。
-			先生の当たりはずれが大きい(合う合わない)。
-			いかにその先生に適応できるかが鍵かもしれない。
-		</p>
-		<p>
-			羽賀先生は、めちゃめちゃ小テストの量が多い。
-			逆に言えば挽回の余地があるわけだが、実力が反映されやすいともいえる。
-			要注意科目の一つ。
-			資料もめちゃめちゃ多く、しかも訂正プリントが複数枚来ることもある。
-			プリント管理も鍵になり得る。
-			高校数学微分積分を復讐しておくが吉。
-		</p>
-
-		<h4 id="7">数演☆ 1単位</h4>
-		<p>
-			正式名称は数学演習第一。
-			線形代数学第一と微分積分学第一の内容に関する演習を行う。
-			各時間計算用紙の提出がある。
-			が、成績に加味されるわけではなく、添削があるわけでもない。
-			恐らく回収用途は出席確認。
-			成績は出席と定期考査(中間・期末)のみ。
-		</p>
-		<p>
-			著者は中間考査で4点/20点を叩き出すも、期末で挽回できたらしくなんとか可をget。
-			何が言いたいかというと決して諦めるなということ。
-			この科目を落とすと、翌年度以降の必修科目と重なりやすく、一気に留年に近づく科目とも言われている。
-		</p>
-
-		<h4 id="8">コミケ 1単位</h4>
-		<p>
-			初めて聞いたときは薄い本を連想させたが、その名をコミュニケーション科学という。
-			これもクソ授業と言われがちな科目。
-			<s>やる気の無い</s>教師が講堂でプログラム紹介をするだけ。
-			前期入試方式が大括り式になったから出来たらしい。
-			成績は可、不可のみで最終レポートによって決まる。
-			著者の年は、200字×14回のレポートだった。
-			最後にまとめて書こうとすると泣きを見る科目。
-		</p>
-
-		<h4 id="10">線形☆ 2単位</h4>
-		<p>
-			正式名称を線形代数学第一という。
-			行列という新しい概念の導入が行われる科目。
-			2クラの皆さまにとってはハズレ科目。
-			著者の年にはゲリラ中間考査が行われるなどした。
-			何をしてくるかわからない。
-			最大の特徴は。先生による煽りが酷い。
-			本当に酷い。
-			ありえないくらい酷い。
-			その上教室には平均5分遅れで入室する。
-			ベクトルの復讐をしとくと吉。
-			まあ、頑張ってくれたまえ。
-		</p>
-
-		<h4 id="12">化概☆ 2単位</h4>
-		<p>
-			その名を化学概論第一という。
-			高校物理、原子の延長の延長のような授業。
-			新しい式にめっちゃ触れる。
-			多分高校の貯金じゃ足りない授業。
-			結局最終課題をしっかり解けば可は取れるような科目。
-		</p>
-
-		<h4 id="13">実験 A 2単位</h4>
-		<p>
-			正式名称とか飛ばしたい。
-			それほど最悪にして最凶と名高い科目。
-			まあ基礎科学実験 Aという名を持つ。
-		</p>
-		<p>
-			何がキツイってレポートが重い。
-			しかも必要事項の記載漏れがあったりすると再レポートとなりモチベーションも一気に下がる！
-			それと計算量が多くてミスりやすい...
-			エクセルを使える友達をいち早く見つけるが吉。
-			みんなで協力して乗り切ろう！
-		</p>
-
-		<h4 id="3">ASE 1単位</h4>
-		<p>
-			ASE : Academic Spoken Englishの略。<br>
-			名前の通り、学術的なスピーチを目的とした科目。
-			著者の代は、第一回の授業時に先生を決める回があり、情報戦であった。
-			著者はDr. Damian Lucantonio で授業を受けたが、令和2年度以降は退職なさってしまった。所謂楽単の先生で、ある程度の授業参加で優をくれるような先生であった。
-		</p>
-		<p>
-			令和2年度は、出席番号により教師が割り振られることになったらしい。
-			先生を選べなくなった分、合う合わないがより強く出てしまうだろう。
-			頑張れ。
-		</p>
-
-		<h4 id="11">AWE 1単位</h4>
-		<p>
-			AWE : Academic Written Englishの略。<br>
-			こちらもその名の通り、書くことを目的とした科目である。
-			ASEと同じく、第一回に抽選回があったが、これもまたなくなってしまったようだ。
-			言えることはASEと同じなので割愛させていただく。
-		</p>
-
-		<h3><span class="under_orange"> 選択必修 </span></h3>
-		<h4 id="1"> 第二外国語 1単位 </h4>
-		<p>
-			第二外国語は「中国・朝鮮韓国・ロシア・ドイツ・フランス」から選択しなくちゃいけない。著者の選択はフランス語。他の人から聞いたかもしれないが、フランス語はお勧めしない。とにかく分量が多く、難易度が高い。既修者でないと相当苦労するだろう。少なくとも1年次に取る科目ではないとだけは言っておく。
-		</p>
-
-		<h4 id="2"> 体育 1単位 </h4>
-		<p>
-			「ゴルフ・テニス・サッカー・フラッグフットボール」から選択。著者はサッカーを取ったが、偶然にも男子だけでワイワイやった。晴れの日は多摩グラウンドで行う。移動がネック。休み時間を削られるので評判が悪い。また、<a href="http://www.sport.edu.uec.ac.jp/" target="blank" class="exit" rel="noopener"> 健康・スポーツ科学部会 </a>の告知がギリギリだったりもする。
-			雨の日は武道場や体育館等で筋トレなどを行う。
-		</p>
-
-
-
-		<h3><span class="under_orange"> 自由選択 </span></h3>
-		<h4 id="9">選択二外 1単位</h4>
-		<p>
-			選択必修である第二外国語の補足的授業である。
-			各言語により取ることが望ましい云々言われるが、正直取らなくても問題ない。
-			ただし、フランス語を取るのであれば、履修しておくことが好ましい。
-			それほどに仏語は重い科目なので注意。
-		</p>
-
-		<h4 id="14">教育心理</h4>
-		<p>
-			共通単位にもならない、教職免許を取りたい人向けの科目。何をしても不可は来ないと思われる。最終回にテストがあるので、プリントだけは保管しておくべし。
-		</p>
-
-		<h4 id="15">特活</h4>
-		<p>
-			こちらも教職免許を取る人用の科目。
-			驚くほどの楽単。
-			絶対に不可取ったと思いきや可が与えられて驚愕した科目。
-			講師の話も面白いので取ることに苦痛はない。
-		</p>
-	</section>
-
-	<footer>
-
-	</footer>
-
+<body>
+<div class="outer">
+	<div id="header"></div>
+	<center>
+		<!-- パンくずリスト -->
+		<div id="breadcrumb_area">
+			<ul id="breadcrumb_list">
+				<li class="bread_li"><a class="bread" href="https://Yuto-34.github.io">HOME</a></li>
+				<li class="bread_li"><a class="bread" href="../">Classes</a></li>
+				<li class="bread_li"><a class="bread" href="./">前期授業 (1学期)</a></li>
+			</ul>
+		</div>
+		<!-- パンくずリスト -->
+		<div class="main">
+			<h1>前期授業 (1学期)</h1>
+			<div class="content">
+				<h2>時間割</h2>
+				<table style="font-size: 14px;">
+					<tr>
+						<th style="width: 3%;"></th>
+						<th style="width: 17.4%;">月</th>
+						<th style="width: 17.4%;">火</th>
+						<th style="width: 17.4%;">水</th>
+						<th style="width: 17.4%;">木</th>
+						<th style="width: 17.4%;">金</th>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 1 </th>
+						<td></td>
+						<td></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/biseki.pdf"> 微積第一 </a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/komike.pdf"> コミケ </a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/AWE_higuchi.pdf"> AWE </a></td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 2 </th>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/french.pdf"> 仏語第一 </a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/ASE.pdf"> ASE </a></td>
+						<td></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/french_sentaku.pdf"> 選択仏語 </a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/introduction_to_chemistry.pdf"> 化概第一 </a></td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 3 </th>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/PE.pdf"> 健康・体力<br>つくり実習 </a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/computer_literacy.pdf"> コンリテ </a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/suuenn.pdf"> 数演 </a></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/senkei.pdf"> 線形第一 </a></td>
+						<td rowspan="2"><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/basic_sience_experinment_A.pdf"> 基礎(クソ)科学実験A </a></td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 4 </th>
+						<td></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/introduction_to_phisics.pdf"> 物概第一 </a></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th style="height: 5ex;"> 5 </th>
+						<td></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/kyouiku.pdf"> 教育心理 </a></td>
+						<td></td>
+						<td></td>
+						<td><a target="blank" class="exit" rel="noopener" href="./syllabus/1_1/kin5.pdf"> 特活・総合の<br>指導法 </a></td>
+				</table>
+				<h2> 授業について </h2>
+				<h3><span class="under_orange"> 成績について </span></h3>
+				<p>
+					成績は上から「秀・優・良・可・不可」の順になっていて、GPにするとそれぞれ「4・3・2・1・0」である。GPとはグレードポイントのことであり、成績を表す共通の指数である。一般的には平均と取ったGPA(グレード ポイント アヴェレージ)を用いることが多い。
+				</p>
+				<h3><span class="under_orange"> 類分けについて </span></h3>
+				<p>
+					類分けは、GP×単位数 の合計順に配属が決定する。
+					令和元年度は、類分け科目として 「コンリテ・物概・微積・数演・線形・化概」のGPが使われた。以下令和元年度における類分け科目には、印として☆を付ける。
+				</p>
+				<h2> 必修科目 </h2>
+				<h3 id="4"><span class="under_orange">コンリテ☆ 2単位</span></h3>
+				<p>
+					正式名称をコンピュータリテラシという、 <a target="blank" class="exit" rel="noopener" href="https://twitter.com/ykuno?s=20">久野 靖</a>教授でおなじみの教科。高校までろくにコンピュータを使ってこなかった著者にとっては少々難易度の高めの教科であった。なお、プログラミングは殆ど行わない(ラスト二回程度の授業では行った)。タッチタイプが出来ないと他の人に後れを取るかもしれない。
+				</p>
+				<p>
+					あまり大きな声では言えないが、動画を見ずとも優は取れる科目。ただしテキストの熟読は必須。
+				</p>
+				<p>
+					テスト時は、専用のテキストPDFを見ることができる。その為暗記は必要ないが、解法等は予め頭に入れておくと良い点が期待できる。
+				</p>
+				<h3 id="5"><span class="under_orange">物概☆ 2単位</span></h3>
+				<p>
+					正式名称を物理学概論第一という。
+					正直な話、授業を聞いていなくても過去問が解ければ成績が期待できる科目である。
+					高校物理の延長かと思いきや、急に微分方程式を解くことになるので、ある程度授業を聞いていないとついていけなくなるかもしれない。
+				</p>
+				<h3 id="6"><span class="under_orange">微積☆ 2単位</span></h3>
+				<p>
+					正式名称を微分積分学第一という。
+					ほんっっっっっっとうに先生に左右される教科。
+					所謂先生ガチャ。
+					先生の当たりはずれが大きい(合う合わない)。
+					いかにその先生に適応できるかが鍵かもしれない。
+				</p>
+				<p>
+					羽賀先生は、めちゃめちゃ小テストの量が多い。
+					逆に言えば挽回の余地があるわけだが、実力が反映されやすいともいえる。
+					要注意科目の一つ。
+					資料もめちゃめちゃ多く、しかも訂正プリントが複数枚来ることもある。
+					プリント管理も鍵になり得る。
+					高校数学微分積分を復讐しておくが吉。
+				</p>
+				<h3 id="7"><span class="under_orange">数演☆ 1単位</span></h3>
+				<p>
+					正式名称は数学演習第一。
+					線形代数学第一と微分積分学第一の内容に関する演習を行う。
+					各時間計算用紙の提出がある。
+					が、成績に加味されるわけではなく、添削があるわけでもない。
+					恐らく回収用途は出席確認。
+					成績は出席と定期考査(中間・期末)のみ。
+				</p>
+				<p>
+					著者は中間考査で4点/20点を叩き出すも、期末で挽回できたらしくなんとか可をget。
+					何が言いたいかというと決して諦めるなということ。
+					この科目を落とすと、翌年度以降の必修科目と重なりやすく、一気に留年に近づく科目とも言われている。
+				</p>
+				<h3 id="8"><span class="under_orange">コミケ 1単位</span></h3>
+				<p>
+					初めて聞いたときは薄い本を連想させたが、その名をコミュニケーション科学という。
+					これもクソ授業と言われがちな科目。
+					<s>やる気の無い</s>教師が講堂でプログラム紹介をするだけ。
+					前期入試方式が大括り式になったから出来たらしい。
+					成績は可、不可のみで最終レポートによって決まる。
+					著者の年は、200字×14回のレポートだった。
+					最後にまとめて書こうとすると泣きを見る科目。
+				</p>
+				<h3 id="10"><span class="under_orange">線形☆ 2単位</span></h3>
+				<p>
+					正式名称を線形代数学第一という。
+					行列という新しい概念の導入が行われる科目。
+					2クラの皆さまにとってはハズレ科目。
+					著者の年にはゲリラ中間考査が行われるなどした。
+					何をしてくるかわからない。
+					最大の特徴は。先生による煽りが酷い。
+					本当に酷い。
+					ありえないくらい酷い。
+					その上教室には平均5分遅れで入室する。
+					ベクトルの復讐をしとくと吉。
+					まあ、頑張ってくれたまえ。
+				</p>
+				<h3 id="12"><span class="under_orange">化概☆ 2単位</span></h3>
+				<p>
+					その名を化学概論第一という。
+					高校物理、原子の延長の延長のような授業。
+					新しい式にめっちゃ触れる。
+					多分高校の貯金じゃ足りない授業。
+					結局最終課題をしっかり解けば可は取れるような科目。
+				</p>
+				<h3 id="13"><span class="under_orange">実験 A 2単位</span></h3>
+				<p>
+					正式名称とか飛ばしたい。
+					それほど最悪にして最凶と名高い科目。
+					まあ基礎科学実験 Aという名を持つ。
+				</p>
+				<p>
+					何がキツイってレポートが重い。
+					しかも必要事項の記載漏れがあったりすると再レポートとなりモチベーションも一気に下がる！
+					それと計算量が多くてミスりやすい...
+					エクセルを使える友達をいち早く見つけるが吉。
+					みんなで協力して乗り切ろう！
+				</p>
+				<h3 id="3"><span class="under_orange">ASE 1単位</span></h3>
+				<p>
+					ASE : Academic Spoken Englishの略。<br>
+					名前の通り、学術的なスピーチを目的とした科目。
+					著者の代は、第一回の授業時に先生を決める回があり、情報戦であった。
+					著者はDr. Damian Lucantonio で授業を受けたが、令和2年度以降は退職なさってしまった。所謂楽単の先生で、ある程度の授業参加で優をくれるような先生であった。
+				</p>
+				<p>
+					令和2年度は、出席番号により教師が割り振られることになったらしい。
+					先生を選べなくなった分、合う合わないがより強く出てしまうだろう。
+					頑張れ。
+				</p>
+				<h3 id="11"><span class="under_orange">AWE 1単位</span></h3>
+				<p>
+					AWE : Academic Written Englishの略。<br>
+					こちらもその名の通り、書くことを目的とした科目である。
+					ASEと同じく、第一回に抽選回があったが、これもまたなくなってしまったようだ。
+					言えることはASEと同じなので割愛させていただく。
+				</p>
+				<h2> 選択必修 </h2>
+				<h3 id="1"><span class="under_orange"> 第二外国語 1単位 </span></h3>
+				<p>
+					第二外国語は「中国・朝鮮韓国・ロシア・ドイツ・フランス」から選択しなくちゃいけない。著者の選択はフランス語。他の人から聞いたかもしれないが、フランス語はお勧めしない。とにかく分量が多く、難易度が高い。既修者でないと相当苦労するだろう。少なくとも1年次に取る科目ではないとだけは言っておく。
+				</p>
+				<h3 id="2"><span class="under_orange"> 体育 1単位 </span></h3>
+				<p>
+					「ゴルフ・テニス・サッカー・フラッグフットボール」から選択。著者はサッカーを取ったが、偶然にも男子だけでワイワイやった。晴れの日は多摩グラウンドで行う。移動がネック。休み時間を削られるので評判が悪い。また、<a href="http://www.sport.edu.uec.ac.jp/" target="blank" class="exit" rel="noopener"> 健康・スポーツ科学部会 </a>の告知がギリギリだったりもする。
+					雨の日は武道場や体育館等で筋トレなどを行う。
+				</p>
+				<h2> 自由選択 </h2>
+				<h3 id="9"><span class="under_orange">選択二外 1単位</span></h3>
+				<p>
+					選択必修である第二外国語の補足的授業である。
+					各言語により取ることが望ましい云々言われるが、正直取らなくても問題ない。
+					ただし、フランス語を取るのであれば、履修しておくことが好ましい。
+					それほどに仏語は重い科目なので注意。
+				</p>
+				<h3 id="14"><span class="under_orange">教育心理</span></h3>
+				<p>
+					共通単位にもならない、教職免許を取りたい人向けの科目。何をしても不可は来ないと思われる。最終回にテストがあるので、プリントだけは保管しておくべし。
+				</p>
+				<h3 id="15"><span class="under_orange">特活</span></h3>
+				<p>
+					こちらも教職免許を取る人用の科目。
+					驚くほどの楽単。
+					絶対に不可取ったと思いきや可が与えられて驚愕した科目。
+					講師の話も面白いので取ることに苦痛はない。
+				</p>
+	</center>
+</div>
+<div id="footer"></div>
+<!-- <header>
+	<h1>1年 前期</h1>
+</header> -->
+<!-- <aside>
+	<table class="no_line">
+		<tr>
+			<td class="no_line"><a href="#1"> 月1 </a></td>
+			<td class="no_line" style="text-align: left;">第二外国語 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#2"> 月2 </a></td>
+			<td class="no_line" style="text-align: left;">体育 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#3"> 火2 </a></td>
+			<td class="no_line" style="text-align: left;">ASE </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#4"> 火3 </a></td>
+			<td class="no_line" style="text-align: left;">コンリテ </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#5"> 火4 </a></td>
+			<td class="no_line" style="text-align: left;">物概 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#6"> 水1 </a></td>
+			<td class="no_line" style="text-align: left;">微積 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#7"> 水3 </a></td>
+			<td class="no_line" style="text-align: left;">数演 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#8"> 木1 </a></td>
+			<td class="no_line" style="text-align: left;">コミケ </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#9"> 木2 </a></td>
+			<td class="no_line" style="text-align: left;">選択二外 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#10"> 木3 </a></td>
+			<td class="no_line" style="text-align: left;">線形 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#11"> 金1 </a></td>
+			<td class="no_line" style="text-align: left;">AWE </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#12"> 金2 </a></td>
+			<td class="no_line" style="text-align: left;">化概 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#13"> 金3$\cdot$4 </a></td>
+			<td class="no_line" style="text-align: left;">実験A </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#14"> 火5 </a></td>
+			<td class="no_line" style="text-align: left;">教育心理 </td>
+		</tr>
+		<tr>
+			<td class="no_line"><a href="#15"> 金5 </a></td>
+			<td class="no_line" style="text-align: left;">特活 </td>
+		</tr>
+	</table>
+</aside> -->
 </body>
-
 </html>

@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-3"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 
@@ -10,11 +10,14 @@
 		dataLayer.push(arguments);
 	}
 	gtag('js', new Date());
-	gtag('config', 'UA-162881724-3');
+	gtag('config', 'UA-162881724-2');
 
 </script>
+<!-- Google Ad -->
+<script data-ad-client="ca-pub-1338532618014473" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 文字コードの指定 -->
 <meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja,en">
 <!-- jQueryの指定 -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!-- ＃リンクのスムーズスクロール -->
@@ -35,32 +38,77 @@
 	});
 
 </script>
-
-<!-- Place your fontawesome's code here -->
+<!-- Place your kit's code here -->
 <script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
-
-<!-- syntacs highlight -->
-<script src="https: //cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
-
-<!-- Mathjax -->
+<!-- Syntax highlight -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
+<!-- Mthjax -->
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({
-	TeX: { equationNumbers: { autoNumber: "AMS" }},
-	tex2jax: {
-	inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-	processEscapes: true
-	},
-	"HTML-CSS": { matchFontHeight: false },
-	displayAlign: "left",
-	displayIndent: "2em"
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: { equationNumbers: { autoNumber: "AMS" }},
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			processEscapes: true
+		},
+		"HTML-CSS": { matchFontHeight: false },
+		displayAlign: "left",
+		displayIndent: "2em"
 	});
 </script>
-<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
-<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
-<link rel="manifest" href="../favicons/manifest.json">
+<!-- 共通部分の読み込み -->
+<script type="text/javascript">
+	$(function() {
+		// header.htmlをid属性「header」という名前で読み込むように指定する
+		$("#header").load("https://yuto-34.github.io/import/header.html");
+		$("#footer").load("https://yuto-34.github.io/import/footer.html");
+	});
+
+</script>
+<meta name="msapplication-square70x70logo" content="/site-tile-70x70.png">
+<meta name="msapplication-square150x150logo" content="/site-tile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="/site-tile-310x150.png">
+<meta name="msapplication-square310x310logo" content="/site-tile-310x310.png">
+<meta name="msapplication-TileColor" content="#0078d7">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://yuto-34.github.io/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://yuto-34.github.io/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://yuto-34.github.io/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://yuto-34.github.io/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://yuto-34.github.io/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://yuto-34.github.io/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://yuto-34.github.io/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://yuto-34.github.io/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://yuto-34.github.io/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/android-chrome-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/android-chrome-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/android-chrome-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/android-chrome-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/android-chrome-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/android-chrome-152x152.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/android-chrome-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="160x160" href="https://yuto-34.github.io/favicons/icon-160x160.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://yuto-34.github.io/favicons/icon-196x196.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/icon-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuto-34.github.io/favicons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="24x24" href="https://yuto-34.github.io/favicons/icon-24x24.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuto-34.github.io/favicons/icon-32x32.png">
+<link rel="manifest" href="https://yuto-34.github.io/favicons/manifest.json">
 <!-- ###################################################
 	<script type="text/javascript" src="./JS/index.js"></script>
 	ここからはページ毎に変更する
@@ -68,52 +116,58 @@
 <meta name="description" content="VSCodeに関するメモ1" />
 <meta name="keywords" content="Yuto, UEC19, Yuto's Page, VSCode" />
 <link rel="stylesheet" type="text/css" href="./import.css" />
-<title>Yuto's Page</title>
+<title>Yuto's Blog</title>
 <script src="./main.js" type="text/javascript"></script>
 <meta http-equiv="refresh" content="5; URL=">
 </head>
 <body>
-<header class="header">
-	<!--ここに header.htmlが読み込まれる-->
-</header>
+<div class="outer">
+	<div id="header"></div>
+	<center>
+		<!-- パンくずリスト -->
+		<div id="breadcrumb_area">
+			<ul id="breadcrumb_list">
+				<li class="bread_li"><a class="bread" href="https://Yuto-34.github.io">HOME</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<h1>
+				更新確認用
+			</h1>
+			<h1>
+				<span id="view_clock"></span>
+				<script type="text/javascript">
+					timerID = setInterval('clock()', 500); //0.5秒毎にclock()を実行
 
-<center>
-	<h1>
-		更新確認用
-	</h1>
-	<h1>
-		<span id="view_clock"></span>
+					function clock() {
+						document.getElementById("view_clock").innerHTML = getNow();
+					}
 
-		<script type="text/javascript">
-			timerID = setInterval('clock()', 500); //0.5秒毎にclock()を実行
+					function getNow() {
+						var now = new Date();
+						var year = now.getFullYear();
+						var mon = now.getMonth() + 1; //１を足すこと
+						var day = now.getDate();
+						var hour = now.getHours();
+						var min = now.getMinutes();
+						var sec = now.getSeconds();
+						var you = now.getDay(); //曜日(0～6=日～土)
 
-			function clock() {
-				document.getElementById("view_clock").innerHTML = getNow();
-			}
+						//曜日の選択肢
+						var youbi = new Array("日", "月", "火", "水", "木", "金", "土");
 
-			function getNow() {
-				var now = new Date();
-				var year = now.getFullYear();
-				var mon = now.getMonth() + 1; //１を足すこと
-				var day = now.getDate();
-				var hour = now.getHours();
-				var min = now.getMinutes();
-				var sec = now.getSeconds();
-				var you = now.getDay(); //曜日(0～6=日～土)
+						//出力用
+						var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ") " + hour + "時" + min + "分" + sec + "秒";
+						return s;
+					}
 
-				//曜日の選択肢
-				var youbi = new Array("日", "月", "火", "水", "木", "金", "土");
-
-				//出力用
-				var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ") " + hour + "時" + min + "分" + sec + "秒";
-				return s;
-			}
-
-		</script>
-	</h1>
-</center>
-<footer class="footer">
-	<!--ここに footer.htmlが読み込まれる-->
-</footer>
+				</script>
+			</h1>
+		</div>
+	</center>
+</div>
+<div id="footer">
+	<!-- header.htmlをここに表示する -->
+</div>
 </body>
 </html>

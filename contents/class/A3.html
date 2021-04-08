@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162881724-2"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'UA-162881724-2');
+
+</script>
+<!-- Google Ad -->
+<script data-ad-client="ca-pub-1338532618014473" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 文字コードの指定 -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja,en">
+<!-- jQueryの指定 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- Place your kit's code here -->
+<script src="https://kit.fontawesome.com/da2a99b904.js" crossorigin="anonymous"></script>
+<!-- Syntax highlight -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=latex&lang=tex&lang=ruby&lang=c"> </script>
+<!-- Mthjax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+			TeX: { equationNumbers: { autoNumber: "AMS" }},
+			tex2jax: {
+				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+				processEscapes: true
+			},
+			"HTML-CSS": { matchFontHeight: false },
+			displayAlign: "left",
+			displayIndent: "2em"
+		});
+	</script>
+<!-- 共通部分の読み込み -->
+<script type="text/javascript">
+	$(function() {
+		// header.htmlをid属性「header」という名前で読み込むように指定する
+		$("#header").load("https://yuto-34.github.io/import/header.html");
+		$("#footer").load("https://yuto-34.github.io/import/footer.html");
+	});
+
+</script>
+<!-- ＃リンクのスムーズスクロール -->
+<script type="text/javascript">
+	$(function() {
+		// #で始まるリンクをクリックしたら実行されます
+		$('a[href^="#"]').click(function() {
+			// スクロールの速度
+			var speed = 400; // ミリ秒で記述
+			var href = $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({
+				scrollTop: position
+			}, speed, 'swing');
+			return false;
+		});
+	});
+
+</script>
+<meta name="msapplication-square70x70logo" content="/site-tile-70x70.png">
+<meta name="msapplication-square150x150logo" content="/site-tile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="/site-tile-310x150.png">
+<meta name="msapplication-square310x310logo" content="/site-tile-310x310.png">
+<meta name="msapplication-TileColor" content="#0078d7">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://yuto-34.github.io/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://yuto-34.github.io/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://yuto-34.github.io/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://yuto-34.github.io/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://yuto-34.github.io/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://yuto-34.github.io/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://yuto-34.github.io/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://yuto-34.github.io/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://yuto-34.github.io/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://yuto-34.github.io/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/android-chrome-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/android-chrome-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/android-chrome-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/android-chrome-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/android-chrome-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/android-chrome-152x152.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/android-chrome-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="36x36" href="https://yuto-34.github.io/favicons/icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://yuto-34.github.io/favicons/icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="https://yuto-34.github.io/favicons/icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://yuto-34.github.io/favicons/icon-96x96.png">
+<link rel="icon" type="image/png" sizes="128x128" href="https://yuto-34.github.io/favicons/icon-128x128.png">
+<link rel="icon" type="image/png" sizes="144x144" href="https://yuto-34.github.io/favicons/icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="https://yuto-34.github.io/favicons/icon-152x152.png">
+<link rel="icon" type="image/png" sizes="160x160" href="https://yuto-34.github.io/favicons/icon-160x160.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://yuto-34.github.io/favicons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="196x196" href="https://yuto-34.github.io/favicons/icon-196x196.png">
+<link rel="icon" type="image/png" sizes="256x256" href="https://yuto-34.github.io/favicons/icon-256x256.png">
+<link rel="icon" type="image/png" sizes="384x384" href="https://yuto-34.github.io/favicons/icon-384x384.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://yuto-34.github.io/favicons/icon-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuto-34.github.io/favicons/icon-16x16.png">
+<link rel="icon" type="image/png" sizes="24x24" href="https://yuto-34.github.io/favicons/icon-24x24.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuto-34.github.io/favicons/icon-32x32.png">
+<link rel="manifest" href="https://yuto-34.github.io/favicons/manifest.json">
+<!-- ###################################################
+	<script type="text/javascript" src="./JS/index.js"></script>
+	ここからはページ毎に変更する
+################################################### -->
+<link rel="stylesheet" type="text/css" href="./import.css" />
+<title>1年後期 (2学期)</title>
+</head>
+<body>
+<div class="outer">
+	<div id="header" name="header"></div>
+	<center>
+		<!-- パンくずリスト -->
+		<div id="breadcrumb_area" name="breadcrumb_area">
+			<ul id="breadcrumb_list" name="breadcrumb_list">
+				<li class="bread_li"><a class="bread" href="https://Yuto-34.github.io">HOME</a></li>
+				<li class="bread_li"><a class="bread" href="../"> Classes</a></li>
+				<li class="bread_li"><a class="bread" href="./"> 前期授業 (3学期)</a></li>
+			</ul>
+		</div>
+		<!-- パンくずリストここまで -->
+		<div class="main">
+			<!-- 本文 -->
+			<h1>2年前期 (3学期)</h1>
+			<p>敬称省略です．ご理解ください．<br>下手すると教務課に怒られるレベルの本音で書いてあります．<br>どうぞご内密に…</p>
+			<h2>目次</h2>
+			<dt>
+				<ol>
+					<li>時間割</li>
+					<li>必修科目</li>
+					<li>選択科目</li>
+					<li>人文科目</li>
+					<li>自由(共通</li>
+					<li>教職科目</li>
+				</ol>
+			</dt>
+			<h2 id="jikanwari" name="jikanwari">時間割</h2>
+			<p>
+				クリックすると新規タブでシラバスが開きます．<br>
+				学内のみです．
+			</p>
+			<table style="font-size: 15px;">
+				<tr>
+					<th style="width: 3%;"></th>
+					<th style="width: 17.4%;">月</th>
+					<th style="width: 17.4%;">火</th>
+					<th style="width: 17.4%;">水</th>
+					<th style="width: 17.4%;">木</th>
+					<th style="width: 17.4%;">金</th>
+				</tr>
+				<!-- 1限 -->
+				<tr>
+					<th rowspan="2" style="height: 5ex;"> 1 </th>
+					<!-- 月1 -->
+					<td class="no_line_bottom"> - </td>
+					<!-- 火1 -->
+					<td rowspan="2"> - </td>
+					<!-- 水1 -->
+					<td rowspan="2"> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/Humanities/Psychology_A.pdf">心理学</a></td>
+					<!-- 木1 -->
+					<td rowspan="2"> - </td>
+					<!-- 金1 -->
+					<td class="no_line_bottom"> - </td>
+				</tr>
+				<!-- 1.5限 -->
+				<tr>
+					<td rowspan="2" id="tanni3" name="tanni3"> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Introductory_Electromagnetism.pdf"> 基礎電磁気学<br>および演習</a></td>
+					<td rowspan="2" id="tanni3" name="tanni3"> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Introductory_Engineering_Mathematics.pdf"> 工学基礎数学<br>および演習</a></td>
+				</tr>
+				<!-- 2限 -->
+				<tr>
+					<th style="height: 5ex;"> 2 </th>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Thermodynamics.pdf"> 熱力学</a> </td>
+					<td> - </td>
+					<td> - </td>
+				</tr>
+				<!-- 3限 -->
+				<tr>
+					<th style="height: 5ex;"> 3 </th>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Numerical_Analysis.pdf"> 数値解析</a> </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Academic_English_for_the_Second_Year_1.pdf">AES</a></td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Complex_Analysis.pdf"> 複素関数論</a> </td>
+					<td> - </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Calculus_1.pdf"> 微積第一<br>(再履)</a> </td>
+				</tr>
+				<!-- 4限 -->
+				<tr>
+					<th style="height: 5ex;"> 4 </th>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Elementary_French_1.pdf"> 仏語第一<br>(再履)</a> </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Principles_of_Chemistry_1.pdf">化概第一<br>(再履)</a> </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Fundamental_Electric_Circuits.pdf"> 基礎電気回路</a> </td>
+					<td> - </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Intermediate_Seminars_in_English.pdf"> 英語演習</a>
+					</td>
+				</tr>
+				<!-- 5限 -->
+				<tr>
+					<th style="height: 5ex;"> 5 </th>
+					<td> - </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Study_of_the_Teachers_Education_A.pdf">教職論</a> </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Physics_1.pdf">物概第一<br>(再履)</a> </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Information_Engineering_Laboratory.pdf">JK工房<br>Project Euler</a> </td>
+					<td> <a target="blank" rel="noopener" href="http://www.edu.cc.uec.ac.jp/~u1910098/syllabus/A3/Educational_Methods_for_Sciences_1B.pdf">理科教育法</a> </td>
+				</tr>
+			</table>
+			<h2 id="hisshu" name="hisshu"> 必修科目 </h2>
+			<h3>基礎電磁気学および演習</h3>
+			<dd>教師</dd>
+			<dt>中村 淳</dt>
+			<dd>形式</dd>
+			<dt>オンデマンド(クラスルーム)</dt>
+			<dd>中間・期末</dd>
+			<dt>無し，提出課題のみで評価</dt>
+			<dd>その他</dd>
+			<dt>
+				毎回の授業は丁寧に作られていて，課題も阿保みたいに難しい物はなかった．<br>
+				だからこそ差が出にくいし，良い成績を取るのは難しめだったかもしれない．
+			</dt>
+
+			<h3>熱力学</h3>
+			<dd>教師</dd>
+			<dt>安井 正憲</dt>
+			<dd>形式</dd>
+			<dt>
+				リアルタイム + オンデマンド<br>
+				リアタイZoomして，録画をClassroomにアップロードしてくれる．
+			</dt>
+			<dd>中間・期末</dd>
+			<dt>有り</dt>
+			<dd>その他</dd>
+			<dt>
+				毎時前回の復習小テストをZoomアンケート昨日で行う．<br>
+				オンデマンド式の人はgoogle form を通して行う(実はオンデマンド資料内に答えがある)．<br>
+				内容は高校熱力学を数学的に掘り下げたもの．<br>
+				先生の口癖は自分で手を動かして一回導出してみてください．
+			</dt>
+
+			<h3>AES(Y1)</h3>
+			<dd>教師</dd>
+			<dt>Mulia Teguh Nguyen</dt>
+			<dd>形式</dd>
+			<dt>リアルタイム</dt>
+			<dd>中間・期末</dd>
+			<dt>プレゼンテーションを録画して提出</dt>
+			<dd>その他</dd>
+			<dt>
+				毎回の課題がめちゃクソ重い<br>
+				授業の全貌が見えない<br>
+				過去に書いたものを再利用するので，内容を忘れがち<br>
+				クソ<br>
+				Toporと並ぶハズレキャラ<br>
+				当たってしまったら真面目に翌年履修を考えてもいいレベル
+			</dt>
+
+			<h3>基礎電気回路</h3>
+			<dd>教師</dd>
+			<dt>中村 信行</dt>
+			<dd>形式</dd>
+			<dt>オンデマンド (Webclass)</dt>
+			<dd>中間・期末</dd>
+			<dt>期末のみ</dt>
+			<dd>その他</dd>
+			<dt>
+				至って普通のオンデマンド授業<br>
+				毎授業小テストが行われる<br>
+				オンデマンド資料も音声付き動画で，非常にやり易かった．
+			</dt>
+
+			<h3>工学基礎数学および演習</h3>
+			<dd>教師</dd>
+			<dt>島田 宏</dt>
+			<dd>形式</dd>
+			<dt>リアルタイム+オンデマンド</dt>
+			<dd>中間・期末</dd>
+			<dt>期末</dt>
+			<dd>その他</dd>
+			<dt>
+				Ⅲ類の中で恐らく最も凶悪な科目<br>
+				島田さんはダメ．<br>
+				絶対的評価で悪いのではなく，相対的に見たら低い．<br>
+				まずTAが何もしない．<br>
+				Zoomはほぼ質疑応答の会のみ．演習問題の公開がZoom45分前程度なので，大抵質問もそこまで出せない．<br>
+				そういった意味でお勧めしない．<br>
+				実際Zoomの参加人数も右肩下がりだった記憶．<br>
+				おすすめは宮嵜先生のクラス．<br>
+				宮嵜先生のクラスはTAがめちゃめちゃヒントをくれるので大分解きやすい．<br>
+				平均点のクラス間差も非常に大きく，宮嵜クラスは高い．<br>
+				成績は履修者全体で上からつけられるので，他クラスに潜ることをおススメする．
+			</dt>
+
+			<h2 id="sentaku" name="sentaku"> 選択科目 </h2>
+			<h3>複素関数論</h3>
+			<dd>教師</dd>
+			<dt>古川 怜</dt>
+			<dd>形式</dd>
+			<dt>オンデマンド授業</dt>
+			<dd>中間・期末</dd>
+			<dt>期末レポ</dt>
+			<dd>その他</dd>
+			<dt>
+				古川さんの顔はおろか声すら知らない．
+				講義は動画で，音声無し字幕(テロップ)付き．
+				質疑応答はWebclass会議室を利用．
+				全体的に見て良い授業だったと感じる．
+			</dt>
+
+			<h3>数値解析</h3>
+			<dd>教師</dd>
+			<dt>久保木 孝</dt>
+			<dd>形式</dd>
+			<dt>リアルタイム</dt>
+			<dd>中間・期末</dd>
+			<dt>確か無し</dt>
+			<dd>その他</dd>
+			<dt>
+				C言語でプログラムを書く授業．<br>
+				資料は丁寧だが，プログラミングが苦手な人にとっては苦痛かもしれない．<br>
+				ほぼ毎時課題があり，提出はメール．<br>
+				全ての授業を真面目に受けると，ある程度の技術は身に付くだろう．<br>
+				僕自身解説は出来るので，受講者で分からないことがあったら気軽に聞いてほしい．<br>
+				また，JSを使ってメールフォームも作成した．<br>
+				気が向いたらぜひ使ってみて欲しい．<br>
+				<a href="../mail_na.html">数値解析メールフォーム</a>
+			</dt>
+
+			<h3>英語演習</h3>
+			<dd>教師</dd>
+			<dt>Eric Hauser</dt>
+			<dd>形式</dd>
+			<dt>リアルタイム (Zoom)</dt>
+			<dd>中間・期末</dd>
+			<dt>ディスカッションテスト</dt>
+			<dd>その他</dd>
+			<dt>
+				俺的神授業，超おすすめ<br>
+				何より課題がない．課題がないのに単位2単位！これは強い．<br>
+				ディスカッションテストは事前に採点項目が細かく分類分けされ明記されている．<br>
+				すなわち点数が取りやすい！！！<br>
+				毎時やるトピックが決まっていて，伝え方を学ぶといった内容．<br>
+				会話が苦手な人にはおススメしないけど，それ以外の人は絶対取るべき！<br>
+				ネックなのがメール先着制な点．<br>
+				もう定員埋まっちゃってるかもしれないけどメールを送ると，後期の予約が出来る可能性もあるので取り敢えずメール推奨．
+			</dt>
+			
+			<h2 id="jinbun" name="jinbun"> 人文科目 </h2>
+			<p>昨年度まとめた<a rel="noopener" class="exit" target="_blank" href="https://yuto-34.github.io/contents/class/9_jinbun/jinbun.pdf">資料</a>．<br>
+			変更あるかもしれないけど知らん．</p>
+			<h3>心理学A</h3>
+			<dd>教師</dd>
+			<dt>久野 雅樹</dt>
+			<dd>形式</dd>
+			<dt>リアルタイム</dt>
+			<dd>中間・期末</dd>
+			<dt>期末レポ (ゲロ重)</dt>
+			<dd>その他</dd>
+			<dt>
+				水曜1限のリアルタイム授業．<br>
+				教員は某「くの」ではなく，「ひさの」．<br>
+				毎週1000字程度の課題がある．<br>
+				Zoomでビデオを見せられて，それに関する言及が無いと授業を受けたとは言えないよね．と煽ってくる．<br>
+				煽りんちゅ<br>
+				期末レポは自分語り(2500字かなんか)．<br>
+				内容自体は書けないこともないけど，精神が削られる．<br>
+				マジで黒歴史．<br>
+				ただオンライン授業中はPCでOKだが，対面だと手書きになるらしい．<br>
+				その分課題も半分程度にはなるらしいが．<br>
+				毎回ガチでやって，優を取ったが，が，が！！！おススメはしない．
+			</dt>
+				
+			<h3>法学A</h3>
+			<dd>教師</dd>
+			<dt>忘れた</dt>
+			<dd>形式</dd>
+			<dt>夏季集中，オンデマンド</dt>
+			<dd>中間・期末</dd>
+			<dt>期末レポ</dt>
+			<dd>その他</dd>
+			<dt>
+				期末レポで成績が付くはず．<br>
+				めっちゃ頑張って書いたけど良しか来なくて萎えた(お前だけ)．<br>
+				5日くらいで人文の科目が取れるのでコスパは良い．<br>
+				内容はラジオ形式を聞いて設問に答えるだけなので悪くない．<br>
+				GPAガチ勢にはおススメしない．
+			</dt>
+
+			<h2 id="jiyu" name="jiyu"> 自由科目 </h2>
+			<h3>情報工学工房 (Project Euler)</h3>
+			<dd>教師</dd>
+			<dt>西野 順二</dt>
+			<dd>形式</dd>
+			<dt>部分的にリアルタイム？</dt>
+			<dd>中間・期末</dd>
+			<dt>テストはないが，JK工房全体の発表会がある(欠席した)．</dt>
+			<dd>その他</dd>
+			<dt>
+				Ⅰ類の類専門選択科目になるはず．<br>
+				Ⅱ・Ⅲ類の人(俺ら)は共通科目になる．<br>
+				プロジェクトオイラーは良いぞ．<br>
+				今年は毎週木曜日17:00からZoomでアルゴリズム等のヒントを軽く講義してくれた．<br>
+				要するにアルゴリズムを学んで，楽しみながら単位が取れる．<br>
+				出席もろくにない．<br>
+				ただただ楽しい．<br>
+				(大声では言えないが，恐らく全員に秀が来る．)<br>
+				簡単に言って神科目だろうね．単位関係なく来年も取る予定．
+			</dt>
+
+			<h2 id="kyoshoku" name="kyoshoku"> 教職科目 </h2>
+			<h3>教職論A</h3>
+			<dd>教師</dd>
+			<dt>武石 典史</dt>
+			<dd>形式</dd>
+			<dt>オンデマンド</dt>
+			<dd>中間・期末</dd>
+			<dt>レポ</dt>
+			<dd>その他</dd>
+			<dt>
+				期末レポ70%の科目．<br>
+				期末レポは書式設定等中々めんどうだった．<br>
+				俺の勘違いで期限を間違えていて，メールしたら受付延長してくれた．<br>
+				それどころか優くれた(GPA入らんん"ん"ん")．<br>
+				適当に緩くやって，最終レポさえ出せば単位くるんじゃね，知らんけど<br>
+				他に何話していいか分からんから，DM等で気軽に質問してくれ．
+
+			<h3>理科教育法</h3>
+			<dd>教師</dd>
+			<dt>川角 博</dt>
+			<dd>形式</dd>
+			<dt>オンデマンド</dt>
+			<dd>中間・期末</dd>
+			<dt>課題がある．</dt>
+			<dd>その他</dd>
+			<dt>
+				比較的楽に単位を取った．<br>
+				何話していいか分からんから，DM等で気軽に質問してくれ．
+			</dt>
+			
+			<h2> 再履科目 </h2>
+			<dt>
+				<ul>
+					<li>仏語第一</li>
+					<li>化概第一</li>
+					<li>物概第一</li>
+					<li>微積第一</li>
+				</ul>
+			</dt>
+		</div>
+		<!-- ここからは何も記載しない -->
+	</center>
+</div>
+<div id="footer" name="footer"></div>
+</body>
+</html>
+

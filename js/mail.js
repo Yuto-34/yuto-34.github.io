@@ -13,6 +13,7 @@ function psy() {
 	subject = '31-' + student_number + '-' + number;
 	body = number + '回目授業レポート' + student_number + student_name + '%0D%0A' + '%0D%0A' + txtData;
 	location.href = 'mailto:' + address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subject + '&body=' + body;
+	alert("ReDirecting");
 };
 
 function na() {
@@ -28,6 +29,7 @@ function na() {
 	subjects = numbers + ' ' + student_number + ' ' + student_name ;
 	bodys = student_number + student_name + '%0D%0A' + '%0D%0A' + txtDatas;
 	location.href = 'mailto:' + teacher_address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subjects + '&body=' + bodys;
+	alert("ReDirecting");
 };
 
 function na_handin() {
@@ -44,4 +46,5 @@ function na_handin() {
 	subjects = numbers + version + ' ' + student_number + ' ' + student_name ;
 	bodys = student_number + student_name + '%0D%0A' + '%0D%0A' + txtDatas;
 	location.href = 'mailto:' + teacher_address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subjects + '&body=' + bodys;
+	alert("ReDirecting");
 };

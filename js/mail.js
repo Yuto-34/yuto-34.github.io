@@ -1,4 +1,5 @@
 function psy() {
+    alert("Are you checked?");
     var number = document.getElementById('howmuch').value;
     txtData = document.getElementById('txt_data').value.replace(/\r?\n/g, '%0D%0A');
     student_number = document.getElementById('your_address').value;
@@ -13,10 +14,11 @@ function psy() {
     subject = '31-' + student_number + '-' + number;
     body = number + '回目授業レポート' + student_number + student_name + '%0D%0A' + '%0D%0A' + txtData;
     location.href = 'mailto:' + address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subject + '&body=' + body;
-    alert("ReDirecting");
+    alert("Re-Directing?");
 };
 
 function na() {
+    alert("Are you checked?");
     var numbers = document.getElementById('howmuch2').value;
     txtDatas = document.getElementById('txt_data2').value.replace(/\r?\n/g, '%0D%0A');
     student_number = document.getElementById('your_address').value;
@@ -29,10 +31,11 @@ function na() {
     subjects = numbers + ' ' + student_number + ' ' + student_name;
     bodys = student_number + student_name + '%0D%0A' + '%0D%0A' + txtDatas;
     location.href = 'mailto:' + teacher_address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subjects + '&body=' + bodys;
-    alert("ReDirecting");
+    alert("Re-Directing?");
 };
 
 function na_handin() {
+    alert("Are you checked?");
     var numbers = document.getElementById('howmuch3').value;
     txtDatas = document.getElementById('txt_data3').value.replace(/\r?\n/g, '%0D%0A');
     student_number = document.getElementById('your_address').value;
@@ -46,5 +49,5 @@ function na_handin() {
     subjects = numbers + version + ' ' + student_number + ' ' + student_name;
     bodys = student_number + student_name + '%0D%0A' + '%0D%0A' + txtDatas;
     location.href = 'mailto:' + teacher_address + '?cc=' + student_address + '&bcc=' + private_address + '&subject=' + subjects + '&body=' + bodys;
-    alert("ReDirecting");
+    alert("Re-Directing?");
 };
